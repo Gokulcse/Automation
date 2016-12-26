@@ -1,0 +1,62 @@
+package pages;
+
+import java.util.Properties;
+import java.io.IOException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import utilitymethods.UtilityMethods;
+import driver.BaseDriver;
+
+public class Tele2HomePage extends BaseDriver {
+	public static FirefoxDriver driver = launchApp();
+	static Properties allInputValue;
+
+	public static void main(String[] args) throws IOException
+	{
+		System.out.println("done");
+		allInputValue = UtilityMethods.getPropValues();
+		headearValidation();
+		sectionOne();
+		driver.close();
+
+	}
+	public static void headearValidation() 
+	{
+		validateOperatorLogo();
+		validateCompanyLogo();
+		//UtilityMethods.PageNavigationValidation(driver.findElement(By.xpath("//img[@alt='Bell']")), driver.findElement(By.xpath("//img[@title='What is IoT']")));
+		System.out.println("Header Section is Completed");
+	}
+	public static void validateOperatorLogo()
+	{
+		WebElement operatorLogo = driver.findElement(By.xpath("//img[@alt='Tele2']"));
+		UtilityMethods.DisplayEnableValidator(operatorLogo, "NotEqual","Tele2 Operator Logo in IoT Starter Kit");	
+		UtilityMethods.Imagevalidation(operatorLogo,"src",allInputValue.getProperty("tele2Logo"),"Tele2 Operator Logo");	
+	} 
+
+	public static void validateCompanyLogo()
+	{
+		WebElement companyLogo = driver.findElement(By.xpath("//img[@alt='Cisco Jasper']"));
+		UtilityMethods.DisplayEnableValidator(companyLogo, "NotEqual","Cisco Jasper Company Logo in IoT Starter Kit");		
+		UtilityMethods.Imagevalidation(companyLogo,"src",allInputValue.getProperty("tele2CompanyLogo"),"Cisco Jasper Company Logo");	
+	}
+	public static void sectionOne()
+	{
+		sectionOneIotStarterKitTele2Validation();
+		
+	}
+	public static void sectionOneIotStarterKitTele2Validation()
+	{
+		System.out.println(" the string is "+driver.findElements(By.xpath("//div[@class='pb5 br-none-md clr-white']//p")).get(0).getText()+"");
+		UtilityMethods.StringValidation(driver.findElement(By.xpath("//section[@id='hero-wrp']//h1")).getText().replace("\n", " "), "A WORLD WITHOUT IOT IS IDIOTIC", "equalsignorecase");
+		UtilityMethods.StringValidation(driver.findElement(By.xpath("//section[@id='hero-wrp']//h2")).getText(), "Don’t be an idiot, let’s get IoT started!", "equalsignorecase");
+		UtilityMethods.StringValidation(driver.findElements(By.xpath("//div[@class='pb5 br-none-md clr-white']//p")).get(0).getText().replace("\n", " "), "We offer global connectivity for IoT with full visibility, flexibility and control. Order our starter kit and start exploring the endless possibilities of IoT.", "equalsignorecase");
+		UtilityMethods.StringValidation(driver.findElement(By.xpath("//div[@class='pb5 br-none-md clr-white']//p[@class='pt10']")).getText(), "To order a complimentary kit you must have a referral code.", "equalsignorecase");
+
+		
+	
+	}
+}

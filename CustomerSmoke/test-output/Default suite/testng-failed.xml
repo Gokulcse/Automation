@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="pages.Tele2ReferralRequestpage">
+        <methods>
+          <include name="RequestReferralCodeLabelTextDisplayedAndEnabled"/>
+          <include name="RequestButtonValidation"/>
+          <include name="ReferralRequestOtherValidation"/>
+          <include name="validateOperatorLogo"/>
+          <include name="RequestReferralCodeTextBoxDisplayedAndEnabled"/>
+          <include name="ReferralRequestMinimumInputValidation"/>
+          <include name="ReferralRequestTextValidation"/>
+          <include name="validateCompanyLogo"/>
+          <include name="ReferralRequestCodeValidInputValidation"/>
+          <include name="RequestReferralCodePlaceholderValidation"/>
+          <include name="ReferralRequestMaximumInputValidation"/>
+          <include name="ReferralRequestRequiredFieldValidation"/>
+          <include name="Start"/>
+          <include name="ReferralRequestSpaceNotAllowedValidation"/>
+        </methods>
+      </class> <!-- pages.Tele2ReferralRequestpage -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
