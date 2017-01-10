@@ -103,8 +103,7 @@ import driver.BaseDriver;
 
 		UtilityMethods.StringValidation(Tele2HomePagePO.TextBannerp2.getText(), allInputValue.getProperty("HomePage.Bannerp2"), "equalsignorecase");
 		testcase.log(LogStatus.PASS, "Section one Banner text is displayed properly");
-		extent.endTest(testcase);
-		extent.flush();
+
 	}
 	
 	

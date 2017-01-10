@@ -62,7 +62,7 @@ import driver.BaseDriver;
 	
 	}
 	
-
+	@Test(priority=4)
 	public static void companyLogoPageRedirection() throws Exception
 	{	
 		testcase = extent.startTest("Check company Logo", "Checking Wether The company Logo Page Navigation");
@@ -87,24 +87,15 @@ import driver.BaseDriver;
 		extent.flush();
 	}
  
-	@Test(priority=4)
+
 	public static void sectionOneIotStarterKitTele2Validation()
 	{
 		testcase = extent.startTest("Section 1 Banner text 1", "Text Displayed and content Validation");
-	 	testcase.log(LogStatus.INFO, "check Section one Banner text is displayed properly");
+	 	testcase.log(LogStatus.INFO, "Section 1 Banner text 1 is displayed properly");
 		UtilityMethods.StringValidation(Tele2HomePagePO.TextBannerh1.getText().replace("\n", " "), allInputValue.getProperty("HomePage.Bannerh1"), "equalsignorecase");
-		testcase.log(LogStatus.PASS, "Section one Banner text is displayed properly");
-
 		UtilityMethods.StringValidation(Tele2HomePagePO.TextBannerh2.getText(), allInputValue.getProperty("HomePage.Bannerh2"), "equalsignorecase");
-		testcase.log(LogStatus.PASS, "Section one Banner text is displayed properly");
-
 		UtilityMethods.StringValidation(Tele2HomePagePO.TextBannerp1.getText().replace("\n", " "),allInputValue.getProperty("HomePage.Bannerp1"), "equalsignorecase");
-		testcase.log(LogStatus.PASS, "Section one Banner text is displayed properly");
-
 		UtilityMethods.StringValidation(Tele2HomePagePO.TextBannerp2.getText(), allInputValue.getProperty("HomePage.Bannerp2"), "equalsignorecase");
-		testcase.log(LogStatus.PASS, "Section one Banner text is displayed properly");
-		extent.endTest(testcase);
-		extent.flush();
 	}
 	
 	
