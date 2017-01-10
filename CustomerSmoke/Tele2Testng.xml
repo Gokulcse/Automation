@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+  
+<suite name="Tele2publicSite" verbose="1" >
+  <test name="ReferralRequest" >
+    <classes>
+       <class name="pages.Tele2ReferralRequestpage" />
+    </classes>
+  </test>
+ 
+
+</suite>

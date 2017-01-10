@@ -275,7 +275,7 @@ public static void sectionTwoImageValidation()
 }
 public static void sectionTwoContentValidation()
 {
-	UtilityMethods.howKitIncludesValidation(driver.findElements(By.xpath("//div[contains(@class,'col-sm-6 col-md-4 col-xs-12')]")).get(0), driver.findElements(By.xpath("//div[contains(@class,'col-sm-6 col-md-4 col-xs-12')]//img")).get(0), allInputValue.getProperty("toolImage"),allInputValue.getProperty("kitIncludesCol1"));
+	//UtilityMethods.whatTheKitIncludesValidation(driver.findElements(By.xpath("//div[contains(@class,'col-sm-6 col-md-4 col-xs-12')]")).get(0), driver.findElements(By.xpath("//div[contains(@class,'col-sm-6 col-md-4 col-xs-12')]//img")).get(0), allInputValue.getProperty("toolImage"),allInputValue.getProperty("kitIncludesCol1"));
 	
 	
 	
@@ -299,9 +299,11 @@ public static void sectionTwoContentValidation()
 	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@id='kit-inc']//li")).get(0).getText(), "Test-as-you-build for fast, quality development", "equalsignorecase");
 	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@id='kit-inc']//li")).get(1).getText(), "Visibility into device and network behavior", "equalsignorecase");
 	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@id='kit-inc']//li")).get(2).getText(), "Diagnostics and troubleshooting help", "equalsignorecase");
+	
 	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@id='kit-inc']//li")).get(3).getText(), "Complete suite of developer tools", "equalsignorecase");
 	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@id='kit-inc']//li")).get(4).getText(), "User logins for everyone on your team", "equalsignorecase");
 	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@id='kit-inc']//li")).get(5).getText(), "Same environment for testing and deployment", "equalsignorecase");
+	
 	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@id='kit-inc']//li")).get(6).getText(), "Developer guidelines and M2M.comforum", "equalsignorecase");
 	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@id='kit-inc']//li")).get(7).getText(), "Access to APIs", "equalsignorecase");
 	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@id='kit-inc']//li")).get(8).getText(), "Accelerated device certification", "equalsignorecase");

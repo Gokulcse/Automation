@@ -1,12 +1,14 @@
 package pages;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.Properties;
+
+import pageobjects.Tele2ReferralRequestpagePO;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
 
 import utilitymethods.UtilityMethods;
 import driver.BaseDriver;
@@ -19,20 +21,18 @@ public class Tele2ReferralRequestpage extends BaseDriver
 {	
 	public static FirefoxDriver driver = launchApp();
 	static Properties allInputValue;
+
 	
 	@BeforeTest
 	public static void Start() throws IOException 
 	{
-		allInputValue = UtilityMethods.getPropValues();
-		headerValidation();
+		allInputValue = UtilityMethods.getTele2PropValues();
+	//	headerValidation();
 		//
-		
-		
-		
-		System.out.println("header Section Completed");
-		sectionOneValidation();
+		//System.out.println("header Section Completed");
+		//sectionOneValidation();
 		//UtilityMethods.PageNavigationValidation(driver.findElement(By.xpath("//img[@alt='Tele2']")), driver.findElement(By.xpath("//img[@title='What is IoT']")));
-		System.out.println("Section one Completed");
+		//System.out.println("Section one Completed");
 	}
 	public static void headerValidation()
 	{
@@ -44,18 +44,18 @@ public class Tele2ReferralRequestpage extends BaseDriver
 	@Test
 	public static void validateOperatorLogo()
 	{
-		WebElement operatorLogo = driver.findElement(By.xpath("//img[@alt='Tele2']"));
-		UtilityMethods.DisplayEnableValidator(operatorLogo, "NotEqual","Bell Operator Logo in IoT Starter Kit");	
-		UtilityMethods.Imagevalidation(operatorLogo,"src",allInputValue.getProperty("tele2logo"),"Bell Operator Logo");		
+		PageFactory.initElements(driver, Tele2ReferralRequestpagePO.class);
+		UtilityMethods.DisplayEnableValidator(Tele2ReferralRequestpagePO.Tele2Logo, "NotEqual","Tele2 Operator Logo in IoT Starter Kit");	
+		UtilityMethods.Imagevalidation(Tele2ReferralRequestpagePO.Tele2Logo,"src",allInputValue.getProperty("tele2Logo"),"Tele2 Operator Logo");		
 	} 
-	@Test
+	@Test(priority=1)
 	public static void validateCompanyLogo()
 	{
 		WebElement companyLogo = driver.findElement(By.xpath("//img[@alt='Cisco Jasper']"));
 		UtilityMethods.DisplayEnableValidator(companyLogo, "NotEqual","Cisco Jasper Company Logo in IoT Starter Kit");		
-		UtilityMethods.Imagevalidation(companyLogo,"src",allInputValue.getProperty("companyLogo"),"Cisco Jasper Company Logo");		
+		UtilityMethods.Imagevalidation(companyLogo,"src",allInputValue.getProperty("tele2CompanyLogo"),"Cisco Jasper Company Logo");		
 	}
-	
+	 
 	public static void sectionOneValidation()
 	{
 		ReferralRequestTextValidation();
@@ -72,15 +72,15 @@ public class Tele2ReferralRequestpage extends BaseDriver
 		
 		
 	}
-	@Test
+	@Test(priority=2)
 	public static void ReferralRequestTextValidation()
 	{
 		UtilityMethods.StringValidation(driver.findElement(By.xpath("//h2")).getText(), "Request a Referral Code", "equalsignorecase");
-		UtilityMethods.StringValidation(driver.findElement(By.xpath("//p")).getText(), "We look forward to assisting you with a Tele2 IoT Starter Kit. Please fill out the form below and a Tele2 representative will get back to you within 3 business days.", "equalsignorecase");
+		UtilityMethods.StringValidation(driver.findElement(By.xpath("//p")).getText(), allInputValue.getProperty("ReferralRequest.sectionOne"), "equalsignorecase");
 		UtilityMethods.StringValidation(driver.findElements(By.xpath("//h4")).get(0).getText(), "Contact Information", "equalsignorecase");
 		UtilityMethods.StringValidation(driver.findElements(By.xpath("//h4")).get(1).getText(), "Device Information", "equalsignorecase");
 	}
-	@Test
+	@Test(priority=3)
 	public static void RequestReferralCodeTextBoxDisplayedAndEnabled()
 	{
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='fname']")), "NotEqual", "First Name Input Field");	
@@ -91,7 +91,9 @@ public class Tele2ReferralRequestpage extends BaseDriver
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='email']")), "NotEqual", "E-mail Address Input Field");	
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='device']")), "NotEqual", "Module Name Input Field");	
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//select[@id='industryId']")), "NotEqual", "Business Type Drop Down Menu");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='mini0']")), "NotEqual", "Not Available Radio Button");			UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='deviceVolume']")), "NotEqual", "Volume to deploy Input Field");	
+		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='mini0']")), "NotEqual", "2FF Sim Type Radio Button");			
+		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='mini1']")), "NotEqual", "3FF Sim Type Radio Button");			
+		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='deviceVolume']")), "NotEqual", "Volume to deploy Input Field");	
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='with3mn00']")), "NotEqual", "Within 3 months Radio Button");	
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='with3mn01']")), "NotEqual", "3-6 months Radio Button");	
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='with3mn02']")), "NotEqual", "6-12 months Radio Button");	
@@ -100,7 +102,7 @@ public class Tele2ReferralRequestpage extends BaseDriver
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//a[@name='reset']")), "NotEqual", "Cancel Button");	
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@value='Request']")), "NotEqual", "Request Button");	
 	}
-	@Test
+	@Test(priority=4)
 	public static void RequestReferralCodeLabelTextDisplayedAndEnabled()
 	{
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='First Name']")), "NotEqual", "First Name Label Text");	
@@ -112,7 +114,8 @@ public class Tele2ReferralRequestpage extends BaseDriver
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='Module']")), "NotEqual", "Module Name Label Text");	
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='Business Type']")), "NotEqual", "Business TypeLabel Text");	
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='SIM Type']")), "NotEqual", "Sim Type Label Text");
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='Not Available']")), "NotEqual", "2FF/Ruggedized Label Text");	
+		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='2FF Mini']")), "NotEqual", "2FF Mini Label Text");	
+		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='3FF Micro']")), "NotEqual", "3FF Micro Label Text");	
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='Volume to Deploy']")), "NotEqual", "Volume to deploy Label Text");	
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='Launch Timeframe']")), "NotEqual", "Launch Timeframe Label Text");
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='Within 3 months']")), "NotEqual", "Within 3 months Label Text");	
@@ -121,7 +124,7 @@ public class Tele2ReferralRequestpage extends BaseDriver
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='More than 12 months/unknown']")), "NotEqual", "More than 12 months/unknown Label Text");
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='Description']")), "NotEqual", "Description Label Text");			
 	}
-	@Test
+	@Test(priority=5)
 	public static void RequestReferralCodePlaceholderValidation()
 	{
 		UtilityMethods.PlaceholderValidation(driver.findElement(By.xpath("//input[@id='fname']")), "Enter your first name", "First Name");
@@ -135,7 +138,7 @@ public class Tele2ReferralRequestpage extends BaseDriver
 		UtilityMethods.PlaceholderValidation(driver.findElement(By.xpath("//textarea[@id='targetAudience']")), "Tell us a little about your device, target audience, and how we can help.", "Description");
 		
 	}
-	@Test
+	@Test(priority=6)
 	public static void ReferralRequestCodeValidInputValidation()
 	{
 		driver.findElement(By.xpath("//input[@value='Request']")).click();
@@ -153,7 +156,7 @@ public class Tele2ReferralRequestpage extends BaseDriver
 		UtilityMethods.ValidInputValidation(driver.findElement(By.xpath("//textarea[@id='targetAudience']")), allInputValue.getProperty("ValidDescription"), driver.findElement(By.xpath("//div[@id='targetAudience-error']")));
 	
 	}
-	@Test
+	@Test(priority=7)
 	public static void ReferralRequestRequiredFieldValidation()
 	{
 		driver.findElement(By.xpath("//input[@value='Request']")).click();
@@ -170,7 +173,7 @@ public class Tele2ReferralRequestpage extends BaseDriver
 		UtilityMethods.RequiredFieldValidation(driver.findElement(By.xpath("//label[text()='Launch Timeframe']")), driver.findElement(By.xpath("//div[@id='launchTimeFrameId-error']")),"RadioButton");
 		UtilityMethods.RequiredFieldValidation(driver.findElement(By.xpath("//textarea[@id='targetAudience']")), driver.findElement(By.xpath("//div[@id='targetAudience-error']")),"TextBox");		
 	}
-	@Test
+	@Test(priority=8)
 	public static void ReferralRequestSpaceNotAllowedValidation()
 	 {	
 		 driver.findElement(By.xpath("//input[@value='Request']")).click();
@@ -180,7 +183,7 @@ public class Tele2ReferralRequestpage extends BaseDriver
 		 UtilityMethods.SpaceNotAllowedvalidation(driver.findElement(By.xpath("//input[@id='postion']")), driver.findElement(By.xpath("//div[@id='postion-error']")));
 		
 	 }
-	@Test
+	@Test(priority=9)
 	public static void ReferralRequestMaximumInputValidation()
 	 {
 		driver.findElement(By.xpath("//input[@value='Request']")).click();
@@ -188,11 +191,11 @@ public class Tele2ReferralRequestpage extends BaseDriver
         UtilityMethods.MaximumInputValidation(driver.findElement(By.xpath("//input[@id='lname']")), driver.findElement(By.xpath("//div[@id='lname-error']")), 49, allInputValue.getProperty("InvalidInput"));
         UtilityMethods.MaximumInputValidation(driver.findElement(By.xpath("//input[@id='company']")), driver.findElement(By.xpath("//div[@id='company-error']")), 25, allInputValue.getProperty("InvalidCompanyName"));
         UtilityMethods.MaximumInputValidation(driver.findElement(By.xpath("//input[@id='postion']")), driver.findElement(By.xpath("//div[@id='postion-error']")), 25, allInputValue.getProperty("InvalidCompanyName"));
-        UtilityMethods.MaximumInputValidation(driver.findElement(By.xpath("//input[@id='phoneNumber']")), driver.findElement(By.xpath("//div[@id='phoneNumber-error']")), 15, allInputValue.getProperty("Invalidphonenumber"));
+        UtilityMethods.MaximumInputValidation(driver.findElement(By.xpath("//input[@id='phoneNumber']")), driver.findElement(By.xpath("//div[@id='phoneNumber-error']")), 10, allInputValue.getProperty("Invalidphonenumber"));
         UtilityMethods.MaximumInputValidation(driver.findElement(By.xpath("//textarea[@id='targetAudience']")), driver.findElement(By.xpath("//div[@id='targetAudience-error']")), 255, allInputValue.getProperty("InvalidDescription"));     
        	 
 	 }
-	@Test
+	@Test(priority=10)
 	public static void ReferralRequestMinimumInputValidation()
 	 {
 		driver.findElement(By.xpath("//input[@value='Request']")).click();
@@ -200,7 +203,7 @@ public class Tele2ReferralRequestpage extends BaseDriver
         UtilityMethods.MinimumInputValidation(driver.findElement(By.xpath("//input[@id='phoneNumber']")), driver.findElement(By.xpath("//div[@id='phoneNumber-error']")), 10, allInputValue.getProperty("InvalidMinphonenumber"));    	 
 
 	 }
-	@Test
+	@Test(priority=11)
 	public static void ReferralRequestOtherValidation()
 	{	
 		driver.findElement(By.xpath("//input[@value='Request']")).click();
@@ -209,12 +212,12 @@ public class Tele2ReferralRequestpage extends BaseDriver
 		UtilityMethods.NumericFieldValidation(driver.findElement(By.xpath("//input[@id='deviceVolume']")), driver.findElement(By.xpath("//div[@id='deviceVolume-error']")), allInputValue.getProperty("InvadildNumbericField"));
 
 	}
-	@Test
+	@Test(priority=12)
 	public static void RequestButtonValidation()
 	{
 		UtilityMethods.SendInputValues(driver.findElement(By.xpath("//input[@id='fname']")), "Testing1", "TextBox");
 		UtilityMethods.SendInputValues(driver.findElement(By.xpath("//input[@id='lname']")), "Test1", "TextBox");
-		UtilityMethods.SendInputValues(driver.findElement(By.xpath("//input[@id='company']")), "Testing  Team 11", "TextBox");
+		UtilityMethods.SendInputValues(driver.findElement(By.xpath("//input[@id='company']")), "Testing Team 11", "TextBox");
 		UtilityMethods.SendInputValues(driver.findElement(By.xpath("//input[@id='postion']")), "ELP 1", "TextBox");
 		UtilityMethods.SendInputValues(driver.findElement(By.xpath("//input[@id='phoneNumber']")), "956874236951", "TextBox");
 		UtilityMethods.SendInputValues(driver.findElement(By.xpath("//input[@id='email']")), "automategokultesting@yopmail.com", "TextBox");
@@ -227,6 +230,7 @@ public class Tele2ReferralRequestpage extends BaseDriver
 	    //UtilityMethods.PageRedirection(driver.findElement(By.xpath("//input[@value='Request']")), driver.findElement(By.xpath("//a[text()='Back to IoT Starter Kit Page']")));
 	   // UtilityMethods.PageNavigationValidation(driver.findElement(By.xpath("//input[@value='Request']")), driver.findElement(By.xpath("//a[text()='Back to IoT Starter Kit Page']")));
 	    driver.findElement(By.xpath("//input[@value='Request']")).click();	
+	    driver.navigate().back();
 	  /*  driver.findElement(By.xpath("//input[@value='Request']")).click();	
 	    try{ Thread.sleep(2500);}catch (InterruptedException e) {e.printStackTrace();}
 	//	UtilityMethods.waitForElement(driver.findElement(By.xpath("//img[@title='What is IoT']")));	
@@ -239,6 +243,8 @@ public class Tele2ReferralRequestpage extends BaseDriver
 		}
 	*/
 	}
+	
+	
 	@AfterTest
 	public static void Exit()
 	{
