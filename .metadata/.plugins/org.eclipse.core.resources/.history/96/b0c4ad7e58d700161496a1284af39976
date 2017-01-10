@@ -55,6 +55,7 @@ import driver.BaseDriver;
 	{
 		testcase = extent.startTest("Check Operator Logo", "Checking Wether The Operator Logo Page Navigation");
 	 	testcase.log(LogStatus.INFO, "on button Click same Page to be loaded");
+	
 		UtilityMethods.PageNavigationValidation(Tele2HomePagePO.Tele2Logo,Tele2HomePagePO.WhatIsIotImage,"Tele2"); 
 		testcase.log(LogStatus.PASS, "Operator logo page redirection is sucessfull");
 		extent.endTest(testcase);
@@ -90,8 +91,6 @@ import driver.BaseDriver;
 
 	public static void sectionOneIotStarterKitTele2Validation()
 	{
-		testcase = extent.startTest("Section 1 Banner text 1", "Text Displayed and content Validation");
-	 	testcase.log(LogStatus.INFO, "Section 1 Banner text 1 is displayed properly");
 		UtilityMethods.StringValidation(Tele2HomePagePO.TextBannerh1.getText().replace("\n", " "), allInputValue.getProperty("HomePage.Bannerh1"), "equalsignorecase");
 		UtilityMethods.StringValidation(Tele2HomePagePO.TextBannerh2.getText(), allInputValue.getProperty("HomePage.Bannerh2"), "equalsignorecase");
 		UtilityMethods.StringValidation(Tele2HomePagePO.TextBannerp1.getText().replace("\n", " "),allInputValue.getProperty("HomePage.Bannerp1"), "equalsignorecase");
