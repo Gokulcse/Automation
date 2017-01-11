@@ -433,16 +433,16 @@ public class UtilityMethods extends BaseDriver {
 		break;
 		case "doubleequals":
 			result = stringBase==stringToCompare;
-		break;	
+		break;
+		
 		}
-		Assert.assertTrue(result);
-		/*
+		
 		if (result == false)
 		{
 			ScreenShot(driver, "StringValidation in "+stringBase+"");
 			
 			System.out.println("The String " + stringToCompare +" is not " + value +" to "+ stringBase +" ");
-		}*/
+		}
 	}
 
 	public static void DisplayEnableValidator(WebElement strObject, String value, String Result)
@@ -450,21 +450,21 @@ public class UtilityMethods extends BaseDriver {
 		switch(value.toLowerCase())
 		{
 		case "equal":
-			//if (strObject.isDisplayed() && strObject.isEnabled())
-		//	{
-			//	ScreenShot(driver,"DisplayEnableValidator "+ Result+"");
+			if (strObject.isDisplayed() && strObject.isEnabled())
+			{
+				ScreenShot(driver,"DisplayEnableValidator "+ Result+"");
 				Assert.assertEquals(true, strObject.isDisplayed() && strObject.isEnabled());			
 			
-		//	}
+			}
 			break;
 		case "notequal":
-		//	if (!strObject.isDisplayed() && !strObject.isEnabled())
-			//{
-			//	ScreenShot(driver, Result);
-			//	System.out.println("The " + Result +" is not Displayed or Enabled");
-				Assert.assertEquals(false, !strObject.isDisplayed() && strObject.isEnabled());			
+			if (!strObject.isDisplayed() && !strObject.isEnabled())
+			{
+				ScreenShot(driver, Result);
+				System.out.println("The " + Result +" is not Displayed or Enabled");
+				Assert.assertEquals(false, strObject.isDisplayed() && strObject.isEnabled());			
 
-			//}
+			}
 			break;
 		}	
 	}

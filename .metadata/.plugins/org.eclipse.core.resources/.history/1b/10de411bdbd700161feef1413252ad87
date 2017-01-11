@@ -8,8 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -17,7 +15,6 @@ import org.testng.annotations.Test;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-import com.sun.jna.platform.win32.Netapi32Util.User;
 
 import pageobjects.Tele2HomePagePO;
 import utilitymethods.UtilityMethods;
@@ -28,43 +25,30 @@ import driver.BaseDriver;
 	static Properties allInputValue;
 	public static ExtentReports extent;
 	public static ExtentTest testcase;
-	
-	@BeforeTest
+@BeforeTest
 	public static void Start() throws IOException
 	{
 		driver = launchApp();
 		System.out.println("done");
 		allInputValue = UtilityMethods.getTele2PropValues();
 		PageFactory.initElements(driver, Tele2HomePagePO.class);	
-		extent = new ExtentReports(System.getProperty("User.dir")+"test-output\\Advanced.html", true );	
-	}
-	@AfterMethod
-	public static void getResult(ITestResult result)
-	{
-		if(result.getStatus()==ITestResult.FAILURE)
-		{
-		 	testcase.log(LogStatus.FAIL, result.getTestName());
-		}
-		if(result.getStatus()==ITestResult.SUCCESS)
-		{
-		 	testcase.log(LogStatus.PASS, result.getTestName());
-		}
-		extent.endTest(testcase);
+		extent = new ExtentReports("C:\\Users\\Sada\\Desktop\\test-output\\Advanced.html", true );
+		
 	}
 
-	@Test(priority=1)
+@Test(priority=1)
 	public static void validateOperatorLogo() throws InterruptedException
 	{	
 		testcase = extent.startTest("Check Operator Logo", "Checking Wether The Operator Logo is Diplayed,Enabled.");
 	 	testcase.log(LogStatus.INFO, "Validaion Operator Logo is displayed properly");
 	 	UtilityMethods.DisplayEnableValidator(Tele2HomePagePO.Tele2Logo, "NotEqual","Tele2 Operator Logo in IoT Starter Kit");	
-		//testcase.log(LogStatus.PASS, "Validaion Operator Logo is displayed,enabled is sucessfull");
-		/*testcase.log(LogStatus.INFO, "Validaion Operator Logo is displayed from correct source path");
+		testcase.log(LogStatus.PASS, "Validaion Operator Logo is displayed,enabled is sucessfull");
+		testcase.log(LogStatus.INFO, "Validaion Operator Logo is displayed from correct source path");
 		UtilityMethods.Imagevalidation(Tele2HomePagePO.Tele2Logo,"src",allInputValue.getProperty("tele2Logo"),"Tele2 Operator Logo");
 		testcase.log(LogStatus.PASS, "Validaion Operator Logo is displayed from correct source path is sucessfull");
-	*/	
+		extent.endTest(testcase);
+		extent.flush();
 	} 
-	
 	
 	@Test(priority=2)
 	public static void operatorLogoPageRedirection() throws Exception
@@ -73,6 +57,8 @@ import driver.BaseDriver;
 	 	testcase.log(LogStatus.INFO, "on button Click same Page to be loaded");
 		UtilityMethods.PageNavigationValidation(Tele2HomePagePO.Tele2Logo,Tele2HomePagePO.WhatIsIotImage,"Tele2"); 
 		testcase.log(LogStatus.PASS, "Operator logo page redirection is sucessfull");
+		extent.endTest(testcase);
+		extent.flush();
 	
 	}
 	
@@ -83,7 +69,8 @@ import driver.BaseDriver;
  		testcase.log(LogStatus.INFO, "On button Click page should be redirected to jasper home page");
 		UtilityMethods.PageNavigationValidation(Tele2HomePagePO.CiscoLogo,Tele2HomePagePO.JasperDotComFindElement,"IoT Connectivity Management Platform | Cisco Jasper"); 
 		testcase.log(LogStatus.PASS, "company logo page redirection Failed");
-		
+		extent.endTest(testcase);
+		extent.flush();
 	}
 	
 	@Test(priority=3)
@@ -96,7 +83,8 @@ import driver.BaseDriver;
 		testcase.log(LogStatus.INFO, "Validaion Company Logo is displayed from correct source path");
 		UtilityMethods.Imagevalidation(Tele2HomePagePO.CiscoLogo,"src",allInputValue.getProperty("tele2CompanyLogo"),"Cisco Jasper Company Logo");	
 		testcase.log(LogStatus.PASS, "Validaion Company Logo is displayed from correct source path is sucessfull");
-		
+		extent.endTest(testcase);
+		extent.flush();
 	}
  
 	@Test(priority=4)
@@ -115,7 +103,8 @@ import driver.BaseDriver;
 
 		UtilityMethods.StringValidation(Tele2HomePagePO.TextBannerp2.getText(), allInputValue.getProperty("HomePage.Bannerp2"), "equalsignorecase");
 		testcase.log(LogStatus.PASS, "Section one Banner text is displayed properly");
-	
+		extent.endTest(testcase);
+		extent.flush();
 	}
 	
 	
@@ -338,8 +327,6 @@ public static void sectionFourJasperdotCo() throws InterruptedException
 	@AfterTest
 	public static void Exit()
 	{
-		extent.endTest(testcase);
-		extent.flush();
 		driver.close();
 	} 
 	

@@ -17,7 +17,6 @@ import org.testng.annotations.Test;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-import com.sun.jna.platform.win32.Netapi32Util.User;
 
 import pageobjects.Tele2HomePagePO;
 import utilitymethods.UtilityMethods;
@@ -36,20 +35,7 @@ import driver.BaseDriver;
 		System.out.println("done");
 		allInputValue = UtilityMethods.getTele2PropValues();
 		PageFactory.initElements(driver, Tele2HomePagePO.class);	
-		extent = new ExtentReports(System.getProperty("User.dir")+"test-output\\Advanced.html", true );	
-	}
-	@AfterMethod
-	public static void getResult(ITestResult result)
-	{
-		if(result.getStatus()==ITestResult.FAILURE)
-		{
-		 	testcase.log(LogStatus.FAIL, result.getTestName());
-		}
-		if(result.getStatus()==ITestResult.SUCCESS)
-		{
-		 	testcase.log(LogStatus.PASS, result.getTestName());
-		}
-		extent.endTest(testcase);
+		extent = new ExtentReports("C:\\Users\\Sada\\Desktop\\test-output\\Advanced.html", true );	
 	}
 
 	@Test(priority=1)
@@ -58,13 +44,25 @@ import driver.BaseDriver;
 		testcase = extent.startTest("Check Operator Logo", "Checking Wether The Operator Logo is Diplayed,Enabled.");
 	 	testcase.log(LogStatus.INFO, "Validaion Operator Logo is displayed properly");
 	 	UtilityMethods.DisplayEnableValidator(Tele2HomePagePO.Tele2Logo, "NotEqual","Tele2 Operator Logo in IoT Starter Kit");	
-		//testcase.log(LogStatus.PASS, "Validaion Operator Logo is displayed,enabled is sucessfull");
-		/*testcase.log(LogStatus.INFO, "Validaion Operator Logo is displayed from correct source path");
+		testcase.log(LogStatus.PASS, "Validaion Operator Logo is displayed,enabled is sucessfull");
+		testcase.log(LogStatus.INFO, "Validaion Operator Logo is displayed from correct source path");
 		UtilityMethods.Imagevalidation(Tele2HomePagePO.Tele2Logo,"src",allInputValue.getProperty("tele2Logo"),"Tele2 Operator Logo");
 		testcase.log(LogStatus.PASS, "Validaion Operator Logo is displayed from correct source path is sucessfull");
-	*/	
+		
 	} 
-	
+	@AfterMethod
+	public static void getResult(ITestResult result)
+	{
+		if(result.getStatus()==ITestResult.FAILURE)
+		{
+		 	testcase.log(LogStatus.FAIL, result.getTestClass().toString());
+		}
+		if(result.getStatus()==ITestResult.SUCCESS)
+		{
+		 	testcase.log(LogStatus.PASS, result.getTestClass().toString());
+		}
+		extent.endTest(testcase);
+	}
 	
 	@Test(priority=2)
 	public static void operatorLogoPageRedirection() throws Exception

@@ -5,8 +5,10 @@
     <classes>
       <class name="pages.Tele2HomePage">
         <methods>
-          <include name="companyLogoPageRedirection"/>
-          <include name="Exit"/>
+          <include name="getResult"/>
+          <include name="validateCompanyLogo"/>
+          <include name="operatorLogoPageRedirection"/>
+          <include name="sectionOneIotStarterKitTele2Validation"/>
           <include name="Start"/>
         </methods>
       </class> <!-- pages.Tele2HomePage -->
