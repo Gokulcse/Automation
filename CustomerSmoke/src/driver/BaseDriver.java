@@ -23,7 +23,7 @@ public class BaseDriver {
 		System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.get("http://tele2.devm2m.com/");
+		driver.get("http://post.devm2m.com/form/referral/request");
 		return driver;
 	}
 

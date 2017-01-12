@@ -36,7 +36,7 @@ import driver.BaseDriver;
 		System.out.println("done");
 		allInputValue = UtilityMethods.getTele2PropValues();
 		PageFactory.initElements(driver, Tele2HomePagePO.class);	
-		extent = new ExtentReports(System.getProperty("User.dir")+"test-output\\Advanced.html", true );	
+		extent = new ExtentReports(System.getProperty("user.dir")+"/test-output/Advanced.html", true );	
 	}
 	@AfterMethod
 	public static void getResult(ITestResult result)
@@ -58,11 +58,11 @@ import driver.BaseDriver;
 		testcase = extent.startTest("Check Operator Logo", "Checking Wether The Operator Logo is Diplayed,Enabled.");
 	 	testcase.log(LogStatus.INFO, "Validaion Operator Logo is displayed properly");
 	 	UtilityMethods.DisplayEnableValidator(Tele2HomePagePO.Tele2Logo, "NotEqual","Tele2 Operator Logo in IoT Starter Kit");	
-		//testcase.log(LogStatus.PASS, "Validaion Operator Logo is displayed,enabled is sucessfull");
-		/*testcase.log(LogStatus.INFO, "Validaion Operator Logo is displayed from correct source path");
+		testcase.log(LogStatus.PASS, "Validaion Operator Logo is displayed,enabled is sucessfull");
+		testcase.log(LogStatus.INFO, "Validaion Operator Logo is displayed from correct source path");
 		UtilityMethods.Imagevalidation(Tele2HomePagePO.Tele2Logo,"src",allInputValue.getProperty("tele2Logo"),"Tele2 Operator Logo");
 		testcase.log(LogStatus.PASS, "Validaion Operator Logo is displayed from correct source path is sucessfull");
-	*/	
+		
 	} 
 	
 	
