@@ -1,101 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="3" ignored="0" total="13" passed="10">
+<testng-results skipped="0" failed="2" ignored="0" total="14" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="114914" started-at="2017-01-12T06:55:41Z" finished-at="2017-01-12T06:57:36Z">
+  <suite name="Default suite" duration-ms="68808" started-at="2017-01-12T13:43:22Z" finished-at="2017-01-12T13:44:31Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="114914" started-at="2017-01-12T06:55:41Z" finished-at="2017-01-12T06:57:36Z">
+    <test name="Default test" duration-ms="68808" started-at="2017-01-12T13:43:22Z" finished-at="2017-01-12T13:44:31Z">
       <class name="pages.PostReferralRequest">
-        <test-method status="PASS" signature="Start()[pri:0, instance:pages.PostReferralRequest@7905a0b8]" name="Start" is-config="true" duration-ms="31" started-at="2017-01-12T12:25:41Z" finished-at="2017-01-12T12:25:41Z">
+        <test-method status="PASS" signature="Start()[pri:0, instance:pages.PostReferralRequest@7905a0b8]" name="Start" is-config="true" duration-ms="10" started-at="2017-01-12T19:13:22Z" finished-at="2017-01-12T19:13:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Start -->
-        <test-method status="FAIL" signature="validateOperatorLogo()[pri:0, instance:pages.PostReferralRequest@7905a0b8]" name="validateOperatorLogo" duration-ms="187" started-at="2017-01-12T12:25:42Z" finished-at="2017-01-12T12:25:42Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Unable to locate element: {"method":"xpath","selector":"//img[@alt='Tele2']"}
-Command duration or timeout: 78 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.0.0-beta4', revision: '3169782', time: '2016-09-29 10:29:23 -0700'
-System info: host: 'Gokul', ip: '192.168.1.33', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_101'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=44.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: ec1a9d56-f1cf-420a-b3c8-4350f634cef7
-*** Element info: {Using=xpath, value=//img[@alt='Tele2']}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//img[@alt='Tele2']"}
-Command duration or timeout: 78 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.0.0-beta4', revision: '3169782', time: '2016-09-29 10:29:23 -0700'
-System info: host: 'Gokul', ip: '192.168.1.33', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_101'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=44.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: ec1a9d56-f1cf-420a-b3c8-4350f634cef7
-*** Element info: {Using=xpath, value=//img[@alt='Tele2']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:636)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:369)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:474)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy7.isDisplayed(Unknown Source)
-	at utilitymethods.UtilityMethods.DisplayEnableValidator(UtilityMethods.java:458)
-	at pages.PostReferralRequest.validateOperatorLogo(PostReferralRequest.java:46)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//img[@alt='Tele2']"}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.0.0-beta4', revision: '3169782', time: '2016-09-29 10:29:23 -0700'
-System info: host: 'Gokul', ip: '192.168.1.33', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_101'
-Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Sada/AppData/Local/Temp/anonymous7569139251952880111webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11187)
-	at <anonymous class>.FirefoxDriver.prototype.findElement(file:///C:/Users/Sada/AppData/Local/Temp/anonymous7569139251952880111webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11196)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/Sada/AppData/Local/Temp/anonymous7569139251952880111webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12698)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_(file:///C:/Users/Sada/AppData/Local/Temp/anonymous7569139251952880111webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12703)
-	at <anonymous class>.DelayedCommand.prototype.execute/<(file:///C:/Users/Sada/AppData/Local/Temp/anonymous7569139251952880111webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12645)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method status="PASS" signature="validateOperatorLogo()[pri:0, instance:pages.PostReferralRequest@7905a0b8]" name="validateOperatorLogo" duration-ms="1616" started-at="2017-01-12T19:13:22Z" finished-at="2017-01-12T19:13:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateOperatorLogo -->
-        <test-method status="PASS" signature="validateCompanyLogo()[pri:1, instance:pages.PostReferralRequest@7905a0b8]" name="validateCompanyLogo" duration-ms="2468" started-at="2017-01-12T12:25:42Z" finished-at="2017-01-12T12:25:44Z">
+        <test-method status="PASS" signature="validateCompanyLogo()[pri:1, instance:pages.PostReferralRequest@7905a0b8]" name="validateCompanyLogo" duration-ms="1542" started-at="2017-01-12T19:13:24Z" finished-at="2017-01-12T19:13:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateCompanyLogo -->
-        <test-method status="FAIL" signature="ReferralRequestTextValidation()[pri:2, instance:pages.PostReferralRequest@7905a0b8]" name="ReferralRequestTextValidation" duration-ms="346" started-at="2017-01-12T12:25:44Z" finished-at="2017-01-12T12:25:45Z">
+        <test-method status="FAIL" signature="ReferralRequestTextValidation()[pri:2, instance:pages.PostReferralRequest@7905a0b8]" name="ReferralRequestTextValidation" duration-ms="190" started-at="2017-01-12T19:13:25Z" finished-at="2017-01-12T19:13:25Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -107,7 +31,7 @@ Driver info: driver.version: unknown
 	at org.testng.Assert.assertTrue(Assert.java:42)
 	at org.testng.Assert.assertTrue(Assert.java:52)
 	at utilitymethods.UtilityMethods.StringValidation(UtilityMethods.java:438)
-	at pages.PostReferralRequest.ReferralRequestTextValidation(PostReferralRequest.java:77)
+	at pages.PostReferralRequest.ReferralRequestTextValidation(PostReferralRequest.java:78)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -139,32 +63,32 @@ Driver info: driver.version: unknown
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ReferralRequestTextValidation -->
-        <test-method status="PASS" signature="RequestReferralCodeTextBoxDisplayedAndEnabled()[pri:3, instance:pages.PostReferralRequest@7905a0b8]" name="RequestReferralCodeTextBoxDisplayedAndEnabled" duration-ms="3187" started-at="2017-01-12T12:25:45Z" finished-at="2017-01-12T12:25:48Z">
+        <test-method status="PASS" signature="RequestReferralCodeTextBoxDisplayedAndEnabled()[pri:3, instance:pages.PostReferralRequest@7905a0b8]" name="RequestReferralCodeTextBoxDisplayedAndEnabled" duration-ms="948" started-at="2017-01-12T19:13:25Z" finished-at="2017-01-12T19:13:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RequestReferralCodeTextBoxDisplayedAndEnabled -->
-        <test-method status="FAIL" signature="RequestReferralCodeLabelTextDisplayedAndEnabled()[pri:4, instance:pages.PostReferralRequest@7905a0b8]" name="RequestReferralCodeLabelTextDisplayedAndEnabled" duration-ms="1516" started-at="2017-01-12T12:25:48Z" finished-at="2017-01-12T12:25:49Z">
+        <test-method status="FAIL" signature="RequestReferralCodeLabelTextDisplayedAndEnabled()[pri:4, instance:pages.PostReferralRequest@7905a0b8]" name="RequestReferralCodeLabelTextDisplayedAndEnabled" duration-ms="438" started-at="2017-01-12T19:13:26Z" finished-at="2017-01-12T19:13:27Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[Unable to locate element: {"method":"xpath","selector":"//label[text()='2FF Mini']"}
-Command duration or timeout: 78 milliseconds
+Command duration or timeout: 24 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.0.0-beta4', revision: '3169782', time: '2016-09-29 10:29:23 -0700'
 System info: host: 'Gokul', ip: '192.168.1.33', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_101'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=44.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: ec1a9d56-f1cf-420a-b3c8-4350f634cef7
+Session ID: 528d3777-63c7-40be-bff4-a59739a30aa6
 *** Element info: {Using=xpath, value=//label[text()='2FF Mini']}]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//label[text()='2FF Mini']"}
-Command duration or timeout: 78 milliseconds
+Command duration or timeout: 24 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.0.0-beta4', revision: '3169782', time: '2016-09-29 10:29:23 -0700'
 System info: host: 'Gokul', ip: '192.168.1.33', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_101'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=44.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: ec1a9d56-f1cf-420a-b3c8-4350f634cef7
+Session ID: 528d3777-63c7-40be-bff4-a59739a30aa6
 *** Element info: {Using=xpath, value=//label[text()='2FF Mini']}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -177,7 +101,7 @@ Session ID: ec1a9d56-f1cf-420a-b3c8-4350f634cef7
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:474)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
-	at pages.PostReferralRequest.RequestReferralCodeLabelTextDisplayedAndEnabled(PostReferralRequest.java:115)
+	at pages.PostReferralRequest.RequestReferralCodeLabelTextDisplayedAndEnabled(PostReferralRequest.java:116)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -208,50 +132,54 @@ For documentation on this error, please visit: http://seleniumhq.org/exceptions/
 Build info: version: '3.0.0-beta4', revision: '3169782', time: '2016-09-29 10:29:23 -0700'
 System info: host: 'Gokul', ip: '192.168.1.33', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_101'
 Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Sada/AppData/Local/Temp/anonymous7569139251952880111webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11187)
-	at <anonymous class>.FirefoxDriver.prototype.findElement(file:///C:/Users/Sada/AppData/Local/Temp/anonymous7569139251952880111webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11196)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/Sada/AppData/Local/Temp/anonymous7569139251952880111webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12698)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_(file:///C:/Users/Sada/AppData/Local/Temp/anonymous7569139251952880111webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12703)
-	at <anonymous class>.DelayedCommand.prototype.execute/<(file:///C:/Users/Sada/AppData/Local/Temp/anonymous7569139251952880111webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12645)
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Sada/AppData/Local/Temp/anonymous5212204571757278481webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11187)
+	at <anonymous class>.FirefoxDriver.prototype.findElement(file:///C:/Users/Sada/AppData/Local/Temp/anonymous5212204571757278481webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11196)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/Sada/AppData/Local/Temp/anonymous5212204571757278481webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12698)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_(file:///C:/Users/Sada/AppData/Local/Temp/anonymous5212204571757278481webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12703)
+	at <anonymous class>.DelayedCommand.prototype.execute/<(file:///C:/Users/Sada/AppData/Local/Temp/anonymous5212204571757278481webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12645)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RequestReferralCodeLabelTextDisplayedAndEnabled -->
-        <test-method status="PASS" signature="RequestReferralCodePlaceholderValidation()[pri:5, instance:pages.PostReferralRequest@7905a0b8]" name="RequestReferralCodePlaceholderValidation" duration-ms="3541" started-at="2017-01-12T12:25:49Z" finished-at="2017-01-12T12:25:53Z">
+        <test-method status="PASS" signature="RequestReferralCodePlaceholderValidation()[pri:5, instance:pages.PostReferralRequest@7905a0b8]" name="RequestReferralCodePlaceholderValidation" duration-ms="1812" started-at="2017-01-12T19:13:27Z" finished-at="2017-01-12T19:13:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RequestReferralCodePlaceholderValidation -->
-        <test-method status="PASS" signature="ReferralRequestCodeValidInputValidation()[pri:6, instance:pages.PostReferralRequest@7905a0b8]" name="ReferralRequestCodeValidInputValidation" duration-ms="35344" started-at="2017-01-12T12:25:53Z" finished-at="2017-01-12T12:26:28Z">
+        <test-method status="PASS" signature="ReferralRequestCodeValidInputValidation()[pri:6, instance:pages.PostReferralRequest@7905a0b8]" name="ReferralRequestCodeValidInputValidation" duration-ms="12592" started-at="2017-01-12T19:13:28Z" finished-at="2017-01-12T19:13:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ReferralRequestCodeValidInputValidation -->
-        <test-method status="PASS" signature="ReferralRequestRequiredFieldValidation()[pri:7, instance:pages.PostReferralRequest@7905a0b8]" name="ReferralRequestRequiredFieldValidation" duration-ms="8001" started-at="2017-01-12T12:26:28Z" finished-at="2017-01-12T12:26:36Z">
+        <test-method status="PASS" signature="ReferralRequestRequiredFieldValidation()[pri:7, instance:pages.PostReferralRequest@7905a0b8]" name="ReferralRequestRequiredFieldValidation" duration-ms="2210" started-at="2017-01-12T19:13:41Z" finished-at="2017-01-12T19:13:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ReferralRequestRequiredFieldValidation -->
-        <test-method status="PASS" signature="ReferralRequestSpaceNotAllowedValidation()[pri:8, instance:pages.PostReferralRequest@7905a0b8]" name="ReferralRequestSpaceNotAllowedValidation" duration-ms="4668" started-at="2017-01-12T12:26:36Z" finished-at="2017-01-12T12:26:41Z">
+        <test-method status="PASS" signature="ReferralRequestSpaceNotAllowedValidation()[pri:8, instance:pages.PostReferralRequest@7905a0b8]" name="ReferralRequestSpaceNotAllowedValidation" duration-ms="1202" started-at="2017-01-12T19:13:43Z" finished-at="2017-01-12T19:13:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ReferralRequestSpaceNotAllowedValidation -->
-        <test-method status="PASS" signature="ReferralRequestMaximumInputValidation()[pri:9, instance:pages.PostReferralRequest@7905a0b8]" name="ReferralRequestMaximumInputValidation" duration-ms="18457" started-at="2017-01-12T12:26:41Z" finished-at="2017-01-12T12:26:59Z">
+        <test-method status="PASS" signature="ReferralRequestMaximumInputValidation()[pri:9, instance:pages.PostReferralRequest@7905a0b8]" name="ReferralRequestMaximumInputValidation" duration-ms="7333" started-at="2017-01-12T19:13:44Z" finished-at="2017-01-12T19:13:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ReferralRequestMaximumInputValidation -->
-        <test-method status="PASS" signature="ReferralRequestMinimumInputValidation()[pri:10, instance:pages.PostReferralRequest@7905a0b8]" name="ReferralRequestMinimumInputValidation" duration-ms="4066" started-at="2017-01-12T12:26:59Z" finished-at="2017-01-12T12:27:03Z">
+        <test-method status="PASS" signature="ReferralRequestMinimumInputValidation()[pri:10, instance:pages.PostReferralRequest@7905a0b8]" name="ReferralRequestMinimumInputValidation" duration-ms="1448" started-at="2017-01-12T19:13:52Z" finished-at="2017-01-12T19:13:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ReferralRequestMinimumInputValidation -->
-        <test-method status="PASS" signature="ReferralRequestOtherValidation()[pri:11, instance:pages.PostReferralRequest@7905a0b8]" name="ReferralRequestOtherValidation" duration-ms="18175" started-at="2017-01-12T12:27:03Z" finished-at="2017-01-12T12:27:22Z">
+        <test-method status="PASS" signature="ReferralRequestOtherValidation()[pri:11, instance:pages.PostReferralRequest@7905a0b8]" name="ReferralRequestOtherValidation" duration-ms="9157" started-at="2017-01-12T19:13:53Z" finished-at="2017-01-12T19:14:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ReferralRequestOtherValidation -->
-        <test-method status="PASS" signature="RequestButtonValidation()[pri:12, instance:pages.PostReferralRequest@7905a0b8]" name="RequestButtonValidation" duration-ms="12862" started-at="2017-01-12T12:27:22Z" finished-at="2017-01-12T12:27:34Z">
+        <test-method status="PASS" signature="RequestButtonValidation()[pri:12, instance:pages.PostReferralRequest@7905a0b8]" name="RequestButtonValidation" duration-ms="6266" started-at="2017-01-12T19:14:02Z" finished-at="2017-01-12T19:14:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RequestButtonValidation -->
-        <test-method status="PASS" signature="Exit()[pri:0, instance:pages.PostReferralRequest@7905a0b8]" name="Exit" is-config="true" duration-ms="1922" started-at="2017-01-12T12:27:34Z" finished-at="2017-01-12T12:27:36Z">
+        <test-method status="PASS" signature="AdminApproval()[pri:13, instance:pages.PostReferralRequest@7905a0b8]" name="AdminApproval" duration-ms="21882" started-at="2017-01-12T19:14:09Z" finished-at="2017-01-12T19:14:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AdminApproval -->
+        <test-method status="PASS" signature="Exit()[pri:0, instance:pages.PostReferralRequest@7905a0b8]" name="Exit" is-config="true" duration-ms="115" started-at="2017-01-12T19:14:31Z" finished-at="2017-01-12T19:14:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Exit -->

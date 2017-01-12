@@ -6,7 +6,6 @@
       <class name="pages.PostReferralRequest">
         <methods>
           <include name="RequestReferralCodeLabelTextDisplayedAndEnabled"/>
-          <include name="validateOperatorLogo"/>
           <include name="Exit"/>
           <include name="Start"/>
           <include name="ReferralRequestTextValidation"/>

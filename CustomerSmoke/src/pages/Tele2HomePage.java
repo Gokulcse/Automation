@@ -61,8 +61,7 @@ import driver.BaseDriver;
 		testcase.log(LogStatus.PASS, "Validaion Operator Logo is displayed,enabled is sucessfull");
 		testcase.log(LogStatus.INFO, "Validaion Operator Logo is displayed from correct source path");
 		UtilityMethods.Imagevalidation(Tele2HomePagePO.Tele2Logo,"src",allInputValue.getProperty("tele2Logo"),"Tele2 Operator Logo");
-		testcase.log(LogStatus.PASS, "Validaion Operator Logo is displayed from correct source path is sucessfull");
-		
+		testcase.log(LogStatus.PASS, "Validaion Operator Logo is displayed from correct source path is sucessfull");	
 	} 
 	
 	

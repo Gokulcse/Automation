@@ -1,6 +1,7 @@
 package pages;
 
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -12,9 +13,20 @@ public class TestPage {
 		System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.get("http://www.jasper.com/"); 
+		driver.get("http://www.yopmail.com/"); 
 		System.out.println(""+driver.getTitle());
 		String parentHandle = driver.getWindowHandle();
+		
+		Thread.sleep(1500);
+		driver.findElement(By.xpath("//input[@id='login']")).sendKeys("automation1");
+		driver.findElement(By.xpath("//input[@value='Check Inbox']")).click();
+		Thread.sleep(3500);
+		driver.findElement(By.xpath(".//*[@id='m1']//span[contains(.,'Your referral code to order a Post IoT M2M Developer Kit')]")).click();
+		Thread.sleep(1500);
+		driver.findElement(By.xpath(".//*[@id='mailmillieu']//a[@rel='nofollow']")).click();
+		
+		
+		
 		
 		/*PageFactory.initElements(driver, Tele2ReferralRequestpagePO.class);
 		UtilityMethods.PageNavigationValidation(Tele2ReferralRequestpagePO.M2MDotCom,Tele2ReferralRequestpagePO.selectKit,""); 

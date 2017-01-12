@@ -15,6 +15,7 @@ import driver.BaseDriver;
 import pageobjects.Tele2ReferralRequestpagePO;
 import utilitymethods.UtilityMethods;
 
+import pageobjects.PostReferralRequestPO;
 public class PostReferralRequest extends BaseDriver
 {
 	public static FirefoxDriver driver = launchApp();
@@ -42,9 +43,9 @@ public class PostReferralRequest extends BaseDriver
 	@Test
 	public static void validateOperatorLogo()
 	{
-		PageFactory.initElements(driver, Tele2ReferralRequestpagePO.class);
-		UtilityMethods.DisplayEnableValidator(Tele2ReferralRequestpagePO.Tele2Logo, "NotEqual","Tele2 Operator Logo in IoT Starter Kit");	
-		UtilityMethods.Imagevalidation(Tele2ReferralRequestpagePO.Tele2Logo,"src",allInputValue.getProperty("tele2Logo"),"Tele2 Operator Logo");		
+		PageFactory.initElements(driver, PostReferralRequestPO.class);
+		UtilityMethods.DisplayEnableValidator(PostReferralRequestPO.PostLogo, "NotEqual","Tele2 Operator Logo in IoT Starter Kit");	
+		UtilityMethods.Imagevalidation(PostReferralRequestPO.PostLogo,"src",allInputValue.getProperty("tele2Logo"),"Tele2 Operator Logo");		
 	} 
 	@Test(priority=1)
 	public static void validateCompanyLogo()
@@ -241,13 +242,23 @@ public class PostReferralRequest extends BaseDriver
 		}
 	*/
 	}
-	
-	public static void AdminApproval()
+	@Test(priority=13)
+	public static void AdminApproval() throws InterruptedException
 	{
 		System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.get("http://starterkit-dev.devm2m.com/admin/internal/login");
+		Thread.sleep(1500);
+		driver.findElement(By.xpath("//input[@id='userName']")).sendKeys("prasanna.v");
+		driver.findElement(By.xpath("//input[@value='Login']")).click();
+		Thread.sleep(1500);
+		driver.findElement(By.xpath("//div[@class='blpr-menu blpr-dsk-menu']//span[text()='Referrals']")).click();
+		Thread.sleep(1500);
+		driver.findElement(By.xpath("//div[@id='approve0']")).click();
+		Thread.sleep(1500);
+		driver.findElement(By.xpath("//div[@id='aprCode']//button[@type='submit']")).click();
+	
 	}
 	
 	
