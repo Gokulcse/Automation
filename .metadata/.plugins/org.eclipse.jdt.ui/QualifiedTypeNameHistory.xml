@@ -19,11 +19,9 @@
 <fullyQualifiedTypeName name="org.openqa.selenium.firefox.FirefoxProfile"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.By"/>
 <fullyQualifiedTypeName name="pageobjects.Tele2ReferralRequestpagePO"/>
 <fullyQualifiedTypeName name="junit.framework.Assert"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.remote.BrowserType"/>
-<fullyQualifiedTypeName name="java.lang.Thread"/>
 <fullyQualifiedTypeName name="utilitymethods.UtilityMethods"/>
 <fullyQualifiedTypeName name="pageobjects.Tele2HomePagePO"/>
 <fullyQualifiedTypeName name="pages.Tele2HomePage"/>
@@ -39,4 +37,7 @@
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="com.sun.jna.platform.win32.Netapi32Util.User"/>
 <fullyQualifiedTypeName name="driver.BaseDriver"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="pageobjects.PostReferralRequestPO"/>
 </qualifiedTypeNameHistroy>
