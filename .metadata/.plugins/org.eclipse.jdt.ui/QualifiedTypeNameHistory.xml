@@ -36,8 +36,8 @@
 <fullyQualifiedTypeName name="org.testng.Assert"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="com.sun.jna.platform.win32.Netapi32Util.User"/>
-<fullyQualifiedTypeName name="driver.BaseDriver"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
 <fullyQualifiedTypeName name="java.lang.Thread"/>
 <fullyQualifiedTypeName name="pageobjects.PostReferralRequestPO"/>
+<fullyQualifiedTypeName name="driver.BaseDriver"/>
 </qualifiedTypeNameHistroy>

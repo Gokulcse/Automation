@@ -486,6 +486,7 @@ public class UtilityMethods extends BaseDriver {
 		} 
 	}
 	
+	
 	public static Properties getPropValues() throws IOException 
 	{
 		
@@ -507,6 +508,21 @@ public class UtilityMethods extends BaseDriver {
 		
 		Properties properties = new Properties();
 		String propertiesFile=System.getProperty("user.dir")+ "\\src\\tele2TestData.properties";
+		try 
+		{
+			properties.load(new FileInputStream(propertiesFile));
+        } 
+		catch (IOException e) 
+		{
+            System.out.println("Exception Occurred" + e.getMessage());
+        }
+		return properties;
+	}
+	public static Properties getPostPropValues() throws IOException 
+	{
+		
+		Properties properties = new Properties();
+		String propertiesFile=System.getProperty("user.dir")+ "\\src\\PostTestData.properties";
 		try 
 		{
 			properties.load(new FileInputStream(propertiesFile));

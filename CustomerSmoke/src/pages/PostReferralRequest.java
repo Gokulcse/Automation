@@ -26,6 +26,7 @@ public class PostReferralRequest extends BaseDriver
 	public static void Start() throws IOException 
 	{
 		allInputValue = UtilityMethods.getTele2PropValues();
+		PageFactory.initElements(driver, PostReferralRequestPO.class);
 		//	headerValidation();
 	
 		//System.out.println("header Section Completed");
@@ -43,7 +44,7 @@ public class PostReferralRequest extends BaseDriver
 	@Test
 	public static void validateOperatorLogo()
 	{
-		PageFactory.initElements(driver, PostReferralRequestPO.class);
+		
 		UtilityMethods.DisplayEnableValidator(PostReferralRequestPO.PostLogo, "NotEqual","Tele2 Operator Logo in IoT Starter Kit");	
 		UtilityMethods.Imagevalidation(PostReferralRequestPO.PostLogo,"src",allInputValue.getProperty("tele2Logo"),"Tele2 Operator Logo");		
 	} 
@@ -82,7 +83,9 @@ public class PostReferralRequest extends BaseDriver
 	@Test(priority=3)
 	public static void RequestReferralCodeTextBoxDisplayedAndEnabled()
 	{
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='fname']")), "NotEqual", "First Name Input Field");	
+		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='fname']")), "NotEqual", "First Name "
+				+ ""
+				+ "");	
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='lname']")), "NotEqual", "Last Name Input Field");	
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='company']")), "NotEqual", "Company Name Input Field");	
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='postion']")), "NotEqual", "Position/Role Input Field");	
@@ -214,18 +217,18 @@ public class PostReferralRequest extends BaseDriver
 	@Test(priority=12)
 	public static void RequestButtonValidation()
 	{
-		UtilityMethods.SendInputValues(driver.findElement(By.xpath("//input[@id='fname']")), "Testing2", "TextBox");
-		UtilityMethods.SendInputValues(driver.findElement(By.xpath("//input[@id='lname']")), "Test2", "TextBox");
-		UtilityMethods.SendInputValues(driver.findElement(By.xpath("//input[@id='company']")), "Testing Team 22", "TextBox");
-		UtilityMethods.SendInputValues(driver.findElement(By.xpath("//input[@id='postion']")), "ELP 2", "TextBox");
-		UtilityMethods.SendInputValues(driver.findElement(By.xpath("//input[@id='phoneNumber']")), "956874236952", "TextBox");
+		UtilityMethods.SendInputValues(driver.findElement(By.xpath("//input[@id='fname']")), "Test", "TextBox");
+		UtilityMethods.SendInputValues(driver.findElement(By.xpath("//input[@id='lname']")), "Data 1", "TextBox");
+		UtilityMethods.SendInputValues(driver.findElement(By.xpath("//input[@id='company']")), "CTELA TESTING", "TextBox");
+		UtilityMethods.SendInputValues(driver.findElement(By.xpath("//input[@id='postion']")), "ELP", "TextBox");
+		UtilityMethods.SendInputValues(driver.findElement(By.xpath("//input[@id='phoneNumber']")), "8220119412", "TextBox");
 		UtilityMethods.SendInputValues(driver.findElement(By.xpath("//input[@id='email']")), "automation1@yopmail.com", "TextBox");
-		UtilityMethods.SendInputValues(driver.findElement(By.xpath("//input[@id='device']")), "M2M", "TextBox");
+		UtilityMethods.SendInputValues(driver.findElement(By.xpath("//input[@id='device']")), "Test Entry", "TextBox");
 		UtilityMethods.SendInputValues(driver.findElement(By.xpath("//select[@id='industryId']")), "Telematics - passenger vehicles, aftermarket", "DropDown");
 	    UtilityMethods.SendInputValues(driver.findElement(By.xpath("//label[@for='mini0']")), "", "Radiobutton");
-	    UtilityMethods.SendInputValues(driver.findElement(By.xpath("//input[@id='deviceVolume']")), "562", "TextBox");
+	    UtilityMethods.SendInputValues(driver.findElement(By.xpath("//input[@id='deviceVolume']")), "001", "TextBox");
 	    UtilityMethods.SendInputValues(driver.findElement(By.xpath("//label[@for='with3mn02']")), "", "Radiobutton");
-	    UtilityMethods.SendInputValues(driver.findElement(By.xpath("//textarea[@id='targetAudience']")), "Test Data", "TextBox");	
+	    UtilityMethods.SendInputValues(driver.findElement(By.xpath("//textarea[@id='targetAudience']")), "Test Data value", "TextBox");	
 	    //UtilityMethods.PageRedirection(driver.findElement(By.xpath("//input[@value='Request']")), driver.findElement(By.xpath("//a[text()='Back to IoT Starter Kit Page']")));
 	   // UtilityMethods.PageNavigationValidation(driver.findElement(By.xpath("//input[@value='Request']")), driver.findElement(By.xpath("//a[text()='Back to IoT Starter Kit Page']")));
 	    driver.findElement(By.xpath("//input[@value='Request']")).click();	
