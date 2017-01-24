@@ -7,14 +7,8 @@
         <methods>
           <include name="BillingInfoRequiredFieldvalidatoin"/>
           <include name="ShippingInfoRequiredFieldvalidatoin"/>
-          <include name="ShippingInfoTextvalidation"/>
           <include name="Exit"/>
-          <include name="ShippingInfoMinimumInputValidation"/>
-          <include name="ShippingInfoSpaceNotAllowedvalidatoin"/>
-          <include name="sec2"/>
-          <include name="shippingInfoInputField"/>
           <include name="Start"/>
-          <include name="shippingInfoLabelText"/>
         </methods>
       </class> <!-- pages.PostShippingInfo -->
     </classes>

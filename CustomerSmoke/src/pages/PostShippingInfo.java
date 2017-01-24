@@ -32,7 +32,7 @@ public class PostShippingInfo extends BaseDriver
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//a[text()='Enter Referral Code']")).click();
 		
-		driver.findElement(By.xpath("//input[@id='referral']")).sendKeys("rKvEcRDP");
+		driver.findElement(By.xpath("//input[@id='referral']")).sendKeys("FgLSMxOO");
 		
 		driver.findElement(By.xpath("//a[text()='Order Kit']")).click();
 		
@@ -53,15 +53,23 @@ public class PostShippingInfo extends BaseDriver
 		    Thread.sleep(3000);
 		    for(String winHandle : driver.getWindowHandles())
 		    {
+		    	 Thread.sleep(3000);
 		    	 driver.switchTo().window(winHandle);
 				 driver.findElement(By.xpath("//label[@for='blcheck']")).click();	
-				 driver.findElement(By.xpath("//input[@value='Request']")).click();	
+				 driver.findElement(By.xpath("//input[@value='Continue']")).click();	
 				 Thread.sleep(3000);
 		    }
 	}	
 		
-	
-	
+	@Test(priority=3)
+	public static void sec3() throws InterruptedException
+	{
+	    Thread.sleep(3000);
+	    for(String winHandle : driver.getWindowHandles())
+	    {
+	    	 driver.switchTo().window(winHandle);
+	    }
+	}
 	
 	
 	public static void validateOperatorLogo()
@@ -70,7 +78,7 @@ public class PostShippingInfo extends BaseDriver
 		UtilityMethods.DisplayEnableValidator(operatorLogo, "NotEqual","Post Operator Logo in IoT Starter Kit");	
 		UtilityMethods.Imagevalidation(operatorLogo,"src",allInputValue.getProperty("tele2Logo"),"Post Operator Logo");		
 	} 
-	@Test(priority=3)
+	
 	public static void validateCompanyLogo()
 	{
 		WebElement companyLogo = driver.findElement(By.xpath("//img[@alt='Cisco Jasper']"));
@@ -92,7 +100,7 @@ public class PostShippingInfo extends BaseDriver
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//form/div[@class='clearfix frm-in-field']//label[text()='Apt/Suite']")), "NotEqual", "Apt/Suite Label Text");	
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//form/div[@class='clearfix frm-in-field']//label[text()='City']")), "NotEqual", "City Label Text");	
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//form/div[@class='clearfix frm-in-field']//label[text()='Province']")), "NotEqual", "Province Label Text");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//form/div[@class='clearfix frm-in-field']//label[text()='Postal Code']")), "NotEqual", "Postal Code Label Text");	
+		UtilityMethods.DisplayEnableValidator(driver. findElement(By.xpath("//form/div[@class='clearfix frm-in-field']//label[text()='Postal Code']")), "NotEqual", "Postal Code Label Text");	
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//form/div[@class='clearfix frm-in-field']//label[text()='Country']")), "NotEqual", "Country Label Text");	
 	}
 	@Test(priority=6)
@@ -100,11 +108,10 @@ public class PostShippingInfo extends BaseDriver
 	{
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@name='shipAddress.addressLine1']")), "NotEqual", "Address Input Field");	
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@name='shipAddress.addressLine2']")), "NotEqual", "Apt/Suite Input Field");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@name='shipAddress.cityTown']']")), "NotEqual", "City Input Field");	
+		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@name='shipAddress.cityTown']")), "NotEqual", "City Input Field");	
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@name='shipAddress.state']")), "NotEqual", "Province Input Field");	
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@name='shipAddress.zipPostalCode']")), "NotEqual", "Postal Code Input Field");	
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//select[@id='country']")), "NotEqual", "Country Drop Down");	
-
 	}
 	@Test(priority=7)
 	public static void ShippingInfoRequiredFieldvalidatoin()
@@ -113,8 +120,8 @@ public class PostShippingInfo extends BaseDriver
 		UtilityMethods.RequiredFieldValidation(driver.findElement(By.xpath("//input[@name='shipAddress.addressLine1']")), driver.findElement(By.xpath("//div[@id='address-error']")),"TextBox");
 		UtilityMethods.RequiredFieldValidation(driver.findElement(By.xpath("//input[@name='shipAddress.cityTown']")), driver.findElement(By.xpath("//div[@id='citydown-error']")),"TextBox");
 		UtilityMethods.RequiredFieldValidation(driver.findElement(By.xpath("//input[@name='shipAddress.state']")), driver.findElement(By.xpath("//div[@id='province-error']")),"TextBox");
-		UtilityMethods.RequiredFieldValidation(driver.findElement(By.xpath("//input[@name='shipAddress.zipPostalCode']")), driver.findElement(By.xpath("//div[@id=''pscode-error']")),"TextBox");
-		UtilityMethods.RequiredFieldValidation(driver.findElement(By.xpath("//select[@id='country']")), driver.findElement(By.xpath("//div[@id=''country-error']")),"DropDown");
+		UtilityMethods.RequiredFieldValidation(driver.findElement(By.xpath("//input[@name='shipAddress.zipPostalCode']")), driver.findElement(By.xpath("//div[@id='pscode-error']")),"TextBox");
+		UtilityMethods.RequiredFieldShippingDropDown(driver.findElement(By.xpath("//select[@id='country']")), driver.findElement(By.xpath("//div[@id='country-error']")));
 	}
 	@Test(priority=8)
 	public static void ShippingInfoSpaceNotAllowedvalidatoin()
@@ -123,7 +130,7 @@ public class PostShippingInfo extends BaseDriver
 		 UtilityMethods.SpaceNotAllowedvalidation(driver.findElement(By.xpath("//input[@name='shipAddress.addressLine1']")), driver.findElement(By.xpath("//div[@id='address-error']")));
 		 UtilityMethods.SpaceNotAllowedvalidation(driver.findElement(By.xpath("//input[@name='shipAddress.cityTown']")), driver.findElement(By.xpath("//div[@id='citydown-error']")));
 		 UtilityMethods.SpaceNotAllowedvalidation(driver.findElement(By.xpath("//input[@name='shipAddress.state']")), driver.findElement(By.xpath("//div[@id='province-error']")));
-		 UtilityMethods.SpaceNotAllowedvalidation(driver.findElement(By.xpath("//input[@name='shipAddress.zipPostalCode']")), driver.findElement(By.xpath("//div[@id=''pscode-error']")));
+		 UtilityMethods.SpaceNotAllowedvalidation(driver.findElement(By.xpath("//input[@name='shipAddress.zipPostalCode']")), driver.findElement(By.xpath("//div[@id='pscode-error']")));
 	}
 	
 	@Test(priority=9)
@@ -142,7 +149,7 @@ public class PostShippingInfo extends BaseDriver
 	{
 		driver.findElement(By.xpath("//input[@value='Continue']")).click();
 		UtilityMethods.MinimumInputValidation(driver.findElement(By.xpath("//input[@name='shipAddress.state']")), driver.findElement(By.xpath("//div[@id='province-error']")), 2, allInputValue.getProperty("InvalidMinInput"));
-        UtilityMethods.MinimumInputValidation(driver.findElement(By.xpath("//input[@name='shipAddress.zipPostalCode']")), driver.findElement(By.xpath("//div[@id=''pscode-error']")), 3, allInputValue.getProperty("InvalidMinInput"));    	 
+        UtilityMethods.MinimumInputValidation(driver.findElement(By.xpath("//input[@name='shipAddress.zipPostalCode']")), driver.findElement(By.xpath("//div[@id='pscode-error']")), 3, allInputValue.getProperty("InvalidMinInput"));    	 
 	}
 	@Test(priority=11)
 	public static void CheckBoxVaildation()
@@ -180,7 +187,8 @@ public class PostShippingInfo extends BaseDriver
 		UtilityMethods.RequiredFieldValidation(driver.findElement(By.xpath("//input[@name='billAddress.cityTown']")), driver.findElement(By.xpath("//div[@id='citytown-error']")),"TextBox");
 		UtilityMethods.RequiredFieldValidation(driver.findElement(By.xpath("//input[@name='billAddress.state']")), driver.findElement(By.xpath("//div[@id='provinces-error']")),"TextBox");
 		UtilityMethods.RequiredFieldValidation(driver.findElement(By.xpath("//input[@name='billAddress.zipPostalCode']")), driver.findElement(By.xpath("//div[@id='poscode-error']")),"TextBox");
-		UtilityMethods.RequiredFieldValidation(driver.findElement(By.xpath("//select[@id='bcountry']")), driver.findElement(By.xpath("//div[@id=''country-error']")),"DropDown");
+		UtilityMethods.RequiredFieldShippingDropDown(driver.findElement(By.xpath("//select[@id='bcountry']")), driver.findElement(By.xpath("//div[@id='country-error']")));
+		
 	}
 	@Test(priority=15)
 	public static void BillingInfoSpaceNotAllowedvalidatoin()

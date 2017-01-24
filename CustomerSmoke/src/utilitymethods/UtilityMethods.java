@@ -358,6 +358,17 @@ public class UtilityMethods extends BaseDriver {
 		}
 
 	}
+	public static void RequiredFieldShippingDropDown(WebElement textBoxObject,WebElement errorObject)
+	{
+		Select DropDown = new Select(textBoxObject);
+		DropDown.selectByVisibleText("Select");
+		String ErrorMessage1= errorObject.getText();
+		if(!ErrorMessage1.equals("This field is required."))
+		{
+			ScreenShot(driver, ""+textBoxObject.getAttribute("id")+" "+ErrorMessage1+"");
+			System.out.println("The Error Message displayed is "+ErrorMessage1+" not equals to 'This field is required.'");
+		}
+	}
 	
 	public static void ValidateDropDown(WebElement dropDownObject,String InputValue,WebElement errorObject)
 	{
