@@ -16,13 +16,13 @@ public class TestPage {
 		System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.get("http://tel7sd.devm2m.com/"); 
+		driver.get("http://spa5kd.devm2m.com/"); 
 		System.out.println(""+driver.getTitle());
 String temp =driver.findElement(By.tagName("body")).getText();
 		
 		try
 		{
-		PrintWriter writer = new PrintWriter("TextContentTelus.doc", "UTF-8");
+		PrintWriter writer = new PrintWriter("TextContentSpark.doc", "UTF-8");
 		writer.println(temp);
 		writer.close();
 		} 
@@ -47,8 +47,8 @@ String temp =driver.findElement(By.tagName("body")).getText();
 		UtilityMethods.PageNavigationValidation(Tele2ReferralRequestpagePO.M2MDotCom,Tele2ReferralRequestpagePO.selectKit,""); 
 		*/
 		
-		
-		
+		driver.switchTo().window(parentHandle);
+		*/
 	}
 
 }

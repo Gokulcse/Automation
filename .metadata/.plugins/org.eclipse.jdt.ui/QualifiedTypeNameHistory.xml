@@ -40,4 +40,6 @@
 <fullyQualifiedTypeName name="java.lang.Thread"/>
 <fullyQualifiedTypeName name="pageobjects.PostReferralRequestPO"/>
 <fullyQualifiedTypeName name="driver.BaseDriver"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
 </qualifiedTypeNameHistroy>

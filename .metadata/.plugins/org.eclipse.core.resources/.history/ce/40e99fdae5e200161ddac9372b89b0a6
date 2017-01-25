@@ -50,15 +50,8 @@ public class PostOrderConfirmPage extends BaseDriver
 	
 	public static void SectionTwoTextValidation()
 	{
-		UtilityMethods.StringValidation(driver.findElement(By.xpath("//p[contains(.,'IoT')]")).getText(), "IoT Starter Kit", "equalsignorecase");
-		UtilityMethods.StringValidation(driver.findElement(By.xpath("//li[contains(.,'Test')]")).getText(), "3 Test SIMs", "equalsignorecase");
-		UtilityMethods.StringValidation(driver.findElement(By.xpath("//li[contains(.,'30')]")).getText(), "30MB per SIM per month", "equalsignorecase");	
-		UtilityMethods.StringValidation(driver.findElement(By.xpath("//li[contains(.,'50')]")).getText(), "50 SMS per SIM per month", "equalsignorecase");
-		UtilityMethods.StringValidation(driver.findElement(By.xpath("//li[contains(.,'Post')]")).getText(), "Full access to Post Control Centre", "equalsignorecase");
-
-	}
-	public static void SectionThreeTextValidation()
-	{
+		
 		
 	}
+
 }

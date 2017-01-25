@@ -70,7 +70,6 @@ public class Tele2HomePagePO extends BaseDriver
 	@FindBy(how=How.XPATH,using="//section[@id='kit-inc']//a[text()='Request Referral Code']")
 	public static WebElement SectionTwoReferralRrequestButton;
 	
-	
 	@FindBy(how=How.XPATH,using="//img[@alt='sim']")
 	public static WebElement SimIcon;
 	
