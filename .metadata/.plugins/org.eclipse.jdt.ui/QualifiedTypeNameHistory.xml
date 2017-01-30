@@ -22,7 +22,6 @@
 <fullyQualifiedTypeName name="pageobjects.Tele2ReferralRequestpagePO"/>
 <fullyQualifiedTypeName name="junit.framework.Assert"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.remote.BrowserType"/>
-<fullyQualifiedTypeName name="utilitymethods.UtilityMethods"/>
 <fullyQualifiedTypeName name="pageobjects.Tele2HomePagePO"/>
 <fullyQualifiedTypeName name="pages.Tele2HomePage"/>
 <fullyQualifiedTypeName name="com.relevantcodes.extentreports.ExtentReports"/>
@@ -42,4 +41,5 @@
 <fullyQualifiedTypeName name="driver.BaseDriver"/>
 <fullyQualifiedTypeName name="java.io.PrintWriter"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="utilitymethods.UtilityMethods"/>
 </qualifiedTypeNameHistroy>

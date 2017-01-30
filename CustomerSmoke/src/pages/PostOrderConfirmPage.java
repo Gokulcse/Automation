@@ -59,6 +59,12 @@ public class PostOrderConfirmPage extends BaseDriver
 	}
 	public static void SectionThreeTextValidation()
 	{
+		UtilityMethods.StringValidation(driver.findElement(By.xpath("//div[@class='col-xs-8 clr-black']")).getText(), "Shipping", "equalsignorecase");
+		UtilityMethods.StringValidation(driver.findElement(By.xpath("//p[text()='Included']")).getText(), "Included", "equalsignorecase");
+		UtilityMethods.StringValidation(driver.findElement(By.xpath("//div[@class='ship_wrap clearfix']//h5")).getText(), "Shipping", "equalsignorecase");
+		UtilityMethods.StringValidation(driver.findElement(By.xpath("//div[@class='payment_wrap clearfix']//h5")).getText(), "Included", "equalsignorecase");
+
+		
 		
 	}
 }
