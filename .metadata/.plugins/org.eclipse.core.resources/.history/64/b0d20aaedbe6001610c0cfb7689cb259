@@ -55,24 +55,16 @@ public class PostOrderConfirmPage extends BaseDriver
 		UtilityMethods.StringValidation(driver.findElement(By.xpath("//li[contains(.,'30')]")).getText(), "30MB per SIM per month", "equalsignorecase");	
 		UtilityMethods.StringValidation(driver.findElement(By.xpath("//li[contains(.,'50')]")).getText(), "50 SMS per SIM per month", "equalsignorecase");
 		UtilityMethods.StringValidation(driver.findElement(By.xpath("//li[contains(.,'Post')]")).getText(), "Full access to Post Control Centre", "equalsignorecase");
+
 	}
-	
 	public static void SectionThreeTextValidation()
 	{
 		UtilityMethods.StringValidation(driver.findElement(By.xpath("//div[@class='col-xs-8 clr-black']")).getText(), "Shipping", "equalsignorecase");
 		UtilityMethods.StringValidation(driver.findElement(By.xpath("//p[text()='Included']")).getText(), "Included", "equalsignorecase");
 		UtilityMethods.StringValidation(driver.findElement(By.xpath("//div[@class='ship_wrap clearfix']//h5")).getText(), "Shipping", "equalsignorecase");
-		UtilityMethods.StringValidation(driver.findElement(By.xpath("//div[@class='payment_wrap clearfix']//h5")).getText(), "Billing", "equalsignorecase");		
-	}
-	
-	public static void shippingEditButton()
-	{
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//div[@class='ship_wrap clearfix']//a")), "NotEqual", "Edit button in shipping");
-	
-	}
-	
-	public static void billingEditButton()
-	{
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//div[@class='payment_wrap clearfix']//a")), "NotEqual", "Edit button in Billing");
+		UtilityMethods.StringValidation(driver.findElement(By.xpath("//div[@class='payment_wrap clearfix']//h5")).getText(), "Included", "equalsignorecase");
+
+		
+		
 	}
 }

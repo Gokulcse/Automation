@@ -127,5 +127,4 @@ public class PostReferralRequestPO extends BaseDriver
 	@FindBy(how=How.XPATH,using="//img[@alt='Cisco Jasper']")
 	public static WebElement RequestButton;	
 	
-	
 }
