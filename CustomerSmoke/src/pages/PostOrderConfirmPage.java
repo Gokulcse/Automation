@@ -65,6 +65,7 @@ public class PostOrderConfirmPage extends BaseDriver
 		UtilityMethods.StringValidation(driver.findElement(By.xpath("//div[@class='payment_wrap clearfix']//h5")).getText(), "Billing", "equalsignorecase");		
 	}
 	
+	
 	public static void shippingEditButton()
 	{
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//div[@class='ship_wrap clearfix']//a")), "NotEqual", "Edit button in shipping");
@@ -75,4 +76,5 @@ public class PostOrderConfirmPage extends BaseDriver
 	{
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//div[@class='payment_wrap clearfix']//a")), "NotEqual", "Edit button in Billing");
 	}
+	
 }

@@ -25,14 +25,9 @@ public class PostReferralRequest extends BaseDriver
 	@BeforeTest
 	public static void Start() throws IOException 
 	{
-		allInputValue = UtilityMethods.getTele2PropValues();
+		allInputValue = UtilityMethods.getPostPropValues();
 		PageFactory.initElements(driver, PostReferralRequestPO.class);
-		//	headerValidation();
-	
-		//System.out.println("header Section Completed");
-		//sectionOneValidation();
-		//UtilityMethods.PageNavigationValidation(driver.findElement(By.xpath("//img[@alt='Tele2']")), driver.findElement(By.xpath("//img[@title='What is IoT']")));
-		//System.out.println("Section one Completed");
+		System.out.println("1 c");
 	}
 	public static void headerValidation()
 	{
@@ -45,15 +40,15 @@ public class PostReferralRequest extends BaseDriver
 	public static void validateOperatorLogo()
 	{
 		
-		UtilityMethods.DisplayEnableValidator(PostReferralRequestPO.PostLogo, "NotEqual","Tele2 Operator Logo in IoT Starter Kit");	
-		UtilityMethods.Imagevalidation(PostReferralRequestPO.PostLogo,"src",allInputValue.getProperty("tele2Logo"),"Tele2 Operator Logo");		
+		UtilityMethods.DisplayEnableValidator(PostReferralRequestPO.PostLogo, "NotEqual","Post Operator Logo in IoT Starter Kit");	
+		UtilityMethods.Imagevalidation(PostReferralRequestPO.PostLogo,"src",allInputValue.getProperty("postLogo"),"Post Operator Logo");		
+		System.out.println("2 c");
 	} 
 	@Test(priority=1)
 	public static void validateCompanyLogo()
 	{
-		WebElement companyLogo = driver.findElement(By.xpath("//img[@alt='Cisco Jasper']"));
-		UtilityMethods.DisplayEnableValidator(companyLogo, "NotEqual","Cisco Jasper Company Logo in IoT Starter Kit");		
-		UtilityMethods.Imagevalidation(companyLogo,"src",allInputValue.getProperty("tele2CompanyLogo"),"Cisco Jasper Company Logo");		
+		UtilityMethods.DisplayEnableValidator(PostReferralRequestPO.CiscoLogo, "NotEqual","Cisco Jasper Company Logo in IoT Starter Kit");		
+		UtilityMethods.Imagevalidation(PostReferralRequestPO.CiscoLogo,"src",allInputValue.getProperty("CompanyLogo"),"Cisco Jasper Company Logo");		
 	}
 	 
 	public static void sectionOneValidation()
@@ -75,17 +70,15 @@ public class PostReferralRequest extends BaseDriver
 	@Test(priority=2)
 	public static void ReferralRequestTextValidation()
 	{
-		UtilityMethods.StringValidation(driver.findElement(By.xpath("//h2")).getText(), "Request a Referral Code", "equalsignorecase");
-		UtilityMethods.StringValidation(driver.findElement(By.xpath("//p")).getText(), allInputValue.getProperty("ReferralRequest.sectionOne"), "equalsignorecase");
-		UtilityMethods.StringValidation(driver.findElements(By.xpath("//h4")).get(0).getText(), "Contact Information", "equalsignorecase");
-		UtilityMethods.StringValidation(driver.findElements(By.xpath("//h4")).get(1).getText(), "Device Information", "equalsignorecase");
+		UtilityMethods.StringValidation(PostReferralRequestPO.SectionOneHead1.getText(), "Request a Referral Code", "equalsignorecase");
+		UtilityMethods.StringValidation(PostReferralRequestPO.ParagraphText.getText(), allInputValue.getProperty("ReferralRequest.sectionOne"), "equalsignorecase");
+		UtilityMethods.StringValidation(PostReferralRequestPO.ContactInfoText.getText(), "Contact Information", "equalsignorecase");
+		UtilityMethods.StringValidation(PostReferralRequestPO.DeviceInfoText.getText(), "Device Information", "equalsignorecase");
 	}
 	@Test(priority=3)
 	public static void RequestReferralCodeTextBoxDisplayedAndEnabled()
 	{
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='fname']")), "NotEqual", "First Name "
-				+ ""
-				+ "");	
+		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='fname']")), "NotEqual", "First Name Input Field");	
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='lname']")), "NotEqual", "Last Name Input Field");	
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='company']")), "NotEqual", "Company Name Input Field");	
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='postion']")), "NotEqual", "Position/Role Input Field");	
@@ -212,8 +205,8 @@ public class PostReferralRequest extends BaseDriver
 		UtilityMethods.EmailIdInvalidvalidation(driver.findElement(By.xpath("//input[@id='email']")), driver.findElement(By.xpath("//div[@id='email-error']")), allInputValue.getProperty("InvalidEmailID"));
 		UtilityMethods.NumericFieldValidation(driver.findElement(By.xpath("//input[@id='phoneNumber']")), driver.findElement(By.xpath("//div[@id='phoneNumber-error']")), allInputValue.getProperty("InvalidPhoneNumber"));
 		UtilityMethods.NumericFieldValidation(driver.findElement(By.xpath("//input[@id='deviceVolume']")), driver.findElement(By.xpath("//div[@id='deviceVolume-error']")), allInputValue.getProperty("InvadildNumbericField"));
-
 	}
+	
 	@Test(priority=12)
 	public static void RequestButtonValidation()
 	{
@@ -237,6 +230,7 @@ public class PostReferralRequest extends BaseDriver
 	    try{ Thread.sleep(2500);}catch (InterruptedException e) {e.printStackTrace();}
 	//	UtilityMethods.waitForElement(driver.findElement(By.xpath("//img[@title='What is IoT']")));	
 		boolean Result = true;
+		
 		Result= driver.findElement(By.xpath("//a[text()='Back to IoT Starter Kit Page']")).isDisplayed();
 		System.out.println("The Result is "+Result);
 		if(Result==false)
@@ -245,7 +239,8 @@ public class PostReferralRequest extends BaseDriver
 		}
 	*/
 	}
-	@Test(priority=13)
+	
+	//@Test(priority=13)
 	public static void AdminApproval() throws InterruptedException
 	{
 		System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");

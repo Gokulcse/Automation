@@ -45,7 +45,6 @@ public class Tele2HomePagePO extends BaseDriver
 	@FindBy(how=How.XPATH,using="//form[@id='hmeRefTrack']//a")
 	public static WebElement SectionOneTrackOrderFindElement;
 	
-	
 	@FindBy(how=How.ID,using="emailId")
 	public static WebElement TrackOrderEmailID;
 	

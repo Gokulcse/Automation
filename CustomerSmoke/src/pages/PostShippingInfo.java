@@ -178,6 +178,7 @@ public class PostShippingInfo extends BaseDriver
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@name='billAddress.zipPostalCode']")), "NotEqual", "Postal Code Input Field");	
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//select[@id='bcountry']")), "NotEqual", "Country Drop Down");	
 
+		
 	}
 	@Test(priority=14)
 	public static void BillingInfoRequiredFieldvalidatoin()
@@ -188,7 +189,6 @@ public class PostShippingInfo extends BaseDriver
 		UtilityMethods.RequiredFieldValidation(driver.findElement(By.xpath("//input[@name='billAddress.state']")), driver.findElement(By.xpath("//div[@id='provinces-error']")),"TextBox");
 		UtilityMethods.RequiredFieldValidation(driver.findElement(By.xpath("//input[@name='billAddress.zipPostalCode']")), driver.findElement(By.xpath("//div[@id='poscode-error']")),"TextBox");
 		UtilityMethods.RequiredFieldShippingDropDown(driver.findElement(By.xpath("//select[@id='bcountry']")), driver.findElement(By.xpath("//div[@id='country-error']")));
-		
 	}
 	@Test(priority=15)
 	public static void BillingInfoSpaceNotAllowedvalidatoin()

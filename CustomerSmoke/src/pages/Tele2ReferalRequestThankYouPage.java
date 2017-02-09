@@ -1,3 +1,4 @@
+
 package pages;
 
 import java.io.IOException;
@@ -31,7 +32,7 @@ public class Tele2ReferalRequestThankYouPage extends BaseDriver {
 		validateOperatorLogo();
 		validateCompanyLogo();
 		//UtilityMethods.PageNavigationValidation(driver.findElement(By.xpath("//img[@alt='Tele2']")), driver.findElement(By.xpath("//img[@title='What is IoT']")));
-				
+				 
 	}
 	
 	public static void validateOperatorLogo()

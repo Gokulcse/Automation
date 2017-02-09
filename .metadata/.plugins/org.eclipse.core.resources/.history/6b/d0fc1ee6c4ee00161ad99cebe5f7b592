@@ -1,0 +1,33 @@
+package pages;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import utilitymethods.UtilityMethods;
+import driver.BaseDriver;
+
+public class PostHomePage extends BaseDriver
+{
+	public static FirefoxDriver driver = launchApp();
+	 static Properties allInputValue;
+	public static void start() throws IOException
+	{
+		allInputValue = UtilityMethods.getPostPropValues();
+	}
+	public static void validateOperatorLogo()
+	{
+		WebElement operatorLogo = driver.findElement(By.xpath("//img[@alt='Post']"));
+		UtilityMethods.DisplayEnableValidator(operatorLogo, "NotEqual","Post Operator Logo in IoT Starter Kit");	
+		UtilityMethods.Imagevalidation(operatorLogo,"src",allInputValue.getProperty("bellLogo"),"Post Operator Logo");	
+	} 
+
+	public static void validateCompanyLogo()
+	{
+		WebElement companyLogo = driver.findElement(By.xpath("//img[@alt='Cisco Jasper']"));
+		UtilityMethods.DisplayEnableValidator(companyLogo, "NotEqual","Cisco Jasper Company Logo in IoT Starter Kit");		
+		UtilityMethods.Imagevalidation(companyLogo,"src",allInputValue.getProperty("companyLogo"),"Cisco Jasper Company Logo");		
+	}
+}
