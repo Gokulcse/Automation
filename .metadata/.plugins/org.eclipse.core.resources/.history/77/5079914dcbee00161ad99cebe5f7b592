@@ -25,6 +25,7 @@ public class PostHomePage extends BaseDriver
 	{		
 		UtilityMethods.DisplayEnableValidator(PostHomePagePO.PostLogo, "NotEqual","Tele2 Operator Logo in IoT Starter Kit");	
 		UtilityMethods.Imagevalidation(PostHomePagePO.PostLogo,"src",allInputValue.getProperty("tele2Logo"),"Tele2 Operator Logo");
+
 	} 
 
 	public static void validateCompanyLogo()
@@ -40,6 +41,7 @@ public class PostHomePage extends BaseDriver
 		UtilityMethods.StringValidation(PostHomePagePO.TextBannerh3.getText(), allInputValue.getProperty("HomePage.Bannerh3"), "equalsignorecase");
 		UtilityMethods.StringValidation(PostHomePagePO.TextBannerp1.getText().replace("\n", " "),allInputValue.getProperty("HomePage.Bannerp1"), "equalsignorecase");
 		UtilityMethods.StringValidation(PostHomePagePO.TextBannerp2.getText().replace("\n", " "), allInputValue.getProperty("HomePage.Bannerp2"), "equalsignorecase");
+	
 	}
 	
 	
@@ -81,24 +83,28 @@ public class PostHomePage extends BaseDriver
 		UtilityMethods.StringValidation(PostHomePagePO.TextSimp2.getText(), "per month for 3 months", "equalsignorecase");
 		UtilityMethods.StringValidation(PostHomePagePO.TextSimp3.getText(), "messages per SIM per month", "equalsignorecase");
 	}
-		
+	
+	
 	public static void sectionTwoWhatThekitIncludesToolsvalidation()
 	{
 		UtilityMethods.whatTheKitIncludesImageAndTextValidation(PostHomePagePO.ToolIcon, allInputValue.getProperty("tele2ToolIcon"), PostHomePagePO.ToolText, "Real-Time Testing Tool");
 		UtilityMethods.whatThekitIncludesTextValidation(PostHomePagePO.ToolListText,"Test-as-you-build for fast, quality development","Visibility into device and network behavior","Diagnostics and troubleshooting help");		
 	}
-		
+	
+	
 	public static void sectionTwoWhatThekitIncludesCentervalidation()
 	{	
 		UtilityMethods.whatTheKitIncludesImageAndTextValidation(PostHomePagePO.CenterIcon, allInputValue.getProperty("tele2CenterIcon"), PostHomePagePO.CenterText,"Full Access to Tele2 M2M Control Center");
 		UtilityMethods.whatThekitIncludesTextValidation(PostHomePagePO.CenterListText, "Complete suite of developer tools", "User logins for everyone on your team","Same environment for testing and deployment");		
 	}
+
 	
 	public static void sectionTwoWhatThekitIncludesSuppportvalidation()
 	{
 		UtilityMethods.whatTheKitIncludesImageAndTextValidation(PostHomePagePO.SupportIcon, allInputValue.getProperty("tele2SupportIcon"), PostHomePagePO.SupportText,"Exceptional Developer Support");
 		UtilityMethods.whatThekitIncludesTextValidation(PostHomePagePO.SupportListText, "Developer guidelines", "Full access to APIs","M2M.com forum");
 	}
+
 	
 	public static void sectionThreeHowItWorksValidation()
 	{
@@ -107,7 +113,8 @@ public class PostHomePage extends BaseDriver
 		UtilityMethods.howItWorksValidation(PostHomePagePO.HowItWorksActivate, "2", "Activate", allInputValue.getProperty("HomePage.HowItWorksText2"));
 		UtilityMethods.howItWorksValidation(PostHomePagePO.HowItWorksExplore, "3", "Explore", allInputValue.getProperty("HomePage.HowItWorksText3"));
 		UtilityMethods.howItWorksValidation(PostHomePagePO.HowItWorksMonetize, "4", "Launch", allInputValue.getProperty("HomePage.HowItWorksText4"));	
-	}	
+	}
+	
 	
 	public static void sectionFourWhatIsIotValidation()
 	{
@@ -117,6 +124,7 @@ public class PostHomePage extends BaseDriver
 		UtilityMethods.StringValidation(PostHomePagePO.WhatIsIotParaText2.getText(), allInputValue.getProperty("HomePage.WhatIsIoTP2"), "equalsignorecase");	
 	}
 
+	
 	public static void sectionOneLinkvalidation()
 	{
 		UtilityMethods.sectionOneLinkvalidation(driver.findElements(By.xpath("//ul[@class='list-inline bl-whw']//li")).get(0));
@@ -124,19 +132,21 @@ public class PostHomePage extends BaseDriver
 		UtilityMethods.sectionOneLinkvalidation(driver.findElements(By.xpath("//ul[@class='list-inline bl-whw']//li")).get(2));
 	}
 	
+	
 	public static void SectionThreeLearnMore() throws InterruptedException
 	{
 		UtilityMethods.DisplayEnableValidator(PostHomePagePO.HowItWorksLearnMore, "NotEqual", "M2MDotCom Link Button");
 		UtilityMethods.PageNavigationValidation(PostHomePagePO.HowItWorksLearnMore,PostHomePagePO.M2MDotComFindElement,"Tel"); 	
 	}
+	
 
 	public static void TrackOrderValidPageRedirection() throws InterruptedException
+
 	{
 	PostHomePagePO.SectionOneTrackOrderButton.click();
 	PostHomePagePO.TrackOrderEmailID.sendKeys(allInputValue.getProperty("TrackOrder.validTrackOrderEmailID"));
 	UtilityMethods.PageNavigationValidation(PostHomePagePO.SectionOneTrackOrderPRButton, PostHomePagePO.SectionOneTrackOrderFindElement, "Tele2");
 	}
-	
 	public static void TrackOrderInValidPageRedirection() throws InterruptedException
 	{
 		PostHomePagePO.SectionOneTrackOrderButton.click();
@@ -162,6 +172,7 @@ public class PostHomePage extends BaseDriver
 	UtilityMethods.DisplayEnableValidator(PostHomePagePO.M2mDotCom, "NotEqual", "M2MDotCom Link Button");
 	UtilityMethods.PageNavigationValidation(PostHomePagePO.M2mDotCom,PostHomePagePO.M2MDotComFindElement,"M2M Developer Kits from the World’s Leading Mobile Operators"); 
 	}
+
 	
 	public static void sectionTwoM2MdotCo()
 	{
@@ -248,11 +259,17 @@ public static void sectionFourJasperdotCo() throws InterruptedException
 		driver.navigate().back();
 	}
 	
+
+
 	@AfterTest
 	public static void Exit()
 	{
 		extent.endTest(testcase);
 		extent.flush();
 		driver.close();
-	} 	
+	} 
+	
+	
+		
+	
 }

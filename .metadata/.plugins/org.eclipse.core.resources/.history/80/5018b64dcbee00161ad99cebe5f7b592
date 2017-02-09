@@ -121,10 +121,10 @@ public class PostReferralRequestPO extends BaseDriver
 	@FindBy(how=How.XPATH,using="//input[@id='with3mn03']")
 	public static WebElement Morethan12MonthInput;
 	
-	@FindBy(how=How.XPATH,using="//a[@value='Cancel']")
+	@FindBy(how=How.XPATH,using="//img[@alt='Post']")
 	public static WebElement CancelButton;
 	
-	@FindBy(how=How.XPATH,using="//input[@value='Request']")
+	@FindBy(how=How.XPATH,using="//img[@alt='Cisco Jasper']")
 	public static WebElement RequestButton;	
 	
 	

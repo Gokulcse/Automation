@@ -27,7 +27,7 @@ public class PostReferralRequest extends BaseDriver
 	{
 		allInputValue = UtilityMethods.getPostPropValues();
 		PageFactory.initElements(driver, PostReferralRequestPO.class);
-		
+		System.out.println("1 c");
 	}
 	public static void headerValidation()
 	{
@@ -42,7 +42,7 @@ public class PostReferralRequest extends BaseDriver
 		
 		UtilityMethods.DisplayEnableValidator(PostReferralRequestPO.PostLogo, "NotEqual","Post Operator Logo in IoT Starter Kit");	
 		UtilityMethods.Imagevalidation(PostReferralRequestPO.PostLogo,"src",allInputValue.getProperty("postLogo"),"Post Operator Logo");		
-		
+		System.out.println("2 c");
 	} 
 	@Test(priority=1)
 	public static void validateCompanyLogo()
