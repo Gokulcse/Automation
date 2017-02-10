@@ -124,9 +124,6 @@ public class PostReferralRequestPO extends BaseDriver
 	@FindBy(how=How.XPATH,using="//textarea[@id='targetAudience']")
 	public static WebElement Description;
 	
-	@FindBy(how=How.XPATH,using="	//label[text()='Description']")
-	public static WebElement DescriptionLabel;
-	
 	@FindBy(how=How.XPATH,using="//a[@value='Cancel']")
 	public static WebElement CancelButton;
 	

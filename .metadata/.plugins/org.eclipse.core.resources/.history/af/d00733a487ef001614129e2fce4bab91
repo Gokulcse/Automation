@@ -1,11 +1,11 @@
 postLogo=http://tele2.devm2m.com/img/tele2/tele2logo.png
 CompanyLogo=http://tele2.devm2m.com/img/bell/jasper-logo.png
 
+
 postSimIcon=http://tele2.devm2m.com/img/tele2/icons/tele-sim.png
 postToolIcon=http://tele2.devm2m.com/img/tele2/icons/tele-tools.png
 postCenterIcon=http://tele2.devm2m.com/img/tele2/icons/tele-access.png
 postSupportIcon=http://tele2.devm2m.com/img/tele2/icons/tele-support.png
-WhatIsIot=
 
 HomePage.Bannerh1=Start your IoT journey with Post Telecom
 HomePage.Bannerh3=IoT Starter Kit

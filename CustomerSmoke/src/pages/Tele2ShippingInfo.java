@@ -10,7 +10,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import utilitymethods.UtilityMethods;
 import driver.BaseDriver;
 
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 public class Tele2ShippingInfo extends BaseDriver

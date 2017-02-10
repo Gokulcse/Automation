@@ -38,6 +38,7 @@ public class Tele2ControlCenter extends BaseDriver {
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='create_cc']")), "NotEqual", "Control Center Create link button");
 		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//button")), "NotEqual", "Control Center Close icon");
 	}
+	
 	public static void CCTextValidation()
 	{
 		UtilityMethods.StringValidation(driver.findElement(By.xpath("//label[@for='uname']")).getText(), "Username *", "equalsignorecase");
@@ -52,6 +53,7 @@ public class Tele2ControlCenter extends BaseDriver {
 		UtilityMethods.PlaceholderValidation(driver.findElement(By.xpath("//input[@id='cpsswrd']")), "", "Confirm password Input Field");
 
 	}
+	
 	public static void CCErrorValidation()
 	{
 		driver.findElement(By.xpath("//input[@id='create_cc']")).click();
@@ -63,8 +65,8 @@ public class Tele2ControlCenter extends BaseDriver {
 		UtilityMethods.ControlCenterPasswordValidation(driver.findElement(By.xpath("//input[@id='psswrd']")),driver.findElement(By.xpath("//div[@id='psswrd-error']")),"a,123,   ,acd123,Abc123,ABCDabcd,!@#$$123@$");
 		UtilityMethods.CCPasswordAndConfirmPasswordValidation(driver.findElement(By.xpath("//input[@id='psswrd']")), driver.findElement(By.xpath("//input[@id='cpsswrd']")), driver.findElement(By.xpath("//div[@id='psswrd-error']")), driver.findElement(By.xpath("//div[@id='cpsswrd-error']")), "Test123Adbc,TEst123!@#$ABC");
 		UtilityMethods.CCConfirmPasswordValidation(driver.findElement(By.xpath("//input[@id='psswrd']")), driver.findElement(By.xpath("//input[@id='cpsswrd']")), driver.findElement(By.xpath("//div[@id='cpsswrd-error']")), "Test123Adbc,TEst123!@#$ABC");	
-	
 	}
+	
 	
 
 }

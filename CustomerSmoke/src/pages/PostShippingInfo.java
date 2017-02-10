@@ -12,7 +12,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import pageobjects.PostReferralRequestPO;
-import pageobjects.Tele2HomePagePO;
+
 import driver.BaseDriver;
 import utilitymethods.UtilityMethods;
 

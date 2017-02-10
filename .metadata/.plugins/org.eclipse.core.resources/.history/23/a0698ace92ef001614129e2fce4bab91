@@ -19,20 +19,21 @@ public class PostReferralRequest extends BaseDriver
 	public static FirefoxDriver driver = launchApp();
 	static Properties allInputValue;
 
+	
 	@BeforeTest
 	public static void Start() throws IOException 
 	{
 		allInputValue = UtilityMethods.getPostPropValues();
-		PageFactory.initElements(driver, PostReferralRequestPO.class);		
+		PageFactory.initElements(driver, PostReferralRequestPO.class);
+		
 	}
-	
 	public static void headerValidation()
 	{
 		validateOperatorLogo();
 		validateCompanyLogo();
 		//UtilityMethods.PageNavigationValidation(driver.findElement(By.xpath("//img[@alt='Tele2']")), driver.findElement(By.xpath("//img[@title='What is IoT']")));
+				
 	}
-	
 	@Test
 	public static void validateOperatorLogo()
 	{
@@ -104,17 +105,17 @@ public class PostReferralRequest extends BaseDriver
 		UtilityMethods.DisplayEnableValidator(PostReferralRequestPO.PhoneNumberLabel, "NotEqual", "Phone Number Label Text");	
 		UtilityMethods.DisplayEnableValidator(PostReferralRequestPO.EmailLabel, "NotEqual", "E-mail Address Label Text");	
 		UtilityMethods.DisplayEnableValidator(PostReferralRequestPO.ModuleLabel, "NotEqual", "Module Name Label Text");	
-		UtilityMethods.DisplayEnableValidator(PostReferralRequestPO.BusinessLabel, "NotEqual", "Business TypeLabel Text");	
-		UtilityMethods.DisplayEnableValidator(PostReferralRequestPO.SimLabel, "NotEqual", "Sim Type Label Text");
-		UtilityMethods.DisplayEnableValidator(PostReferralRequestPO.Sim2FFLabel, "NotEqual", "2FF Mini Label Text");	
-		UtilityMethods.DisplayEnableValidator(PostReferralRequestPO.Sim3FFlabel, "NotEqual", "3FF Micro Label Text");	
-		UtilityMethods.DisplayEnableValidator(PostReferralRequestPO.VolumetoDeployLabel, "NotEqual", "Volume to deploy Label Text");	
-		UtilityMethods.DisplayEnableValidator(PostReferralRequestPO.LastNameLabel, "NotEqual", "Launch Timeframe Label Text");
-		UtilityMethods.DisplayEnableValidator(PostReferralRequestPO.IN3MonthLabel, "NotEqual", "Within 3 months Label Text");	
-		UtilityMethods.DisplayEnableValidator(PostReferralRequestPO.IN6Monthlabel, "NotEqual", "3-6 months Label Text");	
-		UtilityMethods.DisplayEnableValidator(PostReferralRequestPO.IN12MonthLabel, "NotEqual", "6-12 months Label Text");	
-		UtilityMethods.DisplayEnableValidator(PostReferralRequestPO.Morethan12Monthlabel, "NotEqual", "More than 12 months/unknown Label Text");
-		UtilityMethods.DisplayEnableValidator(PostReferralRequestPO.DescriptionLabel, "NotEqual", "Description Label Text");			
+		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='Business Type']")), "NotEqual", "Business TypeLabel Text");	
+		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='SIM Type']")), "NotEqual", "Sim Type Label Text");
+		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='2FF Mini']")), "NotEqual", "2FF Mini Label Text");	
+		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='3FF Micro']")), "NotEqual", "3FF Micro Label Text");	
+		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='Volume to Deploy']")), "NotEqual", "Volume to deploy Label Text");	
+		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='Launch Timeframe']")), "NotEqual", "Launch Timeframe Label Text");
+		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='Within 3 months']")), "NotEqual", "Within 3 months Label Text");	
+		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='3-6 months']")), "NotEqual", "3-6 months Label Text");	
+		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='6-12 months']")), "NotEqual", "6-12 months Label Text");	
+		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='More than 12 months/unknown']")), "NotEqual", "More than 12 months/unknown Label Text");
+		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='Description']")), "NotEqual", "Description Label Text");			
 	}
 	@Test(priority=5)
 	public static void RequestReferralCodePlaceholderValidation()
@@ -136,16 +137,16 @@ public class PostReferralRequest extends BaseDriver
 		driver.findElement(By.xpath("//input[@value='Request']")).click();
 		UtilityMethods.ValidInputValidation(PostReferralRequestPO.FirstNameInput, allInputValue.getProperty("ValidFirstName"), PostReferralRequestPO.FirstNameError);
 		UtilityMethods.ValidInputValidation(PostReferralRequestPO.LastNameInput, allInputValue.getProperty("ValidLastName"),PostReferralRequestPO.LastNameError );
-		UtilityMethods.ValidInputValidation(PostReferralRequestPO.CompanyNameInput, allInputValue.getProperty("ValidCompanyName"), PostReferralRequestPO.CompanyError);
-		UtilityMethods.ValidInputValidation(PostReferralRequestPO.PositionRoleInput, allInputValue.getProperty("ValidPosition"), PostReferralRequestPO.PositionError);
-		UtilityMethods.ValidInputValidation(PostReferralRequestPO.PhoneNumberInput,allInputValue.getProperty("ValidPhoneNumber"),PostReferralRequestPO.PhoneNumberError);
-		UtilityMethods.ValidInputValidation(PostReferralRequestPO.EmailInput,allInputValue.getProperty("ValidEmailId") , PostReferralRequestPO.EmailError);
-		UtilityMethods.ValidInputValidation(PostReferralRequestPO.ModuleInput, allInputValue.getProperty("ValidModule"), PostReferralRequestPO.ModuleError);	
-		UtilityMethods.ValidateDropDown(PostReferralRequestPO.BusinessInput, "Consumer electronics - personal navigation", PostReferralRequestPO.BusinessTypeError);
+		UtilityMethods.ValidInputValidation(PostReferralRequestPO.CompanyNameInput, allInputValue.getProperty("ValidCompanyName"), driver.findElement(By.xpath("//div[@id='company-error']")));
+		UtilityMethods.ValidInputValidation(PostReferralRequestPO.PositionRoleInput, allInputValue.getProperty("ValidPosition"), driver.findElement(By.xpath("//div[@id='postion-error']")));
+		UtilityMethods.ValidInputValidation(PostReferralRequestPO.PhoneNumberInput,allInputValue.getProperty("ValidPhoneNumber"),driver.findElement(By.xpath("//div[@id='phoneNumber-error']")));
+		UtilityMethods.ValidInputValidation(PostReferralRequestPO.EmailInput,allInputValue.getProperty("ValidEmailId") , driver.findElement(By.xpath("//div[@id='email-error']")));
+		UtilityMethods.ValidInputValidation(PostReferralRequestPO.ModuleInput, allInputValue.getProperty("ValidModule"), driver.findElement(By.xpath("//div[@id='device-error']")));	
+		UtilityMethods.ValidateDropDown(driver.findElement(By.xpath("//select[@id='industryId']")), "Consumer electronics - personal navigation", driver.findElement(By.xpath("//div[@id='industryId-error']")));
 		//UtilityMethods.ValidateSimTypeRadioButton(2,driver.findElement(By.xpath("//div[@id='simTypeId-error']")));	
 		//driver.findElement(By.xpath("//label[text()='2FF/Ruggedized']")).click();
-		UtilityMethods.ValidInputValidation(PostReferralRequestPO.VolumetoDeployInput, allInputValue.getProperty("ValidVolumeToDeploy"),PostReferralRequestPO.VolumetoDeployError);
-		UtilityMethods.ValidInputValidation(PostReferralRequestPO.Description, allInputValue.getProperty("ValidDescription"), PostReferralRequestPO.DescriptionError);
+		UtilityMethods.ValidInputValidation(PostReferralRequestPO.VolumetoDeployInput, allInputValue.getProperty("ValidVolumeToDeploy"), driver.findElement(By.xpath("//div[@id='deviceVolume-error']")));
+		UtilityMethods.ValidInputValidation(PostReferralRequestPO.Description, allInputValue.getProperty("ValidDescription"), driver.findElement(By.xpath("//div[@id='targetAudience-error']")));
 	
 	}
 	@Test(priority=7)
@@ -154,16 +155,16 @@ public class PostReferralRequest extends BaseDriver
 		driver.findElement(By.xpath("//input[@value='Request']")).click();
 		UtilityMethods.RequiredFieldValidation(PostReferralRequestPO.FirstNameInput, PostReferralRequestPO.FirstNameError,"TextBox");
 		UtilityMethods.RequiredFieldValidation(PostReferralRequestPO.LastNameInput, PostReferralRequestPO.LastNameError,"TextBox");
-		UtilityMethods.RequiredFieldValidation(PostReferralRequestPO.CompanyNameInput, PostReferralRequestPO.CompanyError,"TextBox");
-		UtilityMethods.RequiredFieldValidation(PostReferralRequestPO.PositionRoleInput, PostReferralRequestPO.PositionError,"TextBox");
-		UtilityMethods.RequiredFieldValidation(PostReferralRequestPO.PhoneNumberInput, PostReferralRequestPO.PhoneNumberError,"TextBox");
-		UtilityMethods.RequiredFieldValidation(PostReferralRequestPO.EmailInput, PostReferralRequestPO.EmailError,"TextBox");
-		UtilityMethods.RequiredFieldValidation(PostReferralRequestPO.ModuleInput, PostReferralRequestPO.ModuleError,"TextBox");
-		UtilityMethods.RequiredFieldValidation(PostReferralRequestPO.BusinessInput, PostReferralRequestPO.BusinessTypeError,"DropDown");
-		UtilityMethods.RequiredFieldValidation(PostReferralRequestPO.SimLabel, PostReferralRequestPO.SimTypeError,"RadioButton");
-		UtilityMethods.RequiredFieldValidation(PostReferralRequestPO.VolumetoDeployInput, PostReferralRequestPO.VolumetoDeployError,"TextBox");
-		UtilityMethods.RequiredFieldValidation(PostReferralRequestPO.LaunchTimeframeLabel, PostReferralRequestPO.LastNameError,"RadioButton");
-		UtilityMethods.RequiredFieldValidation(PostReferralRequestPO.Description, PostReferralRequestPO.DescriptionError,"TextBox");		
+		UtilityMethods.RequiredFieldValidation(PostReferralRequestPO.CompanyNameInput, driver.findElement(By.xpath("//div[@id='company-error']")),"TextBox");
+		UtilityMethods.RequiredFieldValidation(PostReferralRequestPO.PositionRoleInput, driver.findElement(By.xpath("//div[@id='postion-error']")),"TextBox");
+		UtilityMethods.RequiredFieldValidation(PostReferralRequestPO.PhoneNumberInput, driver.findElement(By.xpath("//div[@id='phoneNumber-error']")),"TextBox");
+		UtilityMethods.RequiredFieldValidation(PostReferralRequestPO.EmailInput, driver.findElement(By.xpath("//div[@id='email-error']")),"TextBox");
+		UtilityMethods.RequiredFieldValidation(PostReferralRequestPO.ModuleInput, driver.findElement(By.xpath("//div[@id='device-error']")),"TextBox");
+		UtilityMethods.RequiredFieldValidation(PostReferralRequestPO.BusinessInput, driver.findElement(By.xpath("//div[@id='industryId-error']")),"DropDown");
+		UtilityMethods.RequiredFieldValidation(PostReferralRequestPO.SimLabel, driver.findElement(By.xpath("//div[@id='simTypeId-error']")),"RadioButton");
+		UtilityMethods.RequiredFieldValidation(PostReferralRequestPO.VolumetoDeployInput, driver.findElement(By.xpath("//div[@id='deviceVolume-error']")),"TextBox");
+		UtilityMethods.RequiredFieldValidation(PostReferralRequestPO.LaunchTimeframeLabel, driver.findElement(By.xpath("//div[@id='launchTimeFrameId-error']")),"RadioButton");
+		UtilityMethods.RequiredFieldValidation(PostReferralRequestPO.Description, driver.findElement(By.xpath("//div[@id='targetAudience-error']")),"TextBox");		
 	}
 	@Test(priority=8)
 	public static void ReferralRequestSpaceNotAllowedValidation()
@@ -171,8 +172,8 @@ public class PostReferralRequest extends BaseDriver
 		 driver.findElement(By.xpath("//input[@value='Request']")).click();
 		 UtilityMethods.SpaceNotAllowedvalidation(PostReferralRequestPO.FirstNameInput, PostReferralRequestPO.FirstNameError);
 		 UtilityMethods.SpaceNotAllowedvalidation(PostReferralRequestPO.LastNameInput, PostReferralRequestPO.LastNameError);
-		 UtilityMethods.SpaceNotAllowedvalidation(PostReferralRequestPO.CompanyNameInput, PostReferralRequestPO.CompanyError);
-		 UtilityMethods.SpaceNotAllowedvalidation(PostReferralRequestPO.PositionRoleInput, PostReferralRequestPO.PositionError);
+		 UtilityMethods.SpaceNotAllowedvalidation(PostReferralRequestPO.CompanyNameInput, driver.findElement(By.xpath("//div[@id='company-error']")));
+		 UtilityMethods.SpaceNotAllowedvalidation(PostReferralRequestPO.PositionRoleInput, driver.findElement(By.xpath("//div[@id='postion-error']")));
 		
 	 }
 	@Test(priority=9)
@@ -181,27 +182,27 @@ public class PostReferralRequest extends BaseDriver
 		driver.findElement(By.xpath("//input[@value='Request']")).click();
         UtilityMethods.MaximumInputValidation(PostReferralRequestPO.FirstNameInput, PostReferralRequestPO.FirstNameError, 49, allInputValue.getProperty("InvalidInput"));
         UtilityMethods.MaximumInputValidation(PostReferralRequestPO.LastNameInput, PostReferralRequestPO.LastNameError, 49, allInputValue.getProperty("InvalidInput"));
-        UtilityMethods.MaximumInputValidation(PostReferralRequestPO.CompanyNameInput, PostReferralRequestPO.CompanyError, 25, allInputValue.getProperty("InvalidCompanyName"));
-        UtilityMethods.MaximumInputValidation(PostReferralRequestPO.PositionRoleInput, PostReferralRequestPO.PositionError, 25, allInputValue.getProperty("InvalidCompanyName"));
-        UtilityMethods.MaximumInputValidation(PostReferralRequestPO.PhoneNumberInput, PostReferralRequestPO.PhoneNumberError, 10, allInputValue.getProperty("Invalidphonenumber"));
-        UtilityMethods.MaximumInputValidation(PostReferralRequestPO.Description, PostReferralRequestPO.DescriptionError, 255, allInputValue.getProperty("InvalidDescription"));     
+        UtilityMethods.MaximumInputValidation(PostReferralRequestPO.CompanyNameInput, driver.findElement(By.xpath("//div[@id='company-error']")), 25, allInputValue.getProperty("InvalidCompanyName"));
+        UtilityMethods.MaximumInputValidation(PostReferralRequestPO.PositionRoleInput, driver.findElement(By.xpath("//div[@id='postion-error']")), 25, allInputValue.getProperty("InvalidCompanyName"));
+        UtilityMethods.MaximumInputValidation(PostReferralRequestPO.PhoneNumberInput, driver.findElement(By.xpath("//div[@id='phoneNumber-error']")), 10, allInputValue.getProperty("Invalidphonenumber"));
+        UtilityMethods.MaximumInputValidation(PostReferralRequestPO.Description, driver.findElement(By.xpath("//div[@id='targetAudience-error']")), 255, allInputValue.getProperty("InvalidDescription"));     
        	 
 	 }
 	@Test(priority=10)
 	public static void ReferralRequestMinimumInputValidation()
 	 {
 		driver.findElement(By.xpath("//input[@value='Request']")).click();
-		UtilityMethods.MinimumInputValidation(PostReferralRequestPO.CompanyNameInput, PostReferralRequestPO.CompanyError, 3, allInputValue.getProperty("InvalidMinInput"));
-        UtilityMethods.MinimumInputValidation(PostReferralRequestPO.PhoneNumberInput, PostReferralRequestPO.PhoneNumberError, 10, allInputValue.getProperty("InvalidMinphonenumber"));    	 
+		UtilityMethods.MinimumInputValidation(PostReferralRequestPO.CompanyNameInput, driver.findElement(By.xpath("//div[@id='company-error']")), 3, allInputValue.getProperty("InvalidMinInput"));
+        UtilityMethods.MinimumInputValidation(PostReferralRequestPO.PhoneNumberInput, driver.findElement(By.xpath("//div[@id='phoneNumber-error']")), 10, allInputValue.getProperty("InvalidMinphonenumber"));    	 
 
 	 }
 	@Test(priority=11)
 	public static void ReferralRequestOtherValidation()
 	{	
 		driver.findElement(By.xpath("//input[@value='Request']")).click();
-		UtilityMethods.EmailIdInvalidvalidation(PostReferralRequestPO.EmailInput, PostReferralRequestPO.EmailError, allInputValue.getProperty("InvalidEmailID"));
-		UtilityMethods.NumericFieldValidation(PostReferralRequestPO.PhoneNumberInput, PostReferralRequestPO.PhoneNumberError, allInputValue.getProperty("InvalidPhoneNumber"));
-		UtilityMethods.NumericFieldValidation(PostReferralRequestPO.VolumetoDeployInput, PostReferralRequestPO.VolumetoDeployError, allInputValue.getProperty("InvadildNumbericField"));
+		UtilityMethods.EmailIdInvalidvalidation(PostReferralRequestPO.EmailInput, driver.findElement(By.xpath("//div[@id='email-error']")), allInputValue.getProperty("InvalidEmailID"));
+		UtilityMethods.NumericFieldValidation(PostReferralRequestPO.PhoneNumberInput, driver.findElement(By.xpath("//div[@id='phoneNumber-error']")), allInputValue.getProperty("InvalidPhoneNumber"));
+		UtilityMethods.NumericFieldValidation(PostReferralRequestPO.VolumetoDeployInput, driver.findElement(By.xpath("//div[@id='deviceVolume-error']")), allInputValue.getProperty("InvadildNumbericField"));
 	}
 	
 	@Test(priority=12)

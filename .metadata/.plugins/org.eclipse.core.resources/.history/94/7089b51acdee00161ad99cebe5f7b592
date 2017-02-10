@@ -1,11 +1,15 @@
 package driver;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.testng.annotations.Test;
 
+import pageobjects.Tele2HomePagePO;
+import utilitymethods.UtilityMethods;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
-
+import com.relevantcodes.extentreports.LogStatus;
 
 public class BaseDriver {
 	public static ExtentReports extent;

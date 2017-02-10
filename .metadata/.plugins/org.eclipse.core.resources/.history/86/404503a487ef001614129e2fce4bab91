@@ -121,52 +121,11 @@ public class PostReferralRequestPO extends BaseDriver
 	@FindBy(how=How.XPATH,using="//input[@id='with3mn03']")
 	public static WebElement Morethan12MonthInput;
 	
-	@FindBy(how=How.XPATH,using="//textarea[@id='targetAudience']")
-	public static WebElement Description;
-	
-	@FindBy(how=How.XPATH,using="	//label[text()='Description']")
-	public static WebElement DescriptionLabel;
-	
 	@FindBy(how=How.XPATH,using="//a[@value='Cancel']")
 	public static WebElement CancelButton;
 	
 	@FindBy(how=How.XPATH,using="//input[@value='Request']")
 	public static WebElement RequestButton;	
 	
-	@FindBy(how=How.XPATH,using="//div[@id='fname-error']")
-	public static WebElement FirstNameError;
-	
-	@FindBy(how=How.XPATH,using="//div[@id='lname-error']")
-	public static WebElement LastNameError;
-	
-	@FindBy(how=How.XPATH,using="//div[@id='company-error']")
-	public static WebElement CompanyError;
-	
-	@FindBy(how=How.XPATH,using="///div[@id='postion-error']")
-	public static WebElement PositionError;
-	
-	@FindBy(how=How.XPATH,using="//div[@id='phoneNumber-error']")
-	public static WebElement PhoneNumberError;
-	
-	@FindBy(how=How.XPATH,using="//div[@id='email-error']")
-	public static WebElement EmailError;
-	
-	@FindBy(how=How.XPATH,using="//div[@id='device-error']")
-	public static WebElement ModuleError;
-	
-	@FindBy(how=How.XPATH,using="//div[@id='industryId-error']")
-	public static WebElement BusinessTypeError;
-	
-	@FindBy(how=How.XPATH,using="//div[@id='simTypeId-error']")
-	public static WebElement SimTypeError;
-	
-	@FindBy(how=How.XPATH,using="//div[@id='deviceVolume-error']")
-	public static WebElement VolumetoDeployError;
-	
-	@FindBy(how=How.XPATH,using="//div[@id='launchTimeFrameId-error']")
-	public static WebElement LaunchTimeError;
-	
-	@FindBy(how=How.XPATH,using="//div[@id='targetAudience-error']")
-	public static WebElement DescriptionError;
 	
 }

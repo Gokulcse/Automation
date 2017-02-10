@@ -6,29 +6,30 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="PageNavigationValidation" key="selection"/>
+		<item value="PostHomePagePO" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="Tele2HomePagePO"/>
+			<item value="ReferrralRequestFindElement"/>
 			<item value="PageNavigationValidation"/>
 			<item value="tele2CenterIcon"/>
 			<item value="Image"/>
 			<item value="howItWorksValidation"/>
 			<item value="InvalidMinphonenumber"/>
 			<item value="ValidateSimTypeRadioButton"/>
-			<item value="near Displayed Text Box ID"/>
-			<item value="phoneNumber"/>
 		</list>
 		<list key="replacehistory">
+			<item value="PostHomePagePO"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="257" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="386" key="DIALOG_HEIGHT"/>
-		<item value="984" key="DIALOG_X_ORIGIN"/>
-		<item value="219" key="DIALOG_Y_ORIGIN"/>
+		<item value="928" key="DIALOG_X_ORIGIN"/>
+		<item value="350" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

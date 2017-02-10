@@ -23,18 +23,18 @@ public class PostHomePage extends BaseDriver
 	}
 	public static void validateOperatorLogo()
 	{		
-		UtilityMethods.DisplayEnableValidator(PostHomePagePO.PostLogo, "NotEqual","Post Operator Logo in IoT Starter Kit");	
-		UtilityMethods.Imagevalidation(PostHomePagePO.PostLogo,"src",allInputValue.getProperty("PostLogo"),"Post Operator Logo");
+		UtilityMethods.DisplayEnableValidator(PostHomePagePO.PostLogo, "NotEqual","Tele2 Operator Logo in IoT Starter Kit");	
+		UtilityMethods.Imagevalidation(PostHomePagePO.PostLogo,"src",allInputValue.getProperty("tele2Logo"),"Tele2 Operator Logo");
 	} 
 
 	public static void validateCompanyLogo()
 	{
 		UtilityMethods.DisplayEnableValidator(PostHomePagePO.CiscoLogo, "NotEqual","Cisco Jasper Company Logo in IoT Starter Kit");		
-		UtilityMethods.Imagevalidation(PostHomePagePO.CiscoLogo,"src",allInputValue.getProperty("CiscoLogo"),"Cisco Jasper Company Logo");	
+		UtilityMethods.Imagevalidation(PostHomePagePO.CiscoLogo,"src",allInputValue.getProperty("tele2CompanyLogo"),"Cisco Jasper Company Logo");	
 	}
 	
 	
-	public static void sectionOneIotStarterKitPostValidation()
+	public static void sectionOneIotStarterKitTele2Validation()
 	{
 		UtilityMethods.StringValidation(PostHomePagePO.TextBannerh1.getText(), allInputValue.getProperty("HomePage.Bannerh1"), "equalsignorecase");
 		UtilityMethods.StringValidation(PostHomePagePO.TextBannerh3.getText(), allInputValue.getProperty("HomePage.Bannerh3"), "equalsignorecase");
@@ -73,33 +73,30 @@ public class PostHomePage extends BaseDriver
 	
 	public static void sectionTwoWhatThekitIncludesContentvalidation()
 	{
-		UtilityMethods.Imagevalidation(PostHomePagePO.SimIcon, "src",allInputValue.getProperty("PostSimIcon"), "Post Sim Icon");
-		UtilityMethods.StringValidation(PostHomePagePO.TextSimh1.getText(), allInputValue.getProperty("HomePage.WhatTheKitIncludesSimh1"), "equalsignorecase");
-		UtilityMethods.StringValidation(PostHomePagePO.TextSimh2.getText(), allInputValue.getProperty("HomePage.WhatTheKitIncludesSimh2"), "equalsignorecase");
-		UtilityMethods.StringValidation(PostHomePagePO.TextSimh3.getText(), allInputValue.getProperty("HomePage.WhatTheKitIncludesSimh3"), "equalsignorecase");
-		UtilityMethods.StringValidation(PostHomePagePO.TextSimh4.getText(), allInputValue.getProperty("HomePage.WhatTheKitIncludesSimh4"), "equalsignorecase");
-
-		
-		UtilityMethods.StringValidation(PostHomePagePO.TextSimp1.getText(), allInputValue.getProperty("HomePage.WhatTheKitIncludesSimp1"), "equalsignorecase");
-		UtilityMethods.StringValidation(PostHomePagePO.TextSimp2.getText(), allInputValue.getProperty("HomePage.WhatTheKitIncludesSimp2"), "equalsignorecase");
-		UtilityMethods.StringValidation(PostHomePagePO.TextSimp3.getText(), allInputValue.getProperty("HomePage.WhatTheKitIncludesSimp3"), "equalsignorecase");
+		UtilityMethods.Imagevalidation(PostHomePagePO.SimIcon, "src",allInputValue.getProperty("tele2SimIcon"), "Tele2 Sim Icon");
+		UtilityMethods.StringValidation(PostHomePagePO.TextSimh1.getText(), "5 SIMS", "equalsignorecase");
+		UtilityMethods.StringValidation(PostHomePagePO.TextSimh2.getText(), "30 MB per SIM", "equalsignorecase");
+		UtilityMethods.StringValidation(PostHomePagePO.TextSimh3.getText(), "50 SMS", "equalsignorecase");
+		UtilityMethods.StringValidation(PostHomePagePO.TextSimp1.getText(), "with Post Connectivity", "equalsignorecase");
+		UtilityMethods.StringValidation(PostHomePagePO.TextSimp2.getText(), "per month for 3 months", "equalsignorecase");
+		UtilityMethods.StringValidation(PostHomePagePO.TextSimp3.getText(), "messages per SIM per month", "equalsignorecase");
 	}
 		
 	public static void sectionTwoWhatThekitIncludesToolsvalidation()
 	{
-		UtilityMethods.whatTheKitIncludesImageAndTextValidation(PostHomePagePO.ToolIcon, allInputValue.getProperty("PostToolIcon"), PostHomePagePO.ToolText, "Real-Time Testing Tool");
+		UtilityMethods.whatTheKitIncludesImageAndTextValidation(PostHomePagePO.ToolIcon, allInputValue.getProperty("tele2ToolIcon"), PostHomePagePO.ToolText, "Real-Time Testing Tool");
 		UtilityMethods.whatThekitIncludesTextValidation(PostHomePagePO.ToolListText,"Test-as-you-build for fast, quality development","Visibility into device and network behavior","Diagnostics and troubleshooting help");		
 	}
 		
 	public static void sectionTwoWhatThekitIncludesCentervalidation()
 	{	
-		UtilityMethods.whatTheKitIncludesImageAndTextValidation(PostHomePagePO.CenterIcon, allInputValue.getProperty("PostCenterIcon"), PostHomePagePO.CenterText,"Full Access to Post M2M Control Center");
+		UtilityMethods.whatTheKitIncludesImageAndTextValidation(PostHomePagePO.CenterIcon, allInputValue.getProperty("tele2CenterIcon"), PostHomePagePO.CenterText,"Full Access to Tele2 M2M Control Center");
 		UtilityMethods.whatThekitIncludesTextValidation(PostHomePagePO.CenterListText, "Complete suite of developer tools", "User logins for everyone on your team","Same environment for testing and deployment");		
 	}
 	
 	public static void sectionTwoWhatThekitIncludesSuppportvalidation()
 	{
-		UtilityMethods.whatTheKitIncludesImageAndTextValidation(PostHomePagePO.SupportIcon, allInputValue.getProperty("PostSupportIcon"), PostHomePagePO.SupportText,"Exceptional Developer Support");
+		UtilityMethods.whatTheKitIncludesImageAndTextValidation(PostHomePagePO.SupportIcon, allInputValue.getProperty("tele2SupportIcon"), PostHomePagePO.SupportText,"Exceptional Developer Support");
 		UtilityMethods.whatThekitIncludesTextValidation(PostHomePagePO.SupportListText, "Developer guidelines", "Full access to APIs","M2M.com forum");
 	}
 	
@@ -114,7 +111,7 @@ public class PostHomePage extends BaseDriver
 	
 	public static void sectionFourWhatIsIotValidation()
 	{
-		UtilityMethods.Imagevalidation(PostHomePagePO.WhatIsIotImage, "src" , "http://Post.devm2m.com/img/Post/whatisiot.png", "What is IoT?");
+		UtilityMethods.Imagevalidation(PostHomePagePO.WhatIsIotImage, "src" , "http://tele2.devm2m.com/img/tele2/whatisiot.png", "What is IoT?");
 		UtilityMethods.StringValidation(PostHomePagePO.WhatIsIotText.getText(), "What is IoT?", "equalsignorecase");
 		UtilityMethods.StringValidation(PostHomePagePO.WhatIsIotParaText1.getText(), allInputValue.getProperty("HomePage.WhatIsIoTP1"), "equalsignorecase");
 		UtilityMethods.StringValidation(PostHomePagePO.WhatIsIotParaText2.getText(), allInputValue.getProperty("HomePage.WhatIsIoTP2"), "equalsignorecase");	
@@ -137,26 +134,26 @@ public class PostHomePage extends BaseDriver
 	{
 	PostHomePagePO.SectionOneTrackOrderButton.click();
 	PostHomePagePO.TrackOrderEmailID.sendKeys(allInputValue.getProperty("TrackOrder.validTrackOrderEmailID"));
-	UtilityMethods.PageNavigationValidation(PostHomePagePO.SectionOneTrackOrderPRButton, PostHomePagePO.SectionOneTrackOrderFindElement, "Post");
+	UtilityMethods.PageNavigationValidation(PostHomePagePO.SectionOneTrackOrderPRButton, PostHomePagePO.SectionOneTrackOrderFindElement, "Tele2");
 	}
 	
 	public static void TrackOrderInValidPageRedirection() throws InterruptedException
 	{
 		PostHomePagePO.SectionOneTrackOrderButton.click();
 		PostHomePagePO.TrackOrderEmailID.sendKeys(allInputValue.getProperty("TrackOrder.InvalidTrackOrderEmailID"));
-		UtilityMethods.PageNavigationValidation(PostHomePagePO.SectionOneTrackOrderPRButton, PostHomePagePO.WhatIsIotImage, "Post");	
+		UtilityMethods.PageNavigationValidation(PostHomePagePO.SectionOneTrackOrderPRButton, PostHomePagePO.WhatIsIotImage, "Tele2");	
 	}
 
 	public static void SectionOTwoReferralRequestvalidation() throws InterruptedException
 	{
 		UtilityMethods.DisplayEnableValidator(PostHomePagePO.SectionTwoReferralRrequestButton, "NotEqual", "Section Two Referral Request Button");
-		UtilityMethods.PageNavigationValidation(PostHomePagePO.SectionTwoReferralRrequestButton,PostHomePagePO.ReferrralRequestFindElement,"Post"); 
+		UtilityMethods.PageNavigationValidation(PostHomePagePO.SectionTwoReferralRrequestButton,PostHomePagePO.ReferrralRequestFindElement,"Tele2"); 
 	}
 
 	public static void SectionOneReferralRequestvalidation() throws InterruptedException
 	{
 		UtilityMethods.DisplayEnableValidator(PostHomePagePO.SectionOneReferralRrequestButton, "NotEqual", "Section One Referral Request Button");
-		UtilityMethods.PageNavigationValidation(PostHomePagePO.SectionOneReferralRrequestButton,PostHomePagePO.ReferrralRequestFindElement,"Post"); 
+		UtilityMethods.PageNavigationValidation(PostHomePagePO.SectionOneReferralRrequestButton,PostHomePagePO.ReferrralRequestFindElement,"Tele2"); 
 	}
 	
 	

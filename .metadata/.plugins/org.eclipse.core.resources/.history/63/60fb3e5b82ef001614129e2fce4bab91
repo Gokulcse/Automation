@@ -1,16 +1,15 @@
 package pages;
-
 import java.io.IOException;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import driver.BaseDriver;
 import utilitymethods.UtilityMethods;
+import driver.BaseDriver;
 
-public class PostContolCenter extends BaseDriver
-{
+public class Tele2ControlCenter extends BaseDriver {
+
 	public static FirefoxDriver driver = launchApp();
 	static Properties allInputValue;
 	
@@ -26,6 +25,7 @@ public class PostContolCenter extends BaseDriver
 	}
 	public static void ControlCenterAccountCreation()
 	{
+		
 		CCDisplayedAndEnabledValidation();		
 		CCTextValidation();
 		CCErrorValidation();
@@ -66,4 +66,5 @@ public class PostContolCenter extends BaseDriver
 	
 	}
 	
+
 }
