@@ -47,8 +47,7 @@ String temp =driver.findElement(By.tagName("body")).getText();
 		UtilityMethods.PageNavigationValidation(Tele2ReferralRequestpagePO.M2MDotCom,Tele2ReferralRequestpagePO.selectKit,""); 
 		*/
 		
-		
-		
+
 	}
 
 }

@@ -120,11 +120,11 @@ public class PostHomePage extends BaseDriver
 		UtilityMethods.StringValidation(PostHomePagePO.WhatIsIotParaText2.getText(), allInputValue.getProperty("HomePage.WhatIsIoTP2"), "equalsignorecase");	
 	}
 
-	public static void sectionOneLinkvalidation()
+	public static void sectionOneLinkvalidation() throws Exception
 	{
-		UtilityMethods.sectionOneLinkvalidation(driver.findElements(By.xpath("//ul[@class='list-inline bl-whw']//li")).get(0));
-		UtilityMethods.sectionOneLinkvalidation(driver.findElements(By.xpath("//ul[@class='list-inline bl-whw']//li")).get(1));
-		UtilityMethods.sectionOneLinkvalidation(driver.findElements(By.xpath("//ul[@class='list-inline bl-whw']//li")).get(2));
+		UtilityMethods.sectionOneLinkvalidation(PostHomePagePO.WhattheKitIncludeLink);
+		UtilityMethods.sectionOneLinkvalidation(PostHomePagePO.HowItWorkslink);
+		UtilityMethods.sectionOneLinkvalidation(PostHomePagePO.WhatIsIotLink);
 	}
 	
 	public static void SectionThreeLearnMore() throws InterruptedException

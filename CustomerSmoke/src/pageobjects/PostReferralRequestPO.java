@@ -76,19 +76,19 @@ public class PostReferralRequestPO extends BaseDriver
 	@FindBy(how=How.XPATH,using="//label[text()='Business Type']")
 	public static WebElement SimLabel;
 	
-	@FindBy(how=How.XPATH,using="//label[text()='2FF Mini']")
+	@FindBy(how=How.XPATH,using="//label[text()='2FF/Mini Standard SIM']")
 	public static WebElement Sim2FFLabel;
 	
-	@FindBy(how=How.XPATH,using="//label[text()='3FF Micro']")
+	@FindBy(how=How.XPATH,using="//label[text()='Triple (Mini,Micro and Nano) Standard SIM']")
 	public static WebElement Sim3FFlabel;
 	
-	@FindBy(how=How.XPATH,using="//input[@id='mini0']")
+	@FindBy(how=How.XPATH,using="//label[@for='mini0']")
 	public static WebElement Sim2FFInput;
 	
-	@FindBy(how=How.XPATH,using="//input[@id='mini1']")
+	@FindBy(how=How.XPATH,using="//label[@for='mini1']")
 	public static WebElement Sim3FFInput;
 	
-	@FindBy(how=How.XPATH,using="//label[text()='Volume to deploy']")
+	@FindBy(how=How.XPATH,using="//label[text()='Volume to Deploy']")
 	public static WebElement VolumetoDeployLabel;
 	
 	@FindBy(how=How.XPATH,using="//input[@id='deviceVolume']")
@@ -124,7 +124,7 @@ public class PostReferralRequestPO extends BaseDriver
 	@FindBy(how=How.XPATH,using="//textarea[@id='targetAudience']")
 	public static WebElement Description;
 	
-	@FindBy(how=How.XPATH,using="	//label[text()='Description']")
+	@FindBy(how=How.XPATH,using="//label[text()='Description']")
 	public static WebElement DescriptionLabel;
 	
 	@FindBy(how=How.XPATH,using="//a[@value='Cancel']")

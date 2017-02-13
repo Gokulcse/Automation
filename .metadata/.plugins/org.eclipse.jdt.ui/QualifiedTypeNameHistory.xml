@@ -37,9 +37,9 @@
 <fullyQualifiedTypeName name="com.sun.jna.platform.win32.Netapi32Util.User"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
 <fullyQualifiedTypeName name="java.lang.Thread"/>
-<fullyQualifiedTypeName name="pageobjects.PostReferralRequestPO"/>
 <fullyQualifiedTypeName name="java.io.PrintWriter"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="utilitymethods.UtilityMethods"/>
 <fullyQualifiedTypeName name="driver.BaseDriver"/>
+<fullyQualifiedTypeName name="pageobjects.PostReferralRequestPO"/>
 </qualifiedTypeNameHistroy>

@@ -6,7 +6,6 @@ import java.io.IOException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import org.openqa.selenium.support.PageFactory;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -19,6 +18,9 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 
+
+
+import pageobjects.PostHomePagePO;
 import pageobjects.Tele2HomePagePO;
 import utilitymethods.UtilityMethods;
 import driver.BaseDriver;
@@ -197,29 +199,26 @@ import driver.BaseDriver;
 		UtilityMethods.StringValidation(Tele2HomePagePO.WhatIsIotParaText2.getText(), "Learn more at jasper.com", "equalsignorecase");	
 	}
 
-	
-	public static void sectionOneLinkvalidation()
+	public static void sectionOneLinkvalidation() throws Exception
 	{
-		UtilityMethods.sectionOneLinkvalidation(driver.findElements(By.xpath("//ul[@class='list-inline bl-whw']//li")).get(0));
-		UtilityMethods.sectionOneLinkvalidation(driver.findElements(By.xpath("//ul[@class='list-inline bl-whw']//li")).get(1));
-		UtilityMethods.sectionOneLinkvalidation(driver.findElements(By.xpath("//ul[@class='list-inline bl-whw']//li")).get(2));
+		UtilityMethods.sectionOneLinkvalidation(PostHomePagePO.WhattheKitIncludeLink);
+		UtilityMethods.sectionOneLinkvalidation(PostHomePagePO.HowItWorkslink);
+		UtilityMethods.sectionOneLinkvalidation(PostHomePagePO.WhatIsIotLink);
 	}
-	
-	
+		
 	public static void SectionThreeLearnMore() throws InterruptedException
 	{
 		UtilityMethods.DisplayEnableValidator(Tele2HomePagePO.HowItWorksLearnMore, "NotEqual", "M2MDotCom Link Button");
 		UtilityMethods.PageNavigationValidation(Tele2HomePagePO.HowItWorksLearnMore,Tele2HomePagePO.M2MDotComFindElement,"Tel"); 	
 	}
 	
-
 	public static void TrackOrderValidPageRedirection() throws InterruptedException
-
 	{
 	Tele2HomePagePO.SectionOneTrackOrderButton.click();
 	Tele2HomePagePO.TrackOrderEmailID.sendKeys(allInputValue.getProperty("TrackOrder.validTrackOrderEmailID"));
 	UtilityMethods.PageNavigationValidation(Tele2HomePagePO.SectionOneTrackOrderPRButton, Tele2HomePagePO.SectionOneTrackOrderFindElement, "Tele2");
 	}
+	
 	public static void TrackOrderInValidPageRedirection() throws InterruptedException
 	{
 		Tele2HomePagePO.SectionOneTrackOrderButton.click();

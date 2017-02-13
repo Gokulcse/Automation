@@ -16,12 +16,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NotFoundException;
 import org.openqa.selenium.WebElement;
-
 import org.openqa.selenium.support.ui.Select;
 
 
 
 import org.testng.Assert;
+
 import driver.BaseDriver;
 
 public class UtilityMethods extends BaseDriver {
@@ -81,9 +81,10 @@ public class UtilityMethods extends BaseDriver {
 		}
 	}
 	
-	public static void sectionOneLinkvalidation(WebElement webObj)
+	public static void sectionOneLinkvalidation(WebElement webObj) throws Exception
 	{
 		webObj.click();
+		Thread.sleep(1000);
 		if(!webObj.getAttribute("class").equals("active"))
 		{
 			System.out.println("There is error in link validation "+webObj.getText()+"");

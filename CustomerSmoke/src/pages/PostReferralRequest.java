@@ -16,12 +16,13 @@ import utilitymethods.UtilityMethods;
 import pageobjects.PostReferralRequestPO;
 public class PostReferralRequest extends BaseDriver
 {
-	public static FirefoxDriver driver = launchApp();
+	public static FirefoxDriver driver;
 	static Properties allInputValue;
 
 	@BeforeTest
 	public static void Start() throws IOException 
 	{
+		driver = launchApp();
 		allInputValue = UtilityMethods.getPostPropValues();
 		PageFactory.initElements(driver, PostReferralRequestPO.class);		
 	}
@@ -36,14 +37,14 @@ public class PostReferralRequest extends BaseDriver
 	@Test
 	public static void validateOperatorLogo()
 	{
-		
+		PageFactory.initElements(driver, PostReferralRequestPO.class);
 		UtilityMethods.DisplayEnableValidator(PostReferralRequestPO.PostLogo, "NotEqual","Post Operator Logo in IoT Starter Kit");	
 		UtilityMethods.Imagevalidation(PostReferralRequestPO.PostLogo,"src",allInputValue.getProperty("postLogo"),"Post Operator Logo");		
 		
 	} 
 	@Test(priority=1)
 	public static void validateCompanyLogo()
-	{
+	{PageFactory.initElements(driver, PostReferralRequestPO.class);
 		UtilityMethods.DisplayEnableValidator(PostReferralRequestPO.CiscoLogo, "NotEqual","Cisco Jasper Company Logo in IoT Starter Kit");		
 		UtilityMethods.Imagevalidation(PostReferralRequestPO.CiscoLogo,"src",allInputValue.getProperty("CompanyLogo"),"Cisco Jasper Company Logo");		
 	}
@@ -61,20 +62,22 @@ public class PostReferralRequest extends BaseDriver
 		ReferralRequestMinimumInputValidation();
 		ReferralRequestOtherValidation();
 		RequestButtonValidation();
-		
-		
 	}
+	
 	@Test(priority=2)
 	public static void ReferralRequestTextValidation()
 	{
+		PageFactory.initElements(driver, PostReferralRequestPO.class);
 		UtilityMethods.StringValidation(PostReferralRequestPO.SectionOneHead1.getText(), "Request a Referral Code", "equalsignorecase");
 		UtilityMethods.StringValidation(PostReferralRequestPO.ParagraphText.getText(), allInputValue.getProperty("ReferralRequest.sectionOne"), "equalsignorecase");
 		UtilityMethods.StringValidation(PostReferralRequestPO.ContactInfoText.getText(), "Contact Information", "equalsignorecase");
 		UtilityMethods.StringValidation(PostReferralRequestPO.DeviceInfoText.getText(), "Device Information", "equalsignorecase");
 	}
+	
 	@Test(priority=3)
 	public static void RequestReferralCodeTextBoxDisplayedAndEnabled()
 	{
+		PageFactory.initElements(driver, PostReferralRequestPO.class);
 		UtilityMethods.DisplayEnableValidator(PostReferralRequestPO.FirstNameInput, "NotEqual", "First Name Input Field");	
 		UtilityMethods.DisplayEnableValidator(PostReferralRequestPO.LastNameInput, "NotEqual", "Last Name Input Field");	
 		UtilityMethods.DisplayEnableValidator(PostReferralRequestPO.CompanyNameInput, "NotEqual", "Company Name Input Field");	
@@ -96,7 +99,8 @@ public class PostReferralRequest extends BaseDriver
 	}
 	@Test(priority=4)
 	public static void RequestReferralCodeLabelTextDisplayedAndEnabled()
-	{
+	{	
+		PageFactory.initElements(driver, PostReferralRequestPO.class);
 		UtilityMethods.DisplayEnableValidator(PostReferralRequestPO.FirstNameLabel, "NotEqual", "First Name Label Text");	
 		UtilityMethods.DisplayEnableValidator(PostReferralRequestPO.LastNameLabel, "NotEqual", "Last Name Label Text");	
 		UtilityMethods.DisplayEnableValidator(PostReferralRequestPO.CompanyNameLabel, "NotEqual", "Company Name Label Text");	
@@ -133,7 +137,7 @@ public class PostReferralRequest extends BaseDriver
 	@Test(priority=6)
 	public static void ReferralRequestCodeValidInputValidation()
 	{
-		driver.findElement(By.xpath("//input[@value='Request']")).click();
+		PostReferralRequestPO.RequestButton.click();
 		UtilityMethods.ValidInputValidation(PostReferralRequestPO.FirstNameInput, allInputValue.getProperty("ValidFirstName"), PostReferralRequestPO.FirstNameError);
 		UtilityMethods.ValidInputValidation(PostReferralRequestPO.LastNameInput, allInputValue.getProperty("ValidLastName"),PostReferralRequestPO.LastNameError );
 		UtilityMethods.ValidInputValidation(PostReferralRequestPO.CompanyNameInput, allInputValue.getProperty("ValidCompanyName"), PostReferralRequestPO.CompanyError);
@@ -151,7 +155,7 @@ public class PostReferralRequest extends BaseDriver
 	@Test(priority=7)
 	public static void ReferralRequestRequiredFieldValidation()
 	{
-		driver.findElement(By.xpath("//input[@value='Request']")).click();
+		PostReferralRequestPO.RequestButton.click();
 		UtilityMethods.RequiredFieldValidation(PostReferralRequestPO.FirstNameInput, PostReferralRequestPO.FirstNameError,"TextBox");
 		UtilityMethods.RequiredFieldValidation(PostReferralRequestPO.LastNameInput, PostReferralRequestPO.LastNameError,"TextBox");
 		UtilityMethods.RequiredFieldValidation(PostReferralRequestPO.CompanyNameInput, PostReferralRequestPO.CompanyError,"TextBox");
@@ -168,7 +172,7 @@ public class PostReferralRequest extends BaseDriver
 	@Test(priority=8)
 	public static void ReferralRequestSpaceNotAllowedValidation()
 	 {	
-		 driver.findElement(By.xpath("//input[@value='Request']")).click();
+		PostReferralRequestPO.RequestButton.click();
 		 UtilityMethods.SpaceNotAllowedvalidation(PostReferralRequestPO.FirstNameInput, PostReferralRequestPO.FirstNameError);
 		 UtilityMethods.SpaceNotAllowedvalidation(PostReferralRequestPO.LastNameInput, PostReferralRequestPO.LastNameError);
 		 UtilityMethods.SpaceNotAllowedvalidation(PostReferralRequestPO.CompanyNameInput, PostReferralRequestPO.CompanyError);
@@ -178,7 +182,7 @@ public class PostReferralRequest extends BaseDriver
 	@Test(priority=9)
 	public static void ReferralRequestMaximumInputValidation()
 	 {
-		driver.findElement(By.xpath("//input[@value='Request']")).click();
+		PostReferralRequestPO.RequestButton.click();
         UtilityMethods.MaximumInputValidation(PostReferralRequestPO.FirstNameInput, PostReferralRequestPO.FirstNameError, 49, allInputValue.getProperty("InvalidInput"));
         UtilityMethods.MaximumInputValidation(PostReferralRequestPO.LastNameInput, PostReferralRequestPO.LastNameError, 49, allInputValue.getProperty("InvalidInput"));
         UtilityMethods.MaximumInputValidation(PostReferralRequestPO.CompanyNameInput, PostReferralRequestPO.CompanyError, 25, allInputValue.getProperty("InvalidCompanyName"));
@@ -190,7 +194,7 @@ public class PostReferralRequest extends BaseDriver
 	@Test(priority=10)
 	public static void ReferralRequestMinimumInputValidation()
 	 {
-		driver.findElement(By.xpath("//input[@value='Request']")).click();
+		PostReferralRequestPO.RequestButton.click();
 		UtilityMethods.MinimumInputValidation(PostReferralRequestPO.CompanyNameInput, PostReferralRequestPO.CompanyError, 3, allInputValue.getProperty("InvalidMinInput"));
         UtilityMethods.MinimumInputValidation(PostReferralRequestPO.PhoneNumberInput, PostReferralRequestPO.PhoneNumberError, 10, allInputValue.getProperty("InvalidMinphonenumber"));    	 
 
@@ -198,7 +202,7 @@ public class PostReferralRequest extends BaseDriver
 	@Test(priority=11)
 	public static void ReferralRequestOtherValidation()
 	{	
-		driver.findElement(By.xpath("//input[@value='Request']")).click();
+		PostReferralRequestPO.RequestButton.click();
 		UtilityMethods.EmailIdInvalidvalidation(PostReferralRequestPO.EmailInput, PostReferralRequestPO.EmailError, allInputValue.getProperty("InvalidEmailID"));
 		UtilityMethods.NumericFieldValidation(PostReferralRequestPO.PhoneNumberInput, PostReferralRequestPO.PhoneNumberError, allInputValue.getProperty("InvalidPhoneNumber"));
 		UtilityMethods.NumericFieldValidation(PostReferralRequestPO.VolumetoDeployInput, PostReferralRequestPO.VolumetoDeployError, allInputValue.getProperty("InvadildNumbericField"));
@@ -215,13 +219,13 @@ public class PostReferralRequest extends BaseDriver
 		UtilityMethods.SendInputValues(PostReferralRequestPO.EmailInput, "automation1@yopmail.com", "TextBox");
 		UtilityMethods.SendInputValues(PostReferralRequestPO.ModuleInput, "Test Entry", "TextBox");
 		UtilityMethods.SendInputValues(PostReferralRequestPO.BusinessInput, "Telematics - passenger vehicles, aftermarket", "DropDown");
-	    UtilityMethods.SendInputValues(driver.findElement(By.xpath("//label[@for='mini0']")), "", "Radiobutton");
+	    UtilityMethods.SendInputValues(PostReferralRequestPO.Sim2FFInput, "", "Radiobutton");
 	    UtilityMethods.SendInputValues(PostReferralRequestPO.VolumetoDeployInput, "001", "TextBox");
-	    UtilityMethods.SendInputValues(driver.findElement(By.xpath("//label[@for='with3mn02']")), "", "Radiobutton");
+	    UtilityMethods.SendInputValues(PostReferralRequestPO.IN6MonthInput, "", "Radiobutton");
 	    UtilityMethods.SendInputValues(PostReferralRequestPO.Description, "Test Data value", "TextBox");	
 	    //UtilityMethods.PageRedirection(driver.findElement(By.xpath("//input[@value='Request']")), driver.findElement(By.xpath("//a[text()='Back to IoT Starter Kit Page']")));
 	   // UtilityMethods.PageNavigationValidation(driver.findElement(By.xpath("//input[@value='Request']")), driver.findElement(By.xpath("//a[text()='Back to IoT Starter Kit Page']")));
-	    driver.findElement(By.xpath("//input[@value='Request']")).click();	
+	    PostReferralRequestPO.RequestButton.click();
 	    driver.navigate().back();
 	  /*  driver.findElement(By.xpath("//input[@value='Request']")).click();	
 	    try{ Thread.sleep(2500);}catch (InterruptedException e) {e.printStackTrace();}

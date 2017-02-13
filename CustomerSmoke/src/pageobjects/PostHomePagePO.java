@@ -163,5 +163,14 @@ public class PostHomePagePO extends BaseDriver
 	
 	@FindBy(how=How.XPATH,using="//a[text()='Blog']")
 	public static WebElement JasperDotComFindElement;
+
+	@FindBy(how=How.XPATH,using="//ul[@class='list-inline bl-whw']//li[contains(.,'Kit')]")
+	public static WebElement WhattheKitIncludeLink;
+
+	@FindBy(how=How.XPATH,using="//ul[@class='list-inline bl-whw']//li[contains(.,'Works')]")
+	public static WebElement HowItWorkslink;
+	
+	@FindBy(how=How.XPATH,using="//ul[@class='list-inline bl-whw']//li[contains(.,'IoT')]")
+	public static WebElement WhatIsIotLink;
 	
 }

@@ -2,6 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry exported="true" kind="lib" path="libs/selenium-server-standalone-3.0.0-beta4.jar" sourcepath="libs/selenium-server-standalone-3.0.0-beta4.jar"/>
+	<classpathentry kind="lib" path="libs/java-rt-jar-stubs-1.5.0.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="lib" path="F:/Automation/CustomerSmoke/libs/extentreports-2.05.jar"/>
