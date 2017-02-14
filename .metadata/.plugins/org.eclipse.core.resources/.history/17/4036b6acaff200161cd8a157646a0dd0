@@ -124,19 +124,19 @@ public class PostShippingInfo extends BaseDriver
 	public static void ShippingInfoSpaceNotAllowedvalidatoin()
 	{
 		 driver.findElement(By.xpath("//input[@value='Continue']")).click();
-		 UtilityMethods.SpaceNotAllowedvalidation(PostShippingInfoPO.ShipAddressInput, PostShippingInfoPO.ShipAddressError);
-		 UtilityMethods.SpaceNotAllowedvalidation(PostShippingInfoPO.ShipCityInput, PostShippingInfoPO.ShipCityError);
-		 UtilityMethods.SpaceNotAllowedvalidation(PostShippingInfoPO.ShipProvinceInput, PostShippingInfoPO.ShipProvinceError);
-		 UtilityMethods.SpaceNotAllowedvalidation(PostShippingInfoPO.ShipPostInput, PostShippingInfoPO.ShipPostError);
+		 UtilityMethods.SpaceNotAllowedvalidation(PostShippingInfoPO.ShipAddressInput, driver.findElement(By.xpath("//div[@id='address-error']")));
+		 UtilityMethods.SpaceNotAllowedvalidation(PostShippingInfoPO.ShipCityInput, driver.findElement(By.xpath("//div[@id='citydown-error']")));
+		 UtilityMethods.SpaceNotAllowedvalidation(PostShippingInfoPO.ShipProvinceInput, driver.findElement(By.xpath("//div[@id='province-error']")));
+		 UtilityMethods.SpaceNotAllowedvalidation(PostShippingInfoPO.ShipPostInput, driver.findElement(By.xpath("//div[@id='pscode-error']")));
 	}
 	
 	@Test(priority=9)
 	public static void ShippingInfoMaximumInputValidation()
 	 {
 		driver.findElement(By.xpath("//input[@value='Continue']")).click();
-        UtilityMethods.MaximumInputValidation(PostShippingInfoPO.ShipAddressInput, PostShippingInfoPO.ShipAddressError,100, allInputValue.getProperty("InvalidCity"));
-        UtilityMethods.MaximumInputValidation(PostShippingInfoPO.ShipCityInput, PostShippingInfoPO.ShipCityError, 100, allInputValue.getProperty("InvalidCity")); 
-        UtilityMethods.MaximumInputValidation(PostShippingInfoPO.ShipProvinceInput, PostShippingInfoPO.ShipProvinceError, 25, allInputValue.getProperty("InvalidCompanyName"));
+        UtilityMethods.MaximumInputValidation(PostShippingInfoPO.ShipAddressInput, driver.findElement(By.xpath("//div[@id='address-error']")),100, allInputValue.getProperty("InvalidCity"));
+        UtilityMethods.MaximumInputValidation(PostShippingInfoPO.ShipCityInput, driver.findElement(By.xpath("//div[@id='citydown-error']")), 100, allInputValue.getProperty("InvalidCity")); 
+        UtilityMethods.MaximumInputValidation(PostShippingInfoPO.ShipProvinceInput, driver.findElement(By.xpath("//div[@id='province-error']")), 25, allInputValue.getProperty("InvalidCompanyName"));
      
         //UtilityMethods.MaximumInputValidation(driver.findElement(By.xpath("//input[@name='shipAddress.zipPostalCode']")), driver.findElement(By.xpath("//div[@id=''pscode-error']")), 6, allInputValue.getProperty("InvalidCompanyName"));
         //postal Code Maximum Input validation need to be verified 	 
@@ -145,35 +145,35 @@ public class PostShippingInfo extends BaseDriver
 	public static void  ShippingInfoMinimumInputValidation()
 	{
 		driver.findElement(By.xpath("//input[@value='Continue']")).click();
-		UtilityMethods.MinimumInputValidation(PostShippingInfoPO.ShipProvinceInput, PostShippingInfoPO.ShipProvinceError, 2, allInputValue.getProperty("InvalidMinInput"));
-        UtilityMethods.MinimumInputValidation(PostShippingInfoPO.ShipPostInput,PostShippingInfoPO.ShipPostError, 3, allInputValue.getProperty("InvalidMinInput"));    	 
+		UtilityMethods.MinimumInputValidation(PostShippingInfoPO.ShipProvinceInput, driver.findElement(By.xpath("//div[@id='province-error']")), 2, allInputValue.getProperty("InvalidMinInput"));
+        UtilityMethods.MinimumInputValidation(PostShippingInfoPO.ShipPostInput, driver.findElement(By.xpath("//div[@id='pscode-error']")), 3, allInputValue.getProperty("InvalidMinInput"));    	 
 	}
 	@Test(priority=11)
 	public static void CheckBoxVaildation()
 	{
-		PostShippingInfoPO.SameBillAndShipLabel.click();
+		driver.findElement(By.xpath("//label[@for='smebilling']")).click();
 	}
 	
 	@Test(priority=12)
 	public static void BillingInfoLabelText()
 	{
-		UtilityMethods.DisplayEnableValidator(PostShippingInfoPO.BillAddressLabel, "NotEqual", "Address Label Text");	
-		UtilityMethods.DisplayEnableValidator(PostShippingInfoPO.BillAptLabel, "NotEqual", "Apt/Suite Label Text");	
-		UtilityMethods.DisplayEnableValidator(PostShippingInfoPO.BillCityLabel, "NotEqual", "City Label Text");	
-		UtilityMethods.DisplayEnableValidator(PostShippingInfoPO.BillProvinceLabel, "NotEqual", "Province Label Text");	
-		UtilityMethods.DisplayEnableValidator(PostShippingInfoPO.BillPostLabel, "NotEqual", "Postal Code Label Text");	
-		UtilityMethods.DisplayEnableValidator(PostShippingInfoPO.BillCountryLabel, "NotEqual", "Country Label Text");	
+		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//div[@class='bl-hid-pp']//label[text()='Address']")), "NotEqual", "Address Label Text");	
+		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//div[@class='bl-hid-pp']//label[text()='Apt/Suite']")), "NotEqual", "Apt/Suite Label Text");	
+		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//div[@class='bl-hid-pp']//label[text()='City']")), "NotEqual", "City Label Text");	
+		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//div[@class='bl-hid-pp']//label[text()='Province']")), "NotEqual", "Province Label Text");	
+		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//div[@class='bl-hid-pp']//label[text()='Postal Code']")), "NotEqual", "Postal Code Label Text");	
+		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//div[@class='bl-hid-pp']//label[text()='Country']")), "NotEqual", "Country Label Text");	
 	}
 
 	@Test(priority=13)
 	public static void BillingInfoInputField()
 	{
-		UtilityMethods.DisplayEnableValidator(PostShippingInfoPO.BillAddressInput, "NotEqual", "Address Input Field");	
-		UtilityMethods.DisplayEnableValidator(PostShippingInfoPO.BillAptInput, "NotEqual", "Apt/Suite Input Field");	
-		UtilityMethods.DisplayEnableValidator(PostShippingInfoPO.BillCityInput, "NotEqual", "City Input Field");	
-		UtilityMethods.DisplayEnableValidator(PostShippingInfoPO.BillProvinceInput, "NotEqual", "Province Input Field");	
-		UtilityMethods.DisplayEnableValidator(PostShippingInfoPO.BillPostInput, "NotEqual", "Postal Code Input Field");	
-		UtilityMethods.DisplayEnableValidator(PostShippingInfoPO.BillCountryInput, "NotEqual", "Country Drop Down");	
+		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@name='billAddress.addressLine1']")), "NotEqual", "Address Input Field");	
+		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@name='billAddress.addressLine2']")), "NotEqual", "Apt/Suite Input Field");	
+		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@name='billAddress.cityTown']")), "NotEqual", "City Input Field");	
+		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@name='billAddress.state']")), "NotEqual", "Province Input Field");	
+		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@name='billAddress.zipPostalCode']")), "NotEqual", "Postal Code Input Field");	
+		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//select[@id='bcountry']")), "NotEqual", "Country Drop Down");	
 
 		
 	}
@@ -181,29 +181,29 @@ public class PostShippingInfo extends BaseDriver
 	public static void BillingInfoRequiredFieldvalidatoin()
 	{
 		driver.findElement(By.xpath("//input[@value='Continue']")).click();
-		UtilityMethods.RequiredFieldValidation(PostShippingInfoPO.BillAddressInput, PostShippingInfoPO.BillAddressError,"TextBox");
-		UtilityMethods.RequiredFieldValidation(PostShippingInfoPO.BillCityInput, PostShippingInfoPO.BillCityError,"TextBox");
-		UtilityMethods.RequiredFieldValidation(PostShippingInfoPO.BillProvinceInput, PostShippingInfoPO.BillProvinceError,"TextBox");
-		UtilityMethods.RequiredFieldValidation(PostShippingInfoPO.BillPostInput, PostShippingInfoPO.BillPostError,"TextBox");
-		UtilityMethods.RequiredFieldShippingDropDown(PostShippingInfoPO.BillCountryInput, PostShippingInfoPO.BillCountryError);
+		UtilityMethods.RequiredFieldValidation(driver.findElement(By.xpath("//input[@name='billAddress.addressLine1']")), driver.findElement(By.xpath("//div[@id='address1-error']")),"TextBox");
+		UtilityMethods.RequiredFieldValidation(driver.findElement(By.xpath("//input[@name='billAddress.cityTown']")), driver.findElement(By.xpath("//div[@id='citytown-error']")),"TextBox");
+		UtilityMethods.RequiredFieldValidation(driver.findElement(By.xpath("//input[@name='billAddress.state']")), driver.findElement(By.xpath("//div[@id='provinces-error']")),"TextBox");
+		UtilityMethods.RequiredFieldValidation(driver.findElement(By.xpath("//input[@name='billAddress.zipPostalCode']")), driver.findElement(By.xpath("//div[@id='poscode-error']")),"TextBox");
+		UtilityMethods.RequiredFieldShippingDropDown(driver.findElement(By.xpath("//select[@id='bcountry']")), driver.findElement(By.xpath("//div[@id='country-error']")));
 	}
 	@Test(priority=15)
 	public static void BillingInfoSpaceNotAllowedvalidatoin()
 	{
 		 driver.findElement(By.xpath("//input[@value='Continue']")).click();
-		 UtilityMethods.SpaceNotAllowedvalidation(PostShippingInfoPO.BillAddressInput, PostShippingInfoPO.BillAddressError);
-		 UtilityMethods.SpaceNotAllowedvalidation(PostShippingInfoPO.BillCityInput, PostShippingInfoPO.BillCityError);
-		 UtilityMethods.SpaceNotAllowedvalidation(PostShippingInfoPO.BillProvinceInput, PostShippingInfoPO.BillProvinceError);
-		 UtilityMethods.SpaceNotAllowedvalidation(PostShippingInfoPO.BillPostInput, PostShippingInfoPO.BillPostError);
+		 UtilityMethods.SpaceNotAllowedvalidation(driver.findElement(By.xpath("//input[@name='billAddress.addressLine1']")), driver.findElement(By.xpath("//div[@id='address1-error']")));
+		 UtilityMethods.SpaceNotAllowedvalidation(driver.findElement(By.xpath("//input[@name='billAddress.cityTown']")), driver.findElement(By.xpath("//div[@id='citytown-error']")));
+		 UtilityMethods.SpaceNotAllowedvalidation(driver.findElement(By.xpath("//input[@name='billAddress.state']")), driver.findElement(By.xpath("//div[@id='provinces-error']")));
+		 UtilityMethods.SpaceNotAllowedvalidation(driver.findElement(By.xpath("//input[@name='billAddress.zipPostalCode']")), driver.findElement(By.xpath("//div[@id='poscode-error']")));
 	}
 	
 	@Test(priority=14)
 	public static void BillingInfoMaximumInputValidation()
 	{
 		driver.findElement(By.xpath("//input[@value='Continue']")).click();
-        UtilityMethods.MaximumInputValidation(PostShippingInfoPO.BillAddressInput, PostShippingInfoPO.BillAddressError,100, allInputValue.getProperty("InvalidCity"));
-        UtilityMethods.MaximumInputValidation(PostShippingInfoPO.BillCityInput, PostShippingInfoPO.BillCityError, 100, allInputValue.getProperty("InvalidCity")); 
-        UtilityMethods.MaximumInputValidation(PostShippingInfoPO.BillProvinceInput, PostShippingInfoPO.BillProvinceError, 25, allInputValue.getProperty("InvalidCompanyName"));
+        UtilityMethods.MaximumInputValidation(driver.findElement(By.xpath("//input[@name='billAddress.addressLine1']")), driver.findElement(By.xpath("//div[@id='address1-error']")),100, allInputValue.getProperty("InvalidCity"));
+        UtilityMethods.MaximumInputValidation(driver.findElement(By.xpath("//input[@name='billAddress.cityTown']")), driver.findElement(By.xpath("//div[@id='citytown-error']")), 100, allInputValue.getProperty("InvalidCity")); 
+        UtilityMethods.MaximumInputValidation(driver.findElement(By.xpath("//input[@name='billAddress.state']")), driver.findElement(By.xpath("//div[@id='provinces-error']")), 25, allInputValue.getProperty("InvalidCompanyName"));
         //UtilityMethods.MaximumInputValidation(driver.findElement(By.xpath("//input[@name='shipAddress.zipPostalCode']")), driver.findElement(By.xpath("//div[@id=''pscode-error']")), 6, allInputValue.getProperty("InvalidCompanyName"));
         //postal Code Maximum Input validation need to be verified 	 
 	 }
@@ -211,8 +211,8 @@ public class PostShippingInfo extends BaseDriver
 	public static void  BillingInfoMinimumInputValidation()
 	{
 		driver.findElement(By.xpath("//input[@value='Continue']")).click();
-		UtilityMethods.MinimumInputValidation(PostShippingInfoPO.BillProvinceInput, PostShippingInfoPO.BillProvinceError, 2, allInputValue.getProperty("InvalidMinInput"));
-        UtilityMethods.MinimumInputValidation(PostShippingInfoPO.BillPostInput, PostShippingInfoPO.BillPostError, 3, allInputValue.getProperty("InvalidMinInput"));    	 
+		UtilityMethods.MinimumInputValidation(driver.findElement(By.xpath("//input[@name='billAddress.state']")), driver.findElement(By.xpath("//div[@id='provinces-error']")), 2, allInputValue.getProperty("InvalidMinInput"));
+        UtilityMethods.MinimumInputValidation(driver.findElement(By.xpath("//input[@name='billAddress.zipPostalCode']")), driver.findElement(By.xpath("//div[@id='poscode-error']")), 3, allInputValue.getProperty("InvalidMinInput"));    	 
 	}
 	@AfterTest
 	public static void Exit()

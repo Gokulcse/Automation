@@ -6,12 +6,13 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="FirstNameInput" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="FirstNameInput"/>
 			<item value="你申請的推薦碼已通過審核"/>
 			<item value="您申請的引薦碼已通過審核"/>
 			<item value="driver.findElement(By.xpath(&quot;//div[@id=&apos;targetAudience-error&apos;]&quot;))"/>
@@ -19,7 +20,6 @@
 			<item value="driver.findElement(By.xpath(&quot;//div[@id=&apos;phoneNumber-error&apos;]&quot;))"/>
 			<item value="driver.findElement(By.xpath(&quot;//div[@id=&apos;postion-error&apos;]&quot;))"/>
 			<item value="driver.findElement(By.xpath(&quot;//div[@id=&apos;company-error&apos;]&quot;))"/>
-			<item value="PostReferralRequestPO.ModuleInput"/>
 		</list>
 		<list key="replacehistory">
 			<item value="PostReferralRequestPO.DescriptionError"/>

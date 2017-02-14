@@ -142,7 +142,7 @@ public class PostReferralRequestPO extends BaseDriver
 	@FindBy(how=How.XPATH,using="//div[@id='company-error']")
 	public static WebElement CompanyError;
 	
-	@FindBy(how=How.XPATH,using="//div[@id='postion-error']")
+	@FindBy(how=How.XPATH,using="///div[@id='postion-error']")
 	public static WebElement PositionError;
 	
 	@FindBy(how=How.XPATH,using="//div[@id='phoneNumber-error']")

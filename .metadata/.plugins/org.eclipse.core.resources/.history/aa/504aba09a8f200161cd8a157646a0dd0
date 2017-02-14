@@ -134,7 +134,7 @@ public class PostReferralRequest extends BaseDriver
 		UtilityMethods.PlaceholderValidation(PostReferralRequestPO.Description, "Tell us a little about your device, target audience, and how we can help.", "Description");
 		
 	}
-	@Test(priority=6) 
+	@Test(priority=6)
 	public static void ReferralRequestCodeValidInputValidation()
 	{
 		PostReferralRequestPO.RequestButton.click();
