@@ -15,12 +15,13 @@ import utilitymethods.UtilityMethods;
 
 public class PostOrderConfirmPage extends BaseDriver
 {
-	public static FirefoxDriver driver = launchApp();
+	public static FirefoxDriver driver ;
 	static Properties allInputValue;
 	
 	@BeforeTest
 	public static void Start() throws IOException 
 	{
+		driver = launchApp();
 		allInputValue = UtilityMethods.getPostPropValues();
 		PageFactory.initElements(driver, PostReferralRequestPO.class);
 	}

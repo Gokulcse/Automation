@@ -112,6 +112,8 @@ public class UtilityMethods extends BaseDriver {
 	
 	public static void whatTheKitIncludesImageAndTextValidation(WebElement imgObj,String imgsrc,WebElement TextObj,String Stringsrc)
 	{
+		
+		//System.out.println(""+imgObj.getAttribute("src"));
 		if (!imgObj.getAttribute("src").equals(imgsrc))
 		{
 		ScreenShot(driver, "Imagevalidation Source path "+imgsrc+"");
@@ -408,6 +410,7 @@ public class UtilityMethods extends BaseDriver {
 	
 	public static void Imagevalidation(WebElement imgObject,String typeattribute,String value,String Result)
 	{
+		//System.out.println(""+imgObject.getAttribute(typeattribute));
 		switch(typeattribute.toLowerCase())
 		{
 		case "alt":
@@ -454,6 +457,7 @@ public class UtilityMethods extends BaseDriver {
 
 	public static void DisplayEnableValidator(WebElement strObject, String value, String Result)
 	{
+		//System.out.println(""+strObject);
 		switch(value.toLowerCase())
 		{
 		case "equal":
@@ -468,7 +472,7 @@ public class UtilityMethods extends BaseDriver {
 			{
 				ScreenShot(driver, Result);
 				System.out.println("The " + Result +" is not Displayed or Enabled");
-				Assert.assertEquals(false, strObject.isDisplayed() && strObject.isEnabled());			
+				Assert.assertEquals(false, strObject.isDisplayed() && strObject.isEnabled());	
 			}
 			break;
 		}	

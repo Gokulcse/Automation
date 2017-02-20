@@ -5,14 +5,20 @@
     <classes>
       <class name="pages.PostReferralRequest">
         <methods>
-          <include name="ReferralRequestMaximumInputValidation"/>
-          <include name="Exit"/>
-          <include name="ReferralRequestCodeValidInputValidation"/>
+          <include name="RequestReferralCodeLabelTextDisplayedAndEnabled"/>
+          <include name="validateOperatorLogo"/>
+          <include name="RequestReferralCodeTextBoxDisplayedAndEnabled"/>
           <include name="RequestButtonValidation"/>
+          <include name="ReferralRequestTextValidation"/>
+          <include name="ReferralRequestMaximumInputValidation"/>
+          <include name="RequestReferralCodePlaceholderValidation"/>
+          <include name="validateCompanyLogo"/>
+          <include name="ReferralRequestCodeValidInputValidation"/>
+          <include name="ReferralRequestMinimumInputValidation"/>
           <include name="Start"/>
+          <include name="ReferralRequestOtherValidation"/>
           <include name="ReferralRequestSpaceNotAllowedValidation"/>
           <include name="ReferralRequestRequiredFieldValidation"/>
-          <include name="ReferralRequestTextValidation"/>
         </methods>
       </class> <!-- pages.PostReferralRequest -->
     </classes>

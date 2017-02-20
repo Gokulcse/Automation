@@ -21,10 +21,10 @@ public class PostHomePagePO extends BaseDriver
 	@FindBy(how=How.XPATH,using="//section[@id='hero-wrp']//h3")
 	public static WebElement TextBannerh3;
 	
-	@FindBy(how=How.XPATH,using="//div[@class='pb5 br-none-md']//p[1]")
+	@FindBy(how=How.XPATH,using="//div[@class='pb5 br-none-md']//p[contains(.,'POST')]")
 	public static WebElement TextBannerp1;
 	
-	@FindBy(how=How.XPATH,using="//div[@class='pb5 br-none-md']//p[@class='pt10']")
+	@FindBy(how=How.XPATH,using="//div[@class='pb5 br-none-md']//p[contains(.,'below')]")
 	public static WebElement TextBannerp2;
 	
 	@FindBy(how=How.XPATH,using="//section[@id='hero-wrp']//a[text()='Request Referral Code']")

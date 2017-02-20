@@ -17,11 +17,12 @@ import utilitymethods.UtilityMethods;
 
 public class PostShippingInfo extends BaseDriver
 {
-	public static FirefoxDriver driver = launchApp();
+	public static FirefoxDriver driver ;
 	static Properties allInputValue;
 	@BeforeTest
 	public static void Start() throws IOException 
 	{
+		driver = launchApp();
 		allInputValue = UtilityMethods.getPostPropValues();
 		PageFactory.initElements(driver, PostReferralRequestPO.class);
 	}
@@ -74,21 +75,21 @@ public class PostShippingInfo extends BaseDriver
 	public static void validateOperatorLogo()
 	{
 		UtilityMethods.DisplayEnableValidator(PostShippingInfoPO.PostLogo, "NotEqual","Post Operator Logo in IoT Starter Kit");	
-		UtilityMethods.Imagevalidation(PostShippingInfoPO.PostLogo,"src",allInputValue.getProperty("tele2Logo"),"Post Operator Logo");		
+		UtilityMethods.Imagevalidation(PostShippingInfoPO.PostLogo,"src",allInputValue.getProperty("PostLogo"),"Post Operator Logo");		
 	} 
 	
 	public static void validateCompanyLogo()
 	{	
 		UtilityMethods.DisplayEnableValidator(PostShippingInfoPO.CiscoLogo, "NotEqual","Cisco Jasper Company Logo in IoT Starter Kit");		
-		UtilityMethods.Imagevalidation(PostShippingInfoPO.CiscoLogo,"src",allInputValue.getProperty("tele2CompanyLogo"),"Cisco Jasper Company Logo");		
+		UtilityMethods.Imagevalidation(PostShippingInfoPO.CiscoLogo,"src",allInputValue.getProperty("CiscoLogo"),"Cisco Jasper Company Logo");		
 	}
 	@Test(priority=4)
 	public static void ShippingInfoTextvalidation()
 	{
 		UtilityMethods.StringValidation(PostShippingInfoPO.SectionOneHead1.getText(), "Order IoT Starter Kit", "equalsignorecase");
 		UtilityMethods.StringValidation(PostShippingInfoPO.SectionOneHead4.getText(), "Shipping", "equalsignorecase");
-		UtilityMethods.StringValidation(PostShippingInfoPO.ParagraphText.getText(), "Please provide us with the details of your shipping address. Once your order has been completed, your IoT Starter Kit will be shipped to you at no charge.", "equalsignorecase");
-		UtilityMethods.StringValidation(PostShippingInfoPO.SameBillAndShipLabel.getText(), "My shipping and billing information are the same.", "equalsignorecase");
+		UtilityMethods.StringValidation(PostShippingInfoPO.ParagraphText.getText(), allInputValue.getProperty("Shipping.SectionOne"), "equalsignorecase");
+		UtilityMethods.StringValidation(PostShippingInfoPO.SameBillAndShipLabel.getText(), allInputValue.getProperty("Shipping.BillandShip"), "equalsignorecase");
 	}
 	@Test(priority=5)
 	public static void shippingInfoLabelText()
@@ -173,9 +174,7 @@ public class PostShippingInfo extends BaseDriver
 		UtilityMethods.DisplayEnableValidator(PostShippingInfoPO.BillCityInput, "NotEqual", "City Input Field");	
 		UtilityMethods.DisplayEnableValidator(PostShippingInfoPO.BillProvinceInput, "NotEqual", "Province Input Field");	
 		UtilityMethods.DisplayEnableValidator(PostShippingInfoPO.BillPostInput, "NotEqual", "Postal Code Input Field");	
-		UtilityMethods.DisplayEnableValidator(PostShippingInfoPO.BillCountryInput, "NotEqual", "Country Drop Down");	
-
-		
+		UtilityMethods.DisplayEnableValidator(PostShippingInfoPO.BillCountryInput, "NotEqual", "Country Drop Down");		
 	}
 	@Test(priority=14)
 	public static void BillingInfoRequiredFieldvalidatoin()
@@ -207,6 +206,7 @@ public class PostShippingInfo extends BaseDriver
         //UtilityMethods.MaximumInputValidation(driver.findElement(By.xpath("//input[@name='shipAddress.zipPostalCode']")), driver.findElement(By.xpath("//div[@id=''pscode-error']")), 6, allInputValue.getProperty("InvalidCompanyName"));
         //postal Code Maximum Input validation need to be verified 	 
 	 }
+	
 	@Test(priority=16)
 	public static void  BillingInfoMinimumInputValidation()
 	{

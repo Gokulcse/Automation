@@ -1,0 +1,52 @@
+package driver;
+
+import java.io.IOException;
+
+import javafx.scene.control.Alert;
+
+import org.omg.SendingContext.RunTime;
+import org.openqa.selenium.By;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
+
+import pageobjects.PostReferralRequestPO;
+import utilitymethods.UtilityMethods;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+
+
+public class BaseDriver {
+	public static ExtentReports extent;
+	public static ExtentTest testcase;
+	
+	public static FirefoxDriver driver;
+	
+	
+	public static FirefoxDriver launchApp() throws IOException
+	{	
+		System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
+		driver = new FirefoxDriver();
+		driver.manage().window().maximize();
+		driver.get("http://postdevfortesting.devm2m.com/");
+		
+		//driver.get("http://skotni:dkt123@postdevfortesting.devm2m.com/");	 to be used if windows server authentication is used
+		//Runtime.getRuntime().exec(System.getProperty("user.dir")+ "\\libs\\BasicAut.exe");
+	/*	
+	 * 
+	 * form/referral/request
+	 * try 
+		{
+			Runtime.getRuntime().exec(System.getProperty("user.dir")+ "\\libs\\BasicAut.exe");
+		} 
+		catch (IOException e) 
+		{
+			
+			e.printStackTrace();
+		}
+		/form/referral/request
+		*/
+		return driver;
+	}
+
+}

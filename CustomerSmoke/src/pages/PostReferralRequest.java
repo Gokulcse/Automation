@@ -4,7 +4,9 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -12,7 +14,6 @@ import org.testng.annotations.Test;
 
 import driver.BaseDriver;
 import utilitymethods.UtilityMethods;
-
 import pageobjects.PostReferralRequestPO;
 public class PostReferralRequest extends BaseDriver
 {
@@ -24,15 +25,14 @@ public class PostReferralRequest extends BaseDriver
 	{
 		driver = launchApp();
 		allInputValue = UtilityMethods.getPostPropValues();
-		PageFactory.initElements(driver, PostReferralRequestPO.class);		
 	}
 	
-	public static void headerValidation()
+/*	public static void headerValidation()
 	{
 		validateOperatorLogo();
 		validateCompanyLogo();
 		//UtilityMethods.PageNavigationValidation(driver.findElement(By.xpath("//img[@alt='Tele2']")), driver.findElement(By.xpath("//img[@title='What is IoT']")));
-	}
+	}*/
 	
 	@Test
 	public static void validateOperatorLogo()
@@ -46,7 +46,7 @@ public class PostReferralRequest extends BaseDriver
 	public static void validateCompanyLogo()
 	{PageFactory.initElements(driver, PostReferralRequestPO.class);
 		UtilityMethods.DisplayEnableValidator(PostReferralRequestPO.CiscoLogo, "NotEqual","Cisco Jasper Company Logo in IoT Starter Kit");		
-		UtilityMethods.Imagevalidation(PostReferralRequestPO.CiscoLogo,"src",allInputValue.getProperty("CompanyLogo"),"Cisco Jasper Company Logo");		
+		UtilityMethods.Imagevalidation(PostReferralRequestPO.CiscoLogo,"src",allInputValue.getProperty("ciscoLogo"),"Cisco Jasper Company Logo");		
 	}
 	 
 	public static void sectionOneValidation()
@@ -70,6 +70,8 @@ public class PostReferralRequest extends BaseDriver
 		PageFactory.initElements(driver, PostReferralRequestPO.class);
 		UtilityMethods.StringValidation(PostReferralRequestPO.SectionOneHead1.getText(), "Request a Referral Code", "equalsignorecase");
 		UtilityMethods.StringValidation(PostReferralRequestPO.ParagraphText.getText(), allInputValue.getProperty("ReferralRequest.sectionOne"), "equalsignorecase");
+		allInputValue.setProperty("WhatIsIot", "");
+		
 		UtilityMethods.StringValidation(PostReferralRequestPO.ContactInfoText.getText(), "Contact Information", "equalsignorecase");
 		UtilityMethods.StringValidation(PostReferralRequestPO.DeviceInfoText.getText(), "Device Information", "equalsignorecase");
 	}
@@ -213,10 +215,10 @@ public class PostReferralRequest extends BaseDriver
 	{
 		UtilityMethods.SendInputValues(PostReferralRequestPO.FirstNameInput, "Test", "TextBox");
 		UtilityMethods.SendInputValues(PostReferralRequestPO.LastNameInput, "Data 1", "TextBox");
-		UtilityMethods.SendInputValues(PostReferralRequestPO.CompanyNameInput, "CTELA TESTING", "TextBox");
+		UtilityMethods.SendInputValues(PostReferralRequestPO.CompanyNameInput, "CTELA TEST 1.1", "TextBox");
 		UtilityMethods.SendInputValues(PostReferralRequestPO.PositionRoleInput, "ELP", "TextBox");
 		UtilityMethods.SendInputValues(PostReferralRequestPO.PhoneNumberInput, "8220119412", "TextBox");
-		UtilityMethods.SendInputValues(PostReferralRequestPO.EmailInput, "automation1@yopmail.com", "TextBox");
+		UtilityMethods.SendInputValues(PostReferralRequestPO.EmailInput, "gokularamanancse@gmail.com.com", "TextBox");
 		UtilityMethods.SendInputValues(PostReferralRequestPO.ModuleInput, "Test Entry", "TextBox");
 		UtilityMethods.SendInputValues(PostReferralRequestPO.BusinessInput, "Telematics - passenger vehicles, aftermarket", "DropDown");
 	    UtilityMethods.SendInputValues(PostReferralRequestPO.Sim2FFInput, "", "Radiobutton");
@@ -236,7 +238,7 @@ public class PostReferralRequest extends BaseDriver
 		System.out.println("The Result is "+Result);
 		if(Result==false)
 	    {
-			System.out.println("Page Navigation Error in "+driver.findElement(By.xpath("//img[@alt='Tele2']")).getText());	
+		System.out.println("Page Navigation Error in "+driver.findElement(By.xpath("//img[@alt='Tele2']")).getText());	
 		}
 	*/
 	}
@@ -245,7 +247,7 @@ public class PostReferralRequest extends BaseDriver
 	public static void AdminApproval() throws InterruptedException
 	{
 		System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
-		driver = new FirefoxDriver();
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("http://starterkit-dev.devm2m.com/admin/internal/login");
 		Thread.sleep(1500);
@@ -257,7 +259,6 @@ public class PostReferralRequest extends BaseDriver
 		driver.findElement(By.xpath("//div[@id='approve0']")).click();
 		Thread.sleep(1500);
 		driver.findElement(By.xpath("//div[@id='aprCode']//button[@type='submit']")).click();
-	
 	}
 	
 	

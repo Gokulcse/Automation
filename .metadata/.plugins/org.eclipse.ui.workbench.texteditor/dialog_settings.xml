@@ -6,37 +6,37 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="FirstNameInput" key="selection"/>
+		<item value="sectionOneIotStarterKitTrackOrderValidation" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="FirstNameInput"/>
-			<item value="你申請的推薦碼已通過審核"/>
-			<item value="您申請的引薦碼已通過審核"/>
-			<item value="driver.findElement(By.xpath(&quot;//div[@id=&apos;targetAudience-error&apos;]&quot;))"/>
-			<item value="driver.findElement(By.xpath(&quot;//div[@id=&apos;email-error&apos;]&quot;))"/>
-			<item value="driver.findElement(By.xpath(&quot;//div[@id=&apos;phoneNumber-error&apos;]&quot;))"/>
-			<item value="driver.findElement(By.xpath(&quot;//div[@id=&apos;postion-error&apos;]&quot;))"/>
-			<item value="driver.findElement(By.xpath(&quot;//div[@id=&apos;company-error&apos;]&quot;))"/>
+			<item value="sectionOneIotStarterKitTrackOrderValidation"/>
+			<item value="Buy"/>
+			<item value="M2M"/>
+			<item value="Developer guidelines and M2M"/>
+			<item value="Developer guidelines and M2M.com forum"/>
+			<item value="Full Access to Post M2M Control Center"/>
+			<item value="driver.findElement(By.xpath(&quot;//input[@name=&apos;billAddress.cityTown&apos;]&quot;))"/>
+			<item value="driver.findElement(By.xpath(&quot;//input[@name=&apos;billAddress.addressLine1&apos;]&quot;))"/>
 		</list>
 		<list key="replacehistory">
+			<item value="PostShippingInfoPO.BillCityInput"/>
+			<item value="PostShippingInfoPO.BillAddressInput"/>
+			<item value="Bill"/>
 			<item value="PostReferralRequestPO.DescriptionError"/>
 			<item value="PostReferralRequestPO.EmailError"/>
 			<item value="PostReferralRequestPO.PhoneNumberError"/>
 			<item value="PostReferralRequestPO.PositionError"/>
 			<item value="PostReferralRequestPO.CompanyError"/>
-			<item value="PostReferralRequestPO.Description"/>
-			<item value="PostReferralRequestPO.LastNameError"/>
-			<item value="PostReferralRequestPO.FirstNameError"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="257" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="386" key="DIALOG_HEIGHT"/>
-		<item value="304" key="DIALOG_X_ORIGIN"/>
-		<item value="114" key="DIALOG_Y_ORIGIN"/>
+		<item value="999" key="DIALOG_X_ORIGIN"/>
+		<item value="154" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

@@ -11,12 +11,13 @@ import utilitymethods.UtilityMethods;
 
 public class PostContolCenter extends BaseDriver
 {
-	public static FirefoxDriver driver = launchApp();
+	public static FirefoxDriver driver;
 	static Properties allInputValue;
 	
 	public static void main(String[] args) throws IOException 
 	
 	{
+		driver = launchApp();
 		allInputValue = UtilityMethods.getPropValues();
 		String myWindowHandle = driver.getWindowHandle();
 		driver.switchTo().window(myWindowHandle);

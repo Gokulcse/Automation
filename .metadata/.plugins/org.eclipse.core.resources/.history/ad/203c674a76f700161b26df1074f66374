@@ -1,0 +1,75 @@
+package pageobjects;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+
+import driver.BaseDriver;
+
+public class BellHomePagePO extends BaseDriver
+{
+	
+	@FindBy(how=How.XPATH,using="//img[@alt='Bell']")
+	public static WebElement BellLogo;
+	
+	@FindBy(how=How.XPATH,using="//img[@alt='Cisco Jasper']")
+	public static WebElement CiscoLogo;
+
+	@FindBy(how=How.XPATH,using="//section[@id='hero-wrp']//h1")
+	public static WebElement TextBannerh1;
+	
+	@FindBy(how=How.XPATH,using="//section[@id='hero-wrp']//h3")
+	public static WebElement TextBannerh3;
+	
+	@FindBy(how=How.XPATH,using="//div[@class='pb5 br-none-md']//p[contains(.,'Bell')]")
+	public static WebElement TextBannerp1;
+	
+	@FindBy(how=How.XPATH,using="//div[@class='pb5 br-none-md']//p[contains(.,'code]')]")
+	public static WebElement TextBannerp2;
+	
+	@FindBy(how=How.XPATH,using="//section[@id='hero-wrp']//button")
+	public static WebElement SectionOneReferralRrequestButton;
+	
+	@FindBy(how=How.XPATH,using="//input[@value='Request']")
+	public static WebElement ReferrralRequestFindElement; //Referral Request Find Element in next page
+
+	@FindBy(how=How.XPATH,using="//div[@class='pb5']//a[text()='Track Order']")
+	public static WebElement SectionOneTrackOrderButton;
+	
+	@FindBy(how=How.XPATH,using="//form[@id='hmeRefTrack']//h4")
+	public static WebElement SectionOneTrackOrderText;
+	
+	@FindBy(how=How.XPATH,using="//form[@id='hmeRefTrack']//a")
+	public static WebElement SectionOneTrackOrderPRButton;
+	
+	@FindBy(how=How.XPATH,using="//form[@id='hmeRefTrack']//a")
+	public static WebElement SectionOneTrackOrderFindElement;//Section Find Element in next page
+	
+	@FindBy(how=How.ID,using="emailId")
+	public static WebElement TrackOrderEmailID;
+	
+	@FindBy(how=How.XPATH,using="//div[@class='bl-ref-inpt-grp bl-email']//span")
+	public static WebElement TrackOrderCloseIcon;
+	
+	@FindBy(how=How.XPATH,using="//a[text()='Enter Referral Code']")
+	public static WebElement SectionOneEnterReferralCodeButton;
+	
+	@FindBy(how=How.XPATH,using="//h4[text()='Enter Referral Code']")
+	public static WebElement SectionOneEnterReferralCodeText;
+	
+	@FindBy(how=How.XPATH,using="//section[@id='hero-wrp']//a[text()='Order Kit']")
+	public static WebElement SectionOneOrderKitButton;
+	
+	@FindBy(how=How.ID,using="referral")
+	public static WebElement EnterReferralCode;
+	
+	@FindBy(how=How.XPATH,using="//div[@class='bl-ref-inpt-grp bl-ref-odr']//span")
+	public static WebElement EnterReferralCodeCloseIcon;
+	
+	@FindBy(how=How.XPATH,using="//section[@id='kit-inc']//a[text()='Request Referral Code']")
+	public static WebElement SectionTwoReferralRrequestButton;
+
+	
+	
+}
+

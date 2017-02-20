@@ -1,13 +1,14 @@
 package driver;
 
+import java.io.IOException;
+
+import javafx.scene.control.Alert;
+
+import org.omg.SendingContext.RunTime;
 import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
-
-
-
-
-
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import pageobjects.PostReferralRequestPO;
@@ -23,24 +24,31 @@ public class BaseDriver {
 	
 	public static FirefoxDriver driver;
 	
+	//public static InternetExplorerDriver driver;
 	
-	public static FirefoxDriver launchApp() 
+	
+	//public static ChromeDriver driver;
+	
+	public static FirefoxDriver launchApp() throws IOException
 	{	
+		
+		/*System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+ "\\libs\\IEDriverServer.exe");
+		driver = new InternetExplorerDriver();*/
+		
+	/*	
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ "\\libs\\chromedriver.exe");
+		driver = new ChromeDriver();*/
+		
+		
 		System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
 		driver = new FirefoxDriver();
+		
+		
 		driver.manage().window().maximize();
 		driver.get("http://postdevfortesting.devm2m.com/form/referral/request");
-		/*PageFactory.initElements(driver, PostReferralRequestPO.class);
-		driver.findElement(By.xpath("//input[@id='fname']")).sendKeys("Testing");
 		
-		UtilityMethods.SendInputValues(PostReferralRequestPO.FirstNameInput, "Test", "TextBox");
-		UtilityMethods.SendInputValues(PostReferralRequestPO.LastNameInput, "Data 1", "TextBox");
-		UtilityMethods.SendInputValues(PostReferralRequestPO.CompanyNameInput, "CTELA TESTING", "TextBox");
-		UtilityMethods.SendInputValues(PostReferralRequestPO.PositionRoleInput, "ELP", "TextBox");
-		UtilityMethods.SendInputValues(PostReferralRequestPO.PhoneNumberInput, "8220119412", "TextBox");
-		UtilityMethods.SendInputValues(PostReferralRequestPO.EmailInput, "automation1@yopmail.com", "TextBox");
-		UtilityMethods.SendInputValues(PostReferralRequestPO.ModuleInput, "Test Entry", "TextBox");*/
-		
+		//driver.get("http://skotni:dkt123@postdevfortesting.devm2m.com/");	 to be used if windows server authentication is used
+	
 		return driver;
 	}
 

@@ -11,7 +11,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import utilitymethods.UtilityMethods;
 import driver.BaseDriver;
 
-public class BellHomePage extends BaseDriver{
+public class BellHomePage extends BaseDriver
+
+{
 	
 	public static FirefoxDriver driver = launchApp();
 	static Properties allInputValue;
@@ -25,8 +27,8 @@ public class BellHomePage extends BaseDriver{
 		sectionThree();
 		sectionFour();
 		sectionFive();
-		//driver.findElement(By.xpath("//section[@id='hero-wrp']//a/button[text()='Request Referral Code']")).click();
-	//	UtilityMethods.ErrorValidation(driver.findElement(By.xpath(".//*[@id='fname']")), "4", "Valid", driver.findElement(By.xpath(".//*[@id='blrequestForm']/div[12]/div[1]/input")));
+		//driver.findElement(By.xpat h("//section[@id='hero-wrp']//a/button[text()='Request Referral Code']")).click();
+		//	UtilityMethods.ErrorValidation(driver.findElement(By.xpath(".//*[@id='fname']")), "4", "Valid", driver.findElement(By.xpath(".//*[@id='blrequestForm']/div[12]/div[1]/input")));
 
 		 
 		driver.close();

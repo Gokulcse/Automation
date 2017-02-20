@@ -26,7 +26,6 @@
 <fullyQualifiedTypeName name="pages.Tele2HomePage"/>
 <fullyQualifiedTypeName name="com.relevantcodes.extentreports.ExtentReports"/>
 <fullyQualifiedTypeName name="com.relevantcodes.extentreports.ExtentTest"/>
-<fullyQualifiedTypeName name="org.testng.annotations.Test"/>
 <fullyQualifiedTypeName name="org.testng.ITestResult"/>
 <fullyQualifiedTypeName name="org.testng.annotations.AfterMethod"/>
 <fullyQualifiedTypeName name="com.relevantcodes.extentreports.model.Test"/>
@@ -37,10 +36,16 @@
 <fullyQualifiedTypeName name="com.sun.jna.platform.win32.Netapi32Util.User"/>
 <fullyQualifiedTypeName name="java.io.PrintWriter"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
-<fullyQualifiedTypeName name="utilitymethods.UtilityMethods"/>
-<fullyQualifiedTypeName name="driver.BaseDriver"/>
-<fullyQualifiedTypeName name="pageobjects.PostHomePagePO"/>
 <fullyQualifiedTypeName name="pageobjects.PostReferralRequestPO"/>
-<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="pageobjects.PostShippingInfoPO"/>
+<fullyQualifiedTypeName name="java.lang.Runtime"/>
+<fullyQualifiedTypeName name="org.omg.SendingContext.RunTime"/>
+<fullyQualifiedTypeName name="javafx.scene.control.Alert"/>
+<fullyQualifiedTypeName name="pages.PostHomePage"/>
+<fullyQualifiedTypeName name="pageobjects.PostHomePagePO"/>
+<fullyQualifiedTypeName name="driver.BaseDriver"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+<fullyQualifiedTypeName name="org.testng.annotations.Test"/>
+<fullyQualifiedTypeName name="utilitymethods.UtilityMethods"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
 </qualifiedTypeNameHistroy>
