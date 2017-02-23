@@ -29,7 +29,7 @@ public class BaseDriver {
 	
 	//public static ChromeDriver driver;
 	
-	public static FirefoxDriver launchApp() throws IOException
+	public static FirefoxDriver launchApp() throws IOException, Exception
 	{	
 		
 		/*System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+ "\\libs\\IEDriverServer.exe");
@@ -41,11 +41,12 @@ public class BaseDriver {
 		
 		
 		System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
+		Thread.sleep(1000);
 		driver = new FirefoxDriver();
-		
-		
+		Thread.sleep(1000);
 		driver.manage().window().maximize();
-		driver.get("http://postdevfortesting.devm2m.com/form/referral/request");
+		Thread.sleep(1000);
+		driver.get("http://bell.devm2m.com/form/referral/request");
 		
 		//driver.get("http://skotni:dkt123@postdevfortesting.devm2m.com/");	 to be used if windows server authentication is used
 	

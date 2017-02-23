@@ -20,7 +20,7 @@ public class PostReferralrequestThankYou extends BaseDriver
 	static Properties allInputValue;
 
 	@BeforeTest
-	public static void Start() throws IOException 
+	public static void Start() throws Exception 
 	{
 		driver = launchApp();
 		allInputValue = UtilityMethods.getPostPropValues();

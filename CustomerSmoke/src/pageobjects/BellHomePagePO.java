@@ -24,8 +24,8 @@ public class BellHomePagePO extends BaseDriver
 	@FindBy(how=How.XPATH,using="//div[@class='pb5 br-none-md']//p[contains(.,'Bell')]")
 	public static WebElement TextBannerp1;
 	
-	@FindBy(how=How.XPATH,using="//div[@class='pb5 br-none-md']//p[contains(.,'code]')]")
-	public static WebElement TextBannerp2;
+	@FindBy(how=How.XPATH,using="//div[@class='pb5 br-none-md']//p[contains(.,'code')]")
+	public static WebElement TextBannerp2; 
 	
 	@FindBy(how=How.XPATH,using="//section[@id='hero-wrp']//button")
 	public static WebElement SectionOneReferralRrequestButton;

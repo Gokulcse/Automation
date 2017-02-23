@@ -1,0 +1,46 @@
+package pages;
+
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import driver.BaseDriver;
+import pageobjects.BellHomePagePO;
+import utilitymethods.UtilityMethods;
+
+public class BellHomePage extends BaseDriver
+{
+	public static FirefoxDriver driver;
+	 static Properties allInputValue;
+	
+	 @BeforeTest
+	 public static void start() throws IOException
+	{	 
+		driver = launchApp();
+		allInputValue = UtilityMethods.getPostPropValues();	
+	}
+	 
+	 @Test(priority=1)
+	public static void validateOperatorLogo()
+	{		
+		 PageFactory.initElements(driver, BellHomePagePO.class);	
+		UtilityMethods.DisplayEnableValidator(PostHomePagePO.PostLogo, "NotEqual","Post Operator Logo in IoT Starter Kit");	
+		UtilityMethods.Imagevalidation(PostHomePagePO.PostLogo,"src",allInputValue.getProperty("postLogo"),"Post Operator Logo");
+		System.out.println(""+"TS001");
+	} 
+
+	 @Test(priority=2)
+	public static void validateCompanyLogo()
+	{
+		 PageFactory.initElements(driver, PostHomePagePO.class);	
+		UtilityMethods.DisplayEnableValidator(PostHomePagePO.CiscoLogo, "NotEqual","Cisco Jasper Company Logo in IoT Starter Kit");		
+		UtilityMethods.Imagevalidation(PostHomePagePO.CiscoLogo,"src",allInputValue.getProperty("ciscoLogo"),"Cisco Jasper Company Logo");
+		System.out.println(""+"TS002");
+	}
+	
+
+}

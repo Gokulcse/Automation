@@ -20,7 +20,7 @@ public class PostShippingInfo extends BaseDriver
 	public static FirefoxDriver driver ;
 	static Properties allInputValue;
 	@BeforeTest
-	public static void Start() throws IOException 
+	public static void Start() throws Exception 
 	{
 		driver = launchApp();
 		allInputValue = UtilityMethods.getPostPropValues();

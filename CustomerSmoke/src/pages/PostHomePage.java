@@ -1,13 +1,11 @@
 package pages;
-import java.io.IOException;
+
 import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -17,11 +15,11 @@ import driver.BaseDriver;
 
 public class PostHomePage extends BaseDriver
 {
-	public static InternetExplorerDriver driver;
+	public static FirefoxDriver driver;
 	 static Properties allInputValue;
 	
 	 @BeforeTest
-	 public static void start() throws IOException
+	 public static void start() throws Exception
 	{
 		 
 		driver = launchApp();
@@ -32,9 +30,10 @@ public class PostHomePage extends BaseDriver
 	 @Test(priority=1)
 	public static void validateOperatorLogo()
 	{		
-		 PageFactory.initElements(driver, PostHomePagePO.class);	
+		PageFactory.initElements(driver, PostHomePagePO.class);	
 		UtilityMethods.DisplayEnableValidator(PostHomePagePO.PostLogo, "NotEqual","Post Operator Logo in IoT Starter Kit");	
 		UtilityMethods.Imagevalidation(PostHomePagePO.PostLogo,"src",allInputValue.getProperty("postLogo"),"Post Operator Logo");
+		
 		System.out.println(""+"TS001");
 	} 
 
@@ -160,7 +159,7 @@ public class PostHomePage extends BaseDriver
 	public static void SectionThreeLearnMore() throws InterruptedException
 	{
 		UtilityMethods.DisplayEnableValidator(PostHomePagePO.HowItWorksLearnMore, "NotEqual", "M2MDotCom Link Button");
-		UtilityMethods.PageNavigationValidation(PostHomePagePO.HowItWorksLearnMore,PostHomePagePO.M2MDotComFindElement,"Tel"); 	
+		UtilityMethods.PageNavigationValidation(PostHomePagePO.HowItWorksLearnMore,PostHomePagePO.M2MDotComFindElement,"Bell"); 	
 	}
 
 	 @Test(priority=14)

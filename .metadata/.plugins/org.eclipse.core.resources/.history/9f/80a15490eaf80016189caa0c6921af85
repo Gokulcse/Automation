@@ -1,0 +1,57 @@
+package pages;
+
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import driver.BaseDriver;
+import pageobjects.BellHomePagePO;
+import pageobjects.PostHomePagePO;
+import utilitymethods.UtilityMethods;
+
+public class BellHomePage extends BaseDriver
+{
+	public static FirefoxDriver driver;
+	 static Properties allInputValue;
+	
+	 @BeforeTest
+	 public static void start() throws IOException
+	{	 
+		driver = launchApp();
+		allInputValue = UtilityMethods.getPostPropValues();	
+	}
+	 
+	 @Test(priority=1)
+	public static void validateOperatorLogo()
+	{		
+		 PageFactory.initElements(driver, BellHomePagePO.class);	
+		UtilityMethods.DisplayEnableValidator(BellHomePagePO.BellLogo, "NotEqual","Bell Operator Logo in IoT Starter Kit");	
+		UtilityMethods.Imagevalidation(BellHomePagePO.BellLogo,"src",allInputValue.getProperty("bellLogo"),"Bell Operator Logo");
+		System.out.println(""+"TS001");
+	} 
+
+	 @Test(priority=2)
+	public static void validateCompanyLogo()
+	{
+		 PageFactory.initElements(driver, BellHomePagePO.class);	
+		UtilityMethods.DisplayEnableValidator(BellHomePagePO.CiscoLogo, "NotEqual","Cisco Jasper Company Logo in IoT Starter Kit");		
+		UtilityMethods.Imagevalidation(BellHomePagePO.CiscoLogo,"src",allInputValue.getProperty("ciscoLogo"),"Cisco Jasper Company Logo");
+		System.out.println(""+"TS002");
+	}
+	 @Test(priority=3)
+		public static void sectionOneIotStarterKitPostValidation()
+		{
+			 PageFactory.initElements(driver, BellHomePagePO.class);	
+			UtilityMethods.StringValidation(BellHomePagePO.TextBannerh1.getText(), allInputValue.getProperty("HomePage.Bannerh1"), "equalsignorecase");
+			UtilityMethods.StringValidation(BellHomePagePO.TextBannerh3.getText(), allInputValue.getProperty("HomePage.Bannerh3"), "equalsignorecase");
+			UtilityMethods.StringValidation(BellHomePagePO.TextBannerp1.getText().replace("\n", " "),allInputValue.getProperty("HomePage.Bannerp1"), "equalsignorecase");
+			UtilityMethods.StringValidation(BellHomePagePO.TextBannerp2.getText().replace("\n", " "), allInputValue.getProperty("HomePage.Bannerp2"), "equalsignorecase");
+			System.out.println(""+"TS003");
+		}
+			
+
+}

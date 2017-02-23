@@ -3,24 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="pages.PostReferralRequest">
+      <class name="pages.BellReferralRequestPage">
         <methods>
-          <include name="RequestReferralCodeLabelTextDisplayedAndEnabled"/>
           <include name="validateOperatorLogo"/>
-          <include name="RequestReferralCodeTextBoxDisplayedAndEnabled"/>
-          <include name="RequestButtonValidation"/>
-          <include name="ReferralRequestTextValidation"/>
-          <include name="ReferralRequestMaximumInputValidation"/>
-          <include name="RequestReferralCodePlaceholderValidation"/>
           <include name="validateCompanyLogo"/>
-          <include name="ReferralRequestCodeValidInputValidation"/>
-          <include name="ReferralRequestMinimumInputValidation"/>
+          <include name="RequestButtonValidation"/>
           <include name="Start"/>
-          <include name="ReferralRequestOtherValidation"/>
-          <include name="ReferralRequestSpaceNotAllowedValidation"/>
-          <include name="ReferralRequestRequiredFieldValidation"/>
         </methods>
-      </class> <!-- pages.PostReferralRequest -->
+      </class> <!-- pages.BellReferralRequestPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

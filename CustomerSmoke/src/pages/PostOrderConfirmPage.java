@@ -1,8 +1,7 @@
 package pages;
 
-import java.io.IOException;
-import java.util.Properties;
 
+import java.util.Properties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -19,7 +18,7 @@ public class PostOrderConfirmPage extends BaseDriver
 	static Properties allInputValue;
 	
 	@BeforeTest
-	public static void Start() throws IOException 
+	public static void Start() throws Exception 
 	{
 		driver = launchApp();
 		allInputValue = UtilityMethods.getPostPropValues();

@@ -1,6 +1,6 @@
 package pages;
 
-import java.io.IOException;
+
 import java.util.Properties;
 
 import org.openqa.selenium.By;
@@ -14,7 +14,7 @@ public class PostContolCenter extends BaseDriver
 	public static FirefoxDriver driver;
 	static Properties allInputValue;
 	
-	public static void main(String[] args) throws IOException 
+	public static void main(String[] args) throws Exception 
 	
 	{
 		driver = launchApp();

@@ -1,178 +1,242 @@
 package pages;
 
-import java.io.IOException;
+
 import java.util.Properties;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import pageobjects.BellReferralRequestPO;
 import utilitymethods.UtilityMethods;
 import driver.BaseDriver;
 
 public class BellReferralRequestPage extends BaseDriver
-{	
-	public static FirefoxDriver driver = launchApp();
+{
+	public static FirefoxDriver driver;
 	static Properties allInputValue;
-	public static void main(String[] args) throws IOException 
+
+	@BeforeTest
+	public static void Start() throws Exception
 	{
-		allInputValue = UtilityMethods.getPropValues();
-		headerValidation();
-		System.out.println("header Section Completed");
-		sectionOneValidation();
-		System.out.println("Section one Completed");
+		driver = launchApp();
+		allInputValue = UtilityMethods.getBellPropValues();
 	}
-	public static void headerValidation()
-	{
-		validateOperatorLogo();
-		validateCompanyLogo();
-		//UtilityMethods.PageNavigationValidation(driver.findElement(By.xpath("//img[@alt='Bell']")), driver.findElement(By.xpath("//img[@title='What is IoT']")));
-				
-	}
+	
+	@Test
 	public static void validateOperatorLogo()
 	{
-		WebElement operatorLogo = driver.findElement(By.xpath("//img[@alt='Bell']"));
-		UtilityMethods.DisplayEnableValidator(operatorLogo, "NotEqual","Bell Operator Logo in IoT Starter Kit");	
-		UtilityMethods.Imagevalidation(operatorLogo,"src",allInputValue.getProperty("bellLogo"),"Bell Operator Logo");		
+		PageFactory.initElements(driver, BellReferralRequestPO.class);
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.BellLogo, "NotEqual","Bell Operator Logo in IoT Starter Kit");	
+		UtilityMethods.Imagevalidation(BellReferralRequestPO.BellLogo,"src",allInputValue.getProperty("bellLogo"),"Bell Operator Logo");		
+		
 	} 
+	
+	@Test(priority=1)
 	public static void validateCompanyLogo()
 	{
-		WebElement companyLogo = driver.findElement(By.xpath("//img[@alt='Cisco Jasper']"));
-		UtilityMethods.DisplayEnableValidator(companyLogo, "NotEqual","Cisco Jasper Company Logo in IoT Starter Kit");		
-		UtilityMethods.Imagevalidation(companyLogo,"src",allInputValue.getProperty("companyLogo"),"Cisco Jasper Company Logo");		
+		PageFactory.initElements(driver, BellReferralRequestPO.class);
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.CiscoLogo, "NotEqual","Cisco Jasper Company Logo in IoT Starter Kit");		
+		UtilityMethods.Imagevalidation(BellReferralRequestPO.CiscoLogo,"src",allInputValue.getProperty("ciscoLogo"),"Cisco Jasper Company Logo");		
 	}
-	public static void sectionOneValidation()
+ 
+//	@Test(priority=2)
+	public static void ReferralRequestTextValidation()
 	{
-		RequestReferralCodeTextBoxDisplayedAndEnabled();
-		RequestReferralCodeLabelTextDisplayedAndEnabled();
-		RequestReferralCodePlaceholderValidation();
-		ReferralRequestCodeValidInputValidation();
-		ReferralRequestRequiredFieldValidation();
-		ReferralRequestSpaceNotAllowedValidation();
-		ReferralRequestMaximumInputValidation();
-		ReferralRequestMinimumInputValidation();
-		
+		PageFactory.initElements(driver, BellReferralRequestPO.class);
+		UtilityMethods.StringValidation(BellReferralRequestPO.SectionOneHead1.getText(), "Request a Referral Code", "equalsignorecase");
+		UtilityMethods.StringValidation(BellReferralRequestPO.ParagraphText.getText(), allInputValue.getProperty("ReferralRequestSectionOne"), "equalsignorecase");
+		UtilityMethods.StringValidation(BellReferralRequestPO.ContactInfoText.getText(), "Contact Information", "equalsignorecase");
+		UtilityMethods.StringValidation(BellReferralRequestPO.DeviceInfoText.getText(), "Device Information", "equalsignorecase");
+		UtilityMethods.StringValidation(BellReferralRequestPO.legalText.getText().replace("\n", " "), allInputValue.getProperty("ReferralRequestLegaltext"), "equalsignorecase");
+		UtilityMethods.StringValidation(BellReferralRequestPO.checkBoxLabel.getText(), allInputValue.getProperty("referralrequestCheckBox"), "equalsignorecase");
 		
 	}
+
+	//@Test(priority=3)
 	public static void RequestReferralCodeTextBoxDisplayedAndEnabled()
 	{
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='fname']")), "NotEqual", "First Name Input Field");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='lname']")), "NotEqual", "Last Name Input Field");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='company']")), "NotEqual", "Company Name Input Field");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='postion']")), "NotEqual", "Position/Role Input Field");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='phoneNumber']")), "NotEqual", "Phone Number Input Field");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='email']")), "NotEqual", "E-mail Address Input Field");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='device']")), "NotEqual", "Module Name Input Field");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//select[@id='industryId']")), "NotEqual", "Business Type Drop Down Menu");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='mini0']")), "NotEqual", "2FF/Ruggedized Radio Button");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='mini1']")), "NotEqual", "3FF/Ruggedized Micro Radio Button");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='mini2']")), "NotEqual", "Nano SIM Radio Button");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='deviceVolume']")), "NotEqual", "Volume to deploy Input Field");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='with3mn00']")), "NotEqual", "Within 3 months Radio Button");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='with3mn01']")), "NotEqual", "3-6 months Radio Button");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='with3mn02']")), "NotEqual", "6-12 months Radio Button");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='with3mn03']")), "NotEqual", "More than 12 months/unknown Radio Button");
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//textarea[@id='targetAudience']")), "NotEqual", "Description Input Field");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//a[@name='reset']")), "NotEqual", "Cancel Button");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@value='Request']")), "NotEqual", "Request Button");	
+		PageFactory.initElements(driver, BellReferralRequestPO.class);
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.FirstNameInput, "NotEqual", "First Name Input Field");	
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.LastNameInput, "NotEqual", "Last Name Input Field");	
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.CompanyNameInput, "NotEqual", "Company Name Input Field");	
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.PositionRoleInput, "NotEqual", "Position/Role Input Field");	
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.PhoneNumberInput, "NotEqual", "Phone Number Input Field");	
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.EmailInput, "NotEqual", "E-mail Address Input Field");	
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.ModuleInput, "NotEqual", "Module Name Input Field");	
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.BusinessInput, "NotEqual", "Business Type Drop Down Menu");	
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.Sim2FFInput, "NotEqual", "2FF Sim Type Radio Button");			
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.Sim3FFInput, "NotEqual", "3FF Sim Type Radio Button");	
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.SimNanoInput, "NotEqual", "Nano Sim Type Radio Button");	
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.VolumetoDeployInput, "NotEqual", "Volume to deploy Input Field");	
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.IN3MonthInput, "NotEqual", "Within 3 months Radio Button");	
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.IN6MonthInput, "NotEqual", "3-6 months Radio Button");	
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.IN12MonthInput, "NotEqual", "6-12 months Radio Button");	
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.Morethan12MonthInput, "NotEqual", "More than 12 months/unknown Radio Button");
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.Description, "NotEqual", "Description Input Field");	
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.checkBoxLabel, "NotEqual", "Check Box Input Field");
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.CancelButton, "NotEqual", "Cancel Button");	
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.RequestButton, "NotEqual", "Request Button");	
 	}
+	//@Test(priority=4)
 	public static void RequestReferralCodeLabelTextDisplayedAndEnabled()
-	{
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='First Name']")), "NotEqual", "First Name Label Text");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='Last Name']")), "NotEqual", "Last Name Label Text");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='Company Name']")), "NotEqual", "Company Name Label Text");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='Position/Role']")), "NotEqual", "Position/Role Label Text");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='Phone Number']")), "NotEqual", "Phone Number Label Text");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='E-mail Address']")), "NotEqual", "E-mail Address Label Text");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='Module']")), "NotEqual", "Module Name Label Text");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='Business Type']")), "NotEqual", "Business TypeLabel Text");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='SIM Type']")), "NotEqual", "Sim Type Label Text");
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='2FF/Ruggedized']")), "NotEqual", "2FF/Ruggedized Label Text");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='3FF/Ruggedized Micro']")), "NotEqual", "3FF/Ruggedized Micro Label Text");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='Nano SIM']")), "NotEqual", "Nano SIM Label Text");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='Volume to Deploy']")), "NotEqual", "Volume to deploy Label Text");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='Launch Timeframe']")), "NotEqual", "Launch Timeframe Label Text");
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='Within 3 months']")), "NotEqual", "Within 3 months Label Text");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='3-6 months']")), "NotEqual", "3-6 months Label Text");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='6-12 months']")), "NotEqual", "6-12 months Label Text");	
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='More than 12 months/unknown']")), "NotEqual", "More than 12 months/unknown Label Text");
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//label[text()='Description']")), "NotEqual", "Description Label Text");			
+	{	
+		PageFactory.initElements(driver, BellReferralRequestPO.class);
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.FirstNameLabel, "NotEqual", "First Name Label Text");	
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.LastNameLabel, "NotEqual", "Last Name Label Text");	
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.CompanyNameLabel, "NotEqual", "Company Name Label Text");	
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.PositionRoleLabel, "NotEqual", "Position/Role Label Text");	
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.PhoneNumberLabel, "NotEqual", "Phone Number Label Text");	
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.EmailLabel, "NotEqual", "E-mail Address Label Text");	
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.ModuleLabel, "NotEqual", "Module Name Label Text");	
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.BusinessLabel, "NotEqual", "Business TypeLabel Text");	
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.SimLabel, "NotEqual", "Sim Type Label Text");
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.Sim2FFLabel, "NotEqual", "2FF Mini Label Text");	
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.Sim3FFlabel, "NotEqual", "3FF Micro Label Text");	
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.SimNanolabel, "NotEqual", "3FF Micro Label Text");		
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.VolumetoDeployLabel, "NotEqual", "Volume to deploy Label Text");	
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.LastNameLabel, "NotEqual", "Launch Timeframe Label Text");
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.IN3MonthLabel, "NotEqual", "Within 3 months Label Text");	
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.IN6Monthlabel, "NotEqual", "3-6 months Label Text");	
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.IN12MonthLabel, "NotEqual", "6-12 months Label Text");	
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.Morethan12Monthlabel, "NotEqual", "More than 12 months/unknown Label Text");
+		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.DescriptionLabel, "NotEqual", "Description Label Text");			
 	}
+	//@Test(priority=5)
 	public static void RequestReferralCodePlaceholderValidation()
 	{
-		UtilityMethods.PlaceholderValidation(driver.findElement(By.xpath("//input[@id='fname']")), "Enter your first name", "First Name");
-		UtilityMethods.PlaceholderValidation(driver.findElement(By.xpath("//input[@id='lname']")), "Enter your last name", "Last Name");
-		UtilityMethods.PlaceholderValidation(driver.findElement(By.xpath("//input[@id='company']")), "Enter your company name", "Company Name");
-		UtilityMethods.PlaceholderValidation(driver.findElement(By.xpath("//input[@id='postion']")), "Enter your position/role", "position/role");
-		UtilityMethods.PlaceholderValidation(driver.findElement(By.xpath("//input[@id='phoneNumber']")), "", "Phone Number");
-		UtilityMethods.PlaceholderValidation(driver.findElement(By.xpath("//input[@id='email']")), "Enter e-mail", "Email-ID");
-		UtilityMethods.PlaceholderValidation(driver.findElement(By.xpath("//input[@id='device']")), "Enter the module used in your device", "Module");
-		UtilityMethods.PlaceholderValidation(driver.findElement(By.xpath("//input[@id='deviceVolume']")), "Enter first year quantity", "Volume to deploy");
-		UtilityMethods.PlaceholderValidation(driver.findElement(By.xpath("//textarea[@id='targetAudience']")), "Tell us a little about your device, target audience, and how we can help.", "Description");
+		UtilityMethods.PlaceholderValidation(BellReferralRequestPO.FirstNameInput, "Enter your first name", "First Name");
+		UtilityMethods.PlaceholderValidation(BellReferralRequestPO.LastNameInput, "Enter your last name", "Last Name");
+		UtilityMethods.PlaceholderValidation(BellReferralRequestPO.CompanyNameInput, "Enter your company name", "Company Name");
+		UtilityMethods.PlaceholderValidation(BellReferralRequestPO.PositionRoleInput, "Enter your position/role", "position/role");
+		UtilityMethods.PlaceholderValidation(BellReferralRequestPO.PhoneNumberInput, "Enter your contact number", "Phone Number");
+		UtilityMethods.PlaceholderValidation(BellReferralRequestPO.EmailInput, "Enter e-mail", "Email-ID");
+		UtilityMethods.PlaceholderValidation(BellReferralRequestPO.ModuleInput, "Enter the module used in your device", "Module");
+		UtilityMethods.PlaceholderValidation(BellReferralRequestPO.VolumetoDeployInput, "Enter first year quantity", "Volume to deploy");
+		UtilityMethods.PlaceholderValidation(BellReferralRequestPO.Description, "Tell us a little about your device, target audience, and how we can help.", "Description");
 		
 	}
+	//@Test(priority=6) 
 	public static void ReferralRequestCodeValidInputValidation()
 	{
-		driver.findElement(By.xpath("//input[@value='Request']")).click();
-		UtilityMethods.ValidInputValidation(driver.findElement(By.xpath("//input[@id='fname']")), allInputValue.getProperty("ValidFirstName"), driver.findElement(By.xpath("//div[@id='fname-error']")));
-		UtilityMethods.ValidInputValidation(driver.findElement(By.xpath("//input[@id='lname']")), allInputValue.getProperty("ValidLastName"), driver.findElement(By.xpath("//div[@id='lname-error']")));
-		UtilityMethods.ValidInputValidation(driver.findElement(By.xpath("//input[@id='company']")), allInputValue.getProperty("ValidCompanyName"), driver.findElement(By.xpath("//div[@id='company-error']")));
-		UtilityMethods.ValidInputValidation(driver.findElement(By.xpath("//input[@id='postion']")), allInputValue.getProperty("ValidPosition"), driver.findElement(By.xpath("//div[@id='postion-error']")));
-		UtilityMethods.ValidInputValidation(driver.findElement(By.xpath("//input[@id='phoneNumber']")),allInputValue.getProperty("ValidPhoneNumber"),driver.findElement(By.xpath("//div[@id='phoneNumber-error']")));
-		UtilityMethods.ValidInputValidation(driver.findElement(By.xpath("//input[@id='email']")),allInputValue.getProperty("ValidEmailId") , driver.findElement(By.xpath("//div[@id='email-error']")));
-		UtilityMethods.ValidInputValidation(driver.findElement(By.xpath("//input[@id='device']")), allInputValue.getProperty("ValidModule"), driver.findElement(By.xpath("//div[@id='device-error']")));	
-		UtilityMethods.ValidateDropDown(driver.findElement(By.xpath("//select[@id='industryId']")), "Consumer electronics - personal navigation", driver.findElement(By.xpath("//div[@id='industryId-error']")));
-		//UtilityMethods.ValidateSimTypeRadioButton(2,driver.findElement(By.xpath("//div[@id='simTypeId-error']")));	
-		//driver.findElement(By.xpath("//label[text()='2FF/Ruggedized']")).click();
-		UtilityMethods.ValidInputValidation(driver.findElement(By.xpath("//input[@id='deviceVolume']")), allInputValue.getProperty("ValidVolumeToDeploy"), driver.findElement(By.xpath("//div[@id='deviceVolume-error']")));
-		UtilityMethods.ValidInputValidation(driver.findElement(By.xpath("//textarea[@id='targetAudience']")), allInputValue.getProperty("ValidDescription"), driver.findElement(By.xpath("//div[@id='targetAudience-error']")));
+		BellReferralRequestPO.RequestButton.click();
+		UtilityMethods.ValidInputValidation(BellReferralRequestPO.FirstNameInput, allInputValue.getProperty("ValidFirstName"), BellReferralRequestPO.FirstNameError);
+		UtilityMethods.ValidInputValidation(BellReferralRequestPO.LastNameInput, allInputValue.getProperty("ValidLastName"),BellReferralRequestPO.LastNameError );
+		UtilityMethods.ValidInputValidation(BellReferralRequestPO.CompanyNameInput, allInputValue.getProperty("ValidCompanyName"), BellReferralRequestPO.CompanyError);
+		UtilityMethods.ValidInputValidation(BellReferralRequestPO.PositionRoleInput, allInputValue.getProperty("ValidPosition"), BellReferralRequestPO.PositionError);
+		UtilityMethods.ValidInputValidation(BellReferralRequestPO.PhoneNumberInput,allInputValue.getProperty("ValidPhoneNumber"),BellReferralRequestPO.PhoneNumberError);
+		UtilityMethods.ValidInputValidation(BellReferralRequestPO.EmailInput,allInputValue.getProperty("ValidEmailId") , BellReferralRequestPO.EmailError);
+		UtilityMethods.ValidInputValidation(BellReferralRequestPO.ModuleInput, allInputValue.getProperty("ValidModule"), BellReferralRequestPO.ModuleError);	
+		UtilityMethods.ValidateDropDown(BellReferralRequestPO.BusinessInput, "Consumer electronics - personal navigation", BellReferralRequestPO.BusinessTypeError);	
+		UtilityMethods.ValidInputValidation(BellReferralRequestPO.VolumetoDeployInput, allInputValue.getProperty("ValidVolumeToDeploy"),BellReferralRequestPO.VolumetoDeployError);
+		UtilityMethods.ValidInputValidation(BellReferralRequestPO.Description, allInputValue.getProperty("ValidDescription"), BellReferralRequestPO.DescriptionError);
 	
-	}
-	
-	public static void  ReferralRequestRequiredFieldValidation()
-	{
-		driver.findElement(By.xpath("//input[@value='Request']")).click();
-		UtilityMethods.RequiredFieldValidation(driver.findElement(By.xpath("//input[@id='fname']")), driver.findElement(By.xpath("//div[@id='fname-error']")),"TextBox");
-		UtilityMethods.RequiredFieldValidation(driver.findElement(By.xpath("//input[@id='lname']")), driver.findElement(By.xpath("//div[@id='lname-error']")),"TextBox");
-		UtilityMethods.RequiredFieldValidation(driver.findElement(By.xpath("//input[@id='company']")), driver.findElement(By.xpath("//div[@id='company-error']")),"TextBox");
-		UtilityMethods.RequiredFieldValidation(driver.findElement(By.xpath("//input[@id='postion']")), driver.findElement(By.xpath("//div[@id='postion-error']")),"TextBox");
-		UtilityMethods.RequiredFieldValidation(driver.findElement(By.xpath("//input[@id='phoneNumber']")), driver.findElement(By.xpath("//div[@id='phoneNumber-error']")),"TextBox");
-		UtilityMethods.RequiredFieldValidation(driver.findElement(By.xpath("//input[@id='email']")), driver.findElement(By.xpath("//div[@id='email-error']")),"TextBox");
-		UtilityMethods.RequiredFieldValidation(driver.findElement(By.xpath("//input[@id='device']")), driver.findElement(By.xpath("//div[@id='device-error']")),"TextBox");
-		UtilityMethods.RequiredFieldValidation(driver.findElement(By.xpath("//select[@id='industryId']")), driver.findElement(By.xpath("//div[@id='industryId-error']")),"DropDown");
-		UtilityMethods.RequiredFieldValidation(driver.findElement(By.xpath("//label[text()='SIM Type']")), driver.findElement(By.xpath("//div[@id='simTypeId-error']")),"RadioButton");
-		UtilityMethods.RequiredFieldValidation(driver.findElement(By.xpath("//input[@id='deviceVolume']")), driver.findElement(By.xpath("//div[@id='deviceVolume-error']")),"TextBox");
-		UtilityMethods.RequiredFieldValidation(driver.findElement(By.xpath("//label[text()='Launch Timeframe']")), driver.findElement(By.xpath("//div[@id='launchTimeFrameId-error']")),"RadioButton");
-		UtilityMethods.RequiredFieldValidation(driver.findElement(By.xpath("//textarea[@id='targetAudience']")), driver.findElement(By.xpath("//div[@id='targetAudience-error']")),"TextBox");
-			
-	}
-	
-	 public static void ReferralRequestSpaceNotAllowedValidation()
-	 {	
-		 driver.findElement(By.xpath("//input[@value='Request']")).click();
-		 UtilityMethods.SpaceNotAllowedvalidation(driver.findElement(By.xpath("//input[@id='fname']")), driver.findElement(By.xpath("//div[@id='fname-error']")));
-		 UtilityMethods.SpaceNotAllowedvalidation(driver.findElement(By.xpath("//input[@id='lname']")), driver.findElement(By.xpath("//div[@id='lname-error']")));
-		 UtilityMethods.SpaceNotAllowedvalidation(driver.findElement(By.xpath("//input[@id='company']")), driver.findElement(By.xpath("//div[@id='company-error']")));
-		 UtilityMethods.SpaceNotAllowedvalidation(driver.findElement(By.xpath("//input[@id='postion']")), driver.findElement(By.xpath("//div[@id='postion-error']")));
 		
+		//UtilityMethods.ValidateSimTypeRadioButton(2,driver.findElement(By.xpath("//div[@id='simTypeId-error']")));	
+	   //driver.findElement(By.xpath("//label[text()='2FF/Ruggedized']")).click();
+	}
+	//@Test(priority=7)
+	public static void ReferralRequestRequiredFieldValidation()
+	{
+		BellReferralRequestPO.RequestButton.click();
+		UtilityMethods.RequiredFieldValidation(BellReferralRequestPO.FirstNameInput, BellReferralRequestPO.FirstNameError,"TextBox");
+		UtilityMethods.RequiredFieldValidation(BellReferralRequestPO.LastNameInput, BellReferralRequestPO.LastNameError,"TextBox");
+		UtilityMethods.RequiredFieldValidation(BellReferralRequestPO.CompanyNameInput, BellReferralRequestPO.CompanyError,"TextBox");
+		UtilityMethods.RequiredFieldValidation(BellReferralRequestPO.PositionRoleInput, BellReferralRequestPO.PositionError,"TextBox");
+		UtilityMethods.RequiredFieldValidation(BellReferralRequestPO.PhoneNumberInput, BellReferralRequestPO.PhoneNumberError,"TextBox");
+		UtilityMethods.RequiredFieldValidation(BellReferralRequestPO.EmailInput, BellReferralRequestPO.EmailError,"TextBox");
+		UtilityMethods.RequiredFieldValidation(BellReferralRequestPO.ModuleInput, BellReferralRequestPO.ModuleError,"TextBox");
+		UtilityMethods.RequiredFieldValidation(BellReferralRequestPO.BusinessInput, BellReferralRequestPO.BusinessTypeError,"DropDown");
+		UtilityMethods.RequiredFieldValidation(BellReferralRequestPO.SimLabel, BellReferralRequestPO.SimTypeError,"RadioButton");
+		UtilityMethods.RequiredFieldValidation(BellReferralRequestPO.VolumetoDeployInput, BellReferralRequestPO.VolumetoDeployError,"TextBox");
+		UtilityMethods.RequiredFieldValidation(BellReferralRequestPO.LaunchTimeframeLabel, BellReferralRequestPO.LastNameError,"RadioButton");
+		UtilityMethods.RequiredFieldValidation(BellReferralRequestPO.Description, BellReferralRequestPO.DescriptionError,"TextBox");		
+	}
+	//@Test(priority=8)
+	public static void ReferralRequestSpaceNotAllowedValidation()
+	 {	
+		BellReferralRequestPO.RequestButton.click();
+		 UtilityMethods.SpaceNotAllowedvalidation(BellReferralRequestPO.FirstNameInput, BellReferralRequestPO.FirstNameError);
+		 UtilityMethods.SpaceNotAllowedvalidation(BellReferralRequestPO.LastNameInput, BellReferralRequestPO.LastNameError);
+		 UtilityMethods.SpaceNotAllowedvalidation(BellReferralRequestPO.CompanyNameInput, BellReferralRequestPO.CompanyError);
+		 UtilityMethods.SpaceNotAllowedvalidation(BellReferralRequestPO.PositionRoleInput, BellReferralRequestPO.PositionError);	
 	 }
-	 
-	 public static void ReferralRequestMaximumInputValidation()
+	//@Test(priority=9)
+	public static void ReferralRequestMaximumInputValidation()
 	 {
-		driver.findElement(By.xpath("//input[@value='Request']")).click();
-        UtilityMethods.MaximumInputValidation(driver.findElement(By.xpath("//input[@id='fname']")), driver.findElement(By.xpath("//div[@id='fname-error']")), 49, allInputValue.getProperty("InvalidInput"));
-        UtilityMethods.MaximumInputValidation(driver.findElement(By.xpath("//input[@id='lname']")), driver.findElement(By.xpath("//div[@id='lname-error']")), 49, allInputValue.getProperty("InvalidInput"));
-        UtilityMethods.MaximumInputValidation(driver.findElement(By.xpath("//input[@id='company']")), driver.findElement(By.xpath("//div[@id='company-error']")), 25, allInputValue.getProperty("InvalidCompanyName"));
-        UtilityMethods.MaximumInputValidation(driver.findElement(By.xpath("//input[@id='postion']")), driver.findElement(By.xpath("//div[@id='postion-error']")), 25, allInputValue.getProperty("InvalidCompanyName"));
-        UtilityMethods.MaximumInputValidation(driver.findElement(By.xpath("//input[@id='phoneNumber']")), driver.findElement(By.xpath("//div[@id='phoneNumber-error']")), 15, allInputValue.getProperty("Invalidphonenumber"));
-        UtilityMethods.MaximumInputValidation(driver.findElement(By.xpath("//textarea[@id='targetAudience']")), driver.findElement(By.xpath("//div[@id='targetAudience-error']")), 255, allInputValue.getProperty("InvalidDescription"));     
-       	 
+		BellReferralRequestPO.RequestButton.click();
+	    UtilityMethods.MaximumInputValidation(BellReferralRequestPO.FirstNameInput, BellReferralRequestPO.FirstNameError, 49, allInputValue.getProperty("InvalidInput"));
+	    UtilityMethods.MaximumInputValidation(BellReferralRequestPO.LastNameInput, BellReferralRequestPO.LastNameError, 49, allInputValue.getProperty("InvalidInput"));
+	    UtilityMethods.MaximumInputValidation(BellReferralRequestPO.CompanyNameInput, BellReferralRequestPO.CompanyError, 25, allInputValue.getProperty("InvalidCompanyName"));
+	    UtilityMethods.MaximumInputValidation(BellReferralRequestPO.PositionRoleInput, BellReferralRequestPO.PositionError, 25, allInputValue.getProperty("InvalidCompanyName"));
+	    UtilityMethods.MaximumInputValidation(BellReferralRequestPO.PhoneNumberInput, BellReferralRequestPO.PhoneNumberError, 10, allInputValue.getProperty("Invalidphonenumber"));
+	    UtilityMethods.MaximumInputValidation(BellReferralRequestPO.Description, BellReferralRequestPO.DescriptionError, 255, allInputValue.getProperty("InvalidDescription"));     
+	   	 
 	 }
-	 public static void ReferralRequestMinimumInputValidation()
+	//@Test(priority=10)
+	public static void ReferralRequestMinimumInputValidation()
 	 {
-		driver.findElement(By.xpath("//input[@value='Request']")).click();
-		UtilityMethods.MinimumInputValidation(driver.findElement(By.xpath("//input[@id='company']")), driver.findElement(By.xpath("//div[@id='company-error']")), 3, allInputValue.getProperty("InvalidMinInput"));
-        UtilityMethods.MinimumInputValidation(driver.findElement(By.xpath("//input[@id='phoneNumber']")), driver.findElement(By.xpath("//div[@id='phoneNumber-error']")), 10, allInputValue.getProperty("InvalidMinphonenumber"));
-        	 
+		BellReferralRequestPO.RequestButton.click();
+		UtilityMethods.MinimumInputValidation(BellReferralRequestPO.CompanyNameInput, BellReferralRequestPO.CompanyError, 3, allInputValue.getProperty("InvalidMinInput"));
+	    UtilityMethods.MinimumInputValidation(BellReferralRequestPO.PhoneNumberInput, BellReferralRequestPO.PhoneNumberError, 10, allInputValue.getProperty("InvalidMinphonenumber"));    	 
+	
 	 }
+	//@Test(priority=11)
+	public static void ReferralRequestOtherValidation()
+	{	
+		BellReferralRequestPO.RequestButton.click();
+		UtilityMethods.EmailIdInvalidvalidation(BellReferralRequestPO.EmailInput, BellReferralRequestPO.EmailError, allInputValue.getProperty("InvalidEmailID"));
+		UtilityMethods.NumericFieldValidation(BellReferralRequestPO.PhoneNumberInput, BellReferralRequestPO.PhoneNumberError, allInputValue.getProperty("InvalidPhoneNumber"));
+		UtilityMethods.NumericFieldValidation(BellReferralRequestPO.VolumetoDeployInput, BellReferralRequestPO.VolumetoDeployError, allInputValue.getProperty("InvadildNumbericField"));
+	}
+
+	@Test(priority=12)
+	public static void RequestButtonValidation()
+	{
+		UtilityMethods.SendInputValues(BellReferralRequestPO.FirstNameInput, allInputValue.getProperty("FirstName"), "TextBox");
+		UtilityMethods.SendInputValues(BellReferralRequestPO.LastNameInput, allInputValue.getProperty("LastName"), "TextBox");
+		UtilityMethods.SendInputValues(BellReferralRequestPO.CompanyNameInput, allInputValue.getProperty("CompanyName"), "TextBox");
+		UtilityMethods.SendInputValues(BellReferralRequestPO.PositionRoleInput, allInputValue.getProperty("Position"), "TextBox");
+		UtilityMethods.SendInputValues(BellReferralRequestPO.PhoneNumberInput, allInputValue.getProperty("PhoneNumber"), "TextBox");
+		UtilityMethods.SendInputValues(BellReferralRequestPO.EmailInput, allInputValue.getProperty("E-mailAddress"), "TextBox");
+		UtilityMethods.SendInputValues(BellReferralRequestPO.ModuleInput, allInputValue.getProperty("Module"), "TextBox");
+		UtilityMethods.SendInputValues(BellReferralRequestPO.BusinessInput, allInputValue.getProperty("BusinessType"), "DropDown");
+	    UtilityMethods.SendInputValues(BellReferralRequestPO.SimNanolabel, "", "Radiobutton");
+	    UtilityMethods.SendInputValues(BellReferralRequestPO.VolumetoDeployInput, allInputValue.getProperty("VolumeToDeploy"), "TextBox");
+	    UtilityMethods.SendInputValues(BellReferralRequestPO.IN12MonthLabel, "", "Radiobutton");
+	    UtilityMethods.SendInputValues(BellReferralRequestPO.Description, allInputValue.getProperty("Description"), "TextBox");	
+	    //UtilityMethods.PageRedirection(driver.findElement(By.xpath("//input[@value='Request']")), driver.findElement(By.xpath("//a[text()='Back to IoT Starter Kit Page']")));
+	   // UtilityMethods.PageNavigationValidation(driver.findElement(By.xpath("//input[@value='Request']")), driver.findElement(By.xpath("//a[text()='Back to IoT Starter Kit Page']")));
+	  //  BellReferralRequestPO.RequestButton.click();
+	    driver.navigate().back();
+	}
+
+	//@Test(priority=13)
+	public static void AdminApproval() throws InterruptedException
+	{
+		System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
+		driver = new FirefoxDriver();
+		driver.manage().window().maximize();
+		driver.get("http://starterkit-dev.devm2m.com/admin/internal/login");
+		Thread.sleep(1500);
+		driver.findElement(By.xpath("//input[@id='userName']")).sendKeys("prasanna.v");
+		driver.findElement(By.xpath("//input[@value='Login']")).click();
+		Thread.sleep(1500);
+		driver.findElement(By.xpath("//div[@class='blpr-menu blpr-dsk-menu']//span[text()='Referrals']")).click();
+		Thread.sleep(1500);
+		driver.findElement(By.xpath("//div[@id='approve0']")).click();
+		Thread.sleep(1500);
+		driver.findElement(By.xpath("//div[@id='aprCode']//button[@type='submit']")).click();
+	}
+
+
+	@AfterTest
+	public static void Exit()
+	{
+		driver.close();
+	}
 }
 

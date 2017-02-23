@@ -1,12 +1,10 @@
 package pages;
 
-import java.io.IOException;
+
 import java.util.Properties;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -21,7 +19,7 @@ public class PostReferralRequest extends BaseDriver
 	static Properties allInputValue;
 
 	@BeforeTest
-	public static void Start() throws IOException 
+	public static void Start() throws Exception 
 	{
 		driver = launchApp();
 		allInputValue = UtilityMethods.getPostPropValues();
@@ -247,7 +245,7 @@ public class PostReferralRequest extends BaseDriver
 	public static void AdminApproval() throws InterruptedException
 	{
 		System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
-		driver = new ChromeDriver();
+		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.get("http://starterkit-dev.devm2m.com/admin/internal/login");
 		Thread.sleep(1500);

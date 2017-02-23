@@ -1,331 +1,285 @@
 package pages;
 
-import java.io.IOException;
 import java.util.Properties;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
-
-import utilitymethods.UtilityMethods;
 import driver.BaseDriver;
-
+import pageobjects.BellHomePagePO;
+import utilitymethods.UtilityMethods;
 public class BellHomePage extends BaseDriver
-
 {
-	
-	public static FirefoxDriver driver = launchApp();
-	static Properties allInputValue;
-	public static void main(String[] args) throws IOException 
-	{
-		System.out.println("done");
-		allInputValue = UtilityMethods.getPropValues();
-		headearValidation();
-		sectionOne();
-		sectionTwo();
-		sectionThree();
-		sectionFour();
-		sectionFive();
-		//driver.findElement(By.xpat h("//section[@id='hero-wrp']//a/button[text()='Request Referral Code']")).click();
-		//	UtilityMethods.ErrorValidation(driver.findElement(By.xpath(".//*[@id='fname']")), "4", "Valid", driver.findElement(By.xpath(".//*[@id='blrequestForm']/div[12]/div[1]/input")));
-
-		 
-		driver.close();
-	}
-	
-	public static void headearValidation() 
-	{
-		validateOperatorLogo();
-		validateCompanyLogo();
-		//UtilityMethods.PageNavigationValidation(driver.findElement(By.xpath("//img[@alt='Bell']")), driver.findElement(By.xpath("//img[@title='What is IoT']")));
-		System.out.println("Header Section is Completed");
-	}
-	
-	public static void sectionOne()  
-	{
-		sectionOneIotStarterKitErrorMessageValidation();
-		sectionOneIotStarterKitValidation();
-		sectionOneIotStarterKitTrackOrderValidation(); 
-		sectionOneIotStarterKitEnterReferralCodeValidation();
-		sectionOneIotStarterKitBellValidation();	
-		sectionOneIotStarterKitPageNavigation();
+		public static FirefoxDriver driver;
+		static Properties allInputValue;
 		
-		//UtilityMethods.Imagevalidation(driver.findElement(By.xpath("//div/img[@alt='']")), "src",allInputValue.getProperty("bellBanner"),"Bell Banner");E		
+	@BeforeTest
+	public static void start() throws Exception
+	{	 
+		driver = launchApp();
+		allInputValue = UtilityMethods.getBellPropValues();	
 	}
-	public static void sectionTwo() 
-	{
-		sectionTwoImageValidation();
-		sectionTwoContentValidation();	
-		//sectionTwoValidation();
-		System.out.println("Section 2 is Completed");
-	}
-	public static void sectionThree()
-	{
-		sectionThreeValidations();
-		System.out.println("Section 3 is Completed");
-	}
-	public static void sectionFour()
-	{
-		sectionFourValidation();
-		System.out.println("Section 4 is Completed");
-	}
-	public static void sectionFive()
-	{
-		sectionFiveContentValidation();
-		sectionFiveimageValidation();
-		System.out.println("Section 5 is Completed");
-	}
-
-public static void validateOperatorLogo()
-{
-	WebElement operatorLogo = driver.findElement(By.xpath("//img[@alt='Bell']"));
-	UtilityMethods.DisplayEnableValidator(operatorLogo, "NotEqual","Bell Operator Logo in IoT Starter Kit");	
-	UtilityMethods.Imagevalidation(operatorLogo,"src",allInputValue.getProperty("bellLogo"),"Bell Operator Logo");
+			 
+	@Test(priority=1)
+	public static void validateOperatorLogo()
+	{		
+		PageFactory.initElements(driver, BellHomePagePO.class);	
+		UtilityMethods.DisplayEnableValidator(BellHomePagePO.BellLogo, "NotEqual","Bell Operator Logo in IoT Starter Kit");	
+		UtilityMethods.Imagevalidation(BellHomePagePO.BellLogo,"src",allInputValue.getProperty("bellLogo"),"Bell Operator Logo");
+		System.out.println(""+"TS001");
+	} 
 	
-} 
-
-public static void validateCompanyLogo()
-{
-	WebElement companyLogo = driver.findElement(By.xpath("//img[@alt='Cisco Jasper']"));
-	UtilityMethods.DisplayEnableValidator(companyLogo, "NotEqual","Cisco Jasper Company Logo in IoT Starter Kit");		
-	UtilityMethods.Imagevalidation(companyLogo,"src",allInputValue.getProperty("companyLogo"),"Cisco Jasper Company Logo");
+	@Test(priority=2)
+	public static void validateCompanyLogo()
+	{
+		PageFactory.initElements(driver, BellHomePagePO.class);	
+		UtilityMethods.DisplayEnableValidator(BellHomePagePO.CiscoLogo, "NotEqual","Cisco Jasper Company Logo in IoT Starter Kit");		
+		UtilityMethods.Imagevalidation(BellHomePagePO.CiscoLogo,"src",allInputValue.getProperty("ciscoLogo"),"Cisco Jasper Company Logo");
+		System.out.println(""+"TS002");
+	}
 	
-}
-
-public static void sectionOneIotStarterKitValidation()
-{
-	UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//section[@id='hero-wrp']//a/button[text()='Request Referral Code']")), "NotEqual","Request Referral Code Button in IoT Starter Kit");
-	UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//div/a[text()='Track Order'][@class='btn-cus-bdr btn btn-cs-sm bl-en-trk-cd f12']")), "NotEqual","Track Order Button  in IoT Starter Kit");
-	UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//form[@id='hmeRefTrack']//a")), "NotEqual","Track Order on Click Button in IoT Starter Kit");
-	UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//section[@id='hero-wrp']//a[text()='Enter Referral Code']")), "NotEqual","Enter Referral Code Button in IoT Starter Kit");
-	UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//section[@id='hero-wrp']//a[text()='Order Kit']")), "NotEqual","Order kit on Click Button in IoT Starter Kit");
-}
-
-
-public static void sectionOneIotStarterKitTrackOrderValidation() 
-{
-	UtilityMethods.DisplayEnableValidator(driver.findElements(By.xpath("//div/a[text()='Track Order']")).get(0), "NotEqual","Track Order Button  in IoT Starter Kit");
-	driver.findElement(By.xpath("//div[@class='bl-val-chnge pb30']/a[text()='Track Order']")).click();
-	try 
+	@Test(priority=3)
+	public static void sectionOneIotStarterKitBellValidation()
+	{
+		PageFactory.initElements(driver, BellHomePagePO.class);	
+		UtilityMethods.StringValidation(BellHomePagePO.TextBannerh1.getText(), allInputValue.getProperty("sectionOneH1"), "equalsignorecase");
+		UtilityMethods.StringValidation(BellHomePagePO.TextBannerh3.getText(), allInputValue.getProperty("sectionOneH3"), "equalsignorecase");
+		UtilityMethods.StringValidation(BellHomePagePO.TextBannerp1.getText(), allInputValue.getProperty("sectionOneP1"), "equalsignorecase");
+		UtilityMethods.StringValidation(BellHomePagePO.TextBannerp2.getText(), allInputValue.getProperty("sectionOneP2"), "equalsignorecase");
+		System.out.println(""+"TS003");
+	}
+				
+	@Test(priority=4)
+	public static void sectionOneIotStarterKitTrackOrderValidation() throws InterruptedException
+	{
+		PageFactory.initElements(driver, BellHomePagePO.class);	
+		Thread.sleep(3000);
+		UtilityMethods.DisplayEnableValidator(BellHomePagePO.SectionOneTrackOrderButton, "NotEqual","Track Order Button in IoT Starter Kit banner");
+		BellHomePagePO.SectionOneTrackOrderButton.click();
+		UtilityMethods.DisplayEnableValidator(BellHomePagePO.SectionOneTrackOrderPRButton, "NotEqual","Track Order on click Button in IoT Starter Kit Track Order");
+		UtilityMethods.DisplayEnableValidator(BellHomePagePO.SectionOneTrackOrderText, "NotEqual","Track Order on Click Text in IoT Starter Kit Track Order");
+		UtilityMethods.DisplayEnableValidator(BellHomePagePO.TrackOrderEmailID, "NotEqual","Enter Email ID Text Box in IoT Starter Kit Track Order");
+		UtilityMethods.PlaceholderValidation(BellHomePagePO.TrackOrderEmailID, "Enter Email Address", "Track Order Email ID");
+		UtilityMethods.DisplayEnableValidator(BellHomePagePO.TrackOrderCloseIcon, "NotEqual","Track Order Close Button in IoT Starter Kit");
+		BellHomePagePO.TrackOrderCloseIcon.click();		
+		System.out.println(""+"TS004");
+	}
+	
+	@Test(priority=5)
+	public static void sectionOneIotStarterKitEnterReferralCodeValidation() throws InterruptedException
 	{
 		Thread.sleep(3000);
-	} 
-	catch (InterruptedException e)
+		UtilityMethods.DisplayEnableValidator(BellHomePagePO.SectionOneEnterReferralCodeButton, "NotEqual","Enter Referral Code Button in IoT Starter Kit");
+		BellHomePagePO.SectionOneEnterReferralCodeButton.click();
+		Thread.sleep(3000);	
+		UtilityMethods.DisplayEnableValidator(BellHomePagePO.SectionOneOrderKitButton, "NotEqual","OrderKit Button in IoT Starter Kit ");				
+		UtilityMethods.DisplayEnableValidator(BellHomePagePO.SectionOneEnterReferralCodeText, "NotEqual","Enter Referral Code Text in IoT Starter Kit ");
+		UtilityMethods.DisplayEnableValidator(BellHomePagePO.EnterReferralCode, "NotEqual","Enter Referral Code Text Box in IoT Starter Kit Track Order");
+		UtilityMethods.PlaceholderValidation(BellHomePagePO.EnterReferralCode, "Enter Referral Code", "Enter Referral Code");
+		UtilityMethods.DisplayEnableValidator(BellHomePagePO.EnterReferralCodeCloseIcon, "NotEqual","Enter Referral Code Close Button in IoT Starter Kit");
+		Thread.sleep(1000);	
+		BellHomePagePO.EnterReferralCodeCloseIcon.click();	
+		System.out.println(""+"TS005");
+	}
+		
+	public static void sectionOneIotStarterKitTrackOrderErrorValidation()
 	{
-		e.printStackTrace();
+					 			 
 	}
 	
-	UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//form[@id='hmeRefTrack']//a")), "NotEqual","Track Order on click Button in IoT Starter Kit Track Order");
-	UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//h4[text()='Track Order']")), "NotEqual","Track Order on Click Text in IoT Starter Kit Track Order");
-	WebElement trackOrderEmailId= driver.findElement(By.id("emailId"));
-	UtilityMethods.DisplayEnableValidator(trackOrderEmailId, "NotEqual","Enter Email ID Text Box in IoT Starter Kit Track Order");
-	UtilityMethods.StringValidation("Enter Email Address", trackOrderEmailId.getAttribute("placeholder"),"equals");
-	UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//div[@class='bl-ref-inpt-grp bl-email']//span")), "NotEqual","Track Order Close Button in IoT Starter Kit");
-	driver.findElement(By.xpath("//div[@class='bl-ref-inpt-grp bl-email']//span")).click();
-
-	
-}
-
-public static void sectionOneIotStarterKitEnterReferralCodeValidation()
-{
-
-	WebElement enterReferralCode= driver.findElement(By.xpath("//section[@id='hero-wrp']//a[text()='Enter Referral Code']"));
-	UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//section[@id='hero-wrp']//a[text()='Enter Referral Code']")), "NotEqual","Enter Referral Code Button in IoT Starter Kit");	
-	enterReferralCode.click();
-	try 
+	public static void sectionOneIotStarterKitReferralCodeErrorValidation()
 	{
-		Thread.sleep(3000);
-	} 
-	catch (InterruptedException e)
+					 				 
+	}
+				 
+	@Test(priority=6)
+	public static void sectionTwoWhatThekitIncludesContentvalidation()
 	{
-		e.printStackTrace();
+		UtilityMethods.Imagevalidation(BellHomePagePO.SimIcon, "src",allInputValue.getProperty("bellSimIcon"), "Bell Sim Icon");
+		UtilityMethods.StringValidation(BellHomePagePO.TextSimh1.getText(), allInputValue.getProperty("whatTheKitIncludesSimh1"), "equalsignorecase");
+		UtilityMethods.StringValidation(BellHomePagePO.TextSimh2.getText(), allInputValue.getProperty("whatTheKitIncludesSimh2"), "equalsignorecase");
+		UtilityMethods.StringValidation(BellHomePagePO.TextSimh3.getText(), allInputValue.getProperty("whatTheKitIncludesSimh3"), "equalsignorecase");
+		UtilityMethods.StringValidation(BellHomePagePO.TextSimh4.getText(), allInputValue.getProperty("whatTheKitIncludesSimh4"), "equalsignorecase");
+		UtilityMethods.StringValidation(BellHomePagePO.TextSimp1.getText(), allInputValue.getProperty("whatTheKitIncludesSimp1"), "equalsignorecase");
+		UtilityMethods.StringValidation(BellHomePagePO.TextSimp2.getText(), allInputValue.getProperty("whatTheKitIncludesSimp2"), "equalsignorecase");
+		UtilityMethods.StringValidation(BellHomePagePO.TextSimp3.getText(), allInputValue.getProperty("whatTheKitIncludesSimp3"), "equalsignorecase");
+		System.out.println(""+"TS006");
+	}
+				 
+	@Test(priority=7)
+	public static void sectionTwoWhatThekitIncludesToolsvalidation()
+	{
+		UtilityMethods.whatTheKitIncludesImageAndTextValidation(BellHomePagePO.ToolIcon, allInputValue.getProperty("bellToolIcon"), BellHomePagePO.ToolText, allInputValue.getProperty("whatTheKitIncludesToolc1"));
+		UtilityMethods.whatThekitIncludesTextValidation(BellHomePagePO.ToolListText,allInputValue.getProperty("whatTheKitIncludesToolc2"),allInputValue.getProperty("whatTheKitIncludesToolc3"),allInputValue.getProperty("whatTheKitIncludesToolc4"));		
+		System.out.println(""+"TS007");
+	}
+		
+	@Test(priority=8)
+	public static void sectionTwoWhatThekitIncludesCentervalidation()  
+	{	
+		UtilityMethods.whatTheKitIncludesImageAndTextValidation(BellHomePagePO.CenterIcon, allInputValue.getProperty("bellCenterIcon"), BellHomePagePO.CenterText,allInputValue.getProperty("whatTheKitIncludescenterc1"));
+		UtilityMethods.whatThekitIncludesTextValidation(BellHomePagePO.CenterListText, allInputValue.getProperty("whatTheKitIncludescenterc2"), allInputValue.getProperty("whatTheKitIncludescenterc3"),allInputValue.getProperty("whatTheKitIncludescenterc4"));		
+		System.out.println(""+"TS008");
 	}
 	
-	UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//section[@id='hero-wrp']//a[text()='Order Kit']")), "NotEqual","OrderKit Button in IoT Starter Kit ");
-	UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//h4[text()='Enter Referral Code']")), "NotEqual","Enter Referral Code Text in IoT Starter Kit ");
-	WebElement enterReferralCodeTextBox= driver.findElement(By.id("referral"));
-	UtilityMethods.DisplayEnableValidator(enterReferralCodeTextBox, "NotEqual","Enter Referral Code Text Box in IoT Starter Kit Track Order");
-	UtilityMethods.StringValidation("Enter Referral Code", enterReferralCodeTextBox.getAttribute("placeholder"),"equals");
-	UtilityMethods.DisplayEnableValidator(driver.findElements(By.xpath("//span[@class='bl-close ion-android-close']")).get(1), "NotEqual","Enter Referral Code Close Button in IoT Starter Kit");
-	WebElement enterReferralCodeCloseIcon=driver.findElements(By.xpath("//span[@class='bl-close ion-android-close']")).get(0);
-	enterReferralCodeCloseIcon.click();
-	
-}
-
-public static void sectionOneIotStarterKitBellValidation()
-{
-	UtilityMethods.StringValidation(driver.findElement(By.xpath("//h1")).getText().replace("\n", " "), "Discover Internet of Things from Bell.", "equalsignorecase");
-	UtilityMethods.StringValidation(driver.findElement(By.xpath(".//*[@id='hero-wrp']//h3")).getText(), "IoT Starter Kit", "equalsignorecase");	
-	UtilityMethods.StringValidation(driver.findElements(By.xpath("//div//p")).get(0).getText().replace("\n", " "), "Growth opportunities are everywhere, and IoT technologies from Bell can help you uncover them.", "equalsignorecase");
-	UtilityMethods.StringValidation(driver.findElements(By.xpath("//div//p")).get(1).getText().replace("\n", " "), "To order a kit that includes 3 test SIM cards (retail value: $199) you must have a referral code.", "equalsignorecase");
-}
-public static void sectionOneIotStarterKitPageNavigation()
-{
-	//UtilityMethods.PageNavigationValidation(driver.findElement(By.xpath("//section[@id='hero-wrp']//button")), driver.findElement(By.xpath("//input[@type='submit']")));
-	
-	driver.findElement(By.xpath("//div[@class='bl-val-chnge pb30']/a[text()='Track Order']")).click();
-	try {Thread.sleep(2500);}catch (InterruptedException e) {e.printStackTrace();}
-	driver.findElement(By.xpath("//input[@id='emailId']")).clear();
-	driver.findElement(By.xpath("//input[@id='emailId']")).sendKeys("basheer.ahamed@ctela.com");
-	//UtilityMethods.PageNavigationValidation(driver.findElement(By.xpath("//form[@id='hmeRefTrack']//a")), driver.findElement(By.xpath("//div[@class='text-center']/a")));
-	driver.findElement(By.xpath("//form[@id='hmeRefTrack']//a")).click();
-	try {Thread.sleep(2500);}catch (InterruptedException e) {e.printStackTrace();}
-	UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//div[@class='text-center']/a")), "NotEquals", "page navigation Error");
-	driver.navigate().back();
-	
-	driver.findElement(By.xpath("//section[@id='hero-wrp']//a[text()='Enter Referral Code']")).click();
-	try {Thread.sleep(2500);}catch (InterruptedException e) {e.printStackTrace();}
-	driver.findElement(By.xpath("//input[@id='referral']")).clear();
-	driver.findElement(By.xpath("//input[@id='referral']")).sendKeys("Bell7640");
-	//UtilityMethods.PageNavigationValidation(driver.findElement(By.xpath("//section[@id='hero-wrp']//a[text()='Order Kit']")), driver.findElement(By.xpath("//input[@id='create_cc']")));
-	//driver.findElement(By.xpath("//section[@id='hero-wrp']//a[text()='Order Kit']")).click();
-	//try {Thread.sleep(2500);}catch (InterruptedException e) {e.printStackTrace();}
-	//UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//input[@id='create_cc']")), "NotEquals", "page navigation Error");
-	driver.findElement(By.xpath("//div[@id='ctrlAcc']//button")).click();
-	
-	
-	
-}
-public static void sectionOneIotStarterKitErrorMessageValidation() 
-{
-   //UtilityMethods.InputValidation(driver.findElement(By.xpath("//div[@class='bl-val-chnge pb30']/a[text()='Track Order']")), driver.findElement(By.xpath("//input[@id='emailId']")), "basheer.ahamed@ctela.com,gokularamanancse@gmail.com,vsubram4@cisco.com", driver.findElement(By.xpath("//form[@id='hmeRefTrack']//a")));
-	
-	
-	/*for (String retval: TrackOrderValidInput.split(","))
+	@Test(priority=9)
+	public static void sectionTwoWhatThekitIncludesSuppportvalidation()
 	{
-		System.out.println("The Valid Email Id Is"+retval);
-		driver.findElement(By.xpath("//div[@class='bl-val-chnge pb25']/a[text()='Track Order']")).click();
-		try {Thread.sleep(2500);}catch (InterruptedException e) {e.printStackTrace();}
-		driver.findElement(By.xpath("//input[@id='emailId']")).clear();
-		driver.findElement(By.xpath("//input[@id='emailId']")).sendKeys(retval);
-		driver.findElement(By.xpath("//form[@id='hmeRefTrack']//a")).click();
-		try {Thread.sleep(2500);}catch (InterruptedException e) {e.printStackTrace();}
-		UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//div[@class='text-center']/a")), "NotEquals", "page navigation Error");
-		driver.navigate().back();
-	}*/
-}
-
-
-public static void sectionFiveContentValidation()
-{
-	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@class='clearfix']//h3")).get(0).getText(), "You get more with Bell", "equalsignorecase");
-	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@class='clearfix']//p")).get(0).getText(), "With Canada’s largest LTE network, your business is covered from coast to coast. We also work with a robust network IoT partners and hardware providers to meet your unique business needs.", "equalsignorecase");
-	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@class='clearfix']//p")).get(1).getText(), "With the largest support team in Canada, Bell has more than 3,000 certified professionals ready to help you design, implement and manage a mobile solution that best fits your needs, all backed by 24/7 bilingual support.", "equalsignorecase");	
-	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@class='clearfix']//h3")).get(1).getText(), "1. Dependable coverage with Canada’s largest LTE network", "equalsignorecase");
-	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@class='clearfix']//p")).get(2).getText(), "Canada’s largest LTE network. Bell covers over 32 million Canadians from coast to coast ensuring you can stay connected to your business, employees and customers wherever you are.", "equalsignorecase");
-	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@class='clearfix']//h3")).get(2).getText(), "2. A network of partners to address your needs", "equalsignorecase");
-	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@class='clearfix']//p")).get(3).getText(), "We work closely with a robust network of partners to provide the full range of IoT solutions.", "equalsignorecase");
-	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@class='clearfix']//h3")).get(3).getText(), "3. Expertise from end-to-end to help you stay connected", "equalsignorecase");
-	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@class='clearfix']//p")).get(4).getText(), "Our professionals and solution experts are focused on providing you with tailor-made IoT solutions that fit your unique business needs.", "equalsignorecase");	
-}
-public static void sectionFiveimageValidation()
-{
-
-    UtilityMethods.Imagevalidation(driver.findElements(By.xpath("//section[@class='clearfix']//img[@alt='4G LTE']")).get(0), "src", "http://bell.devm2m.com/img/bell/4gLTE.jpg", "LTE Network Image");
-    UtilityMethods.Imagevalidation(driver.findElements(By.xpath("//section[@class='clearfix']//img[@alt='A Variety of Hardware image']")).get(0), "src", "http://bell.devm2m.com/img/bell/hardwaresol.jpg", "Network of partners to address your needs");
-	UtilityMethods.Imagevalidation(driver.findElements(By.xpath("//section[@class='clearfix']//img[@alt='A team of certified professional image']")).get(0), "src", "http://bell.devm2m.com/img/bell/experts.jpg", "end-to-end to help");
-}
-public static void sectionFourValidation()
-{
-	
-	UtilityMethods.Imagevalidation(driver.findElement(By.xpath("//img[@title='What is IoT']")), "src" , "http://bell.devm2m.com/img/bell/whatisiot.png", "What is IoT?");
-	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@id='what-iot']//h2")).get(1).getText(), "What is IoT?", "equalsignorecase");
-	UtilityMethods.StringValidation(driver.findElement(By.xpath("//section[@id='what-iot']//p//strong")).getText(), "Internet of Things (IoT) enables machines and devices to talk to each other directly or through a cloud solution in order to deliver actionable data quickly.", "equalsignorecase");
-	UtilityMethods.StringValidation(driver.findElement(By.xpath("//section[@id='what-iot']//p//a")).getText(), "Learn more from your Bell representative.", "equalsignorecase");
-	
-
-	driver.findElement(By.xpath("//section[@id='what-iot']//a")).click();
-	String BaseURl="https://business.bell.ca/shop/enterprise/forms/mobile-business-solutions-request-callback";
-	try {
-
-	    for(String winHandle : driver.getWindowHandles())
-	    {
-	        driver.switchTo().window(winHandle);
-	        String actualURl = driver.getCurrentUrl();
-	        if (BaseURl.equals(actualURl))
-	        {
-	        System.out.println("The page is navigated correctly");
-	       // driver.close();
-	        //driver.navigate().back();
-	        driver.navigate().to("http://bell.devm2m.com/");
-	        }
-	        
-	    }
-	    }
-	
-	catch(Exception e)
+		UtilityMethods.whatTheKitIncludesImageAndTextValidation(BellHomePagePO.SupportIcon, allInputValue.getProperty("bellSupportIcon"), BellHomePagePO.SupportText,allInputValue.getProperty("whatTheKitIncludesSupportc1"));
+		UtilityMethods.whatThekitIncludesTextValidation(BellHomePagePO.SupportListText, allInputValue.getProperty("whatTheKitIncludesSupportc2"), allInputValue.getProperty("whatTheKitIncludesSupportc3"),allInputValue.getProperty("whatTheKitIncludesSupportc4"));
+		UtilityMethods.StringValidation(BellHomePagePO.PleaseNoteText.getText(), allInputValue.getProperty("pleaseNote"), "equalsignorecase");
+		System.out.println(""+"TS009");
+	}
+	 
+	@Test(priority=10)
+	public static void sectionThreeHowItWorksValidation()
 	{
-	   System.out.println("Condition fail");
+		UtilityMethods.StringValidation(BellHomePagePO.HowItWorksText.getText(), "How it Works", "equalsignorecase");
+		UtilityMethods.howItWorksValidation(BellHomePagePO.HowItWorksOrder, "1", "Buy", allInputValue.getProperty("howItWorksText1"));
+		UtilityMethods.howItWorksValidation(BellHomePagePO.HowItWorksActivate, "2", "Activate", allInputValue.getProperty("howItWorksText2"));
+		UtilityMethods.howItWorksValidation(BellHomePagePO.HowItWorksExplore, "3", "Create", allInputValue.getProperty("howItWorksText3"));
+		UtilityMethods.howItWorksValidation(BellHomePagePO.HowItWorksMonetize, "4", "Launch", allInputValue.getProperty("howItWorksText4"));	
+		System.out.println(""+"TS0010");
 	}	
 	
-}
-public static void sectionThreeValidations()
-{
-	UtilityMethods.StringValidation(driver.findElement(By.xpath("//section[@id='how-works']//h2")).getText(), "How it Works", "equalsignorecase");
-	UtilityMethods.howItWorksValidation(driver.findElements(By.xpath("//div[@class='col-sm-3 col-xs-6']")).get(0), "1", "Buy", "Place an order for your IoT Starter Kit (retail value: $199) using your referral code.");
-	UtilityMethods.howItWorksValidation(driver.findElements(By.xpath("//div[@class='col-sm-3 col-xs-6']")).get(1), "2", "Activate", "Receive access credentials to the Bell Control Center platform to manage device connectivity.");
-	UtilityMethods.howItWorksValidation(driver.findElements(By.xpath("//div[@class='col-sm-3 col-xs-6']")).get(2), "3", "Create", "Install your SIMs in your test devices and use Control Center to connect them to Bell's network and your IoT applications.");
-	UtilityMethods.howItWorksValidation(driver.findElements(By.xpath("//div[@class='col-sm-3 col-xs-6']")).get(3), "4", "Launch", "After completing your tests, you are now ready to launch your connected device services with Bell on Canada’s fastest network.");	
-}
-public static void sectionTwoImageValidation()
-{
-	UtilityMethods.Imagevalidation(driver.findElement(By.xpath("//img[@alt='sim']")), "src" , allInputValue.getProperty("simImage"), "Sim Icon");
-	UtilityMethods.Imagevalidation(driver.findElement(By.xpath("//img[@alt='tool']")), "src" , allInputValue.getProperty("toolImage"), "Tools Icon");
-	UtilityMethods.Imagevalidation(driver.findElement(By.xpath("//img[@alt='center']")), "src" , allInputValue.getProperty("acessImage"), "Access Icon");
-	UtilityMethods.Imagevalidation(driver.findElement(By.xpath("//img[@alt='support']")), "src" , allInputValue.getProperty("supportImage"), "support Icon");
-}
-public static void sectionTwoContentValidation()
-{
-	//UtilityMethods.whatTheKitIncludesValidation(driver.findElements(By.xpath("//div[contains(@class,'col-sm-6 col-md-4 col-xs-12')]")).get(0), driver.findElements(By.xpath("//div[contains(@class,'col-sm-6 col-md-4 col-xs-12')]//img")).get(0), allInputValue.getProperty("toolImage"),allInputValue.getProperty("kitIncludesCol1"));
+	@Test(priority=11)
+	public static void sectionFourWhatIsIotValidation()
+	{
+		UtilityMethods.Imagevalidation(BellHomePagePO.WhatIsIotImage, "src" , allInputValue.getProperty("whatIsIot"), "What is IoT?");
+		UtilityMethods.StringValidation(BellHomePagePO.WhatIsIotText.getText(), "What is IoT?", "equalsignorecase");
+		UtilityMethods.StringValidation(BellHomePagePO.WhatIsIotParaText1.getText(), allInputValue.getProperty("whatIsIoTP1"), "equalsignorecase");
+		System.out.println(""+"TS0011");
+	}
 	
+	@Test(priority=12)
+	public static void sectionOneLinkvalidation() throws Exception
+	{
+		UtilityMethods.sectionOneLinkvalidation(BellHomePagePO.WhattheKitIncludeLink);
+		UtilityMethods.sectionOneLinkvalidation(BellHomePagePO.HowItWorkslink);
+		UtilityMethods.sectionOneLinkvalidation(BellHomePagePO.WhatIsIotLink);
+		System.out.println(""+"TS0012");
+	}
+	@Test(priority=13)
+	public static void sectionFiveWithBell()
+	{
+		UtilityMethods.StringValidation(BellHomePagePO.WithBellTexth3.getText(), allInputValue.getProperty("withBellH3"), "equalsignorecase");
+		UtilityMethods.StringValidation(BellHomePagePO.WithBellTextp1.getText(), allInputValue.getProperty("withBellp1"), "equalsignorecase");
+		UtilityMethods.StringValidation(BellHomePagePO.WithBellTextp2.getText(), allInputValue.getProperty("withBellp2"), "equalsignorecase");
+		System.out.println(""+"TS0013");
+	}
 	
+	@Test(priority=14)
+	public static void sectionFiveLTE()
+	{
+		UtilityMethods.Imagevalidation(BellHomePagePO.LTENetworkIcon, "src" , allInputValue.getProperty("lTEIcon"), "LTE Icon?");
+		UtilityMethods.StringValidation(BellHomePagePO.LTENetworkTexth3.getText(), allInputValue.getProperty("lTEnetworkH3"), "equalsignorecase");
+		UtilityMethods.StringValidation(BellHomePagePO.LTENetworkTextP.getText(), allInputValue.getProperty("lTEnetworkp1"), "equalsignorecase");
+		System.out.println(""+"TS0014");
+	}
+	@Test(priority=15)
+	public static void sectionFivePartners()
+	{
+		UtilityMethods.Imagevalidation(BellHomePagePO.PartnerIcon, "src" , allInputValue.getProperty("partnerIcon"), "Partners Icon");
+		UtilityMethods.StringValidation(BellHomePagePO.PartnerTexth3.getText(), allInputValue.getProperty("partnersH3"), "equalsignorecase");
+		UtilityMethods.StringValidation(BellHomePagePO.PartnerTextP.getText(), allInputValue.getProperty("partnersP1"), "equalsignorecase");
+		System.out.println(""+"TS0015");
+	}
+	@Test(priority=16)
+	public static void sectionFiveEndToEnd()
+	{
+		UtilityMethods.Imagevalidation(BellHomePagePO.EndToEndIcon, "src" , allInputValue.getProperty("endToEndIcon"), "End To End");
+		UtilityMethods.StringValidation(BellHomePagePO.EndToEndyTexth3.getText(), allInputValue.getProperty("endToEndH3"), "equalsignorecase");
+		UtilityMethods.StringValidation(BellHomePagePO.EndToEndTextP.getText(), allInputValue.getProperty("endToEndP1"), "equalsignorecase");
+		System.out.println(""+"TS0016");
+	}
+	@Test(priority=17)
+	public static void bellLogoValidation() throws InterruptedException
+	{
+		UtilityMethods.PageNavigationValidation(BellHomePagePO.BellLogo,BellHomePagePO.WhatIsIotImage,"Bell"); 
+		
+	}
 	
-	UtilityMethods.StringValidation(driver.findElement(By.xpath("//section[@id='kit-inc']//h2")).getText(), "What the Kit Includes", "equalsignorecase");
-	
-	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@id='kit-inc']//h3")).get(0).getText(), "3 SIMS", "equalsignorecase");
-	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@id='kit-inc']//h3")).get(1).getText(), "30 MB/SIM", "equalsignorecase");
-	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@id='kit-inc']//h3")).get(2).getText(), "50 SMS", "equalsignorecase");
-	
-	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@id='kit-inc']//p")).get(0).getText(), "with Bell Connectivity", "equalsignorecase");
-	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@id='kit-inc']//p")).get(1).getText(), "per month for 3 months", "equalsignorecase");
-	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@id='kit-inc']//p")).get(2).getText(), "messages per SIM per month", "equalsignorecase");
-	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@id='kit-inc']//p")).get(3).getText(), "Please note: You must be using a Bell certified device or module to order the Bell M2M IoT starter kit. The IoT starter kit is currently not available outside of Canada.", "equalsignorecase");
-	
-	 
-	
-	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@id='kit-inc']//h4")).get(0).getText(), "Real-Time Testing Tool", "equalsignorecase");
-	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@id='kit-inc']//h4")).get(1).getText().replace("\n", " "), "Full Access to Control Center", "equalsignorecase");
-	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@id='kit-inc']//h4")).get(2).getText().replace("\n", " "), "Exceptional Developer Support", "equalsignorecase");
-	
-	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@id='kit-inc']//li")).get(0).getText(), "Test-as-you-build for fast, quality development", "equalsignorecase");
-	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@id='kit-inc']//li")).get(1).getText(), "Visibility into device and network behavior", "equalsignorecase");
-	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@id='kit-inc']//li")).get(2).getText(), "Diagnostics and troubleshooting help", "equalsignorecase");
-	
-	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@id='kit-inc']//li")).get(3).getText(), "Complete suite of developer tools", "equalsignorecase");
-	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@id='kit-inc']//li")).get(4).getText(), "User logins for everyone on your team", "equalsignorecase");
-	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@id='kit-inc']//li")).get(5).getText(), "Same environment for testing and deployment", "equalsignorecase");
-	
-	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@id='kit-inc']//li")).get(6).getText(), "Developer guidelines and M2M.comforum", "equalsignorecase");
-	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@id='kit-inc']//li")).get(7).getText(), "Access to APIs", "equalsignorecase");
-	UtilityMethods.StringValidation(driver.findElements(By.xpath("//section[@id='kit-inc']//li")).get(8).getText(), "Accelerated device certification", "equalsignorecase");
-	
-}
-public static void sectionTwoValidation()
-{
-	UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//section[@id='kit-inc']//a[text()='M2M.com']")), "NotEqual", "M2M.com Link");
-	UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//section[@id='kit-inc']//a[text()='Request Referral Code']")), "NotEqual", "Request Referral Code Link");
-    
-	UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//div[@id='fixedTab']//a[text()='What the Kit Includes']")), "NotEquals", "What the Kit Includes");
-    UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//div[@id='fixedTab']//a[text()='How it Works']")), "NotEquals", "How it Works");
-    UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//div[@id='fixedTab']//a[text()='What is IoT ?']")), "NotEquals", "What is IoT ?");
-	
-//	UtilityMethods.PageNavigationValidation(driver.findElement(By.xpath("//section[@id='kit-inc']//a[text()='M2M.com']")), "http://devkit.m2m.com/");
-	//UtilityMethods.PageNavigationValidation(driver.findElement(By.xpath("//section[@id='kit-inc']//a[text()='Request Referral Code']")), "http://bell.devm2m.com/form/referral/request");
+	@Test(priority=18)
+	public static void ciscoLogoValidation() throws InterruptedException
+	{
+		UtilityMethods.PageNavigationValidation(BellHomePagePO.CiscoLogo,BellHomePagePO.JasperDotComFindElement,"IoT Connectivity Management Platform | Cisco Jasper"); 
+		
+	}
 
-	//UtilityMethods.PageNavigationValidation(driver.findElement(By.xpath("//div[@id='fixedTab']//a[text()='What the Kit Includes']")), "http://bell.devm2m.com/");
-   // UtilityMethods.PageNavigationValidation(driver.findElement(By.xpath("//div[@id='fixedTab']//a[text()='How it Works']")), "http://bell.devm2m.com/");
-   // UtilityMethods.PageNavigationValidation(driver.findElement(By.xpath("//div[@id='fixedTab']//a[text()='What is IoT ?']")), "http://bell.devm2m.com/");
-}
-}
 
+	@Test(priority=19)
+	public static void sectionOneReferralRequestvalidation() throws InterruptedException
+	{
+		UtilityMethods.DisplayEnableValidator(BellHomePagePO.SectionOneReferralRrequestButton, "NotEqual", "Section One Referral Request Button");
+		UtilityMethods.PageNavigationValidation(BellHomePagePO.SectionOneReferralRrequestButton,BellHomePagePO.ReferrralRequestFindElement,"Bell"); 
+		System.out.println(""+"TS0018");
+	}
+	
+	@Test(priority=20)
+	public static void sectionTwoReferralRequestvalidation() throws InterruptedException
+	{
+		//UtilityMethods.DisplayEnableValidator(BellHomePagePO.SectionTwoReferralRrequestButton, "NotEqual", "Section Two Referral Request Button");
+		//UtilityMethods.PageNavigationValidation(BellHomePagePO.SectionTwoReferralRrequestButton,BellHomePagePO.ReferrralRequestFindElement,"Bell"); 
+		
+		BellHomePagePO.SectionTwoReferralRrequestButton.click();
+		Thread.sleep(3000);
+		String parentHandle = driver.getWindowHandle();
+		try 
+		{
+		System.out.println("Try Block");
+			for(String winHandle : driver.getWindowHandles())
+		    {
+				System.out.println("For each");
+		        driver.switchTo().window(winHandle);
+		        System.out.println("" +driver.getTitle());
+			    if (driver.getTitle().equals("Bell"))
+			    {
+			    	if(!BellHomePagePO.ReferrralRequestFindElement.isDisplayed());
+			    	{
+					System.out.println("Page Rredirection Failed for"+BellHomePagePO.SectionTwoReferralRrequestButton.getText()+"");
+					//Assert.assertEquals(true, FindElement.isDisplayed());
+		        	}
+			    }
+		    }
+		    driver.switchTo().window(parentHandle);
+		  }
+		catch(Exception e)
+		{
+		   System.out.println("Condition fail");
+		}
+				
+		System.out.println(""+"TS0017");
+		}
+	@Test(priority=21)
+	public static void TrackOrderValidPageRedirection() throws InterruptedException
+	{
+		BellHomePagePO.SectionOneTrackOrderButton.click();
+		BellHomePagePO.TrackOrderEmailID.sendKeys(allInputValue.getProperty("TrackOrder.validTrackOrderEmailID"));
+		UtilityMethods.PageNavigationValidation(BellHomePagePO.SectionOneTrackOrderPRButton, BellHomePagePO.SectionOneTrackOrderFindElement, "Post");
+	}
+	
+	@Test(priority=22)
+	public static void TrackOrderInValidPageRedirection() throws InterruptedException
+	{
+		BellHomePagePO.SectionOneTrackOrderButton.click();
+		BellHomePagePO.TrackOrderEmailID.sendKeys(allInputValue.getProperty("TrackOrder.InvalidTrackOrderEmailID"));
+		UtilityMethods.PageNavigationValidation(BellHomePagePO.SectionOneTrackOrderPRButton, BellHomePagePO.WhatIsIotImage, "Post");	
+	}
+	@Test(priority=23)
+	public static void sectionTwoM2MDotCom() throws InterruptedException
+	{
+		UtilityMethods.DisplayEnableValidator(BellHomePagePO.M2mDotCom, "NotEqual", "M2MDotCom Link Button");
+		UtilityMethods.PageNavigationValidation(BellHomePagePO.M2mDotCom,BellHomePagePO.M2MDotComFindElement,"M2M Developer Kits from the World’s Leading Mobile Operators"); 
+	}
+	
+	@Test(priority=24)
+	public static void sectionFourJasperdotCom() throws InterruptedException
+	{
+		UtilityMethods.DisplayEnableValidator(BellHomePagePO.JasperDotCom, "NotEqual", "JasperDotCom Link Button");
+		UtilityMethods.PageNavigationValidation(BellHomePagePO.JasperDotCom, BellHomePagePO.JasperDotComFindElement, "IoT Connectivity Management Platform | Cisco Jasper");
+	}
+	
+	
+}
