@@ -19,34 +19,33 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 
 public class BaseDriver {
-	public static ExtentReports extent;
-	public static ExtentTest testcase;
-	
-	public static FirefoxDriver driver;
+
+	//public static FirefoxDriver driver;
 	
 	//public static InternetExplorerDriver driver;
 	
 	
-	//public static ChromeDriver driver;
+	public static ChromeDriver driver;
 	
-	public static FirefoxDriver launchApp() throws IOException, Exception
+	public static ChromeDriver launchApp() throws IOException, Exception
 	{	
 		
 		/*System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+ "\\libs\\IEDriverServer.exe");
-		driver = new InternetExplorerDriver();*/
+		Thread.sleep(1000);
+		driver = new InternetExplorerDriver();
 		
-	/*	
+	*/
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ "\\libs\\chromedriver.exe");
-		driver = new ChromeDriver();*/
-		
-		
+		driver = new ChromeDriver();
+		/*
 		System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
 		Thread.sleep(1000);
 		driver = new FirefoxDriver();
+		*/
 		Thread.sleep(1000);
 		driver.manage().window().maximize();
 		Thread.sleep(1000);
-		driver.get("http://bell.devm2m.com/form/referral/request");
+		driver.get("http://bell.devm2m.com/");
 		
 		//driver.get("http://skotni:dkt123@postdevfortesting.devm2m.com/");	 to be used if windows server authentication is used
 	

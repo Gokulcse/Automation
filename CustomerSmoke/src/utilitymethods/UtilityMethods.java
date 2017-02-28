@@ -16,55 +16,68 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NotFoundException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 
 
 import org.testng.Assert;
 
+import pageobjects.BellHomePagePO;
 import driver.BaseDriver;
 
 public class UtilityMethods extends BaseDriver {
 
 	public static void PageNavigationValidation(WebElement Linkbutton,WebElement FindElement, String PageTitile) throws InterruptedException 
 	{
+		driver.navigate().refresh();
 		System.out.println("The Link button xpath is :"+Linkbutton+"");
 		System.out.println("The Find button xpath is :"+FindElement+"");
-
-		String parentHandle="";
+		System.out.println(""+ Linkbutton.getAttribute("href"));
+		System.out.println(" The Linkbutton is displayed :"+Linkbutton.isDisplayed()+"");
+		System.out.println(" The Linkbutton is enabled :"+Linkbutton.isEnabled()+"");
+		Thread.sleep(6000);
 		Linkbutton.click();	
 		System.out.println("link button clicked");
-		Thread.sleep(3000);
-		parentHandle = driver.getWindowHandle();
+		Thread.sleep(6000);
+		String parentHandle = driver.getWindowHandle();
 		try {
 		    for(String winHandle : driver.getWindowHandles())
 		    {
-		    	
 		        driver.switchTo().window(winHandle);
 		        System.out.println("" +driver.getTitle());
-		       
 		        if (driver.getTitle().equals(PageTitile))
 			    {
-		        	if(!FindElement.isDisplayed());
+		        	if(!FindElement.isDisplayed())
 		        	{
 		        		System.out.println("Page Rredirection Failed for"+Linkbutton.getText()+"");
-		        		//Assert.assertEquals(true, FindElement.isDisplayed());
+		        	}
+		        	else
+		        	{
+		        		System.out.println("Page Redirection done");
+		        		driver.close();
 		        	}
 			    }
-		       /* else
-		        {
-		        	 System.out.println("" +driver.getTitle());
-		        	//Assert.assertEquals(driver.getTitle(), PageTitile);
-		        }*/
 		    }
-		   // driver.navigate().back();
 		   driver.switchTo().window(parentHandle);
-			
+		    //driver.navigate().back();
 		    }
 		catch(Exception e)
 		{
-		   System.out.println("Condition fail");
+		   System.out.println("Condition fail :"+e+"");
 		}	
+	}
+	
+	public static void pageRedirection(WebElement Linkbutton,WebElement FindElement) throws InterruptedException
+	{
+		driver.navigate().refresh();
+		Linkbutton.click();
+		Thread.sleep(3000);
+		if(!FindElement.isDisplayed())
+    	{
+    		System.out.println("Page Rredirection Failed for"+Linkbutton.getText()+"");
+    	}
+		driver.navigate().back();
 	}
 	public static void howItWorksValidation(WebElement webObj,String str1,String str2,String str3)
 	{
@@ -254,12 +267,50 @@ public class UtilityMethods extends BaseDriver {
 		}	
 	}
 	
+	public static void EnterReferralCodeValidation(WebElement textBoxObject,WebElement errorObject)
+	{
+		textBoxObject.clear();
+		String ErrorMessage= errorObject.getText();
+		if(!ErrorMessage.equals("Invalid Referral Code"))
+		{
+		 	System.out.println("Invalid Referral Code Error Message is Not Displayed");	
+		}
+	}
+	
+	
+	
+	public static void TrackOrderErrorValidation(WebElement textBoxObject,WebElement errorObject)
+	{
+		textBoxObject.clear();
+		String ErrorMessage= errorObject.getText();
+		if(!ErrorMessage.equals("Invalid Track Order Email Id"))
+		{
+		 	System.out.println("Invalid Email ID Error Message is Not Displayed");	
+		}
+	}
+	
 	public static void EmailIdInvalidvalidation(WebElement textBoxObject,WebElement errorObject,String Input)
 	{
 		for (String retval: Input.split(","))
 		{
 			textBoxObject.clear();
 			textBoxObject.sendKeys(retval);
+			String ErrorMessage= errorObject.getText();
+			if(!ErrorMessage.equals("Please enter a valid email address."))
+			{
+				ScreenShot(driver, ""+textBoxObject.getAttribute("id")+" "+ErrorMessage+"");
+				System.out.println("The Error Message displayed is "+ErrorMessage+" near Text Box ID "+textBoxObject.getAttribute("id")+" for input value : '"+retval+" '");
+			}		
+		}	
+	}
+	
+	public static void TrackEmailIdvalidation(WebElement textBoxObject,WebElement errorObject,String Input,WebElement linkButton)
+	{
+		for (String retval: Input.split(","))
+		{
+			textBoxObject.clear();
+			textBoxObject.sendKeys(retval);
+			linkButton.click();
 			String ErrorMessage= errorObject.getText();
 			if(!ErrorMessage.equals("Please enter a valid email address."))
 			{
@@ -409,14 +460,12 @@ public class UtilityMethods extends BaseDriver {
 		{
 			ScreenShot(driver,"PlaceholderValidation " +textObject.getAttribute("id")+"");
 			System.out.println("The Placeholder value in "+Result+" Input Field doesn't match.");
-		}
-		
+		}	
 	}
-	
 	public static void Imagevalidation(WebElement imgObject,String typeattribute,String value,String Result)
 	{
 		//System.out.println(""+imgObject.getAttribute(typeattribute));
-	//	System.out.println(""+value+"");
+		//System.out.println(""+value+"");
 		switch(typeattribute.toLowerCase())
 		{
 		case "alt":
@@ -436,12 +485,9 @@ public class UtilityMethods extends BaseDriver {
 			break;
 		}	
 	}
-	
 	public static void StringValidation(String stringBase, String stringToCompare,String value)
 	{
-		
 		boolean result = true;
-		
 		switch(value.toLowerCase())
 		{
 		case "equal":
@@ -454,21 +500,16 @@ public class UtilityMethods extends BaseDriver {
 			result = stringBase==stringToCompare;
 		break;	
 		}
-		
 		if (result == false)
 		{
 			System.out.println("Base String :"+stringBase+"");
-
-			System.out.println("compare String :"+stringToCompare+"");
-			
+			System.out.println("compare String :"+stringToCompare+"");	
 			ScreenShot(driver, "StringValidation in "+stringBase+"");	
 			System.out.println("The String " + stringToCompare +" is not " + value +" to "+ stringBase +" ");
 		}
 	}
-
-	public static void DisplayEnableValidator(WebElement strObject, String value, String Result)
-	{
-		
+	public static void DisplayEnableValidator(WebElement strObject, String value, String Result) 
+	{	
 		//System.out.println(" The "+Result+" is displayed :"+strObject.isDisplayed()+"");
 		//System.out.println(" The "+Result+" is enabled :"+strObject.isEnabled()+"");
 		//System.out.println(""+strObject);
@@ -486,13 +527,12 @@ public class UtilityMethods extends BaseDriver {
 			{
 				ScreenShot(driver, Result);
 			
-				System.out.println("The " + Result +" is not Displayed or Enabled");
+			System.out.println("The " + Result +" is not Displayed or Enabled");
 				//Assert.assertEquals(false, strObject.isDisplayed() && strObject.isEnabled());	
 			}
 			break;
 		}	
 	}
-	
 	public static void ScreenShot(WebDriver driver,String screenshotName)
 	{
 		try 
@@ -513,11 +553,8 @@ public class UtilityMethods extends BaseDriver {
 		System.out.println("Exception while taking screenshot "+e.getMessage());
 		} 
 	}
-	
-	
 	public static Properties getPropValues() throws IOException 
-	{
-		
+	{	
 		Properties properties = new Properties();
 		String propertiesFile=System.getProperty("user.dir")+ "\\src\\testData.properties";
 		try 
@@ -529,8 +566,7 @@ public class UtilityMethods extends BaseDriver {
             System.out.println("Exception Occurred" + e.getMessage());
         }
 		return properties;
-	}
-	
+	}	
 	public static Properties getBellPropValues() throws IOException 
 	{
 		
@@ -546,8 +582,6 @@ public class UtilityMethods extends BaseDriver {
         }
 		return properties;
 	}
-	
-	
 	public static Properties getTele2PropValues() throws IOException 
 	{
 		

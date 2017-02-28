@@ -3,14 +3,36 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="pages.BellReferralRequestPage">
+      <class name="pages.BellEndToEndFlowOne">
         <methods>
-          <include name="validateOperatorLogo"/>
-          <include name="validateCompanyLogo"/>
-          <include name="RequestButtonValidation"/>
-          <include name="Start"/>
+          <include name="ThankYouIOTPagevalidation"/>
+          <include name="ThankYouBellPageRedirection"/>
+          <include name="ReferralRequestMinimumInputValidation"/>
+          <include name="ReferralRequestButtonvalidation"/>
+          <include name="ReferralRequestBellLogo"/>
+          <include name="ReferralRequestEmailValidation"/>
+          <include name="ReferralrequestLabelDisplayedAndEnabled"/>
+          <include name="sectionOneReferralRequestvalidation"/>
+          <include name="BrowserIntilation"/>
+          <include name="ReferralRequestPlaceHolderValidation"/>
+          <include name="RferrralRequestcancelButton"/>
+          <include name="ThankYouIOTvalidation"/>
+          <include name="ReferrakRequestRequiredFieldValidation"/>
+          <include name="ThankYouTextvalidation"/>
+          <include name="ThankYouBellLogo"/>
+          <include name="HomePageM2MDotComvalidation"/>
+          <include name="ReferralrequestTextBoxDisplayedAndEnabled"/>
+          <include name="ThankYouCiscoLogo"/>
+          <include name="ReferralRequestBellCaLinkvalidation"/>
+          <include name="ReferralRequestCompanyLogo"/>
+          <include name="ReferralRequestNumericFeild"/>
+          <include name="ReferralrequestSpaceNotAllowedValiadation"/>
+          <include name="ReferralRequestValidInputValidation"/>
+          <include name="ReferralRequestMaximumInputValidation"/>
+          <include name="ReferralRequestTextValiadtion"/>
+          <include name="ReferralRequestBellLogoValidation"/>
         </methods>
-      </class> <!-- pages.BellReferralRequestPage -->
+      </class> <!-- pages.BellEndToEndFlowOne -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

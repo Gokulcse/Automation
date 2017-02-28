@@ -6,30 +6,30 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="sectionOneIotStarterKitTrackOrderValidation" key="selection"/>
+		<item value="@Test" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="sectionOneIotStarterKitTrackOrderValidation"/>
-			<item value="Buy"/>
-			<item value="M2M"/>
-			<item value="Developer guidelines and M2M"/>
-			<item value="Developer guidelines and M2M.com forum"/>
-			<item value="Full Access to Post M2M Control Center"/>
-			<item value="driver.findElement(By.xpath(&quot;//input[@name=&apos;billAddress.cityTown&apos;]&quot;))"/>
-			<item value="driver.findElement(By.xpath(&quot;//input[@name=&apos;billAddress.addressLine1&apos;]&quot;))"/>
+			<item value="//@Test"/>
+			<item value="@Test"/>
+			<item value="Cancel"/>
+			<item value="What the Kit Includes"/>
+			<item value="m2m"/>
+			<item value="@Test("/>
+			<item value="bellSupportIcon"/>
+			<item value="ToolIcon"/>
 		</list>
 		<list key="replacehistory">
-			<item value="PostShippingInfoPO.BillCityInput"/>
-			<item value="PostShippingInfoPO.BillAddressInput"/>
-			<item value="Bill"/>
-			<item value="PostReferralRequestPO.DescriptionError"/>
-			<item value="PostReferralRequestPO.EmailError"/>
-			<item value="PostReferralRequestPO.PhoneNumberError"/>
-			<item value="PostReferralRequestPO.PositionError"/>
-			<item value="PostReferralRequestPO.CompanyError"/>
+			<item value="@Test"/>
+			<item value="//@Test"/>
+			<item value="//@Test(priority=1"/>
+			<item value="//@Test("/>
+			<item value="BellHomePagePO"/>
+			<item value="BellReferralRequestThankYouPO"/>
+			<item value="BellReferralRequestPO"/>
+			<item value="Bell"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

@@ -28,7 +28,7 @@ public class PostHomePage extends BaseDriver
 	}
 	 
 	 @Test(priority=1)
-	public static void validateOperatorLogo()
+	private static void validateOperatorLogo()
 	{		
 		PageFactory.initElements(driver, PostHomePagePO.class);	
 		UtilityMethods.DisplayEnableValidator(PostHomePagePO.PostLogo, "NotEqual","Post Operator Logo in IoT Starter Kit");	
@@ -38,7 +38,7 @@ public class PostHomePage extends BaseDriver
 	} 
 
 	 @Test(priority=2)
-	public static void validateCompanyLogo()
+	protected static void validateCompanyLogo()
 	{
 		 PageFactory.initElements(driver, PostHomePagePO.class);	
 		UtilityMethods.DisplayEnableValidator(PostHomePagePO.CiscoLogo, "NotEqual","Cisco Jasper Company Logo in IoT Starter Kit");		

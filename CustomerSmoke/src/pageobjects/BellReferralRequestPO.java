@@ -140,11 +140,17 @@ public class BellReferralRequestPO extends BaseDriver
 	@FindBy(how=How.XPATH,using="//p[contains(.,'Legal')]")
 	public static WebElement legalText;
 		
-	@FindBy(how=How.XPATH,using="//label[text()='Description']")
+	@FindBy(how=How.XPATH,using="//label[@for='bellcheck']//a")
 	public static WebElement BellCaLink;
+	
+	@FindBy(how=How.XPATH,using="//h1")
+	public static WebElement BellCaLinkFindElement;
 	
 	@FindBy(how=How.XPATH,using="//a[@value='Cancel']")
 	public static WebElement CancelButton;
+	
+	@FindBy(how=How.XPATH,using="//img[@title='What is IoT']")
+	public static WebElement CancelButtonFindElement;
 	
 	@FindBy(how=How.XPATH,using="//input[@value='Request']")
 	public static WebElement RequestButton;	

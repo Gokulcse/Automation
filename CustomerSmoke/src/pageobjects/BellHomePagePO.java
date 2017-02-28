@@ -27,8 +27,9 @@ public class BellHomePagePO extends BaseDriver
 	@FindBy(how=How.XPATH,using="//div[@class='pb5 br-none-md']//p[contains(.,'code')]")
 	public static WebElement TextBannerp2; 
 	
-	@FindBy(how=How.XPATH,using="//section[@id='hero-wrp']//button")
+	@FindBy(how=How.XPATH,using="//section[@id='hero-wrp']//a[contains(.,'Request Referral Code')]")
 	public static WebElement SectionOneReferralRrequestButton;
+	//section[@id='hero-wrp']//button
 	
 	@FindBy(how=How.XPATH,using="//input[@value='Request']")
 	public static WebElement ReferrralRequestFindElement; //Referral Request Find Element in next page
@@ -66,7 +67,7 @@ public class BellHomePagePO extends BaseDriver
 	@FindBy(how=How.XPATH,using="//div[@class='bl-ref-inpt-grp bl-ref-odr']//span")
 	public static WebElement EnterReferralCodeCloseIcon;
 	
-	@FindBy(how=How.XPATH,using="//section[@id='kit-inc']//a[text()='Request Referral Code']")
+	@FindBy(how=How.XPATH,using="//a[text()='Request Referral Code']")
 	public static WebElement SectionTwoReferralRrequestButton;
 	
 	@FindBy(how=How.XPATH,using="//img[@alt='sim']")
@@ -148,16 +149,16 @@ public class BellHomePagePO extends BaseDriver
 	public static WebElement WhatIsIotParaText1;
 		
 	@FindBy(how=How.XPATH,using="//a[text()='M2M.com']")
-	public static WebElement M2mDotCom;
+	public static WebElement M2MDotCom;
 	
 	@FindBy(how=How.XPATH,using="//div[@id='footer_wrap']")
 	public static WebElement M2MDotComFindElement;
 	
-	@FindBy(how=How.XPATH,using="//section[@id='what-iot']//a")
-	public static WebElement JasperDotCom;
+	@FindBy(how=How.XPATH,using="//a[text()='Learn more from your Bell representative.']")
+	public static WebElement LearnMoreFromBell;
 	
-	@FindBy(how=How.XPATH,using="//a[text()='Blog']")
-	public static WebElement JasperDotComFindElement;
+	@FindBy(how=How.XPATH,using="//h2[text()='Request a call back']")
+	public static WebElement LearnMoreFromBellFindElement;
 
 	@FindBy(how=How.XPATH,using="//ul[@class='list-inline bl-whw']//li[contains(.,'Kit')]")
 	public static WebElement WhattheKitIncludeLink;
@@ -172,7 +173,7 @@ public class BellHomePagePO extends BaseDriver
 	public static WebElement TrackOrderError; //Invalid track Order Email	
 	
 	@FindBy(how=How.XPATH,using="//label[@id='emailId-error']")
-	public static WebElement TrackOrderValidEmailError; //valid emial ID
+	public static WebElement TrackOrderInValidEmailError; //Invalid emial ID
 	
 	@FindBy(how=How.XPATH,using="//div[@id='referralErr']/p")
 	public static WebElement ReferralCodeError;  //Invalid referral Code
