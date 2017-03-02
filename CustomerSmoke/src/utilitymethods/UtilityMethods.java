@@ -36,7 +36,6 @@ public class UtilityMethods extends BaseDriver {
 		System.out.println(""+ Linkbutton.getAttribute("href"));
 		System.out.println(" The Linkbutton is displayed :"+Linkbutton.isDisplayed()+"");
 		System.out.println(" The Linkbutton is enabled :"+Linkbutton.isEnabled()+"");
-		Thread.sleep(6000);
 		Linkbutton.click();	
 		System.out.println("link button clicked");
 		Thread.sleep(6000);
@@ -68,7 +67,7 @@ public class UtilityMethods extends BaseDriver {
 		}	
 	}
 	
-	public static void pageRedirection(WebElement Linkbutton,WebElement FindElement) throws InterruptedException
+	public static void pageRedirection(WebElement Linkbutton,WebElement FindElement,String PageName) throws InterruptedException
 	{
 		driver.navigate().refresh();
 		Linkbutton.click();
@@ -77,7 +76,10 @@ public class UtilityMethods extends BaseDriver {
     	{
     		System.out.println("Page Rredirection Failed for"+Linkbutton.getText()+"");
     	}
+		if(!PageName.equals("HomePage"))
+		{
 		driver.navigate().back();
+		}
 	}
 	public static void howItWorksValidation(WebElement webObj,String str1,String str2,String str3)
 	{

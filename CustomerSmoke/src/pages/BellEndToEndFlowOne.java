@@ -1,5 +1,10 @@
 package pages;
 
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -14,11 +19,13 @@ import pages.BellHomePage;
 import pages.BellReferralRequestPage;
 import pages.BellReferralRequestThankYou;
 import pages.BellControlCenter;
+import utilitymethods.UtilityMethods;
 
 public class BellEndToEndFlowOne extends BaseDriver
 {
 public static ChromeDriver driver;
 
+static Properties allInputValue;
 	@BeforeTest
 	public static void BrowserIntilation() throws Exception
 	{
@@ -115,20 +122,67 @@ public static ChromeDriver driver;
 		BellHomePage.sectionFiveEndToEnd();
 	}
 	@Test(priority=19)
-	public static void HomePageM2MDotComvalidation() throws InterruptedException
-	{
-	BellHomePage.sectionTwoM2MDotCom();	
-	}
-	@Test(priority=20)
 	public static void HomePageLearnMoreFromBell() throws InterruptedException
 	{
 		BellHomePage.sectionFourLearnMoreFromBell();
 	}
-	@Test(priority=21)
+	@Test(priority=20)
 	public static void HomePageSecOneReferralRequesButton() throws InterruptedException
 	{
 		BellHomePage.sectionOneReferralRequestvalidation();
 	}
+	@Test(priority=21)
+	public static void HomePageM2MDotComvalidation() throws InterruptedException, IOException
+	{
+	allInputValue= UtilityMethods.getBellPropValues();
+	if(allInputValue.getProperty("Broswer").equals("Chrome"))
+	{
+		//driver.navigate().refresh();
+		driver.navigate().refresh();
+		System.out.println(" The Linkbutton is displayed :"+driver.findElement(By.xpath("//a[text()='M2M.com']")).isDisplayed()+"");
+		System.out.println(" The Linkbutton is enabled :"+driver.findElement(By.xpath("//a[text()='M2M.com']")).isEnabled()+"");
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//a[text()='M2M.com']")).click();	
+		System.out.println("link button clicked");
+		Thread.sleep(6000);
+		String parentHandle = driver.getWindowHandle();
+		try {
+		    for(String winHandle : driver.getWindowHandles())
+		    {
+		        driver.switchTo().window(winHandle);
+		        System.out.println("" +driver.getTitle());
+		        if (driver.getTitle().equals("M2M Developer Kits from the World’s Leading Mobile Operators"))
+			    {
+		        	if(!BellHomePagePO.M2MDotComFindElement.isDisplayed())
+		        	{
+		        		System.out.println("Page Rredirection Failed for"+BellHomePagePO.M2MDotCom.getText()+"");
+		        	}
+		        	else
+		        	{
+		        		System.out.println("Page Redirection done");
+		        		driver.close();
+		        	}
+			    }
+		    }
+		   driver.switchTo().window(parentHandle);
+		    //driver.navigate().back();
+		    }
+		catch(Exception e)
+		{
+		   System.out.println("Condition fail :"+e+"");
+		}	
+	}
+	else if(allInputValue.getProperty("Broswer").equals("InternetExplorer"))
+	{
+		
+	}
+	else
+	{
+		BellHomePage.sectionTwoM2MDotCom();		
+	}
+	}
+	
+	
 	@Test(priority=22)
 	public static void HomePageSectwoReferralRequestButton() throws InterruptedException
 	{
@@ -263,6 +317,7 @@ public static ChromeDriver driver;
 	@Test(priority=42)
 	public static void ThankYouBellLogo()
 	{
+		driver.navigate().refresh();
 		BellReferralRequestThankYou.validateOperatorLogo();
 	}
 	@Test(priority=43)
@@ -278,6 +333,7 @@ public static ChromeDriver driver;
 	@Test(priority=45)
 	public static void ThankYouBellPageRedirection() throws InterruptedException
 	{
+		
 		BellReferralRequestThankYou.bellLogoValidation();
 	}
 	@Test(priority=45)

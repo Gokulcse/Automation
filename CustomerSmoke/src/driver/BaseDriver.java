@@ -33,9 +33,10 @@ public class BaseDriver {
 		/*System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+ "\\libs\\IEDriverServer.exe");
 		Thread.sleep(1000);
 		driver = new InternetExplorerDriver();
-		
-	*/
+		*/
+	
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ "\\libs\\chromedriver.exe");
+		Thread.sleep(1000);
 		driver = new ChromeDriver();
 		/*
 		System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");

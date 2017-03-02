@@ -7,30 +7,8 @@
         <methods>
           <include name="ThankYouIOTPagevalidation"/>
           <include name="ThankYouBellPageRedirection"/>
-          <include name="ReferralRequestMinimumInputValidation"/>
-          <include name="ReferralRequestButtonvalidation"/>
-          <include name="ReferralRequestBellLogo"/>
-          <include name="ReferralRequestEmailValidation"/>
-          <include name="ReferralrequestLabelDisplayedAndEnabled"/>
-          <include name="sectionOneReferralRequestvalidation"/>
           <include name="BrowserIntilation"/>
-          <include name="ReferralRequestPlaceHolderValidation"/>
-          <include name="RferrralRequestcancelButton"/>
-          <include name="ThankYouIOTvalidation"/>
-          <include name="ReferrakRequestRequiredFieldValidation"/>
-          <include name="ThankYouTextvalidation"/>
           <include name="ThankYouBellLogo"/>
-          <include name="HomePageM2MDotComvalidation"/>
-          <include name="ReferralrequestTextBoxDisplayedAndEnabled"/>
-          <include name="ThankYouCiscoLogo"/>
-          <include name="ReferralRequestBellCaLinkvalidation"/>
-          <include name="ReferralRequestCompanyLogo"/>
-          <include name="ReferralRequestNumericFeild"/>
-          <include name="ReferralrequestSpaceNotAllowedValiadation"/>
-          <include name="ReferralRequestValidInputValidation"/>
-          <include name="ReferralRequestMaximumInputValidation"/>
-          <include name="ReferralRequestTextValiadtion"/>
-          <include name="ReferralRequestBellLogoValidation"/>
         </methods>
       </class> <!-- pages.BellEndToEndFlowOne -->
     </classes>
