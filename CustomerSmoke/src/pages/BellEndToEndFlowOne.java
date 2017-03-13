@@ -4,21 +4,15 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import driver.BaseDriver;
 import pageobjects.BellHomePagePO;
-import pageobjects.BellReferralRequestPO;
 import pages.BellHomePage;
 import pages.BellReferralRequestPage;
 import pages.BellReferralRequestThankYou;
-import pages.BellControlCenter;
 import utilitymethods.UtilityMethods;
 
 public class BellEndToEndFlowOne extends BaseDriver

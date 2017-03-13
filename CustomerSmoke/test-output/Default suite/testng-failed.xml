@@ -5,17 +5,21 @@
     <classes>
       <class name="pages.BellEndToEndFlowTwo">
         <methods>
-          <include name="YourInfoCompanyLogo"/>
-          <include name="YourInfoBellLogo"/>
-          <include name="YourInfoMinimumInputValidation"/>
-          <include name="YourInfoValidInputValidation"/>
-          <include name="TermsOfServiceTextValidation"/>
-          <include name="YourInfoTextValiadtion"/>
-          <include name="YourInfoMaximumInputValidation"/>
-          <include name="referralRequestDataValidation"/>
+          <include name="ShippingInfoLinkButton"/>
+          <include name="ShippingInfovalidateOperatorLogo"/>
+          <include name="ShippingInfoMinimumInputValidation"/>
+          <include name="ShippingInfoMaximumInputValidation"/>
+          <include name="ShippingInfovalidateCompanyLogo"/>
+          <include name="shippingInfoLabelText"/>
+          <include name="ShippingInfoRequiredFieldvalidatoin"/>
+          <include name="ShippingInfoTextvalidation"/>
+          <include name="ShippingInfoSendInputs"/>
+          <include name="ShippingInfoBackButtonValidation"/>
+          <include name="ShippingInfoBellLogoValidation"/>
+          <include name="ShippingInfoCancelButtonValidation"/>
           <include name="BrowserIntilation"/>
-          <include name="YourInfoEmailValidation"/>
-          <include name="YourInfoNumericFeild"/>
+          <include name="ShippingInfoSpaceNotAllowedvalidatoin"/>
+          <include name="shippingInfoInputField"/>
         </methods>
       </class> <!-- pages.BellEndToEndFlowTwo -->
     </classes>

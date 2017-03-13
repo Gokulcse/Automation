@@ -1,6 +1,7 @@
 package pages;
 
 import java.awt.AWTException;
+import java.io.IOException;
 import java.util.Properties;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -54,22 +55,32 @@ public class BellEndToEndFlowTwo extends BaseDriver
 	{
 		BellControlCenter.InputValidation();
 	}
-	@Test(priority=11)
+	@Test(priority=8)
 	public static void referralRequestDataValidation()
 	{
+		driver.navigate().refresh();
+		try {Thread.sleep(4000);} catch (InterruptedException e) {e.printStackTrace();}
+		try {
+			BellYourInfo.intial();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {Thread.sleep(2000);} catch (InterruptedException e) {e.printStackTrace();}
+
 		BellYourInfo.referralRequestDataValidation();
 	}
-	@Test(priority=10)
+	@Test(priority=9)
 	public static void TermsOfServiceTextValidation()
 	{
 		BellYourInfo.TermsOfServiceTextValidation();
 	}
-	@Test(priority=9)
+	@Test(priority=10)
 	public static void TermsOfServicePopUpCloseIcon()
 	{
 		BellYourInfo.TermsOfServicePopUpCloseIcon();
 	}
-	@Test(priority=8)
+	@Test(priority=11)
 	public static void TermsOfServicePopUpCloseButton()
 	{
 		BellYourInfo.TermsOfServicePopUpCloseButton();
@@ -179,6 +190,87 @@ public class BellEndToEndFlowTwo extends BaseDriver
 	public static void YourInfocancelButton() throws InterruptedException
 	{
 		BellYourInfo.ReferralrequestCancelButton();
+	}
+	@Test(priority=29)
+	public static void YourInfocontinueButton() throws InterruptedException
+	{
+		BellYourInfo.RequestButtonValidation();
+		try {Thread.sleep(4000);} catch (InterruptedException e) {e.printStackTrace();}
+	}
+	
+	@Test(priority=30)
+	public static void ShippingInfovalidateOperatorLogo() throws Exception
+	{	
+		driver.navigate().refresh();
+		try {Thread.sleep(4000);} catch (InterruptedException e) {e.printStackTrace();}
+		try {BellShippingInfo.Start();} catch (IOException e) {e.printStackTrace();}
+		try {Thread.sleep(2000);} catch (InterruptedException e) {e.printStackTrace();}
+		BellShippingInfo.validateOperatorLogo();
+	} 
+	@Test(priority=31)
+	public static void ShippingInfovalidateCompanyLogo()
+	{	
+		BellShippingInfo.validateCompanyLogo();	
+	}
+	@Test(priority=32)
+	public static void ShippingInfoTextvalidation()
+	{
+		BellShippingInfo.ShippingInfoTextvalidation();
+	}
+	@Test(priority=33)
+	public static void shippingInfoLabelText()
+	{
+		BellShippingInfo.shippingInfoLabelText();
+	}
+	@Test(priority=34)
+	public static void shippingInfoInputField()
+	{
+		BellShippingInfo.shippingInfoInputField();
+	}
+	@Test(priority=35)
+	public static void ShippingInfoLinkButton()
+	{
+		BellShippingInfo.ShippingInfoLinkButton();
+	}
+	@Test(priority=36)
+	public static void ShippingInfoRequiredFieldvalidatoin()
+	{
+		BellShippingInfo.ShippingInfoRequiredFieldvalidatoin();
+	}
+	@Test(priority=37)
+	public static void ShippingInfoSpaceNotAllowedvalidatoin()
+	{
+		BellShippingInfo.ShippingInfoSpaceNotAllowedvalidatoin();
+	}
+	@Test(priority=38)
+	public static void ShippingInfoMaximumInputValidation()
+	 {
+		BellShippingInfo.ShippingInfoMaximumInputValidation();
+	 }
+	@Test(priority=39)
+	public static void  ShippingInfoMinimumInputValidation()
+	{
+		BellShippingInfo.ShippingInfoMinimumInputValidation();
+	}
+	@Test(priority=40)	
+	public static void ShippingInfoBellLogoValidation() throws InterruptedException
+	{
+		BellShippingInfo.BellLogoValidation();
+	}
+	@Test(priority=41)
+	public static void ShippingInfoCancelButtonValidation() throws InterruptedException
+	{
+		BellShippingInfo.CancelButtonValidation();
+	}
+	@Test(priority=42)	
+	public static void ShippingInfoBackButtonValidation() throws InterruptedException
+	{
+		BellShippingInfo.BackButtonValidation();
+	}
+	@Test(priority=43)	
+	public static void ShippingInfoSendInputs()
+	{
+		BellShippingInfo.ShippingInfoSendInputs();
 	}
 	
 }

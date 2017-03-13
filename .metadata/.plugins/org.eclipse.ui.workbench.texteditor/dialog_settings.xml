@@ -6,22 +6,23 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="@Test" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="RequestButtonValidation"/>
+			<item value="PostShippingInfoPO"/>
+			<item value="BellShippingInfoPO"/>
+			<item value="//h2"/>
+			<item value="Shipping.SectionOne"/>
 			<item value="//@Test"/>
 			<item value="communicationpreferences."/>
 			<item value="communicationpreferences"/>
-			<item value="@Test"/>
-			<item value="By checking here, you are"/>
-			<item value="TermsOfService"/>
-			<item value="ReferralRequest"/>
-			<item value="BellReferralRequestPage"/>
 		</list>
 		<list key="replacehistory">
+			<item value="BellBillingInfoPO"/>
 			<item value="@Test"/>
 			<item value="//@Test"/>
 			<item value="YourInfo"/>
@@ -29,7 +30,6 @@
 			<item value="BellYourInfoPO"/>
 			<item value=""/>
 			<item value="BellReferralRequestPO"/>
-			<item value="//@Test(priority=1"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

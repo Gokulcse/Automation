@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.lang.String"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.support.PageFactory"/>
-<fullyQualifiedTypeName name="pageobjects.Tele2ReferralRequestpagePO"/>
-<fullyQualifiedTypeName name="junit.framework.Assert"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.remote.BrowserType"/>
 <fullyQualifiedTypeName name="pageobjects.Tele2HomePagePO"/>
 <fullyQualifiedTypeName name="pages.Tele2HomePage"/>
@@ -44,11 +40,9 @@
 <fullyQualifiedTypeName name="org.openqa.selenium.ie.InternetExplorerDriver"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.Keys"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.By"/>
 <fullyQualifiedTypeName name="pageobjects.BellYourInfoPO"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.firefox.FirefoxDriver"/>
 <fullyQualifiedTypeName name="pages.BellControlCenter"/>
-<fullyQualifiedTypeName name="java.lang.Thread"/>
 <fullyQualifiedTypeName name="driver.BaseDriver"/>
 <fullyQualifiedTypeName name="org.testng.annotations.Test"/>
 <fullyQualifiedTypeName name="org.testng.annotations.BeforeTest"/>
@@ -60,4 +54,10 @@
 <fullyQualifiedTypeName name="pageobjects.BellReferralRequestPO"/>
 <fullyQualifiedTypeName name="pageobjects.PostReferralRequestPO"/>
 <fullyQualifiedTypeName name="pageobjects.BellShippingInfoPO"/>
+<fullyQualifiedTypeName name="pageobjects.BellBillingInfoPO"/>
+<fullyQualifiedTypeName name="pageobjects.BellReviewConfirmPO"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+<fullyQualifiedTypeName name="pages.BellYourInfo"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="pages.BellShippingInfo"/>
 </qualifiedTypeNameHistroy>

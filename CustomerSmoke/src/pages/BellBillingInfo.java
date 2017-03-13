@@ -7,7 +7,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeTest;
 
 import pageobjects.BellBillingInfoPO;
-import pageobjects.BellShippingInfoPO;
 import utilitymethods.UtilityMethods;
 
 public class BellBillingInfo 
@@ -25,13 +24,13 @@ public class BellBillingInfo
 	public static void validateOperatorLogo()
 	{
 		UtilityMethods.DisplayEnableValidator(BellBillingInfoPO.BellLogo, "NotEqual","Bell Operator Logo in IoT Starter Kit");	
-		UtilityMethods.Imagevalidation(BellBillingInfoPO.BellLogo,"src",allInputValue.getProperty("BellLogo"),"Bell Operator Logo");		
+		UtilityMethods.Imagevalidation(BellBillingInfoPO.BellLogo,"src",allInputValue.getProperty("bellLogo"),"Bell Operator Logo");		
 	} 
 	
 	public static void validateCompanyLogo()
 	{	
 		UtilityMethods.DisplayEnableValidator(BellBillingInfoPO.CiscoLogo, "NotEqual","Cisco Jasper Company Logo in IoT Starter Kit");		
-		UtilityMethods.Imagevalidation(BellBillingInfoPO.CiscoLogo,"src",allInputValue.getProperty("CiscoLogo"),"Cisco Jasper Company Logo");		
+		UtilityMethods.Imagevalidation(BellBillingInfoPO.CiscoLogo,"src",allInputValue.getProperty("ciscoLogo"),"Cisco Jasper Company Logo");		
 	}
 
 	public static void ShippingInfoTextvalidation()

@@ -1,101 +1,698 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="21" passed="21">
+<testng-results skipped="0" failed="14" ignored="0" total="42" passed="28">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="279229" started-at="2017-03-09T14:39:54Z" finished-at="2017-03-09T14:44:34Z">
+  <suite name="Default suite" duration-ms="486117" started-at="2017-03-13T14:03:17Z" finished-at="2017-03-13T14:11:24Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="279229" started-at="2017-03-09T14:39:54Z" finished-at="2017-03-09T14:44:34Z">
-      <class name="pages.BellYourInfo">
-        <test-method status="PASS" signature="BrowserIntilation()[pri:0, instance:pages.BellYourInfo@4f933fd1]" name="BrowserIntilation" is-config="true" duration-ms="29915" started-at="2017-03-09T20:09:54Z" finished-at="2017-03-09T20:10:24Z">
+    <test name="Default test" duration-ms="486117" started-at="2017-03-13T14:03:17Z" finished-at="2017-03-13T14:11:24Z">
+      <class name="pages.BellEndToEndFlowTwo">
+        <test-method status="PASS" signature="BrowserIntilation()[pri:0, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="BrowserIntilation" is-config="true" duration-ms="31367" started-at="2017-03-13T19:33:17Z" finished-at="2017-03-13T19:33:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BrowserIntilation -->
-        <test-method status="PASS" signature="inputDta()[pri:1, instance:pages.BellYourInfo@4f933fd1]" name="inputDta" duration-ms="11155" started-at="2017-03-09T20:10:24Z" finished-at="2017-03-09T20:10:35Z">
+        <test-method status="PASS" signature="CCDisplayedAndEnabledValidation()[pri:1, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="CCDisplayedAndEnabledValidation" duration-ms="5009" started-at="2017-03-13T19:33:49Z" finished-at="2017-03-13T19:33:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- inputDta -->
-        <test-method status="PASS" signature="referralRequestDataValidation()[pri:2, instance:pages.BellYourInfo@4f933fd1]" name="referralRequestDataValidation" duration-ms="1842" started-at="2017-03-09T20:10:35Z" finished-at="2017-03-09T20:10:37Z">
+        </test-method> <!-- CCDisplayedAndEnabledValidation -->
+        <test-method status="PASS" signature="CCContentValidation()[pri:2, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="CCContentValidation" duration-ms="8262" started-at="2017-03-13T19:33:54Z" finished-at="2017-03-13T19:34:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CCContentValidation -->
+        <test-method status="PASS" signature="CCPlaceHolderValidation()[pri:3, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="CCPlaceHolderValidation" duration-ms="417" started-at="2017-03-13T19:34:02Z" finished-at="2017-03-13T19:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CCPlaceHolderValidation -->
+        <test-method status="PASS" signature="CCRequiredFieldValidation()[pri:4, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="CCRequiredFieldValidation" duration-ms="4968" started-at="2017-03-13T19:34:03Z" finished-at="2017-03-13T19:34:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CCRequiredFieldValidation -->
+        <test-method status="PASS" signature="CCUserNameMinMaxValidation()[pri:5, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="CCUserNameMinMaxValidation" duration-ms="12784" started-at="2017-03-13T19:34:08Z" finished-at="2017-03-13T19:34:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CCUserNameMinMaxValidation -->
+        <test-method status="PASS" signature="CCPasswordValidation()[pri:6, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="CCPasswordValidation" duration-ms="21076" started-at="2017-03-13T19:34:20Z" finished-at="2017-03-13T19:34:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CCPasswordValidation -->
+        <test-method status="PASS" signature="InputValidation()[pri:7, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="InputValidation" duration-ms="11505" started-at="2017-03-13T19:34:41Z" finished-at="2017-03-13T19:34:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InputValidation -->
+        <test-method status="PASS" signature="referralRequestDataValidation()[pri:8, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="referralRequestDataValidation" duration-ms="16037" started-at="2017-03-13T19:34:53Z" finished-at="2017-03-13T19:35:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- referralRequestDataValidation -->
-        <test-method status="PASS" signature="TermsOfServiceTextValidation()[pri:3, instance:pages.BellYourInfo@4f933fd1]" name="TermsOfServiceTextValidation" duration-ms="3132" started-at="2017-03-09T20:10:37Z" finished-at="2017-03-09T20:10:40Z">
+        <test-method status="PASS" signature="TermsOfServiceTextValidation()[pri:9, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="TermsOfServiceTextValidation" duration-ms="8146" started-at="2017-03-13T19:35:09Z" finished-at="2017-03-13T19:35:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TermsOfServiceTextValidation -->
-        <test-method status="PASS" signature="TermsOfServicePopUpCloseIcon()[pri:4, instance:pages.BellYourInfo@4f933fd1]" name="TermsOfServicePopUpCloseIcon" duration-ms="4340" started-at="2017-03-09T20:10:40Z" finished-at="2017-03-09T20:10:45Z">
+        <test-method status="PASS" signature="TermsOfServicePopUpCloseIcon()[pri:10, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="TermsOfServicePopUpCloseIcon" duration-ms="6272" started-at="2017-03-13T19:35:17Z" finished-at="2017-03-13T19:35:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TermsOfServicePopUpCloseIcon -->
-        <test-method status="PASS" signature="TermsOfServicePopUpCloseButton()[pri:5, instance:pages.BellYourInfo@4f933fd1]" name="TermsOfServicePopUpCloseButton" duration-ms="8254" started-at="2017-03-09T20:10:45Z" finished-at="2017-03-09T20:10:53Z">
+        <test-method status="PASS" signature="TermsOfServicePopUpCloseButton()[pri:11, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="TermsOfServicePopUpCloseButton" duration-ms="8175" started-at="2017-03-13T19:35:23Z" finished-at="2017-03-13T19:35:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TermsOfServicePopUpCloseButton -->
-        <test-method status="PASS" signature="validateOperatorLogo()[pri:7, instance:pages.BellYourInfo@4f933fd1]" name="validateOperatorLogo" duration-ms="1367" started-at="2017-03-09T20:10:53Z" finished-at="2017-03-09T20:10:54Z">
+        <test-method status="PASS" signature="TermsOfServicePDFDownload()[pri:12, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="TermsOfServicePDFDownload" duration-ms="5" started-at="2017-03-13T19:35:32Z" finished-at="2017-03-13T19:35:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateOperatorLogo -->
-        <test-method status="PASS" signature="validateCompanyLogo()[pri:8, instance:pages.BellYourInfo@4f933fd1]" name="validateCompanyLogo" duration-ms="1335" started-at="2017-03-09T20:10:54Z" finished-at="2017-03-09T20:10:56Z">
+        </test-method> <!-- TermsOfServicePDFDownload -->
+        <test-method status="PASS" signature="YourInfoBellLogo()[pri:13, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="YourInfoBellLogo" duration-ms="1358" started-at="2017-03-13T19:35:32Z" finished-at="2017-03-13T19:35:33Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateCompanyLogo -->
-        <test-method status="PASS" signature="ReferralRequestTextValidation()[pri:9, instance:pages.BellYourInfo@4f933fd1]" name="ReferralRequestTextValidation" duration-ms="3537" started-at="2017-03-09T20:10:56Z" finished-at="2017-03-09T20:10:59Z">
+        </test-method> <!-- YourInfoBellLogo -->
+        <test-method status="PASS" signature="YourInfoCompanyLogo()[pri:14, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="YourInfoCompanyLogo" duration-ms="1325" started-at="2017-03-13T19:35:33Z" finished-at="2017-03-13T19:35:34Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ReferralRequestTextValidation -->
-        <test-method status="PASS" signature="RequestReferralCodeTextBoxDisplayedAndEnabled()[pri:10, instance:pages.BellYourInfo@4f933fd1]" name="RequestReferralCodeTextBoxDisplayedAndEnabled" duration-ms="21681" started-at="2017-03-09T20:10:59Z" finished-at="2017-03-09T20:11:21Z">
+        </test-method> <!-- YourInfoCompanyLogo -->
+        <test-method status="PASS" signature="YourInfoTextValiadtion()[pri:15, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="YourInfoTextValiadtion" duration-ms="11650" started-at="2017-03-13T19:35:34Z" finished-at="2017-03-13T19:35:46Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- RequestReferralCodeTextBoxDisplayedAndEnabled -->
-        <test-method status="PASS" signature="RequestReferralCodeLabelTextDisplayedAndEnabled()[pri:11, instance:pages.BellYourInfo@4f933fd1]" name="RequestReferralCodeLabelTextDisplayedAndEnabled" duration-ms="22538" started-at="2017-03-09T20:11:21Z" finished-at="2017-03-09T20:11:44Z">
+        </test-method> <!-- YourInfoTextValiadtion -->
+        <test-method status="PASS" signature="YourInfoTextBoxDisplayedAndEnabled()[pri:16, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="YourInfoTextBoxDisplayedAndEnabled" duration-ms="21679" started-at="2017-03-13T19:35:46Z" finished-at="2017-03-13T19:36:08Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- RequestReferralCodeLabelTextDisplayedAndEnabled -->
-        <test-method status="PASS" signature="ReferralRequestCodeValidInputValidation()[pri:12, instance:pages.BellYourInfo@4f933fd1]" name="ReferralRequestCodeValidInputValidation" duration-ms="43954" started-at="2017-03-09T20:11:44Z" finished-at="2017-03-09T20:12:27Z">
+        </test-method> <!-- YourInfoTextBoxDisplayedAndEnabled -->
+        <test-method status="PASS" signature="YourInfoLabelDisplayedAndEnabled()[pri:17, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="YourInfoLabelDisplayedAndEnabled" duration-ms="24090" started-at="2017-03-13T19:36:08Z" finished-at="2017-03-13T19:36:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ReferralRequestCodeValidInputValidation -->
-        <test-method status="PASS" signature="ReferralRequestRequiredFieldValidation()[pri:13, instance:pages.BellYourInfo@4f933fd1]" name="ReferralRequestRequiredFieldValidation" duration-ms="5512" started-at="2017-03-09T20:12:27Z" finished-at="2017-03-09T20:12:33Z">
+        </test-method> <!-- YourInfoLabelDisplayedAndEnabled -->
+        <test-method status="PASS" signature="YourInfoValidInputValidation()[pri:19, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="YourInfoValidInputValidation" duration-ms="49682" started-at="2017-03-13T19:36:32Z" finished-at="2017-03-13T19:37:21Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ReferralRequestRequiredFieldValidation -->
-        <test-method status="PASS" signature="ReferralRequestSpaceNotAllowedValidation()[pri:14, instance:pages.BellYourInfo@4f933fd1]" name="ReferralRequestSpaceNotAllowedValidation" duration-ms="3399" started-at="2017-03-09T20:12:33Z" finished-at="2017-03-09T20:12:36Z">
+        </test-method> <!-- YourInfoValidInputValidation -->
+        <test-method status="PASS" signature="YourInfoRequiredFieldValidation()[pri:20, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="YourInfoRequiredFieldValidation" duration-ms="10323" started-at="2017-03-13T19:37:21Z" finished-at="2017-03-13T19:37:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ReferralRequestSpaceNotAllowedValidation -->
-        <test-method status="PASS" signature="ReferralRequestMaximumInputValidation()[pri:15, instance:pages.BellYourInfo@4f933fd1]" name="ReferralRequestMaximumInputValidation" duration-ms="13443" started-at="2017-03-09T20:12:36Z" finished-at="2017-03-09T20:12:50Z">
+        </test-method> <!-- YourInfoRequiredFieldValidation -->
+        <test-method status="PASS" signature="YourInfoSpaceNotAllowedValiadation()[pri:21, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="YourInfoSpaceNotAllowedValiadation" duration-ms="8682" started-at="2017-03-13T19:37:32Z" finished-at="2017-03-13T19:37:40Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ReferralRequestMaximumInputValidation -->
-        <test-method status="PASS" signature="ReferralRequestMinimumInputValidation()[pri:16, instance:pages.BellYourInfo@4f933fd1]" name="ReferralRequestMinimumInputValidation" duration-ms="6315" started-at="2017-03-09T20:12:50Z" finished-at="2017-03-09T20:12:56Z">
+        </test-method> <!-- YourInfoSpaceNotAllowedValiadation -->
+        <test-method status="PASS" signature="YourInfoMaximumInputValidation()[pri:22, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="YourInfoMaximumInputValidation" duration-ms="18672" started-at="2017-03-13T19:37:40Z" finished-at="2017-03-13T19:37:59Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ReferralRequestMinimumInputValidation -->
-        <test-method status="PASS" signature="ReferralRequestEmailValidation()[pri:17, instance:pages.BellYourInfo@4f933fd1]" name="ReferralRequestEmailValidation" duration-ms="3557" started-at="2017-03-09T20:12:56Z" finished-at="2017-03-09T20:13:00Z">
+        </test-method> <!-- YourInfoMaximumInputValidation -->
+        <test-method status="PASS" signature="YourInfoMinimumInputValidation()[pri:23, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="YourInfoMinimumInputValidation" duration-ms="11299" started-at="2017-03-13T19:37:59Z" finished-at="2017-03-13T19:38:10Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ReferralRequestEmailValidation -->
-        <test-method status="PASS" signature="ReferralRequestNumericFieldValidation()[pri:18, instance:pages.BellYourInfo@4f933fd1]" name="ReferralRequestNumericFieldValidation" duration-ms="9829" started-at="2017-03-09T20:13:00Z" finished-at="2017-03-09T20:13:10Z">
+        </test-method> <!-- YourInfoMinimumInputValidation -->
+        <test-method status="PASS" signature="YourInfoEmailValidation()[pri:24, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="YourInfoEmailValidation" duration-ms="8626" started-at="2017-03-13T19:38:10Z" finished-at="2017-03-13T19:38:19Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ReferralRequestNumericFieldValidation -->
-        <test-method status="PASS" signature="BellLogoValidation()[pri:19, instance:pages.BellYourInfo@4f933fd1]" name="BellLogoValidation" duration-ms="11314" started-at="2017-03-09T20:13:10Z" finished-at="2017-03-09T20:13:21Z">
+        </test-method> <!-- YourInfoEmailValidation -->
+        <test-method status="PASS" signature="YourInfoNumericFeild()[pri:25, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="YourInfoNumericFeild" duration-ms="13942" started-at="2017-03-13T19:38:19Z" finished-at="2017-03-13T19:38:33Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BellLogoValidation -->
-        <test-method status="PASS" signature="BellCALinkValidation()[pri:20, instance:pages.BellYourInfo@4f933fd1]" name="BellCALinkValidation" duration-ms="35041" started-at="2017-03-09T20:13:21Z" finished-at="2017-03-09T20:13:56Z">
+        </test-method> <!-- YourInfoNumericFeild -->
+        <test-method status="PASS" signature="YourInfoBellLogoValidation()[pri:26, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="YourInfoBellLogoValidation" duration-ms="13050" started-at="2017-03-13T19:38:33Z" finished-at="2017-03-13T19:38:46Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BellCALinkValidation -->
-        <test-method status="PASS" signature="ReferralrequestCancelButton()[pri:21, instance:pages.BellYourInfo@4f933fd1]" name="ReferralrequestCancelButton" duration-ms="13459" started-at="2017-03-09T20:13:56Z" finished-at="2017-03-09T20:14:09Z">
+        </test-method> <!-- YourInfoBellLogoValidation -->
+        <test-method status="PASS" signature="YourInfoBellCaLinkvalidation()[pri:27, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="YourInfoBellCaLinkvalidation" duration-ms="34551" started-at="2017-03-13T19:38:46Z" finished-at="2017-03-13T19:39:21Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ReferralrequestCancelButton -->
-        <test-method status="PASS" signature="RequestButtonValidation()[pri:22, instance:pages.BellYourInfo@4f933fd1]" name="RequestButtonValidation" duration-ms="24164" started-at="2017-03-09T20:14:09Z" finished-at="2017-03-09T20:14:34Z">
+        </test-method> <!-- YourInfoBellCaLinkvalidation -->
+        <test-method status="PASS" signature="YourInfocancelButton()[pri:28, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="YourInfocancelButton" duration-ms="14376" started-at="2017-03-13T19:39:21Z" finished-at="2017-03-13T19:39:35Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- RequestButtonValidation -->
-      </class> <!-- pages.BellYourInfo -->
+        </test-method> <!-- YourInfocancelButton -->
+        <test-method status="PASS" signature="YourInfocontinueButton()[pri:29, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="YourInfocontinueButton" duration-ms="27496" started-at="2017-03-13T19:39:35Z" finished-at="2017-03-13T19:40:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- YourInfocontinueButton -->
+        <test-method status="FAIL" signature="ShippingInfovalidateOperatorLogo()[pri:30, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="ShippingInfovalidateOperatorLogo" duration-ms="66925" started-at="2017-03-13T19:40:02Z" finished-at="2017-03-13T19:41:09Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy6.isDisplayed(Unknown Source)
+	at utilitymethods.UtilityMethods.DisplayEnableValidator(UtilityMethods.java:586)
+	at pages.BellShippingInfo.validateOperatorLogo(BellShippingInfo.java:28)
+	at pages.BellEndToEndFlowTwo.ShippingInfovalidateOperatorLogo(BellEndToEndFlowTwo.java:208)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ShippingInfovalidateOperatorLogo -->
+        <test-method status="FAIL" signature="ShippingInfovalidateCompanyLogo()[pri:31, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="ShippingInfovalidateCompanyLogo" duration-ms="1007" started-at="2017-03-13T19:41:09Z" finished-at="2017-03-13T19:41:10Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy6.isDisplayed(Unknown Source)
+	at utilitymethods.UtilityMethods.DisplayEnableValidator(UtilityMethods.java:586)
+	at pages.BellShippingInfo.validateCompanyLogo(BellShippingInfo.java:36)
+	at pages.BellEndToEndFlowTwo.ShippingInfovalidateCompanyLogo(BellEndToEndFlowTwo.java:213)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ShippingInfovalidateCompanyLogo -->
+        <test-method status="FAIL" signature="ShippingInfoTextvalidation()[pri:32, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="ShippingInfoTextvalidation" duration-ms="5" started-at="2017-03-13T19:41:10Z" finished-at="2017-03-13T19:41:10Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy6.getText(Unknown Source)
+	at pages.BellShippingInfo.ShippingInfoTextvalidation(BellShippingInfo.java:44)
+	at pages.BellEndToEndFlowTwo.ShippingInfoTextvalidation(BellEndToEndFlowTwo.java:218)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ShippingInfoTextvalidation -->
+        <test-method status="FAIL" signature="shippingInfoLabelText()[pri:33, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="shippingInfoLabelText" duration-ms="1005" started-at="2017-03-13T19:41:10Z" finished-at="2017-03-13T19:41:11Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy6.isDisplayed(Unknown Source)
+	at utilitymethods.UtilityMethods.DisplayEnableValidator(UtilityMethods.java:586)
+	at pages.BellShippingInfo.shippingInfoLabelText(BellShippingInfo.java:52)
+	at pages.BellEndToEndFlowTwo.shippingInfoLabelText(BellEndToEndFlowTwo.java:223)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shippingInfoLabelText -->
+        <test-method status="FAIL" signature="shippingInfoInputField()[pri:34, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="shippingInfoInputField" duration-ms="1008" started-at="2017-03-13T19:41:11Z" finished-at="2017-03-13T19:41:12Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy6.isDisplayed(Unknown Source)
+	at utilitymethods.UtilityMethods.DisplayEnableValidator(UtilityMethods.java:586)
+	at pages.BellShippingInfo.shippingInfoInputField(BellShippingInfo.java:63)
+	at pages.BellEndToEndFlowTwo.shippingInfoInputField(BellEndToEndFlowTwo.java:228)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shippingInfoInputField -->
+        <test-method status="FAIL" signature="ShippingInfoLinkButton()[pri:35, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="ShippingInfoLinkButton" duration-ms="1004" started-at="2017-03-13T19:41:12Z" finished-at="2017-03-13T19:41:13Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy6.isDisplayed(Unknown Source)
+	at utilitymethods.UtilityMethods.DisplayEnableValidator(UtilityMethods.java:586)
+	at pages.BellShippingInfo.ShippingInfoLinkButton(BellShippingInfo.java:75)
+	at pages.BellEndToEndFlowTwo.ShippingInfoLinkButton(BellEndToEndFlowTwo.java:233)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ShippingInfoLinkButton -->
+        <test-method status="FAIL" signature="ShippingInfoRequiredFieldvalidatoin()[pri:36, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="ShippingInfoRequiredFieldvalidatoin" duration-ms="3" started-at="2017-03-13T19:41:13Z" finished-at="2017-03-13T19:41:13Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy6.click(Unknown Source)
+	at pages.BellShippingInfo.ShippingInfoRequiredFieldvalidatoin(BellShippingInfo.java:83)
+	at pages.BellEndToEndFlowTwo.ShippingInfoRequiredFieldvalidatoin(BellEndToEndFlowTwo.java:238)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ShippingInfoRequiredFieldvalidatoin -->
+        <test-method status="FAIL" signature="ShippingInfoSpaceNotAllowedvalidatoin()[pri:37, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="ShippingInfoSpaceNotAllowedvalidatoin" duration-ms="4" started-at="2017-03-13T19:41:13Z" finished-at="2017-03-13T19:41:13Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy6.click(Unknown Source)
+	at pages.BellShippingInfo.ShippingInfoSpaceNotAllowedvalidatoin(BellShippingInfo.java:95)
+	at pages.BellEndToEndFlowTwo.ShippingInfoSpaceNotAllowedvalidatoin(BellEndToEndFlowTwo.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ShippingInfoSpaceNotAllowedvalidatoin -->
+        <test-method status="FAIL" signature="ShippingInfoMaximumInputValidation()[pri:38, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="ShippingInfoMaximumInputValidation" duration-ms="5" started-at="2017-03-13T19:41:13Z" finished-at="2017-03-13T19:41:13Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy6.click(Unknown Source)
+	at pages.BellShippingInfo.ShippingInfoMaximumInputValidation(BellShippingInfo.java:104)
+	at pages.BellEndToEndFlowTwo.ShippingInfoMaximumInputValidation(BellEndToEndFlowTwo.java:248)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ShippingInfoMaximumInputValidation -->
+        <test-method status="FAIL" signature="ShippingInfoMinimumInputValidation()[pri:39, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="ShippingInfoMinimumInputValidation" duration-ms="6" started-at="2017-03-13T19:41:13Z" finished-at="2017-03-13T19:41:13Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy6.click(Unknown Source)
+	at pages.BellShippingInfo.ShippingInfoMinimumInputValidation(BellShippingInfo.java:114)
+	at pages.BellEndToEndFlowTwo.ShippingInfoMinimumInputValidation(BellEndToEndFlowTwo.java:253)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ShippingInfoMinimumInputValidation -->
+        <test-method status="FAIL" signature="ShippingInfoBellLogoValidation()[pri:40, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="ShippingInfoBellLogoValidation" duration-ms="3006" started-at="2017-03-13T19:41:13Z" finished-at="2017-03-13T19:41:16Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy6.click(Unknown Source)
+	at utilitymethods.UtilityMethods.pageRedirection(UtilityMethods.java:89)
+	at pages.BellShippingInfo.BellLogoValidation(BellShippingInfo.java:123)
+	at pages.BellEndToEndFlowTwo.ShippingInfoBellLogoValidation(BellEndToEndFlowTwo.java:258)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ShippingInfoBellLogoValidation -->
+        <test-method status="FAIL" signature="ShippingInfoCancelButtonValidation()[pri:41, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="ShippingInfoCancelButtonValidation" duration-ms="3004" started-at="2017-03-13T19:41:16Z" finished-at="2017-03-13T19:41:19Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy6.click(Unknown Source)
+	at utilitymethods.UtilityMethods.pageRedirection(UtilityMethods.java:89)
+	at pages.BellShippingInfo.CancelButtonValidation(BellShippingInfo.java:130)
+	at pages.BellEndToEndFlowTwo.ShippingInfoCancelButtonValidation(BellEndToEndFlowTwo.java:263)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ShippingInfoCancelButtonValidation -->
+        <test-method status="FAIL" signature="ShippingInfoBackButtonValidation()[pri:42, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="ShippingInfoBackButtonValidation" duration-ms="3005" started-at="2017-03-13T19:41:19Z" finished-at="2017-03-13T19:41:22Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy6.click(Unknown Source)
+	at utilitymethods.UtilityMethods.pageRedirection(UtilityMethods.java:89)
+	at pages.BellShippingInfo.BackButtonValidation(BellShippingInfo.java:137)
+	at pages.BellEndToEndFlowTwo.ShippingInfoBackButtonValidation(BellEndToEndFlowTwo.java:268)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ShippingInfoBackButtonValidation -->
+        <test-method status="FAIL" signature="ShippingInfoSendInputs()[pri:43, instance:pages.BellEndToEndFlowTwo@3aefe5e5]" name="ShippingInfoSendInputs" duration-ms="1006" started-at="2017-03-13T19:41:22Z" finished-at="2017-03-13T19:41:24Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy6.clear(Unknown Source)
+	at utilitymethods.UtilityMethods.SendInputValues(UtilityMethods.java:196)
+	at pages.BellShippingInfo.ShippingInfoSendInputs(BellShippingInfo.java:144)
+	at pages.BellEndToEndFlowTwo.ShippingInfoSendInputs(BellEndToEndFlowTwo.java:273)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ShippingInfoSendInputs -->
+      </class> <!-- pages.BellEndToEndFlowTwo -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -2,31 +2,23 @@ package pages;
 
 import java.util.Properties;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.awt.AWTException;	
-import java.awt.Robot;	
-import java.awt.event.KeyEvent;
+import java.io.IOException;
 
-import javafx.scene.control.Alert;
 import utilitymethods.UtilityMethods;
 import driver.BaseDriver;
-import pageobjects.BellControlCenterPO;
-import pageobjects.BellReferralRequestPO;
 import pageobjects.BellYourInfoPO;
 
 public class BellYourInfo extends BaseDriver
 {
 	public static FirefoxDriver driver=BaseDriver.driver;
-	public static Properties allInputValue = BellHomePage.allInputValue;
-	@BeforeTest
+	public static Properties allInputValue ;
+	//@BeforeTest
 	public static void BrowserIntilation() throws Exception
 	{
 		driver = launchApp();
@@ -35,8 +27,15 @@ public class BellYourInfo extends BaseDriver
 		driver.switchTo().window(myWindowHandle);
 		//driver.navigate().refresh();
 	}
-	@Test(priority=1)
-	public static void inputDta()
+	//@Test(priority=1)
+	
+	public static void intial() throws IOException
+	{
+		allInputValue = UtilityMethods.getBellPropValues();
+		
+	}
+	
+	/*public static void inputDta()
 	{
 		PageFactory.initElements(driver, BellControlCenterPO.class);
 		UtilityMethods.SendInputValues(BellControlCenterPO.UserNameInput, allInputValue.getProperty("ccUserName"), "TextBox");
@@ -45,12 +44,13 @@ public class BellYourInfo extends BaseDriver
 		BellControlCenterPO.CreateButton.click();
 		try {Thread.sleep(5000);} catch (InterruptedException e) {e.printStackTrace();}
 		System.out.println("TS007");
-	}
+	}*/
 	
-	@Test(priority=2)
+	//@Test(priority=2)
 	public static void referralRequestDataValidation()
 	{
 		PageFactory.initElements(driver, BellYourInfoPO.class);	
+		try {Thread.sleep(3000);} catch (InterruptedException e) {e.printStackTrace();}
 		UtilityMethods.InputDataValidation(BellYourInfoPO.FirstNameInput, allInputValue.getProperty("FirstName"),"textbox");
 		UtilityMethods.InputDataValidation(BellYourInfoPO.LastNameInput, allInputValue.getProperty("LastName"),"textbox");
 		UtilityMethods.InputDataValidation(BellYourInfoPO.CompanyNameInput, allInputValue.getProperty("CompanyName"),"textbox");
@@ -65,30 +65,31 @@ public class BellYourInfo extends BaseDriver
 		System.out.println("TS001");
 	}
 	
-	@Test(priority=3)
+	//@Test(priority=3)
 	public static void TermsOfServiceTextValidation()
 	{
 		PageFactory.initElements(driver, BellYourInfoPO.class);
 		BellYourInfoPO.ContinueButton.click();
+		try {Thread.sleep(5000);} catch (InterruptedException e) {e.printStackTrace();}
 		UtilityMethods.DisplayEnableValidator(BellYourInfoPO.checkBoxTerms, "NotEqual","Terms Of Services");
 		UtilityMethods.StringValidation(BellYourInfoPO.checkBoxTerms.getText(), allInputValue.getProperty("TermsOfService"), "equalsignorecase");
 		UtilityMethods.RequiredFieldValidation(BellYourInfoPO.checkBoxTerms, BellYourInfoPO.TermsOfServicesError,"radiobutton");	
 		System.out.println("TS002");
 	}
 	
-	@Test(priority=4)
+	//@Test(priority=4)
 	public static void TermsOfServicePopUpCloseIcon()
 	{
 		PageFactory.initElements(driver, BellYourInfoPO.class);	
 		BellYourInfoPO.TermsOfServicesLink.click();
-		try {Thread.sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}
+		try {Thread.sleep(2000);} catch (InterruptedException e) {e.printStackTrace();}
 		UtilityMethods.DisplayEnableValidator(BellYourInfoPO.CloseIcon, "NotEqual","Terms Of Services Icon");
 		BellYourInfoPO.CloseIcon.click();
-		try {Thread.sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}
+		try {Thread.sleep(2000);} catch (InterruptedException e) {e.printStackTrace();}
 		System.out.println("TS003");
 	}
 	
-	@Test(priority=5)
+	//@Test(priority=5)
 	public static void TermsOfServicePopUpCloseButton()
 	{
 		PageFactory.initElements(driver, BellYourInfoPO.class);	
@@ -124,7 +125,7 @@ public class BellYourInfo extends BaseDriver
 		System.out.println("TS005");
 	}
 	
-	@Test(priority=7)
+	//@Test(priority=7)
 	public static void validateOperatorLogo()
 	{
 		PageFactory.initElements(driver, BellYourInfoPO.class);
@@ -133,7 +134,7 @@ public class BellYourInfo extends BaseDriver
 		System.out.println("TS006");
 	} 
 	
-	@Test(priority=8)
+	//@Test(priority=8)
 	public static void validateCompanyLogo()
 	{
 		PageFactory.initElements(driver, BellYourInfoPO.class);
@@ -142,17 +143,22 @@ public class BellYourInfo extends BaseDriver
 		System.out.println("TS007");
 	}
  
-	@Test(priority=9)
+	//@Test(priority=9)
 	public static void ReferralRequestTextValidation()
 	{
 		PageFactory.initElements(driver, BellYourInfoPO.class);
 		UtilityMethods.StringValidation(BellYourInfoPO.ContactInfoText.getText(), "Contact Information", "equalsignorecase");
 		UtilityMethods.StringValidation(BellYourInfoPO.DeviceInfoText.getText(), "Device Information", "equalsignorecase");
 		UtilityMethods.StringValidation(BellYourInfoPO.checkBoxLabel.getText(), allInputValue.getProperty("referralrequestCheckBox"), "equalsignorecase");
+		UtilityMethods.StringValidation(BellYourInfoPO.OrderIotHeaderText.getText(), "Order IoT Starter Kit", "equalsignorecase");
+		UtilityMethods.StringValidation(BellYourInfoPO.YourInfoText.getText(), "Your Information", "equalsignorecase");
+		UtilityMethods.StringValidation(BellYourInfoPO.ShppingText.getText(), "Shipping", "equalsignorecase");
+		UtilityMethods.StringValidation(BellYourInfoPO.PaymentText.getText(), "Payment", "equalsignorecase");
+		UtilityMethods.StringValidation(BellYourInfoPO.ReviewConfirmText.getText(), "Review & Confirm", "equalsignorecase");
 		System.out.println("TS008");
 	}
 
-	@Test(priority=10)
+	//@Test(priority=10)
 	public static void RequestReferralCodeTextBoxDisplayedAndEnabled()
 	{
 		PageFactory.initElements(driver, BellYourInfoPO.class);
@@ -178,7 +184,7 @@ public class BellYourInfo extends BaseDriver
 		System.out.println("TS009");
 	}
 	
-	@Test(priority=11)
+	//@Test(priority=11)
 	public static void RequestReferralCodeLabelTextDisplayedAndEnabled()
 	{	
 		PageFactory.initElements(driver, BellYourInfoPO.class);
@@ -204,11 +210,12 @@ public class BellYourInfo extends BaseDriver
 		System.out.println("TS010");
 	}
 	
-	@Test(priority=12) 
+	//@Test(priority=12) 
 	public static void ReferralRequestCodeValidInputValidation()
 	{
 		PageFactory.initElements(driver, BellYourInfoPO.class);
 		BellYourInfoPO.ContinueButton.click();
+		try {Thread.sleep(5000);} catch (InterruptedException e) {e.printStackTrace();}
 		UtilityMethods.ValidInputValidation(BellYourInfoPO.FirstNameInput, allInputValue.getProperty("ValidFirstName"), BellYourInfoPO.FirstNameError);
 		UtilityMethods.ValidInputValidation(BellYourInfoPO.LastNameInput, allInputValue.getProperty("ValidLastName"),BellYourInfoPO.LastNameError );
 		UtilityMethods.ValidInputValidation(BellYourInfoPO.CompanyNameInput, allInputValue.getProperty("ValidCompanyName"), BellYourInfoPO.CompanyError);
@@ -224,11 +231,12 @@ public class BellYourInfo extends BaseDriver
 		System.out.println("TS011");
 	}
 	
-	@Test(priority=13)
+	//@Test(priority=13)
 	public static void ReferralRequestRequiredFieldValidation()
 	{
 		PageFactory.initElements(driver, BellYourInfoPO.class);
 		BellYourInfoPO.ContinueButton.click();
+		try {Thread.sleep(5000);} catch (InterruptedException e) {e.printStackTrace();}
 		UtilityMethods.RequiredFieldValidation(BellYourInfoPO.FirstNameInput, BellYourInfoPO.FirstNameError,"TextBox");
 		UtilityMethods.RequiredFieldValidation(BellYourInfoPO.LastNameInput, BellYourInfoPO.LastNameError,"TextBox");
 		UtilityMethods.RequiredFieldValidation(BellYourInfoPO.CompanyNameInput, BellYourInfoPO.CompanyError,"TextBox");
@@ -243,22 +251,24 @@ public class BellYourInfo extends BaseDriver
 		System.out.println("TS012");
 	}
 	
-	@Test(priority=14)
+	//@Test(priority=14)
 	public static void ReferralRequestSpaceNotAllowedValidation()
 	 {
 		PageFactory.initElements(driver, BellYourInfoPO.class);
 		BellYourInfoPO.ContinueButton.click();
+		try {Thread.sleep(5000);} catch (InterruptedException e) {e.printStackTrace();}
 		UtilityMethods.SpaceNotAllowedvalidation(BellYourInfoPO.FirstNameInput, BellYourInfoPO.FirstNameError);
 		UtilityMethods.SpaceNotAllowedvalidation(BellYourInfoPO.LastNameInput, BellYourInfoPO.LastNameError);
 		UtilityMethods.SpaceNotAllowedvalidation(BellYourInfoPO.CompanyNameInput, BellYourInfoPO.CompanyError);
 		UtilityMethods.SpaceNotAllowedvalidation(BellYourInfoPO.PositionRoleInput, BellYourInfoPO.PositionError);	
 		System.out.println("TS013");
 	 }
-	@Test(priority=15)
+	//@Test(priority=15)
 	public static void ReferralRequestMaximumInputValidation()
 	 {
 		PageFactory.initElements(driver, BellYourInfoPO.class);
 		BellYourInfoPO.ContinueButton.click();
+		try {Thread.sleep(5000);} catch (InterruptedException e) {e.printStackTrace();}
 	    UtilityMethods.MaximumInputValidation(BellYourInfoPO.FirstNameInput, BellYourInfoPO.FirstNameError, 49, allInputValue.getProperty("InvalidInput"));
 	    UtilityMethods.MaximumInputValidation(BellYourInfoPO.LastNameInput, BellYourInfoPO.LastNameError, 49, allInputValue.getProperty("InvalidInput"));
 	    UtilityMethods.MaximumInputValidation(BellYourInfoPO.CompanyNameInput, BellYourInfoPO.CompanyError, 25, allInputValue.getProperty("InvalidCompanyName"));
@@ -267,39 +277,42 @@ public class BellYourInfo extends BaseDriver
 	    UtilityMethods.MaximumInputValidation(BellYourInfoPO.Description, BellYourInfoPO.DescriptionError, 255, allInputValue.getProperty("InvalidDescription"));     
 	    System.out.println("TS014");
 	 }
-	@Test(priority=16)
+	//@Test(priority=16)
 	public static void ReferralRequestMinimumInputValidation()
 	 {
 		PageFactory.initElements(driver, BellYourInfoPO.class);
 		BellYourInfoPO.ContinueButton.click();
+		try {Thread.sleep(5000);} catch (InterruptedException e) {e.printStackTrace();}
 		UtilityMethods.MinimumInputValidation(BellYourInfoPO.CompanyNameInput, BellYourInfoPO.CompanyError, 3, allInputValue.getProperty("InvalidMinInput"));
 	    UtilityMethods.MinimumInputValidation(BellYourInfoPO.PhoneNumberInput, BellYourInfoPO.PhoneNumberError, 10, allInputValue.getProperty("InvalidMinphonenumber"));    	 
 	    System.out.println("TS015");
 	 }
-	@Test(priority=17)
+	//@Test(priority=17)
 	public static void ReferralRequestEmailValidation()
 	{	
 		PageFactory.initElements(driver, BellYourInfoPO.class);
 		BellYourInfoPO.ContinueButton.click();
+		try {Thread.sleep(5000);} catch (InterruptedException e) {e.printStackTrace();}
 		UtilityMethods.EmailIdInvalidvalidation(BellYourInfoPO.EmailInput, BellYourInfoPO.EmailError, allInputValue.getProperty("InvalidEmailID"));
 		System.out.println("TS016");
 	}
-	@Test(priority=18)
+	//@Test(priority=18)
 	public static void ReferralRequestNumericFieldValidation()
 	{
 		PageFactory.initElements(driver, BellYourInfoPO.class);
 		BellYourInfoPO.ContinueButton.click();
+		try {Thread.sleep(5000);} catch (InterruptedException e) {e.printStackTrace();}
 		UtilityMethods.NumericFieldValidation(BellYourInfoPO.PhoneNumberInput, BellYourInfoPO.PhoneNumberError, allInputValue.getProperty("InvalidPhoneNumber"));
 		UtilityMethods.NumericFieldValidation(BellYourInfoPO.VolumetoDeployInput, BellYourInfoPO.VolumetoDeployError, allInputValue.getProperty("InvadildNumbericField"));
 		System.out.println("TS017");
 	}
-	@Test(priority=19)
+	//@Test(priority=19)
 	public static void BellLogoValidation() throws InterruptedException
 	{
 		UtilityMethods.pageRedirection(BellYourInfoPO.BellLogo, BellYourInfoPO.CancelButtonFindElement,"Others");
 		System.out.println("TS018");
 	}
-	@Test(priority=20)
+	//@Test(priority=20)
 	public static void BellCALinkValidation() throws InterruptedException
 	{
 		UtilityMethods.DisplayEnableValidator(BellYourInfoPO.BellCaLink, "NotEqual","Bell Ca Link referral request page");	
@@ -307,7 +320,7 @@ public class BellYourInfo extends BaseDriver
 		UtilityMethods.PageNavigationValidation(BellYourInfoPO.BellCaLink, BellYourInfoPO.BellCaLinkFindElement, "Email updates from Bell Canada – manage your email preferences");	
 		System.out.println("TS019");
 	}
-	@Test(priority=21)
+	//@Test(priority=21)
 	public static void ReferralrequestCancelButton() throws InterruptedException
 	{
 		UtilityMethods.DisplayEnableValidator(BellYourInfoPO.CancelButton, "NotEqual","Bell Ca Link referral request page");	
@@ -316,7 +329,7 @@ public class BellYourInfo extends BaseDriver
 		System.out.println("TS020");
 	}
 	
-	@Test(priority=22)
+	//@Test(priority=22)
 	public static void RequestButtonValidation()
 	{
 		PageFactory.initElements(driver, BellYourInfoPO.class);

@@ -93,10 +93,10 @@ public class BellShippingInfoPO
 	@FindBy(how=How.XPATH,using="//a[text()='Back']")
 	public static WebElement BackButton;
 	
-	@FindBy(how=How.XPATH,using="//div[@id='pscode-error']")// to be modified
-	public static WebElement CancelFindElement;
+	@FindBy(how=How.XPATH,using="//img[@title='What is IoT']")
+	public static WebElement CancelButtonFindElement;
 	
-	@FindBy(how=How.XPATH,using="//div[@id='country-error']")// to be modified
+	@FindBy(how=How.XPATH,using="//input[@value='Continue']")
 	public static WebElement BackFindElement;
 
 	

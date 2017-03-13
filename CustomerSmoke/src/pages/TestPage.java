@@ -28,33 +28,37 @@ public class TestPage {
 
 	public static void main(String[] args) throws InterruptedException
 	{
-		
-		
 		System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.get("https://accounts.google.com/ServiceLogin?");
 		Thread.sleep(3500);
-		
 		driver.findElement(By.id("Email")).sendKeys("automateselenium1");
 		driver.findElement(By.id("next")).click();
+		Thread.sleep(3500);
 		driver.findElement(By.id("Passwd")).sendKeys("Automation@Selenium");
 		driver.findElement(By.id("signIn")).click();
+		Thread.sleep(5000);
+		driver.findElement(By.xpath(".//*[@id='gbwa']/div[1]/a")).click();
 		Thread.sleep(3500);
-
+		driver.findElement(By.xpath(".//*[@id='gb23']/span[text()='Gmail']")).click();
+		Thread.sleep(10000);
 		List<WebElement> unreademeil = driver.findElements(By.xpath("//*[@class='zF']"));
 		String MyMailer = "orders";
-		for(int i=0;i<unreademeil.size();i++){
-		    if(unreademeil.get(i).isDisplayed()==true){
-		        if(unreademeil.get(i).getText().equals(MyMailer)){
+		for(int i=0;i<unreademeil.size();i++)
+		{
+		    if(unreademeil.get(i).isDisplayed()==true)
+		    {
+		        if(unreademeil.get(i).getText().equals(MyMailer))
+		        {
 		            System.out.println("Yes we have got mail form " + MyMailer);
-		            break;
-		        }else{
+		        }
+		        else
+		        {
 		            System.out.println("No mail form " + MyMailer);
 		        }
 		    }
 		}
-		
 		
 		/*driver.navigate().refresh();
 		driver.findElement(By.xpath("//input[@id='login']")).sendKeys("automation1");
