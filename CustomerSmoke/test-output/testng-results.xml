@@ -1,209 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="48" passed="48">
+<testng-results skipped="0" failed="0" ignored="0" total="21" passed="21">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="218616" started-at="2017-03-02T11:32:04Z" finished-at="2017-03-02T11:35:43Z">
+  <suite name="Default suite" duration-ms="279229" started-at="2017-03-09T14:39:54Z" finished-at="2017-03-09T14:44:34Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="218616" started-at="2017-03-02T11:32:04Z" finished-at="2017-03-02T11:35:43Z">
-      <class name="pages.BellEndToEndFlowOne">
-        <test-method status="PASS" signature="BrowserIntilation()[pri:0, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="BrowserIntilation" is-config="true" duration-ms="14246" started-at="2017-03-02T17:02:04Z" finished-at="2017-03-02T17:02:18Z">
+    <test name="Default test" duration-ms="279229" started-at="2017-03-09T14:39:54Z" finished-at="2017-03-09T14:44:34Z">
+      <class name="pages.BellYourInfo">
+        <test-method status="PASS" signature="BrowserIntilation()[pri:0, instance:pages.BellYourInfo@4f933fd1]" name="BrowserIntilation" is-config="true" duration-ms="29915" started-at="2017-03-09T20:09:54Z" finished-at="2017-03-09T20:10:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BrowserIntilation -->
-        <test-method status="PASS" signature="HomePageBellLogo()[pri:1, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="HomePageBellLogo" duration-ms="283" started-at="2017-03-02T17:02:18Z" finished-at="2017-03-02T17:02:19Z">
+        <test-method status="PASS" signature="inputDta()[pri:1, instance:pages.BellYourInfo@4f933fd1]" name="inputDta" duration-ms="11155" started-at="2017-03-09T20:10:24Z" finished-at="2017-03-09T20:10:35Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- HomePageBellLogo -->
-        <test-method status="PASS" signature="HomePageCiscoLogo()[pri:2, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="HomePageCiscoLogo" duration-ms="182" started-at="2017-03-02T17:02:19Z" finished-at="2017-03-02T17:02:19Z">
+        </test-method> <!-- inputDta -->
+        <test-method status="PASS" signature="referralRequestDataValidation()[pri:2, instance:pages.BellYourInfo@4f933fd1]" name="referralRequestDataValidation" duration-ms="1842" started-at="2017-03-09T20:10:35Z" finished-at="2017-03-09T20:10:37Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- HomePageCiscoLogo -->
-        <test-method status="PASS" signature="HomePageSecOneTextValidation()[pri:3, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="HomePageSecOneTextValidation" duration-ms="488" started-at="2017-03-02T17:02:19Z" finished-at="2017-03-02T17:02:19Z">
+        </test-method> <!-- referralRequestDataValidation -->
+        <test-method status="PASS" signature="TermsOfServiceTextValidation()[pri:3, instance:pages.BellYourInfo@4f933fd1]" name="TermsOfServiceTextValidation" duration-ms="3132" started-at="2017-03-09T20:10:37Z" finished-at="2017-03-09T20:10:40Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- HomePageSecOneTextValidation -->
-        <test-method status="PASS" signature="HomePageTrackOrderValidation()[pri:4, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="HomePageTrackOrderValidation" duration-ms="3895" started-at="2017-03-02T17:02:19Z" finished-at="2017-03-02T17:02:23Z">
+        </test-method> <!-- TermsOfServiceTextValidation -->
+        <test-method status="PASS" signature="TermsOfServicePopUpCloseIcon()[pri:4, instance:pages.BellYourInfo@4f933fd1]" name="TermsOfServicePopUpCloseIcon" duration-ms="4340" started-at="2017-03-09T20:10:40Z" finished-at="2017-03-09T20:10:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- HomePageTrackOrderValidation -->
-        <test-method status="PASS" signature="HomePageReferralCodeValidation()[pri:5, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="HomePageReferralCodeValidation" duration-ms="7859" started-at="2017-03-02T17:02:23Z" finished-at="2017-03-02T17:02:31Z">
+        </test-method> <!-- TermsOfServicePopUpCloseIcon -->
+        <test-method status="PASS" signature="TermsOfServicePopUpCloseButton()[pri:5, instance:pages.BellYourInfo@4f933fd1]" name="TermsOfServicePopUpCloseButton" duration-ms="8254" started-at="2017-03-09T20:10:45Z" finished-at="2017-03-09T20:10:53Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- HomePageReferralCodeValidation -->
-        <test-method status="PASS" signature="HomePageTrackOrderErrorValidation()[pri:6, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="HomePageTrackOrderErrorValidation" duration-ms="9464" started-at="2017-03-02T17:02:31Z" finished-at="2017-03-02T17:02:41Z">
+        </test-method> <!-- TermsOfServicePopUpCloseButton -->
+        <test-method status="PASS" signature="validateOperatorLogo()[pri:7, instance:pages.BellYourInfo@4f933fd1]" name="validateOperatorLogo" duration-ms="1367" started-at="2017-03-09T20:10:53Z" finished-at="2017-03-09T20:10:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- HomePageTrackOrderErrorValidation -->
-        <test-method status="PASS" signature="HomePageEnterrefrralCodeErrorvalidation()[pri:7, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="HomePageEnterrefrralCodeErrorvalidation" duration-ms="4556" started-at="2017-03-02T17:02:41Z" finished-at="2017-03-02T17:02:45Z">
+        </test-method> <!-- validateOperatorLogo -->
+        <test-method status="PASS" signature="validateCompanyLogo()[pri:8, instance:pages.BellYourInfo@4f933fd1]" name="validateCompanyLogo" duration-ms="1335" started-at="2017-03-09T20:10:54Z" finished-at="2017-03-09T20:10:56Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- HomePageEnterrefrralCodeErrorvalidation -->
-        <test-method status="PASS" signature="HomePageSecTwoContentValidation()[pri:8, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="HomePageSecTwoContentValidation" duration-ms="851" started-at="2017-03-02T17:02:45Z" finished-at="2017-03-02T17:02:46Z">
+        </test-method> <!-- validateCompanyLogo -->
+        <test-method status="PASS" signature="ReferralRequestTextValidation()[pri:9, instance:pages.BellYourInfo@4f933fd1]" name="ReferralRequestTextValidation" duration-ms="3537" started-at="2017-03-09T20:10:56Z" finished-at="2017-03-09T20:10:59Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- HomePageSecTwoContentValidation -->
-        <test-method status="PASS" signature="HomePageSecTwoWhatThekitIncludesToolsvalidation()[pri:9, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="HomePageSecTwoWhatThekitIncludesToolsvalidation" duration-ms="330" started-at="2017-03-02T17:02:46Z" finished-at="2017-03-02T17:02:46Z">
+        </test-method> <!-- ReferralRequestTextValidation -->
+        <test-method status="PASS" signature="RequestReferralCodeTextBoxDisplayedAndEnabled()[pri:10, instance:pages.BellYourInfo@4f933fd1]" name="RequestReferralCodeTextBoxDisplayedAndEnabled" duration-ms="21681" started-at="2017-03-09T20:10:59Z" finished-at="2017-03-09T20:11:21Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- HomePageSecTwoWhatThekitIncludesToolsvalidation -->
-        <test-method status="PASS" signature="HomePageSecTwoWhatThekitIncludesCentervalidation()[pri:10, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="HomePageSecTwoWhatThekitIncludesCentervalidation" duration-ms="318" started-at="2017-03-02T17:02:46Z" finished-at="2017-03-02T17:02:47Z">
+        </test-method> <!-- RequestReferralCodeTextBoxDisplayedAndEnabled -->
+        <test-method status="PASS" signature="RequestReferralCodeLabelTextDisplayedAndEnabled()[pri:11, instance:pages.BellYourInfo@4f933fd1]" name="RequestReferralCodeLabelTextDisplayedAndEnabled" duration-ms="22538" started-at="2017-03-09T20:11:21Z" finished-at="2017-03-09T20:11:44Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- HomePageSecTwoWhatThekitIncludesCentervalidation -->
-        <test-method status="PASS" signature="HomePagesectionTwoWhatThekitIncludesSuppportvalidation()[pri:11, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="HomePagesectionTwoWhatThekitIncludesSuppportvalidation" duration-ms="417" started-at="2017-03-02T17:02:47Z" finished-at="2017-03-02T17:02:47Z">
+        </test-method> <!-- RequestReferralCodeLabelTextDisplayedAndEnabled -->
+        <test-method status="PASS" signature="ReferralRequestCodeValidInputValidation()[pri:12, instance:pages.BellYourInfo@4f933fd1]" name="ReferralRequestCodeValidInputValidation" duration-ms="43954" started-at="2017-03-09T20:11:44Z" finished-at="2017-03-09T20:12:27Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- HomePagesectionTwoWhatThekitIncludesSuppportvalidation -->
-        <test-method status="PASS" signature="HomePagesectionThreeHowItWorksValidation()[pri:12, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="HomePagesectionThreeHowItWorksValidation" duration-ms="581" started-at="2017-03-02T17:02:47Z" finished-at="2017-03-02T17:02:48Z">
+        </test-method> <!-- ReferralRequestCodeValidInputValidation -->
+        <test-method status="PASS" signature="ReferralRequestRequiredFieldValidation()[pri:13, instance:pages.BellYourInfo@4f933fd1]" name="ReferralRequestRequiredFieldValidation" duration-ms="5512" started-at="2017-03-09T20:12:27Z" finished-at="2017-03-09T20:12:33Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- HomePagesectionThreeHowItWorksValidation -->
-        <test-method status="PASS" signature="HomePagesectionFourWhatIsIotValidation()[pri:13, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="HomePagesectionFourWhatIsIotValidation" duration-ms="308" started-at="2017-03-02T17:02:48Z" finished-at="2017-03-02T17:02:48Z">
+        </test-method> <!-- ReferralRequestRequiredFieldValidation -->
+        <test-method status="PASS" signature="ReferralRequestSpaceNotAllowedValidation()[pri:14, instance:pages.BellYourInfo@4f933fd1]" name="ReferralRequestSpaceNotAllowedValidation" duration-ms="3399" started-at="2017-03-09T20:12:33Z" finished-at="2017-03-09T20:12:36Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- HomePagesectionFourWhatIsIotValidation -->
-        <test-method status="PASS" signature="HomePagesectionOneLinkvalidation()[pri:14, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="HomePagesectionOneLinkvalidation" duration-ms="3759" started-at="2017-03-02T17:02:48Z" finished-at="2017-03-02T17:02:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- HomePagesectionOneLinkvalidation -->
-        <test-method status="PASS" signature="HomePagesectionFiveWithBell()[pri:15, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="HomePagesectionFiveWithBell" duration-ms="341" started-at="2017-03-02T17:02:52Z" finished-at="2017-03-02T17:02:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- HomePagesectionFiveWithBell -->
-        <test-method status="PASS" signature="HomePagesectionFiveLTE()[pri:16, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="HomePagesectionFiveLTE" duration-ms="294" started-at="2017-03-02T17:02:52Z" finished-at="2017-03-02T17:02:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- HomePagesectionFiveLTE -->
-        <test-method status="PASS" signature="HomePagesectionFivePartners()[pri:17, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="HomePagesectionFivePartners" duration-ms="310" started-at="2017-03-02T17:02:52Z" finished-at="2017-03-02T17:02:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- HomePagesectionFivePartners -->
-        <test-method status="PASS" signature="HomePagesectionFiveEndToEnd()[pri:18, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="HomePagesectionFiveEndToEnd" duration-ms="315" started-at="2017-03-02T17:02:53Z" finished-at="2017-03-02T17:02:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- HomePagesectionFiveEndToEnd -->
-        <test-method status="PASS" signature="HomePageLearnMoreFromBell()[pri:19, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="HomePageLearnMoreFromBell" duration-ms="11769" started-at="2017-03-02T17:02:53Z" finished-at="2017-03-02T17:03:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- HomePageLearnMoreFromBell -->
-        <test-method status="PASS" signature="HomePageSecOneReferralRequesButton()[pri:20, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="HomePageSecOneReferralRequesButton" duration-ms="5958" started-at="2017-03-02T17:03:05Z" finished-at="2017-03-02T17:03:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- HomePageSecOneReferralRequesButton -->
-        <test-method status="PASS" signature="HomePageM2MDotComvalidation()[pri:21, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="HomePageM2MDotComvalidation" duration-ms="11412" started-at="2017-03-02T17:03:11Z" finished-at="2017-03-02T17:03:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- HomePageM2MDotComvalidation -->
-        <test-method status="PASS" signature="HomePageSectwoReferralRequestButton()[pri:22, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="HomePageSectwoReferralRequestButton" duration-ms="5439" started-at="2017-03-02T17:03:22Z" finished-at="2017-03-02T17:03:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- HomePageSectwoReferralRequestButton -->
-        <test-method status="PASS" signature="HomePageBellLogoValidation()[pri:23, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="HomePageBellLogoValidation" duration-ms="4782" started-at="2017-03-02T17:03:28Z" finished-at="2017-03-02T17:03:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- HomePageBellLogoValidation -->
-        <test-method status="PASS" signature="sectionOneReferralRequestvalidation()[pri:24, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="sectionOneReferralRequestvalidation" duration-ms="4034" started-at="2017-03-02T17:03:32Z" finished-at="2017-03-02T17:03:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- sectionOneReferralRequestvalidation -->
-        <test-method status="PASS" signature="ReferralRequestBellLogo()[pri:25, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="ReferralRequestBellLogo" duration-ms="164" started-at="2017-03-02T17:03:36Z" finished-at="2017-03-02T17:03:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ReferralRequestBellLogo -->
-        <test-method status="PASS" signature="ReferralRequestCompanyLogo()[pri:26, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="ReferralRequestCompanyLogo" duration-ms="143" started-at="2017-03-02T17:03:37Z" finished-at="2017-03-02T17:03:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ReferralRequestCompanyLogo -->
-        <test-method status="PASS" signature="ReferralRequestTextValiadtion()[pri:27, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="ReferralRequestTextValiadtion" duration-ms="669" started-at="2017-03-02T17:03:37Z" finished-at="2017-03-02T17:03:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ReferralRequestTextValiadtion -->
-        <test-method status="PASS" signature="ReferralrequestTextBoxDisplayedAndEnabled()[pri:28, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="ReferralrequestTextBoxDisplayedAndEnabled" duration-ms="1920" started-at="2017-03-02T17:03:37Z" finished-at="2017-03-02T17:03:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ReferralrequestTextBoxDisplayedAndEnabled -->
-        <test-method status="PASS" signature="ReferralrequestLabelDisplayedAndEnabled()[pri:29, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="ReferralrequestLabelDisplayedAndEnabled" duration-ms="1603" started-at="2017-03-02T17:03:39Z" finished-at="2017-03-02T17:03:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ReferralrequestLabelDisplayedAndEnabled -->
-        <test-method status="PASS" signature="ReferralRequestPlaceHolderValidation()[pri:30, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="ReferralRequestPlaceHolderValidation" duration-ms="470" started-at="2017-03-02T17:03:41Z" finished-at="2017-03-02T17:03:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ReferralRequestPlaceHolderValidation -->
-        <test-method status="PASS" signature="ReferralRequestValidInputValidation()[pri:31, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="ReferralRequestValidInputValidation" duration-ms="19331" started-at="2017-03-02T17:03:41Z" finished-at="2017-03-02T17:04:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ReferralRequestValidInputValidation -->
-        <test-method status="PASS" signature="ReferrakRequestRequiredFieldValidation()[pri:32, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="ReferrakRequestRequiredFieldValidation" duration-ms="2286" started-at="2017-03-02T17:04:01Z" finished-at="2017-03-02T17:04:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ReferrakRequestRequiredFieldValidation -->
-        <test-method status="PASS" signature="ReferralrequestSpaceNotAllowedValiadation()[pri:33, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="ReferralrequestSpaceNotAllowedValiadation" duration-ms="1411" started-at="2017-03-02T17:04:03Z" finished-at="2017-03-02T17:04:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ReferralrequestSpaceNotAllowedValiadation -->
-        <test-method status="PASS" signature="ReferralRequestMaximumInputValidation()[pri:34, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="ReferralRequestMaximumInputValidation" duration-ms="11052" started-at="2017-03-02T17:04:04Z" finished-at="2017-03-02T17:04:16Z">
+        </test-method> <!-- ReferralRequestSpaceNotAllowedValidation -->
+        <test-method status="PASS" signature="ReferralRequestMaximumInputValidation()[pri:15, instance:pages.BellYourInfo@4f933fd1]" name="ReferralRequestMaximumInputValidation" duration-ms="13443" started-at="2017-03-09T20:12:36Z" finished-at="2017-03-09T20:12:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ReferralRequestMaximumInputValidation -->
-        <test-method status="PASS" signature="ReferralRequestMinimumInputValidation()[pri:35, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="ReferralRequestMinimumInputValidation" duration-ms="1427" started-at="2017-03-02T17:04:16Z" finished-at="2017-03-02T17:04:17Z">
+        <test-method status="PASS" signature="ReferralRequestMinimumInputValidation()[pri:16, instance:pages.BellYourInfo@4f933fd1]" name="ReferralRequestMinimumInputValidation" duration-ms="6315" started-at="2017-03-09T20:12:50Z" finished-at="2017-03-09T20:12:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ReferralRequestMinimumInputValidation -->
-        <test-method status="PASS" signature="ReferralRequestEmailValidation()[pri:36, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="ReferralRequestEmailValidation" duration-ms="1386" started-at="2017-03-02T17:04:17Z" finished-at="2017-03-02T17:04:18Z">
+        <test-method status="PASS" signature="ReferralRequestEmailValidation()[pri:17, instance:pages.BellYourInfo@4f933fd1]" name="ReferralRequestEmailValidation" duration-ms="3557" started-at="2017-03-09T20:12:56Z" finished-at="2017-03-09T20:13:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ReferralRequestEmailValidation -->
-        <test-method status="PASS" signature="ReferralRequestNumericFeild()[pri:37, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="ReferralRequestNumericFeild" duration-ms="10260" started-at="2017-03-02T17:04:18Z" finished-at="2017-03-02T17:04:29Z">
+        <test-method status="PASS" signature="ReferralRequestNumericFieldValidation()[pri:18, instance:pages.BellYourInfo@4f933fd1]" name="ReferralRequestNumericFieldValidation" duration-ms="9829" started-at="2017-03-09T20:13:00Z" finished-at="2017-03-09T20:13:10Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ReferralRequestNumericFeild -->
-        <test-method status="PASS" signature="ReferralRequestBellLogoValidation()[pri:38, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="ReferralRequestBellLogoValidation" duration-ms="5247" started-at="2017-03-02T17:04:29Z" finished-at="2017-03-02T17:04:34Z">
+        </test-method> <!-- ReferralRequestNumericFieldValidation -->
+        <test-method status="PASS" signature="BellLogoValidation()[pri:19, instance:pages.BellYourInfo@4f933fd1]" name="BellLogoValidation" duration-ms="11314" started-at="2017-03-09T20:13:10Z" finished-at="2017-03-09T20:13:21Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ReferralRequestBellLogoValidation -->
-        <test-method status="PASS" signature="ReferralRequestBellCaLinkvalidation()[pri:39, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="ReferralRequestBellCaLinkvalidation" duration-ms="18248" started-at="2017-03-02T17:04:34Z" finished-at="2017-03-02T17:04:52Z">
+        </test-method> <!-- BellLogoValidation -->
+        <test-method status="PASS" signature="BellCALinkValidation()[pri:20, instance:pages.BellYourInfo@4f933fd1]" name="BellCALinkValidation" duration-ms="35041" started-at="2017-03-09T20:13:21Z" finished-at="2017-03-09T20:13:56Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ReferralRequestBellCaLinkvalidation -->
-        <test-method status="PASS" signature="RferrralRequestcancelButton()[pri:40, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="RferrralRequestcancelButton" duration-ms="5626" started-at="2017-03-02T17:04:52Z" finished-at="2017-03-02T17:04:58Z">
+        </test-method> <!-- BellCALinkValidation -->
+        <test-method status="PASS" signature="ReferralrequestCancelButton()[pri:21, instance:pages.BellYourInfo@4f933fd1]" name="ReferralrequestCancelButton" duration-ms="13459" started-at="2017-03-09T20:13:56Z" finished-at="2017-03-09T20:14:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- RferrralRequestcancelButton -->
-        <test-method status="PASS" signature="ReferralRequestButtonvalidation()[pri:41, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="ReferralRequestButtonvalidation" duration-ms="11439" started-at="2017-03-02T17:04:58Z" finished-at="2017-03-02T17:05:09Z">
+        </test-method> <!-- ReferralrequestCancelButton -->
+        <test-method status="PASS" signature="RequestButtonValidation()[pri:22, instance:pages.BellYourInfo@4f933fd1]" name="RequestButtonValidation" duration-ms="24164" started-at="2017-03-09T20:14:09Z" finished-at="2017-03-09T20:14:34Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ReferralRequestButtonvalidation -->
-        <test-method status="PASS" signature="ThankYouBellLogo()[pri:42, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="ThankYouBellLogo" duration-ms="2342" started-at="2017-03-02T17:05:09Z" finished-at="2017-03-02T17:05:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ThankYouBellLogo -->
-        <test-method status="PASS" signature="ThankYouCiscoLogo()[pri:43, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="ThankYouCiscoLogo" duration-ms="248" started-at="2017-03-02T17:05:12Z" finished-at="2017-03-02T17:05:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ThankYouCiscoLogo -->
-        <test-method status="PASS" signature="ThankYouTextvalidation()[pri:44, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="ThankYouTextvalidation" duration-ms="297" started-at="2017-03-02T17:05:12Z" finished-at="2017-03-02T17:05:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ThankYouTextvalidation -->
-        <test-method status="PASS" signature="ThankYouBellPageRedirection()[pri:45, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="ThankYouBellPageRedirection" duration-ms="6020" started-at="2017-03-02T17:05:12Z" finished-at="2017-03-02T17:05:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ThankYouBellPageRedirection -->
-        <test-method status="PASS" signature="ThankYouIOTvalidation()[pri:45, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="ThankYouIOTvalidation" duration-ms="174" started-at="2017-03-02T17:05:18Z" finished-at="2017-03-02T17:05:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ThankYouIOTvalidation -->
-        <test-method status="PASS" signature="ThankYouIOTPagevalidation()[pri:46, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="ThankYouIOTPagevalidation" duration-ms="6079" started-at="2017-03-02T17:05:18Z" finished-at="2017-03-02T17:05:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ThankYouIOTPagevalidation -->
-        <test-method status="PASS" signature="ReferralRequestAdminApproval()[pri:47, instance:pages.BellEndToEndFlowOne@4f933fd1]" name="ReferralRequestAdminApproval" duration-ms="18344" started-at="2017-03-02T17:05:24Z" finished-at="2017-03-02T17:05:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ReferralRequestAdminApproval -->
-      </class> <!-- pages.BellEndToEndFlowOne -->
+        </test-method> <!-- RequestButtonValidation -->
+      </class> <!-- pages.BellYourInfo -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

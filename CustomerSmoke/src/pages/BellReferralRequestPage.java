@@ -1,25 +1,16 @@
 package pages;
 
-
 import java.util.Properties;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
-
-import pageobjects.BellHomePagePO;
 import pageobjects.BellReferralRequestPO;
 import utilitymethods.UtilityMethods;
 import driver.BaseDriver;
 
 public class BellReferralRequestPage extends BaseDriver
 {
-	
-	public static ChromeDriver driver=BaseDriver.driver;
+	public static FirefoxDriver driver=BaseDriver.driver;
 	public static Properties allInputValue = BellHomePage.allInputValue;
 	//@BeforeTest
 	public static void BrowserIntilation() throws Exception
@@ -37,7 +28,6 @@ public class BellReferralRequestPage extends BaseDriver
 		allInputValue = UtilityMethods.getBellPropValues();
 		driver = BellHomePage.start();
 		driver.navigate().refresh();
-		
 	}*/
 	//@Test(priority=1)
 	public static void validateOperatorLogo()
@@ -65,7 +55,7 @@ public class BellReferralRequestPage extends BaseDriver
 		UtilityMethods.StringValidation(BellReferralRequestPO.ParagraphText.getText(), allInputValue.getProperty("ReferralRequestSectionOne"), "equalsignorecase");
 		UtilityMethods.StringValidation(BellReferralRequestPO.ContactInfoText.getText(), "Contact Information", "equalsignorecase");
 		UtilityMethods.StringValidation(BellReferralRequestPO.DeviceInfoText.getText(), "Device Information", "equalsignorecase");
-		UtilityMethods.StringValidation(BellReferralRequestPO.legalText.getText().replace("\n", " "), allInputValue.getProperty("ReferralRequestLegaltext"), "equalsignorecase");
+	//	UtilityMethods.StringValidation(BellReferralRequestPO.legalText.getText().replace("\n", " "), allInputValue.getProperty("ReferralRequestLegaltext"), "equalsignorecase");
 		UtilityMethods.StringValidation(BellReferralRequestPO.checkBoxLabel.getText(), allInputValue.getProperty("referralrequestCheckBox"), "equalsignorecase");
 		System.out.println(""+"TS003");
 	}
@@ -277,7 +267,7 @@ public class BellReferralRequestPage extends BaseDriver
 	public static void AdminApproval() throws InterruptedException
 	{
 		System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
-		driver = new ChromeDriver();
+		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.get("http://starterkit-dev.devm2m.com/admin/internal/login");
 		Thread.sleep(1500);

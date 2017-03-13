@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.testng.TestNG"/>
-<fullyQualifiedTypeName name="org.junit.Test"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.support.FindBy"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.support.How"/>
-<fullyQualifiedTypeName name="java.util.Calendar"/>
-<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
-<fullyQualifiedTypeName name="org.testng.annotations.BeforeTest"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.support.PageFactory"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.firefox.FirefoxProfile"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
 <fullyQualifiedTypeName name="pageobjects.Tele2ReferralRequestpagePO"/>
 <fullyQualifiedTypeName name="junit.framework.Assert"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.remote.BrowserType"/>
@@ -27,7 +18,6 @@
 <fullyQualifiedTypeName name="com.sun.jna.platform.win32.Netapi32Util.User"/>
 <fullyQualifiedTypeName name="java.io.PrintWriter"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
-<fullyQualifiedTypeName name="pageobjects.PostReferralRequestPO"/>
 <fullyQualifiedTypeName name="pageobjects.PostShippingInfoPO"/>
 <fullyQualifiedTypeName name="java.lang.Runtime"/>
 <fullyQualifiedTypeName name="org.omg.SendingContext.RunTime"/>
@@ -42,22 +32,32 @@
 <fullyQualifiedTypeName name="pageobjects.BellReferralRequestThankYouPO"/>
 <fullyQualifiedTypeName name="pageobjects.BellControlCenterPO"/>
 <fullyQualifiedTypeName name="pages.PostHomePage"/>
-<fullyQualifiedTypeName name="pages.BellControlCenter"/>
 <fullyQualifiedTypeName name="com.sun.xml.internal.bind.v2.schemagen.xmlschema.List"/>
 <fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.By"/>
-<fullyQualifiedTypeName name="driver.BaseDriver"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.firefox.FirefoxDriver"/>
 <fullyQualifiedTypeName name="pageobjects.BellHomePagePO"/>
 <fullyQualifiedTypeName name="utilitymethods.UtilityMethods"/>
-<fullyQualifiedTypeName name="pageobjects.BellReferralRequestPO"/>
 <fullyQualifiedTypeName name="pages.BellHomePage"/>
 <fullyQualifiedTypeName name="pages.BellReferralRequestPage"/>
-<fullyQualifiedTypeName name="org.testng.annotations.Test"/>
 <fullyQualifiedTypeName name="pages.BellReferralRequestThankYou"/>
 <fullyQualifiedTypeName name="org.testng.annotations.AfterTest"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.ie.InternetExplorerDriver"/>
-<fullyQualifiedTypeName name="javafx.scene.control.Alert"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeDriver"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.ie.InternetExplorerDriver"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.Keys"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+<fullyQualifiedTypeName name="pageobjects.BellYourInfoPO"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.firefox.FirefoxDriver"/>
+<fullyQualifiedTypeName name="pages.BellControlCenter"/>
 <fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="driver.BaseDriver"/>
+<fullyQualifiedTypeName name="org.testng.annotations.Test"/>
+<fullyQualifiedTypeName name="org.testng.annotations.BeforeTest"/>
+<fullyQualifiedTypeName name="com.sun.glass.ui.Robot"/>
+<fullyQualifiedTypeName name="com.sun.glass.events.KeyEvent"/>
+<fullyQualifiedTypeName name="java.awt.Robot"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.firefox.FirefoxProfile"/>
+<fullyQualifiedTypeName name="javafx.scene.control.Alert"/>
+<fullyQualifiedTypeName name="pageobjects.BellReferralRequestPO"/>
+<fullyQualifiedTypeName name="pageobjects.PostReferralRequestPO"/>
+<fullyQualifiedTypeName name="pageobjects.BellShippingInfoPO"/>
 </qualifiedTypeNameHistroy>

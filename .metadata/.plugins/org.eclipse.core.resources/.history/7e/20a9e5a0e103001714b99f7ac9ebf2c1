@@ -1,0 +1,68 @@
+package pages;
+
+import java.util.Properties;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.BeforeTest;
+
+import driver.BaseDriver;
+
+public class BellEndToEndFlowTwo extends BaseDriver
+{
+	public static FirefoxDriver driver;
+	static Properties allInputValue;
+
+	@BeforeTest
+	public static void BrowserIntilation() throws Exception
+	{
+		driver = BellControlCenter.start();
+	}
+	
+	public static void CCDisplayedAndEnabledValidation()
+	{
+		BellControlCenter.CCDisplayedAndEnabledValidation();
+	}
+	public static void CCContentValidation()
+	{
+		BellControlCenter.CCContentValidation();
+	}
+	public static void CCPlaceHolderValidation()
+	{
+		BellControlCenter.CCPlaceHolderValidation();
+	}
+	public static void CCRequiredFieldValidation()
+	{
+		BellControlCenter.CCRequiredFieldValidation();
+	}
+	public static void CCUserNameMinMaxValidation()
+	{
+		BellControlCenter.CCUserNameMinMaxValidation();
+	}
+	public static void CCPasswordValidation()
+	{
+		BellControlCenter.CCPasswordValidation();
+	}
+	public static void InputValidation()
+	{
+		BellControlCenter.InputValidation();
+	}
+	public static void 
+	{
+		
+	}
+	public static void 
+	{
+	}
+	public static void 
+	{
+		
+	}
+	public static void 
+	{
+		
+	}
+	public static void 
+	{
+		
+	}
+}

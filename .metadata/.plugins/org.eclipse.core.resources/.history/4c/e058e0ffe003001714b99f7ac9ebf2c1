@@ -1,0 +1,14 @@
+package pages;
+
+import java.util.Properties;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import driver.BaseDriver;
+
+public class BellEndToEndFlowTwo extends BaseDriver
+{
+	public static FirefoxDriver driver;
+
+	static Properties allInputValue;
+}

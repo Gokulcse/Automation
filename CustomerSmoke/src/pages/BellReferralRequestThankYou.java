@@ -5,6 +5,7 @@ import java.util.Properties;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
@@ -17,7 +18,7 @@ import utilitymethods.UtilityMethods;
 
 public class BellReferralRequestThankYou extends BaseDriver
 {
-	public static ChromeDriver driver=BaseDriver.driver;
+	public static FirefoxDriver driver=BaseDriver.driver;
 	public static Properties allInputValue = BellHomePage.allInputValue;
 	//@BeforeTest
 	public static void BrowserIntilation() throws Exception

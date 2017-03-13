@@ -3,14 +3,21 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="pages.BellEndToEndFlowOne">
+      <class name="pages.BellEndToEndFlowTwo">
         <methods>
-          <include name="ThankYouIOTPagevalidation"/>
-          <include name="ThankYouBellPageRedirection"/>
+          <include name="YourInfoCompanyLogo"/>
+          <include name="YourInfoBellLogo"/>
+          <include name="YourInfoMinimumInputValidation"/>
+          <include name="YourInfoValidInputValidation"/>
+          <include name="TermsOfServiceTextValidation"/>
+          <include name="YourInfoTextValiadtion"/>
+          <include name="YourInfoMaximumInputValidation"/>
+          <include name="referralRequestDataValidation"/>
           <include name="BrowserIntilation"/>
-          <include name="ThankYouBellLogo"/>
+          <include name="YourInfoEmailValidation"/>
+          <include name="YourInfoNumericFeild"/>
         </methods>
-      </class> <!-- pages.BellEndToEndFlowOne -->
+      </class> <!-- pages.BellEndToEndFlowTwo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
