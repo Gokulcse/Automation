@@ -2497,3 +2497,1656 @@ java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.1
   Class:     org.testng.remote.RemoteTestNG
   Args:      -serport 51225 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--137009214\testng-customsuite.xml
 java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 51225 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--137009214\testng-customsuite.xml
+!SESSION 2017-03-14 10:01:17.324 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.debug.core 4 125 2017-03-14 10:03:33.656
+!MESSAGE Invalid expression entry encountered while loading watch expressions. Expression text is empty.
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-03-14 10:13:30.519
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Sada'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.testng.eclipse 1 0 2017-03-14 10:30:49.345
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 53002 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--1456770897\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 53002 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--1456770897\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-14 10:48:03.940
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 54439 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-2014507535\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 54439 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-2014507535\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-14 11:06:29.749
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 55844 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--28133121\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 55844 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--28133121\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-14 11:15:25.777
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 57239 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-1040680710\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 57239 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-1040680710\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-14 11:28:10.372
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 58629 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-1178881065\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 58629 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-1178881065\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-14 11:53:43.051
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 60391 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--2093636549\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 60391 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--2093636549\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-14 12:19:57.971
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 61849 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--892213518\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 61849 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--892213518\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-14 12:30:38.013
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 63287 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--247622837\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 63287 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--247622837\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-14 13:23:57.927
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 64988 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--860358222\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 64988 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--860358222\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-14 13:54:52.415
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 50431 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-157153190\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 50431 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-157153190\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-14 14:32:26.561
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 52519 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--1597406667\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 52519 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--1597406667\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-14 14:58:40.537
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 54458 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--1501751975\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 54458 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--1501751975\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-14 15:11:58.242
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 56309 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--2002363368\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 56309 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--2002363368\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-14 15:35:43.343
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 58284 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--1295922825\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 58284 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--1295922825\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-14 15:53:04.400
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 60181 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-1426658915\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 60181 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-1426658915\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-14 16:29:00.161
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 62201 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-1730256969\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 62201 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-1730256969\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-14 17:19:56.792
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 64419 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--246980261\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 64419 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--246980261\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-14 17:21:54.509
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 64475 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-688880661\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 64475 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-688880661\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-14 17:34:57.323
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 49808 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--459695497\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 49808 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--459695497\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-14 17:45:49.216
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 51426 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-1144874338\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 51426 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-1144874338\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-14 17:57:45.113
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 53201 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-831871503\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 53201 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-831871503\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-14 18:14:24.771
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 55264 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--1914828993\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 55264 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--1914828993\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-14 18:28:20.064
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 57193 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--790409938\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 57193 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--790409938\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-14 18:29:27.892
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 57239 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-1821973797\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 57239 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-1821973797\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-14 18:30:59.376
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 57307 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-288839731\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 57307 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-288839731\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-14 18:46:58.498
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 59371 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--2054288172\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 59371 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--2054288172\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-14 19:01:25.736
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 61110 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--147924952\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 61110 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--147924952\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-14 19:12:21.605
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 62856 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-279297924\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 62856 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-279297924\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-14 19:17:06.539
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 63151 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-350302447\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 63151 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-350302447\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-14 19:29:04.260
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 64926 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--1028257795\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 64926 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--1028257795\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-15 11:00:33.944
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 50941 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-863056953\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 50941 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-863056953\testng-customsuite.xml
+!SESSION 2017-03-15 21:30:32.007 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-03-15 21:31:53.635
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Sada'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.testng.eclipse 1 0 2017-03-15 21:34:32.165
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 56284 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-327754850\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 56284 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-327754850\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-16 12:20:09.608
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 59064 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--283308702\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 59064 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--283308702\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-16 12:35:41.865
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 61018 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--434365067\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 61018 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--434365067\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-16 12:37:48.635
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 61025 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-719476103\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 61025 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-719476103\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-16 13:00:38.181
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 63181 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--1821561412\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 63181 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--1821561412\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-16 13:52:11.160
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 63739 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-1541922219\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 63739 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-1541922219\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-16 13:58:57.482
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 64155 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-225510697\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 64155 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-225510697\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-16 14:14:27.747
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 49549 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-1536470028\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 49549 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-1536470028\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-16 14:17:02.106
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 49614 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-827159978\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 49614 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-827159978\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-16 14:48:36.028
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 51768 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-735333041\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 51768 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-735333041\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-16 15:11:26.030
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 53980 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-1796060044\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 53980 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-1796060044\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-16 15:46:02.270
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 56283 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-1799848404\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 56283 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-1799848404\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-16 16:14:53.974
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 58547 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--1091288936\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 58547 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--1091288936\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-16 16:43:37.946
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 60498 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-795218644\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 60498 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-795218644\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-16 17:04:59.553
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 62389 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--954208367\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 62389 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--954208367\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-16 17:17:57.204
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 64247 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-759563402\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 64247 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-759563402\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-16 17:28:59.756
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 49196 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-1042471503\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 49196 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-1042471503\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-16 17:37:07.499
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 50634 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-310340614\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 50634 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-310340614\testng-customsuite.xml
+
+!ENTRY org.eclipse.ui 4 0 2017-03-16 17:46:36.932
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.AbstractStringBuilder.insert(AbstractStringBuilder.java:1005)
+	at java.lang.StringBuffer.insert(StringBuffer.java:514)
+	at org.eclipse.ui.internal.console.IOConsolePartition.insert(IOConsolePartition.java:75)
+	at org.eclipse.ui.internal.console.IOConsolePartitioner.documentChanged2(IOConsolePartitioner.java:394)
+	at org.eclipse.jface.text.AbstractDocument.updateDocumentStructures(AbstractDocument.java:696)
+	at org.eclipse.jface.text.AbstractDocument.fireDocumentChanged(AbstractDocument.java:793)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1191)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1210)
+	at org.eclipse.ui.internal.console.ConsoleDocument.replace(ConsoleDocument.java:92)
+	at org.eclipse.ui.internal.console.ConsoleDocumentAdapter.replaceTextRange(ConsoleDocumentAdapter.java:266)
+	at org.eclipse.swt.custom.StyledText.modifyContent(StyledText.java:7268)
+	at org.eclipse.swt.custom.StyledText.sendKeyEvent(StyledText.java:8111)
+	at org.eclipse.swt.custom.StyledText.doBackspace(StyledText.java:2285)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:7058)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:5959)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5986)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5663)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1112)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1108)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1529)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4722)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:343)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4610)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.ui 4 0 2017-03-16 17:46:36.984
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -2
+	at java.lang.String.charAt(String.java:658)
+	at org.eclipse.swt.custom.StyledText.doBackspace(StyledText.java:2272)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:7058)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:5959)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5986)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5663)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1112)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1108)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1529)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4722)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:343)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4610)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.ui 4 0 2017-03-16 17:46:37.018
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -2
+	at java.lang.String.charAt(String.java:658)
+	at org.eclipse.swt.custom.StyledText.doBackspace(StyledText.java:2272)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:7058)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:5959)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5986)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5663)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1112)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1108)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1529)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4722)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:343)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4610)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.ui 4 0 2017-03-16 17:46:37.041
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -2
+	at java.lang.String.charAt(String.java:658)
+	at org.eclipse.swt.custom.StyledText.doBackspace(StyledText.java:2272)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:7058)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:5959)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5986)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5663)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1112)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1108)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1529)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4722)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:343)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4610)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.ui 4 0 2017-03-16 17:46:37.062
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -2
+	at java.lang.String.charAt(String.java:658)
+	at org.eclipse.swt.custom.StyledText.doBackspace(StyledText.java:2272)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:7058)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:5959)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5986)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5663)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1112)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1108)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1529)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4722)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:343)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4610)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.ui 4 0 2017-03-16 17:46:37.093
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -2
+	at java.lang.String.charAt(String.java:658)
+	at org.eclipse.swt.custom.StyledText.doBackspace(StyledText.java:2272)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:7058)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:5959)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5986)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5663)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1112)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1108)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1529)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4722)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:343)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4610)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.ui 4 0 2017-03-16 17:46:37.126
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -2
+	at java.lang.String.charAt(String.java:658)
+	at org.eclipse.swt.custom.StyledText.doBackspace(StyledText.java:2272)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:7058)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:5959)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5986)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5663)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1112)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1108)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1529)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4722)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:343)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4610)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.ui 4 0 2017-03-16 17:46:37.159
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -2
+	at java.lang.String.charAt(String.java:658)
+	at org.eclipse.swt.custom.StyledText.doBackspace(StyledText.java:2272)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:7058)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:5959)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5986)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5663)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1112)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1108)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1529)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4722)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:343)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4610)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.ui 4 0 2017-03-16 17:46:37.192
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -2
+	at java.lang.String.charAt(String.java:658)
+	at org.eclipse.swt.custom.StyledText.doBackspace(StyledText.java:2272)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:7058)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:5959)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5986)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5663)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1112)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1108)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1529)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4722)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:343)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4610)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.ui 4 0 2017-03-16 17:46:37.225
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -2
+	at java.lang.String.charAt(String.java:658)
+	at org.eclipse.swt.custom.StyledText.doBackspace(StyledText.java:2272)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:7058)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:5959)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5986)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5663)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1112)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1108)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1529)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4722)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:343)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4610)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.ui 4 0 2017-03-16 17:46:37.258
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -2
+	at java.lang.String.charAt(String.java:658)
+	at org.eclipse.swt.custom.StyledText.doBackspace(StyledText.java:2272)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:7058)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:5959)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5986)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5663)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1112)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1108)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1529)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4722)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:343)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4610)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.ui 4 0 2017-03-16 17:46:37.291
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -2
+	at java.lang.String.charAt(String.java:658)
+	at org.eclipse.swt.custom.StyledText.doBackspace(StyledText.java:2272)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:7058)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:5959)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5986)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5663)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1112)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1108)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1529)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4722)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:343)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4610)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.ui 4 0 2017-03-16 17:46:37.324
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -2
+	at java.lang.String.charAt(String.java:658)
+	at org.eclipse.swt.custom.StyledText.doBackspace(StyledText.java:2272)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:7058)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:5959)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5986)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5663)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1112)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1108)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1529)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4722)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:343)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4610)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.ui 4 0 2017-03-16 17:46:37.357
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -2
+	at java.lang.String.charAt(String.java:658)
+	at org.eclipse.swt.custom.StyledText.doBackspace(StyledText.java:2272)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:7058)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:5959)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5986)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5663)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1112)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1108)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1529)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4722)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:343)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4610)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.ui 4 0 2017-03-16 17:46:37.390
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -2
+	at java.lang.String.charAt(String.java:658)
+	at org.eclipse.swt.custom.StyledText.doBackspace(StyledText.java:2272)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:7058)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:5959)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5986)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5663)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1112)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1108)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1529)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4722)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:343)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4610)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.ui 4 0 2017-03-16 17:46:37.578
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -2
+	at java.lang.String.charAt(String.java:658)
+	at org.eclipse.swt.custom.StyledText.doBackspace(StyledText.java:2272)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:7058)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:5959)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5986)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5663)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1112)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1108)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1529)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4722)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:343)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4610)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.ui 4 0 2017-03-16 17:46:38.494
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -101
+	at java.lang.AbstractStringBuilder.insert(AbstractStringBuilder.java:1005)
+	at java.lang.StringBuffer.insert(StringBuffer.java:514)
+	at org.eclipse.ui.internal.console.IOConsolePartition.insert(IOConsolePartition.java:75)
+	at org.eclipse.ui.internal.console.IOConsolePartitioner.documentChanged2(IOConsolePartitioner.java:394)
+	at org.eclipse.jface.text.AbstractDocument.updateDocumentStructures(AbstractDocument.java:696)
+	at org.eclipse.jface.text.AbstractDocument.fireDocumentChanged(AbstractDocument.java:793)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1191)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1210)
+	at org.eclipse.ui.internal.console.ConsoleDocument.replace(ConsoleDocument.java:92)
+	at org.eclipse.ui.internal.console.ConsoleDocumentAdapter.replaceTextRange(ConsoleDocumentAdapter.java:266)
+	at org.eclipse.swt.custom.StyledText.modifyContent(StyledText.java:7268)
+	at org.eclipse.swt.custom.StyledText.sendKeyEvent(StyledText.java:8111)
+	at org.eclipse.swt.custom.StyledText.doBackspace(StyledText.java:2285)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:7058)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:5959)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5986)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5663)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1112)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1108)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1529)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4722)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:343)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4610)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.ui 4 0 2017-03-16 17:46:38.666
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -3
+	at java.lang.String.charAt(String.java:658)
+	at org.eclipse.swt.custom.StyledText.doBackspace(StyledText.java:2272)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:7058)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:5959)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5986)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5663)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1112)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1108)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1529)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4722)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:343)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4610)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.ui 4 0 2017-03-16 17:46:38.874
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -3
+	at java.lang.String.charAt(String.java:658)
+	at org.eclipse.swt.custom.StyledText.doBackspace(StyledText.java:2272)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:7058)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:5959)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5986)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5663)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1112)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1108)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1529)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4722)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:343)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4610)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.ui 4 0 2017-03-16 17:46:45.019
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -26
+	at java.lang.AbstractStringBuilder.insert(AbstractStringBuilder.java:1005)
+	at java.lang.StringBuffer.insert(StringBuffer.java:514)
+	at org.eclipse.ui.internal.console.IOConsolePartition.insert(IOConsolePartition.java:75)
+	at org.eclipse.ui.internal.console.IOConsolePartitioner.documentChanged2(IOConsolePartitioner.java:394)
+	at org.eclipse.jface.text.AbstractDocument.updateDocumentStructures(AbstractDocument.java:696)
+	at org.eclipse.jface.text.AbstractDocument.fireDocumentChanged(AbstractDocument.java:793)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1191)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1210)
+	at org.eclipse.ui.internal.console.ConsoleDocument.replace(ConsoleDocument.java:92)
+	at org.eclipse.ui.internal.console.ConsoleDocumentAdapter.replaceTextRange(ConsoleDocumentAdapter.java:266)
+	at org.eclipse.swt.custom.StyledText.modifyContent(StyledText.java:7268)
+	at org.eclipse.swt.custom.StyledText.sendKeyEvent(StyledText.java:8111)
+	at org.eclipse.swt.custom.StyledText.doBackspace(StyledText.java:2261)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:7058)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:5959)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5986)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5663)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1112)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1108)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1529)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4722)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:343)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4610)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.ui 4 0 2017-03-16 17:46:49.210
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.IllegalArgumentException: Index out of bounds
+	at org.eclipse.swt.SWT.error(SWT.java:4422)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.SWT.error(SWT.java:4327)
+	at org.eclipse.swt.graphics.TextLayout.getLevel(TextLayout.java:1809)
+	at org.eclipse.swt.custom.StyledText.modifyContent(StyledText.java:7252)
+	at org.eclipse.swt.custom.StyledText.sendKeyEvent(StyledText.java:8111)
+	at org.eclipse.swt.custom.StyledText.doBackspace(StyledText.java:2285)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:7058)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:5959)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5986)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5663)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1112)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1108)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1529)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4722)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:343)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4610)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.ui 4 0 2017-03-16 17:46:49.418
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.IllegalArgumentException: Index out of bounds
+	at org.eclipse.swt.SWT.error(SWT.java:4422)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.SWT.error(SWT.java:4327)
+	at org.eclipse.swt.graphics.TextLayout.getLevel(TextLayout.java:1809)
+	at org.eclipse.swt.custom.StyledText.modifyContent(StyledText.java:7252)
+	at org.eclipse.swt.custom.StyledText.sendKeyEvent(StyledText.java:8111)
+	at org.eclipse.swt.custom.StyledText.doBackspace(StyledText.java:2285)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:7058)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:5959)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5986)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5663)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1112)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1108)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1529)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4722)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:343)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4610)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.ui 4 0 2017-03-16 17:46:49.626
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.IllegalArgumentException: Index out of bounds
+	at org.eclipse.swt.SWT.error(SWT.java:4422)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.SWT.error(SWT.java:4327)
+	at org.eclipse.swt.graphics.TextLayout.getLevel(TextLayout.java:1809)
+	at org.eclipse.swt.custom.StyledText.modifyContent(StyledText.java:7252)
+	at org.eclipse.swt.custom.StyledText.sendKeyEvent(StyledText.java:8111)
+	at org.eclipse.swt.custom.StyledText.doBackspace(StyledText.java:2285)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:7058)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:5959)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5986)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5663)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1112)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1108)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1529)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4722)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:343)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4610)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.testng.eclipse 1 0 2017-03-16 17:57:24.765
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 52704 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--1108485803\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 52704 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--1108485803\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-16 18:24:38.195
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 54539 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--1372875649\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 54539 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--1372875649\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-16 18:45:37.693
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 56344 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--1086245940\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 56344 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--1086245940\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-16 18:49:38.740
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 56722 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--594599787\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 56722 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--594599787\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-16 18:57:10.854
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 57145 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-1063109724\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 57145 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-1063109724\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-16 19:03:22.058
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 57201 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-1128113151\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 57201 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse-1128113151\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-16 19:08:43.222
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 57713 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--1615286069\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 57713 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--1615286069\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-16 19:27:23.859
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar F:\Automation\CustomerSmoke\bin F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 58260 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--1134001897\testng-customsuite.xml
+java -ea -classpath C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng-remote.jar:F:\Automation\CustomerSmoke\bin:F:\Automation\CustomerSmoke\libs\selenium-server-standalone-3.0.0-beta4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\testng.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\jcommander.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\bsh-2.0b4.jar:C:\Users\Sada\Desktop\eclipse\plugins\org.testng.eclipse_6.10.0.201612030230\lib\snakeyaml.jar:F:\Automation\CustomerSmoke\libs\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 58260 -protocol json -d F:\Automation\CustomerSmoke\test-output C:\Users\Sada\AppData\Local\Temp\testng-eclipse--1134001897\testng-customsuite.xml
+!SESSION 2017-03-17 11:25:19.328 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-03-17 11:27:06.069
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Sada'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.

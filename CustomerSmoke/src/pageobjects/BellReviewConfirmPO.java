@@ -4,7 +4,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-public class BellReviewConfirmPO 
+import driver.BaseDriver;
+
+public class BellReviewConfirmPO extends BaseDriver
 {
 	@FindBy(how=How.XPATH,using="//img[@alt='Bell']")
 	public static WebElement BellLogo;
@@ -69,4 +71,12 @@ public class BellReviewConfirmPO
 	@FindBy(how=How.XPATH,using="//a[@value='Cancel']")
 	public static WebElement CancelButton;
 	
+	@FindBy(how=How.XPATH,using="//img[@title='What is IoT']")
+	public static WebElement CancelButtonFindElement;
+	
+	@FindBy(how=How.XPATH,using="//input[@value='Continue']")
+	public static WebElement BillEditFindElement;//to be modified
+
+	@FindBy(how=How.XPATH,using="//input[@value='Continue']")
+	public static WebElement ShipEditFindElement;
 }

@@ -4,7 +4,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-public class BellBillingInfoPO 
+import driver.BaseDriver;
+
+public class BellBillingInfoPO extends BaseDriver
 {
 	@FindBy(how=How.XPATH,using="//img[@alt='Bell']")
 	public static WebElement BellLogo;
@@ -20,6 +22,10 @@ public class BellBillingInfoPO
 	
 	@FindBy(how=How.XPATH,using="//h2")
 	public static WebElement OrderIotHeaderText;
+	//input[@id='smebilling']
+
+	@FindBy(how=How.XPATH,using="//input[@id='smebilling']")
+	public static WebElement SameBillAndShipcheckbox;
 	
 	@FindBy(how=How.XPATH,using="//label[@for='smebilling']")
 	public static WebElement SameBillAndShipLabel;
@@ -36,16 +42,16 @@ public class BellBillingInfoPO
 	@FindBy(how=How.XPATH,using="//div[@class='order-status iot-kit-rc']//span[@class='bl-status']")
 	public static WebElement ReviewConfirmText;
 	
-	@FindBy(how=How.XPATH,using="//form/div[@class='clearfix frm-in-field']//label[text()='Address']")
+	@FindBy(how=How.XPATH,using="//label[@for='namecard']")
 	public static WebElement NameOnCardLabel;
 	
-	@FindBy(how=How.XPATH,using="//form/div[@class='clearfix frm-in-field']//label[text()='Apt/Suite']")
+	@FindBy(how=How.XPATH,using="//label[@for='cardnum']")
 	public static WebElement CardNumberLabel;
 	
-	@FindBy(how=How.XPATH,using="//form/div[@class='clearfix frm-in-field']//label[text()='City']")
+	@FindBy(how=How.XPATH,using="//label[text()='Expiry Date']")
 	public static WebElement ExpiryDateLabel;
 	
-	@FindBy(how=How.XPATH,using="//form/div[@class='clearfix frm-in-field']//label[text()='State/Province']")
+	@FindBy(how=How.XPATH,using="//label[@for='seccode']")
 	public static WebElement CVVCodeLabel;
 	
 	@FindBy(how=How.XPATH,using="//input[@id='namecard']")
@@ -120,9 +126,9 @@ public class BellBillingInfoPO
 	@FindBy(how=How.XPATH,using="//a[text()='Back']")
 	public static WebElement BackButton;
 	
-	@FindBy(how=How.XPATH,using="//div[@id='pscode-error']")// to be modified
-	public static WebElement CancelFindElement;
+	@FindBy(how=How.XPATH,using="//img[@title='What is IoT']")
+	public static WebElement CancelButtonFindElement;
 	
-	@FindBy(how=How.XPATH,using="//div[@id='country-error']")// to be modified
+	@FindBy(how=How.XPATH,using="//input[@value='Continue']")
 	public static WebElement BackFindElement;
 }

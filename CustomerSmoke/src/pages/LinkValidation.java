@@ -14,6 +14,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 
 import java.util.List;
+import java.util.Random;
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 
@@ -35,15 +36,17 @@ public class LinkValidation {
 	
 	public static void main(String[] args) throws InterruptedException
 	{
-		
-		System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
+		System.out.println(""+GenerateRandomNum(5)+"");
+		System.out.println(""+GenerateRandomString(5)+"");
+		System.out.println(""+GenerateRandomAlphaNumeric(10)+"");
+		/*System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
 		driver= new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.get("http://bell.devm2m.com/");
 		Thread.sleep(5000);
 		PageFactory.initElements(driver, BellHomePagePO.class);	
 		LinkValidation.PageNavigationValidation(BellHomePagePO.M2MDotCom, BellHomePagePO.M2MDotComFindElement,"M2M Developer Kits from the World’s Leading Mobile Operators");		
-		
+		*/
 		
 		
 		
@@ -92,7 +95,38 @@ String temp =driver.findElement(By.tagName("body")).getText();
 
 		   
 	}	   
-
+	public static String GenerateRandomNum(int length)
+	{
+		String alphabet =  new String("0123456789"); 
+		int n = alphabet.length(); 
+		String result = new String(); 
+		Random r = new Random(); 
+		for (int i=0; i<length; i++) 
+		result = result + alphabet.charAt(r.nextInt(n));
+		return result;
+	}
+	
+	public static String GenerateRandomString(int length)
+	{
+		String alphabet = new String("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"); //9
+		int n = alphabet.length(); 
+		String result = new String(); 
+		Random r = new Random(); 
+		for (int i=0; i<length; i++) 
+		result = result + alphabet.charAt(r.nextInt(n));
+		return result;
+	}
+	
+	public static String GenerateRandomAlphaNumeric(int length){
+		String alphabet =new String("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"); //9
+		int n = alphabet.length();
+		String result = new String(); 
+		Random r = new Random();
+		for (int i=0; i<length; i++) 
+		result = result + alphabet.charAt(r.nextInt(n));
+		return result;
+		}
+	
 	public static void PageNavigationValidation(WebElement linkbutton,WebElement targetElement, String PageTitile) throws InterruptedException 
 	{
 		System.out.println("The Link button xpath is :"+linkbutton+"");

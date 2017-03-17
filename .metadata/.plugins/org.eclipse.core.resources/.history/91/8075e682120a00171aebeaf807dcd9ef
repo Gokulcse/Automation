@@ -1,0 +1,49 @@
+package pages;
+
+import java.util.Properties;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
+
+import pageobjects.BellOrderSummaryPO;
+import pageobjects.BellReviewConfirmPO;
+import utilitymethods.UtilityMethods;
+import driver.BaseDriver;
+
+public class BellOrderSummary 
+{
+	public static FirefoxDriver driver =BaseDriver.driver;
+	static Properties allInputValue;
+	public static void Start() throws Exception 
+	{
+		allInputValue = UtilityMethods.getBellPropValues();
+		PageFactory.initElements(driver, BellOrderSummaryPO.class);
+	}
+	
+	public static void validateOperatorLogo()
+	{
+		UtilityMethods.DisplayEnableValidator(BellOrderSummaryPO.BellLogo, "NotEqual","Bell Operator Logo in IoT Starter Kit");	
+		UtilityMethods.Imagevalidation(BellOrderSummaryPO.BellLogo,"src",allInputValue.getProperty("bellLogo"),"Bell Operator Logo");		
+		System.out.println("OS001");
+	} 
+	
+	public static void validateCompanyLogo()
+	{	
+		UtilityMethods.DisplayEnableValidator(BellOrderSummaryPO.CiscoLogo, "NotEqual","Cisco Jasper Company Logo in IoT Starter Kit");		
+		UtilityMethods.Imagevalidation(BellOrderSummaryPO.CiscoLogo,"src",allInputValue.getProperty("ciscoLogo"),"Cisco Jasper Company Logo");		
+		System.out.println("OS002");
+	}
+	
+	public static void HeadertextValidation()
+	{
+		UtilityMethods.StringValidation(BellOrderSummaryPO.SectionOneHead1.getText(), "Thank you for your order!", "equalsignorecase");
+		UtilityMethods.StringValidation(BellOrderSummaryPO.SectionOneHead1.getText(), "Thank you for your order!", "equalsignorecase");
+		UtilityMethods.StringValidation(BellOrderSummaryPO.SectionOneHead1.getText(), "Thank you for your order!", "equalsignorecase");
+		UtilityMethods.StringValidation(BellOrderSummaryPO.SectionOneHead1.getText(), "Thank you for your order!", "equalsignorecase");
+
+		
+		System.out.println("OS003");
+	}
+	
+	
+}

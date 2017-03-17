@@ -15,34 +15,35 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 public class BaseDriver {
 
-	public static FirefoxDriver driver;
+	//public static FirefoxDriver driver;
 	
-	//public static InternetExplorerDriver driver;
+	public static InternetExplorerDriver driver;
 	
 	
 	//public static ChromeDriver driver;
 	
 	public static String downloadPath = "F:\\pdf";
-	public static FirefoxDriver launchApp() throws IOException, Exception
+	public static InternetExplorerDriver launchApp() throws IOException, Exception
 	{	
 		
-	/*	System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+ "\\libs\\IEDriverServer.exe");
+		System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+ "\\libs\\IEDriverServer.exe");
 		Thread.sleep(1000);
 		driver = new InternetExplorerDriver();
 	
 	
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ "\\libs\\chromedriver.exe");
+		/*System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ "\\libs\\chromedriver.exe");
 		Thread.sleep(1000);
 		driver = new ChromeDriver();*/
 		
-		System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
+		/*System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
 		Thread.sleep(1000);
-		driver = new FirefoxDriver();
+		driver = new FirefoxDriver();*/
 		
 		Thread.sleep(1000);
 		driver.manage().window().maximize();
 		Thread.sleep(1000);
-		driver.get("http://bell.devm2m.com/bell/home/NiTFUgY3");
+		driver.get("http://bell.devm2m.com/bell/home/GxVI9muT");
+		
 		
 		//driver.get("http://skotni:dkt123@postdevfortesting.devm2m.com/");	 to be used if windows server authentication is used
 	

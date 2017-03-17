@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Properties;
 import java.util.List;
+import java.util.Random;
 import java.io.File;
 
 import org.apache.commons.io.FileUtils;
@@ -21,6 +22,41 @@ import driver.BaseDriver;
 
 public class UtilityMethods extends BaseDriver {
 
+	
+	public static String GenerateRandomNum(int length)
+	{
+		String alphabet =  new String("0123456789"); 
+		int n = alphabet.length(); 
+		String result = new String(); 
+		Random r = new Random(); 
+		for (int i=0; i<length; i++) 
+		result = result + alphabet.charAt(r.nextInt(n));
+		return result;
+	}
+	
+	public static String GenerateRandomString(int length)
+	{
+		String alphabet = new String("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"); //9
+		int n = alphabet.length(); 
+		String result = new String(); 
+		Random r = new Random(); 
+		for (int i=0; i<length; i++) 
+		result = result + alphabet.charAt(r.nextInt(n));
+		return result;
+	}
+	
+	public static String GenerateRandomAlphaNumeric(int length){
+		String alphabet =new String("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"); //9
+		int n = alphabet.length();
+		String result = new String(); 
+		Random r = new Random();
+		for (int i=0; i<length; i++) 
+		result = result + alphabet.charAt(r.nextInt(n));
+		return result;
+		}
+	
+	
+	
 	public static void InputDataValidation(WebElement InputField,String Compare,String fieldType)
 	{
 		switch (fieldType.toLowerCase()) {
@@ -46,20 +82,20 @@ public class UtilityMethods extends BaseDriver {
 	public static void PageNavigationValidation(WebElement Linkbutton,WebElement FindElement, String PageTitile) throws InterruptedException 
 	{
 		driver.navigate().refresh();
-		System.out.println("The Link button xpath is :"+Linkbutton+"");
-		System.out.println("The Find button xpath is :"+FindElement+"");
-		System.out.println(""+ Linkbutton.getAttribute("href"));
-		System.out.println(" The Linkbutton is displayed :"+Linkbutton.isDisplayed()+"");
-		System.out.println(" The Linkbutton is enabled :"+Linkbutton.isEnabled()+"");
+		//System.out.println("The Link button xpath is :"+Linkbutton+"");
+		//System.out.println("The Find button xpath is :"+FindElement+"");
+		//System.out.println(""+ Linkbutton.getAttribute("href"));
+		//System.out.println(" The Linkbutton is displayed :"+Linkbutton.isDisplayed()+"");
+		//System.out.println(" The Linkbutton is enabled :"+Linkbutton.isEnabled()+"");
 		Linkbutton.click();	
-		System.out.println("link button clicked");
+		//System.out.println("link button clicked");
 		Thread.sleep(6000);
 		String parentHandle = driver.getWindowHandle();
 		try {
 		    for(String winHandle : driver.getWindowHandles())
 		    {
 		        driver.switchTo().window(winHandle);
-		        System.out.println("" +driver.getTitle());
+		        //System.out.println("" +driver.getTitle());
 		        if (driver.getTitle().equals(PageTitile))
 			    {
 		        	if(!FindElement.isDisplayed())
@@ -98,7 +134,7 @@ public class UtilityMethods extends BaseDriver {
 			Thread.sleep(3000);
 			driver.navigate().back();
 		}*/
-		
+		Thread.sleep(3000);
 		driver.navigate().back();
 	}
 	public static void howItWorksValidation(WebElement webObj,String str1,String str2,String str3)
@@ -240,15 +276,17 @@ public class UtilityMethods extends BaseDriver {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		PasswordObj.sendKeys(" ");
+		
 		for (String pwd: input.split(","))
 		{
+			PasswordObj.clear();
 			ConfirmPasswordObj.clear();	
+			PasswordObj.sendKeys(pwd);
 			ConfirmPasswordObj.sendKeys(pwd);
 			String ErrorMessage=errorObject.getText();
 			if(!ErrorMessage.equals("Please enter the same value again."))
 			{
-				ScreenShot(driver, ""+PasswordObj.getAttribute("id")+" "+pwd+"");
+				//ScreenShot(driver, ""+PasswordObj.getAttribute("id")+" "+pwd+"");
 				System.out.println("Please enter the same value again. error message is not displayed for input "+pwd+"");
 			}
 		}
@@ -273,7 +311,7 @@ public class UtilityMethods extends BaseDriver {
 			ErrorMessage2= errorObject2.getText();	
 			if((!ErrorMessage1.equals(""))||(!ErrorMessage2.equals("")))
 			{
-			ScreenShot(driver, ""+PasswordObj.getAttribute("id")+" "+pwd+"");
+			//ScreenShot(driver, ""+PasswordObj.getAttribute("id")+" "+pwd+"");
 			System.out.println("The Error Message displayed near password textbox is "+ErrorMessage1+"for input "+pwd+"");
 			System.out.println("The Error Message displayed near Confirmpassword textbox is "+ErrorMessage2+"for input "+pwd+"");
 			}
@@ -411,7 +449,7 @@ public class UtilityMethods extends BaseDriver {
 	public static void SpaceNotAllowedvalidation(WebElement textBoxObject,WebElement errorObject)
 	{
 		textBoxObject.clear();
-		textBoxObject.sendKeys("         ");
+		textBoxObject.sendKeys("    ");
 		String ErrorMessage= errorObject.getText();
 		if(!ErrorMessage.equals("Spaces not allowed before text"))
 		{
@@ -519,6 +557,8 @@ public class UtilityMethods extends BaseDriver {
 			System.out.println("The Placeholder value in "+Result+" Input Field doesn't match.");
 		}	
 	}
+	
+	
 	public static void Imagevalidation(WebElement imgObject,String typeattribute,String value,String Result)
 	{
 		//System.out.println(""+imgObject.getAttribute(typeattribute));
@@ -566,6 +606,15 @@ public class UtilityMethods extends BaseDriver {
 			System.out.println("The String " + stringToCompare +" is not " + value +" to "+ stringBase +" ");
 		}
 	}
+	
+	public static void DisabledValidation(WebElement strObject,String Result)
+	{
+		if (strObject.isEnabled())
+		{
+		System.out.println("The " + Result +" is Enabled");
+		}
+	}
+	
 	public static void DisplayEnableValidator(WebElement strObject, String value, String Result) 
 	{	
 		try {Thread.sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}
@@ -575,7 +624,7 @@ public class UtilityMethods extends BaseDriver {
 		switch(value.toLowerCase())
 		{
 		case "equal":
-			if (strObject.isDisplayed() || strObject.isEnabled())
+			if (strObject.isDisplayed() && strObject.isEnabled())
 			{
 				//ScreenShot(driver,"DisplayEnableValidator "+ Result+"");
 				//Assert.assertEquals(true, strObject.isDisplayed() && strObject.isEnabled());			

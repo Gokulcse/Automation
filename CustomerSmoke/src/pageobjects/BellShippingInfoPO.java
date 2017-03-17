@@ -4,7 +4,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-public class BellShippingInfoPO 
+import driver.BaseDriver;
+
+public class BellShippingInfoPO extends BaseDriver
 {
 	@FindBy(how=How.XPATH,using="//img[@alt='Bell']")
 	public static WebElement BellLogo;

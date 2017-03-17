@@ -3,18 +3,21 @@ package pages;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import driver.BaseDriver;
 import pageobjects.BellShippingInfoPO;
 import pageobjects.BellYourInfoPO;
 import utilitymethods.UtilityMethods;
 
-public class BellShippingInfo 
+public class BellShippingInfo extends BaseDriver
 {
-	public static FirefoxDriver driver ;
+	public static InternetExplorerDriver driver =BaseDriver.driver;
 	static Properties allInputValue;
 	//@BeforeTest
 	public static void Start() throws Exception 
@@ -27,7 +30,9 @@ public class BellShippingInfo
 		PageFactory.initElements(driver, BellShippingInfoPO.class);
 		UtilityMethods.DisplayEnableValidator(BellShippingInfoPO.BellLogo, "NotEqual","Bell Operator Logo in IoT Starter Kit");	
 		UtilityMethods.Imagevalidation(BellShippingInfoPO.BellLogo,"src",allInputValue.getProperty("bellLogo"),"Bell Operator Logo");		
-		System.out.println("TS001");
+		System.out.println("SI001");
+		try {Thread.sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}
+
 	} 
 	
 	public static void validateCompanyLogo()
@@ -35,16 +40,24 @@ public class BellShippingInfo
 		PageFactory.initElements(driver, BellShippingInfoPO.class);
 		UtilityMethods.DisplayEnableValidator(BellShippingInfoPO.CiscoLogo, "NotEqual","Cisco Jasper Company Logo in IoT Starter Kit");		
 		UtilityMethods.Imagevalidation(BellShippingInfoPO.CiscoLogo,"src",allInputValue.getProperty("ciscoLogo"),"Cisco Jasper Company Logo");		
-		System.out.println("TS002");
+		System.out.println("SI002");
+		try {Thread.sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}
+
 	}
 	
 	public static void ShippingInfoTextvalidation()
 	{
 		PageFactory.initElements(driver, BellShippingInfoPO.class);
 		UtilityMethods.StringValidation(BellShippingInfoPO.OrderIotHeaderText.getText(), "Order IoT Starter Kit", "equalsignorecase");
+		UtilityMethods.StringValidation(BellShippingInfoPO.YourInfoText.getText(), "Your Information", "equalsignorecase");
+		UtilityMethods.StringValidation(BellShippingInfoPO.ShppingText.getText(), "Shipping", "equalsignorecase");
+		UtilityMethods.StringValidation(BellShippingInfoPO.PaymentText.getText(), "Payment", "equalsignorecase");
+		UtilityMethods.StringValidation(BellShippingInfoPO.ReviewConfirmText.getText(), "Review & Confirm", "equalsignorecase");
 		UtilityMethods.StringValidation(BellShippingInfoPO.SectionOneHead4.getText(), "Shipping", "equalsignorecase");
 		UtilityMethods.StringValidation(BellShippingInfoPO.ParagraphText.getText(), allInputValue.getProperty("Shipping.SectionOne"), "equalsignorecase");
-		System.out.println("TS003");
+		System.out.println("SI003");
+		try {Thread.sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}
+
 	}
 	public static void shippingInfoLabelText()
 	{
@@ -55,7 +68,9 @@ public class BellShippingInfo
 		UtilityMethods.DisplayEnableValidator(BellShippingInfoPO.ShipProvinceLabel, "NotEqual", "Province Label Text");	
 		UtilityMethods.DisplayEnableValidator(BellShippingInfoPO.ShipPostLabel, "NotEqual", "Postal Code Label Text");	
 		UtilityMethods.DisplayEnableValidator(BellShippingInfoPO.ShipCountryLabel, "NotEqual", "Country Label Text");	
-		System.out.println("TS004");
+		System.out.println("SI004");
+		try {Thread.sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}
+
 	}
 	public static void shippingInfoInputField()
 	{
@@ -66,7 +81,9 @@ public class BellShippingInfo
 		UtilityMethods.DisplayEnableValidator(BellShippingInfoPO.ShipProvinceInput, "NotEqual", "Province Input Field");	
 		UtilityMethods.DisplayEnableValidator(BellShippingInfoPO.ShipPostInput, "NotEqual", "Postal Code Input Field");	
 		UtilityMethods.DisplayEnableValidator(BellShippingInfoPO.ShipCountryInput, "NotEqual", "Country Drop Down");	
-		System.out.println("TS005");
+		System.out.println("SI005");
+		try {Thread.sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}
+
 	}
 	
 	public static void ShippingInfoLinkButton()
@@ -75,67 +92,83 @@ public class BellShippingInfo
 		UtilityMethods.DisplayEnableValidator(BellShippingInfoPO.BackButton, "NotEqual", "Back Button");	
 		UtilityMethods.DisplayEnableValidator(BellShippingInfoPO.ContinueButton, "NotEqual", "Continue Button");	
 		UtilityMethods.DisplayEnableValidator(BellShippingInfoPO.CancelButton, "NotEqual", "Cancel Button");	
-		System.out.println("TS006");
+		System.out.println("SI006");
+		try {Thread.sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}
+
 	}
 	public static void ShippingInfoRequiredFieldvalidatoin()
 	{
 		PageFactory.initElements(driver, BellShippingInfoPO.class);
+		BellShippingInfoPO.ShipAddressInput.clear();
 		BellShippingInfoPO.ContinueButton.click();
+		try {Thread.sleep(3000);} catch (InterruptedException e) {e.printStackTrace();}
 		UtilityMethods.RequiredFieldValidation(BellShippingInfoPO.ShipAddressInput, BellShippingInfoPO.ShipAddressError,"TextBox");
 		UtilityMethods.RequiredFieldValidation(BellShippingInfoPO.ShipCityInput, BellShippingInfoPO.ShipCityError,"TextBox");
 		UtilityMethods.RequiredFieldValidation(BellShippingInfoPO.ShipPostInput, BellShippingInfoPO.ShipPostError,"TextBox");
 
 		UtilityMethods.RequiredFieldShippingDropDown(BellShippingInfoPO.ShipProvinceInput, BellShippingInfoPO.ShipProvinceError);
 		UtilityMethods.RequiredFieldShippingDropDown(BellShippingInfoPO.ShipCountryInput, BellShippingInfoPO.ShipCountryError);
-		System.out.println("TS007");
+		System.out.println("SI007");
+		try {Thread.sleep(2000);} catch (InterruptedException e) {e.printStackTrace();}
 	}
 	public static void ShippingInfoSpaceNotAllowedvalidatoin()
 	{
 		PageFactory.initElements(driver, BellShippingInfoPO.class);
+		BellShippingInfoPO.ShipAddressInput.clear();
 		BellShippingInfoPO.ContinueButton.click();
+		try {Thread.sleep(3000);} catch (InterruptedException e) {e.printStackTrace();}
 		UtilityMethods.SpaceNotAllowedvalidation(BellShippingInfoPO.ShipAddressInput, BellShippingInfoPO.ShipAddressError);
 		UtilityMethods.SpaceNotAllowedvalidation(BellShippingInfoPO.ShipCityInput, BellShippingInfoPO.ShipCityError);
-		UtilityMethods.SpaceNotAllowedvalidation(BellShippingInfoPO.ShipPostInput, BellShippingInfoPO.ShipPostError);
-		System.out.println("TS008");
+		System.out.println("SI008");
+		try {Thread.sleep(2000);} catch (InterruptedException e) {e.printStackTrace();}
 	}
 	
 	public static void ShippingInfoMaximumInputValidation()
 	 {
-		PageFactory.initElements(driver, BellShippingInfoPO.class);BellShippingInfoPO.ContinueButton.click();
-        UtilityMethods.MaximumInputValidation(BellShippingInfoPO.ShipAddressInput, BellShippingInfoPO.ShipAddressError,100, allInputValue.getProperty("InvalidCity"));
+		PageFactory.initElements(driver, BellShippingInfoPO.class);
+		BellShippingInfoPO.ShipAddressInput.clear();
+		BellShippingInfoPO.ContinueButton.click();
+		try {Thread.sleep(3000);} catch (InterruptedException e) {e.printStackTrace();}
+		UtilityMethods.MaximumInputValidation(BellShippingInfoPO.ShipAddressInput, BellShippingInfoPO.ShipAddressError,100, allInputValue.getProperty("InvalidCity"));
         UtilityMethods.MaximumInputValidation(BellShippingInfoPO.ShipCityInput, BellShippingInfoPO.ShipCityError, 100, allInputValue.getProperty("InvalidCity")); 
         //UtilityMethods.MaximumInputValidation(driver.findElement(By.xpath("//input[@name='shipAddress.zipPostalCode']")), driver.findElement(By.xpath("//div[@id=''pscode-error']")), 6, allInputValue.getProperty("InvalidCompanyName"));
         //postal Code Maximum Input validation need to be verified 	 
-        System.out.println("TS009");
+        System.out.println("SI009");
+        try {Thread.sleep(2000);} catch (InterruptedException e) {e.printStackTrace();}
 	 }
 	public static void  ShippingInfoMinimumInputValidation()
 	{
 		PageFactory.initElements(driver, BellShippingInfoPO.class);
+		BellShippingInfoPO.ShipAddressInput.clear();
 		BellShippingInfoPO.ContinueButton.click();
-		UtilityMethods.MinimumInputValidation(BellShippingInfoPO.ShipProvinceInput, BellShippingInfoPO.ShipProvinceError, 2, allInputValue.getProperty("InvalidMinInput"));
-        UtilityMethods.MinimumInputValidation(BellShippingInfoPO.ShipPostInput,BellShippingInfoPO.ShipPostError, 3, allInputValue.getProperty("InvalidMinInput"));    	 
-        System.out.println("TS010");
+		try {Thread.sleep(3000);} catch (InterruptedException e) {e.printStackTrace();}
+        UtilityMethods.MinimumInputValidation(BellShippingInfoPO.ShipPostInput,BellShippingInfoPO.ShipPostError, 6, allInputValue.getProperty("InvalidMinInput"));    	 
+        System.out.println("SI010");
+        try {Thread.sleep(2000);} catch (InterruptedException e) {e.printStackTrace();}
 	}
 	
-	public static void BellLogoValidation() throws InterruptedException
+	public static void ShippingBellLogoValidation() throws InterruptedException
 	{
 		PageFactory.initElements(driver, BellShippingInfoPO.class);
 		UtilityMethods.pageRedirection(BellShippingInfoPO.BellLogo, BellShippingInfoPO.CancelButtonFindElement,"Others");
-		System.out.println("TS011");
+		System.out.println("SI011");
+		try {Thread.sleep(2000);} catch (InterruptedException e) {e.printStackTrace();}
 	}
 	
-	public static void CancelButtonValidation() throws InterruptedException
+	public static void ShippingCancelButtonValidation() throws InterruptedException
 	{
 		PageFactory.initElements(driver, BellShippingInfoPO.class);
 		UtilityMethods.pageRedirection(BellShippingInfoPO.CancelButton, BellShippingInfoPO.CancelButtonFindElement,"Others");
-		System.out.println("TS012");
+		System.out.println("SI012");
+		try {Thread.sleep(2000);} catch (InterruptedException e) {e.printStackTrace();}
 	}
 	
-	public static void BackButtonValidation() throws InterruptedException
+	public static void ShippingBackButtonValidation() throws InterruptedException
 	{
 		PageFactory.initElements(driver, BellShippingInfoPO.class);
 		UtilityMethods.pageRedirection(BellShippingInfoPO.BackButton, BellShippingInfoPO.BackFindElement,"Others");
-		System.out.println("TS013");
+		System.out.println("SI013");
+		try {Thread.sleep(2000);} catch (InterruptedException e) {e.printStackTrace();}
 	}
 	
 	public static void ShippingInfoSendInputs()
@@ -154,7 +187,7 @@ public class BellShippingInfo
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println("TS014");
+		System.out.println("SI014");
 	}
 	
 }
