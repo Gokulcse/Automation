@@ -210,7 +210,7 @@ public class BellYourInfoPO
 	@FindBy(how=How.XPATH,using="//a[@class='btn btn-default']")
 	public static WebElement CloseButton;
 	
-	@FindBy(how=How.XPATH,using="//div[@id='terms']//a/img")
+	@FindBy(how=How.XPATH,using="//div[@id='terms']//a")
 	public static WebElement TermsOfServicesDownload;
 	
 }

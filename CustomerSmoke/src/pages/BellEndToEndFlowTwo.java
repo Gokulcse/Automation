@@ -10,11 +10,12 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import utilitymethods.UtilityMethods;
 import driver.BaseDriver;
 
 public class BellEndToEndFlowTwo extends BaseDriver
 {
-	public static InternetExplorerDriver driver;
+	public static FirefoxDriver driver;
 	static Properties allInputValue;
 
 	@BeforeTest
@@ -53,8 +54,9 @@ public class BellEndToEndFlowTwo extends BaseDriver
 		BellControlCenter.CCUserNameMinMaxValidation();
 	}
 	
-	@Test(priority=6)
-	public static void CCPasswordValidation()
+	@Test(priority=6)	
+	public static void CCPasswordValidation()		
+	
 	{
 		BellControlCenter.CCPasswordValidation();
 	}
@@ -69,9 +71,9 @@ public class BellEndToEndFlowTwo extends BaseDriver
 	public static void referralRequestDataValidation()
 	{
 		driver.navigate().refresh();
-		try {Thread.sleep(4000);} catch (InterruptedException e) {e.printStackTrace();}
+		UtilityMethods.sleep(4000);
 		try {BellYourInfo.intial();} catch (IOException e) {e.printStackTrace();}
-		try {Thread.sleep(2000);} catch (InterruptedException e) {e.printStackTrace();}
+		UtilityMethods.sleep(2000);
 		BellYourInfo.referralRequestDataValidation();
 	}
 	
@@ -93,10 +95,10 @@ public class BellEndToEndFlowTwo extends BaseDriver
 		BellYourInfo.TermsOfServicePopUpCloseButton();
 	}
 	
-	//@Test(priority=12)
+	@Test(priority=12)
 	public static void TermsOfServicePDFDownload() throws AWTException
 	{
-		//BellYourInfo.TermsOfServicePDFDownload();
+		BellYourInfo.TermsOfServicePDFDownload();
 	}
 	
 	@Test(priority=13)
@@ -114,11 +116,7 @@ public class BellEndToEndFlowTwo extends BaseDriver
 	@Test(priority=15)
 	public static void YourInfoTextValiadtion()
 	{
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+		UtilityMethods.sleep(2000);
 		BellYourInfo.ReferralRequestTextValidation();
 	}
 	
@@ -131,11 +129,7 @@ public class BellEndToEndFlowTwo extends BaseDriver
 	@Test(priority=17)
 	public static void YourInfoLabelDisplayedAndEnabled()
 	{
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+		UtilityMethods.sleep(2000);
 		BellYourInfo.RequestReferralCodeLabelTextDisplayedAndEnabled();
 	}
 
@@ -203,17 +197,17 @@ public class BellEndToEndFlowTwo extends BaseDriver
 	public static void YourInfocontinueButton() throws InterruptedException, IOException
 	{
 		BellYourInfo.RequestButtonValidation();
-		try {Thread.sleep(4000);} catch (InterruptedException e) {e.printStackTrace();}
+		UtilityMethods.sleep(4000);
 	}
 	
 	@Test(priority=30)
 	public static void ShippingInfovalidateOperatorLogo() throws Exception
 	{	
 		driver.navigate().refresh();
- 		try {Thread.sleep(4000);} catch (InterruptedException e) {e.printStackTrace();}
+		UtilityMethods.sleep(4000);
 		try {BellShippingInfo.Start();} catch (IOException e) {e.printStackTrace();}
 		//driver.navigate().refresh();
-		try {Thread.sleep(5000);} catch (InterruptedException e) {e.printStackTrace();}
+		UtilityMethods.sleep(5000);
 		BellShippingInfo.validateOperatorLogo();
 	} 
 	
@@ -298,9 +292,9 @@ public class BellEndToEndFlowTwo extends BaseDriver
 	@Test(priority=44)
 	public static void BillingInfovalidateOperatorLogo()
 	{	
-		try {Thread.sleep(4000);} catch (InterruptedException e) {e.printStackTrace();}
+		UtilityMethods.sleep(4000);
 		try {BellBillingInfo.Start();} catch (Exception e) {e.printStackTrace();}
-		try {Thread.sleep(2000);} catch (InterruptedException e) {e.printStackTrace();}
+		UtilityMethods.sleep(2000);
 		BellBillingInfo.validateOperatorLogo();
 		
 	} 
@@ -403,13 +397,8 @@ public class BellEndToEndFlowTwo extends BaseDriver
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		try {
-			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+		UtilityMethods.sleep(4000);
 		BellReviewConfirm.validateOperatorLogo();
-		
 	} 
 	
 	@Test(priority=61)
@@ -475,9 +464,9 @@ public class BellEndToEndFlowTwo extends BaseDriver
 	@Test(priority=71)
 	public static void OrderSummaryBellLogo()
 	{
-		try {Thread.sleep(4000);} catch (InterruptedException e) {e.printStackTrace();}
+		UtilityMethods.sleep(4000);
 		try {BellOrderSummary.Start();} catch (Exception e) {e.printStackTrace();}
-		try {Thread.sleep(2000);} catch (InterruptedException e) {e.printStackTrace();}
+		UtilityMethods.sleep(4000);
 		BellOrderSummary.validateOperatorLogo();
 	}
 	

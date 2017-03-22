@@ -1,0 +1,28 @@
+package driver;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+public class Test {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+ "\\libs\\IEDriverServer.exe");
+		InternetExplorerDriver driver = new InternetExplorerDriver();
+        driver.navigate().to("https://www.spotify.com/se/download/windows/");
+        driver.get("https://java.com/en/download/win8.jsp");
+		driver.findElementByXPath("html/body/div[2]/div[1]/div/div[2]/a/span").click();
+
+        Thread.Sleep(2000);
+        SendKeys.SendWait("@{TAB}"); Thread.Sleep(100);
+        SendKeys.SendWait("@{TAB}"); Thread.Sleep(100);
+        SendKeys.SendWait("@{DOWN}"); Thread.Sleep(100);
+        SendKeys.SendWait("@{DOWN}"); Thread.Sleep(100);
+        SendKeys.SendWait("@{Enter}");
+		
+}
+
+}

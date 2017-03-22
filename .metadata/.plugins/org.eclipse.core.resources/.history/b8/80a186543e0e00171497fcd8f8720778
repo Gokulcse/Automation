@@ -1,0 +1,21 @@
+package driver;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
+		Thread.sleep(1000);
+		 FirefoxProfile profile = new FirefoxProfile();
+		 profile.setPreference("browser.download.folderList", 2);
+		 profile.setPreference("browser.download.dir", "F:\\pdf");
+		 profile.setPreference("browser.helperApps.alwaysAsk.force", false);
+		 FirefoxDriver driver = new FirefoxDriver(profile);
+		 driver.get("https://java.com/en/download/win8.jsp");
+		 driver.findElementByXPath("html/body/div[2]/div[1]/div/div[2]/a/span").click();
+	}
+
+}

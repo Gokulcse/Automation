@@ -36,9 +36,12 @@ public class LinkValidation {
 	
 	public static void main(String[] args) throws InterruptedException
 	{
+		
+		
+		/*
 		System.out.println(""+GenerateRandomNum(5)+"");
 		System.out.println(""+GenerateRandomString(5)+"");
-		System.out.println(""+GenerateRandomAlphaNumeric(10)+"");
+		System.out.println(""+GenerateRandomAlphaNumeric(10)+"");*/
 		/*System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
 		driver= new FirefoxDriver();
 		driver.manage().window().maximize();

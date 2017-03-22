@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.relevantcodes.extentreports.LogStatus"/>
-<fullyQualifiedTypeName name="org.testng.Assert"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
-<fullyQualifiedTypeName name="com.sun.jna.platform.win32.Netapi32Util.User"/>
-<fullyQualifiedTypeName name="java.io.PrintWriter"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="pageobjects.PostShippingInfoPO"/>
 <fullyQualifiedTypeName name="java.lang.Runtime"/>
 <fullyQualifiedTypeName name="org.omg.SendingContext.RunTime"/>
 <fullyQualifiedTypeName name="pageobjects.PostHomePagePO"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.remote.DesiredCapabilities"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.NoAlertPresentException"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.Alert"/>
@@ -29,13 +23,11 @@
 <fullyQualifiedTypeName name="org.testng.annotations.AfterTest"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.Keys"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.firefox.FirefoxDriver"/>
 <fullyQualifiedTypeName name="pages.BellControlCenter"/>
 <fullyQualifiedTypeName name="org.testng.annotations.Test"/>
 <fullyQualifiedTypeName name="org.testng.annotations.BeforeTest"/>
 <fullyQualifiedTypeName name="com.sun.glass.ui.Robot"/>
 <fullyQualifiedTypeName name="com.sun.glass.events.KeyEvent"/>
-<fullyQualifiedTypeName name="java.awt.Robot"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.firefox.FirefoxProfile"/>
 <fullyQualifiedTypeName name="javafx.scene.control.Alert"/>
 <fullyQualifiedTypeName name="pageobjects.BellReferralRequestPO"/>
@@ -47,7 +39,6 @@
 <fullyQualifiedTypeName name="pages.BellBillingInfo"/>
 <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
 <fullyQualifiedTypeName name="java.io.FileInputStream"/>
-<fullyQualifiedTypeName name="java.lang.Thread"/>
 <fullyQualifiedTypeName name="pageobjects.BellYourInfoPO"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
 <fullyQualifiedTypeName name="pageobjects.BellBillingInfoPO"/>
@@ -56,8 +47,17 @@
 <fullyQualifiedTypeName name="pageobjects.BellReviewConfirmPO"/>
 <fullyQualifiedTypeName name="pages.BellReviewConfirm"/>
 <fullyQualifiedTypeName name="driver.BaseDriver"/>
-<fullyQualifiedTypeName name="utilitymethods.UtilityMethods"/>
 <fullyQualifiedTypeName name="pages.BellOrderSummary"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeDriver"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.ie.InternetExplorerDriver"/>
+<fullyQualifiedTypeName name="utilitymethods.UtilityMethods"/>
+<fullyQualifiedTypeName name="Testing.TestBroswer"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.firefox.FirefoxDriver"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.remote.DesiredCapabilities"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.remote.CapabilityType"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.remote.server.handler.SendKeys"/>
+<fullyQualifiedTypeName name="java.awt.Robot"/>
+<fullyQualifiedTypeName name="java.awt.AWTException"/>
+<fullyQualifiedTypeName name="java.awt.event.KeyEvent"/>
 </qualifiedTypeNameHistroy>

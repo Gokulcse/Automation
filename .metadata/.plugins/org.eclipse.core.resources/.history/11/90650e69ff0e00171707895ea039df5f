@@ -1,0 +1,139 @@
+Broswer=IE
+BaseURl=http://bell.devm2m.com/
+
+bellLogo=http://bell.devm2m.com/img/bell/bell-logo.png
+ciscoLogo=http://bell.devm2m.com/img/bell/jasper-logo.png
+bellBanner=http://bell.devm2m.com/img/bell/bellbanner2.jpg
+bellSimIcon=http://bell.devm2m.com/img/bell/icons/sim.png
+bellToolIcon=http://bell.devm2m.com/img/bell/icons/tools.png
+bellCenterIcon=http://bell.devm2m.com/img/bell/icons/access.png
+bellSupportIcon=http://bell.devm2m.com/img/bell/icons/support.png
+whatIsIot=http://bell.devm2m.com/img/bell/whatisiot.png
+lTEIcon=http://bell.devm2m.com/img/bell/4gLTE.jpg
+partnerIcon=http://bell.devm2m.com/img/bell/hardwaresol.jpg
+endToEndIcon=http://bell.devm2m.com/img/bell/experts.jpg
+
+sectionOneH1=Discover Internet Of Things from Bell.
+sectionOneH3=IoT Starter Kit
+sectionOneP1=Growth opportunities are everywhere, and IoT technologies from Bell can help you uncover them.
+sectionOneP2=To order a kit that includes 3 test SIM cards (retail value: $199) you must have a referral code.
+       
+whatTheKitIncludesSimh1=3 SIMS
+whatTheKitIncludesSimh2=30 MB/SIM
+whatTheKitIncludesSimh3=50 SMS
+whatTheKitIncludesSimh4=$199
+
+whatTheKitIncludesSimp1=with Bell Connectivity
+whatTheKitIncludesSimp2=per month for 3 months
+whatTheKitIncludesSimp3=messages per SIM per month
+
+whatTheKitIncludesToolc1=Real-Time Testing Tool
+whatTheKitIncludesToolc2=Test-as-you-build for fast, quality development
+whatTheKitIncludesToolc3=Visibility into device and network behavior
+whatTheKitIncludesToolc4=Diagnostics and troubleshooting help
+
+whatTheKitIncludescenterc1=Full Access to Control Centre
+whatTheKitIncludescenterc2=Complete suite of developer tools
+whatTheKitIncludescenterc3=User logins for everyone on your team
+whatTheKitIncludescenterc4=Same environment for testing and deployment
+
+whatTheKitIncludesSupportc1=Exceptional Developer Support
+whatTheKitIncludesSupportc2=Developer guidelines and M2M.com forum
+whatTheKitIncludesSupportc3=Access to APIs
+whatTheKitIncludesSupportc4=Accelerated device certification
+
+pleaseNote=Please note: You must be using a Bell certified device or module to order the IoT starter kit. The IoT starter kit is currently not available outside of Canada.
+
+howItWorksText1=Place an order for your IoT Starter Kit (retail value: $199) using your referral code.
+howItWorksText2=Receive access credentials to the Bell Control Centre platform to manage device connectivity.
+howItWorksText3=Install your SIMs in your test devices and use Control Centre to connect them to Bell's network and your IoT applications.
+howItWorksText4=After completing your tests, you are now ready to launch your connected device services with Bell on Canada\u2019s fastest network.
+                                                  
+whatIsIoTP1=Internet of Things (IoT) enables machines and devices to talk to each other directly or through a cloud solution in order to deliver actionable data quickly. Achieve business success with IoT and transform your business.
+
+withBellH3=You get more with Bell
+withBellp1=With Canada's largest LTE network*, your business is covered from coast to coast. We also work with a robust network of IoT partners and hardware providers to meet your unique business needs.
+withBellp2=With the largest support team in Canada, Bell has more than 3,000 certified professionals ready to help you design, implement and manage an IoT solution that best fits your needs, all backed by 24/7 bilingual support.
+
+lTEnetworkH3=1. Dependable coverage with Canada's largest LTE network
+lTEnetworkp1=With Canada's largest LTE network, Bell covers over 32 million Canadians from coast to coast ensuring you can stay connected to your business, employees and customers wherever you are.
+
+partnersH3=2. A network of partners to address your needs
+partnersP1=We work closely with a robust network of partners to provide the full range of IoT solutions.
+
+endToEndH3=3. Expertise from end-to-end to help you stay connected
+endToEndP1=Our professionals and solution experts are focused on providing you with tailor-made IoT solutions that fit your unique business needs.
+
+ReferralRequestSectionOne=We look forward to assisting you with an IoT Starter Kit. Please fill out the form below and a Bell representative will get back to you within 10 business days.
+ReferralRequestLegaltext=Legal disclaimers: (*) Based on total sq KMs on the shared LTE network from Bell vs. Rogers\u2019 LTE network; bell.ca/LTE
+referralrequestCheckBox=By checking here, you are providing consent for Bell to send you communications via electronic means, which will include information we think may be of interest to you about Bell's products and services and the products and services of our marketing partners. If at any time you wish to stop getting communications, visit bell.ca/communicationpreferences.
+
+FirstName=Gokul
+LastName=Ramanan
+CompanyName=Testing Team 11.1
+Position=Testing
+PhoneNumber=8220119412
+E-mailAddress=automateselenium1@gmail.com
+ModuleData=Testing Module
+BusinessType=Finance - ATM
+SimType=Nano SIM
+TimeFrame=6-12 months
+VolumeToDeploy=111
+Description=Test Data
+
+ReferralRequestThankYouPara=An e-mail has been sent to you to confirm your request has been received. You will receive a response within 10 business days.
+TermsOfService=Confirm your review & acceptance of Terms of Service.
+
+ccUserName=Test78User34
+ccPassword=Test78User34
+ccConfirmPassword=Test78User34
+
+Shipping.SectionOne=Please provide us with the details of your shipping address. Once your order has been completed, your IoT Starter Kit will be shipped to you at no charge.
+
+sameShippBillAddress=Yes
+
+shippingAddress1=shippingAddress1
+shippingAddress2=shippingAddress2
+ShippingCity=ShippingCity
+ShippingState=BC-British Columbia
+ShippingPostalCode=BELL54
+ShippingCountry=Canada
+
+shippindAddress=shippingAddress1 shippingAddress2 ShippingCity British Columbia BELL54 Canada
+
+billingAddress1=billingAddress1
+billingAddress2=billingAddress2
+billingCity=billingCity
+billingState=ON-Ontario
+billingPostalCode=BELL23
+billingCountry=Canada
+
+billingAddress=billingAddress1 billingAddress2 billingCity Ontario BELL23 Canada
+
+Billing.SectionOne=We are pleased to offer you the IoT Starter Kit as a complimentary offer (retail value: $199) and no payment details will be necessary.
+Shipping.BillandShip=My shipping and billing information are the same.
+
+TrackOrder.validTrackOrderEmailID=gokularamanancse@gmail.com
+TrackOrder.InvalidTrackOrderEmailID=gokularamanan@ctela.com
+
+ValidFirstName=a,abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrs,abcdef123456,12345,123!@#$,xyx,new
+ValidLastName=a,abcdefghijklmnopqrstuvwxyzabcdefghijkl,abcdef123456,12345,123!@#$,xyx,new
+ValidCompanyName=abc,abcdef,abcdef123456,abce123!@#,abcdef!@#$%,abcdefghijklmnopqrstuvwx,abcdefghijklmnopqrs
+ValidPosition=a,abc,abcdef,abcdef123456,abce123!@#,abcdef!@#$%,abcdefghijklmnopqrstuvwx,abcdefghijklmnopqrstuvw
+ValidPhoneNumber=01234567890,1234567890123,12345678901234
+ValidEmailId=abc@gmail.com,abc@yahoo.com,abc@yahoo.co.in,abc@ctela.in,abc@rmkec.ac.in,abc_123@gmail.com
+ValidModule=a,abcd,abcedf,abcefd1234,12345abcdef,abcde123!@#$,12345
+ValidVolumeToDeploy=0,1,11,123,1234,12345,123456
+ValidDescription=a,abc,abcd,abcdefghijklmnopqrstuvwxyz,abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+
+InvalidInput=abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwx,abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxy
+InvalidCompanyName=abcdefghijklmnopqrstuvwxyz,abcdefghijklmnopqrstuvwxyza
+Invalidphonenumber=1234567890123456789012345678,12345678901234567121323132156465
+InvalidDescription=abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvw
+InvalidMinInput=a,ab,abcde,abcd
+InvalidMinphonenumber=1,123,123456,123456789
+InvalidEmailID=abc@.com,#@%^%#$@#$@#.com,email.example.com,Abc..123@example.com
+InvalidPhoneNumber=12356.97401,-985263.251,#@$#$@^$^&@$@$^&$@#$^&,#$#%^dfddf2435
+InvadildNumbericField=abc,abc123,abc12!,12356.974,-5263.251,#@$#$@^$^&@$@$^&$@#$^&,#$#%^dfddf2435
+
+InvalidCity=abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvw

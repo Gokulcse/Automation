@@ -87,9 +87,10 @@ public class UtilityMethods extends BaseDriver {
 		//System.out.println(""+ Linkbutton.getAttribute("href"));
 		//System.out.println(" The Linkbutton is displayed :"+Linkbutton.isDisplayed()+"");
 		//System.out.println(" The Linkbutton is enabled :"+Linkbutton.isEnabled()+"");
+		sleep(4000);
 		Linkbutton.click();	
 		//System.out.println("link button clicked");
-		Thread.sleep(6000);
+		sleep(5000);
 		String parentHandle = driver.getWindowHandle();
 		try {
 		    for(String winHandle : driver.getWindowHandles())
@@ -121,9 +122,9 @@ public class UtilityMethods extends BaseDriver {
 	public static void pageRedirection(WebElement Linkbutton,WebElement FindElement,String PageName) throws InterruptedException
 	{
 	//	driver.navigate().refresh();
-		Thread.sleep(3000);
+		sleep(5000);
 		Linkbutton.click();
-		Thread.sleep(3000);
+		sleep(5000);
 		driver.navigate().refresh();
 		if(!FindElement.isDisplayed())
     	{
@@ -131,10 +132,10 @@ public class UtilityMethods extends BaseDriver {
     	}
 		/*if(!PageName.equals("HomePage"))
 		{
-			Thread.sleep(3000);
+			sleep(6000);
 			driver.navigate().back();
 		}*/
-		Thread.sleep(3000);
+		sleep(5000);
 		driver.navigate().back();
 	}
 	public static void howItWorksValidation(WebElement webObj,String str1,String str2,String str3)
@@ -159,7 +160,7 @@ public class UtilityMethods extends BaseDriver {
 	public static void sectionOneLinkvalidation(WebElement webObj) throws Exception
 	{
 		webObj.click();
-		Thread.sleep(1000);
+		sleep(1000);
 		if(!webObj.getAttribute("class").equals("active"))
 		{
 			System.out.println("There is error in link validation "+webObj.getText()+"");
@@ -205,15 +206,15 @@ public class UtilityMethods extends BaseDriver {
 	{
 		for (String retval: Input.split(","))
 		{
-			try {Thread.sleep(2500);}catch (InterruptedException e) {e.printStackTrace();}
+			sleep(2500);
 			System.out.println("The Valid Email Id Is"+retval);
 		//	driver.findElement(By.xpath("//div[@class='bl-val-chnge pb25']/a[text()='Track Order']")).click();
 			Button1.click();
-			try {Thread.sleep(2500);}catch (InterruptedException e) {e.printStackTrace();}
+			sleep(2500);
 			InputElement.clear();
 			InputElement.sendKeys(retval);
 			Button2.click();
-			try {Thread.sleep(2500);}catch (InterruptedException e) {e.printStackTrace();}
+			sleep(2500);
 			//UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//div[@class='text-center']/a")), "NotEquals", "page navigation Error");
 			driver.navigate().back();
 		}	
@@ -221,29 +222,43 @@ public class UtilityMethods extends BaseDriver {
 	
 	public static void SendInputValues(WebElement webObject,String Input,String type)
 	{
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		switch (type.toLowerCase()) {
+		
+		switch (type.toLowerCase()) 
+		{
 		case "textbox":
 			webObject.clear();
+			sleep(1000);
 			webObject.sendKeys(Input);
 			break;
 		case "dropdown":
+			sleep(1000);
 			Select DropDown = new Select(webObject);
 			DropDown.selectByVisibleText(Input);
 			break;
 		case "radiobutton":
+			sleep(1000);
 			webObject.click();
 			break;
 		case "checkbox":
+			sleep(1000);
 			webObject.click();
 			break;	
 		}
+		sleep(1000);
 	}
+	
+	public static void sleep(long milliseconds)
+	{
+		try 
+		{
+			Thread.sleep(milliseconds);
+		} 
+		catch (InterruptedException e) 
+		{
+			e.printStackTrace();
+		}
+	}
+	
 	
 	public static void NumericFieldValidation(WebElement numericFieldObject,WebElement errorObject,String Input)
 	{
@@ -270,13 +285,7 @@ public class UtilityMethods extends BaseDriver {
 	
 	public static void CCConfirmPasswordValidation(WebElement PasswordObj,WebElement ConfirmPasswordObj,WebElement errorObject,String input)
 	{
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
+		sleep(1000);
 		for (String pwd: input.split(","))
 		{
 			PasswordObj.clear();
@@ -294,15 +303,11 @@ public class UtilityMethods extends BaseDriver {
 	
 	public static void CCPasswordAndConfirmPasswordValidation(WebElement PasswordObj,WebElement ConfirmPasswordObj,WebElement errorObject1,WebElement errorObject2,String Passwordinput)
 	{
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		sleep(1000);
 		String ErrorMessage1 = null,ErrorMessage2 = null;
 		for (String pwd: Passwordinput.split(","))
 		{
+			
 			PasswordObj.clear();
 			ConfirmPasswordObj.clear(); 
 			PasswordObj.sendKeys(pwd);
@@ -320,12 +325,8 @@ public class UtilityMethods extends BaseDriver {
 	
 	public static void ControlCenterPasswordValidation(WebElement textBoxObject,WebElement errorObject,String input)
 	{
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		sleep(1000);
+		
 		for (String retval: input.split(","))
 		{
 			textBoxObject.clear();
@@ -341,13 +342,9 @@ public class UtilityMethods extends BaseDriver {
 	
 	public static void ControlCenterRequiredFieldValidation(WebElement textBoxObject,WebElement errorObject,String Type)
 	{
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 		textBoxObject.clear();
+		sleep(2000);
 		String ErrorMessage= errorObject.getText();
 		if(!ErrorMessage.equals("Please enter "+Type+""))
 		{
@@ -360,9 +357,9 @@ public class UtilityMethods extends BaseDriver {
 	{
 		textBoxObject.clear();
 		String ErrorMessage= errorObject.getText();
-		if(!ErrorMessage.equals("Invalid Referral Code"))
+		if(!ErrorMessage.equals("Please enter Referral Code"))
 		{
-		 	System.out.println("Invalid Referral Code Error Message is Not Displayed");	
+		 	System.out.println("Please enter Referral Code Error Message is Not Displayed");	
 		}
 	}
 	
@@ -413,6 +410,7 @@ public class UtilityMethods extends BaseDriver {
 	{
 		for (String retval: Input.split(","))
 		{
+			sleep(1000);
 			textBoxObject.clear();
 			textBoxObject.sendKeys(retval);
 			String ErrorMessage= errorObject.getText();
@@ -427,14 +425,9 @@ public class UtilityMethods extends BaseDriver {
 	
 	public static void MinimumInputValidation(WebElement textBoxObject,WebElement errorObject,int Minimumvalue,String Input)
 	{
-		try {
-		Thread.sleep(1000);
-	} catch (InterruptedException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
 		for (String retval: Input.split(","))
 		{
+			sleep(1000);
 			textBoxObject.clear();
 			textBoxObject.sendKeys(retval);
 			String ErrorMessage= errorObject.getText();
@@ -584,7 +577,7 @@ public class UtilityMethods extends BaseDriver {
 	}
 	public static void StringValidation(String stringBase, String stringToCompare,String value)
 	{
-		try {Thread.sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}
+		sleep(1000);
 		boolean result = true;
 		switch(value.toLowerCase())
 		{
@@ -617,7 +610,7 @@ public class UtilityMethods extends BaseDriver {
 	
 	public static void DisplayEnableValidator(WebElement strObject, String value, String Result) 
 	{	
-		try {Thread.sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}
+		sleep(1000);
 		//System.out.println(" The "+Result+" is displayed :"+strObject.isDisplayed()+"");
 		//System.out.println(" The "+Result+" is enabled :"+strObject.isEnabled()+"");
 		//System.out.println(""+strObject);
@@ -646,7 +639,7 @@ public class UtilityMethods extends BaseDriver {
 	{
 		try 
 		{
-			Thread.sleep(1200);
+			sleep(1200);
 			Calendar currentDate = Calendar.getInstance();
 	        SimpleDateFormat formatter = new SimpleDateFormat("yyyy/MMM/dd HH:mm:ss");
 	        String dateN = formatter.format(currentDate.getTime()).replace("/","_");

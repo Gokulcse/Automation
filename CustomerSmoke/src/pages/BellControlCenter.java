@@ -11,10 +11,11 @@ import org.testng.annotations.BeforeTest;
 import pageobjects.BellControlCenterPO;
 import driver.BaseDriver;
 import utilitymethods.UtilityMethods;
+import pages.EmailIntegration;
 
 public class BellControlCenter extends BaseDriver
 {
-	public static InternetExplorerDriver driver;
+	public static FirefoxDriver driver;
 	static Properties allInputValue;
 	
 	
@@ -27,9 +28,9 @@ public class BellControlCenter extends BaseDriver
 		PageFactory.initElements(driver, BellControlCenterPO.class);	
 	}*/
 	//@BeforeTest
-	public static InternetExplorerDriver start() throws Exception
+	public static FirefoxDriver start() throws Exception
 	{	 
-		driver = launchApp();
+		driver = launchApp(EmailIntegration.ccURL());
 		allInputValue = UtilityMethods.getBellPropValues();
 		String myWindowHandle = driver.getWindowHandle();
 		driver.switchTo().window(myWindowHandle);
@@ -46,7 +47,7 @@ public class BellControlCenter extends BaseDriver
 		UtilityMethods.DisplayEnableValidator(BellControlCenterPO.CreateButton, "NotEqual", "Control Center Create link button");
 		//UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//button")), "NotEqual", "Control Center Close icon");
 		System.out.println("CC001");
-		try {Thread.sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}
+		UtilityMethods.sleep(2000);
 	}
 	
 	//@Test(priority=2)
@@ -61,7 +62,7 @@ public class BellControlCenter extends BaseDriver
 		UtilityMethods.StringValidation(BellControlCenterPO.UserNamePara.getText(), "6-25 letters and/or numbers, no spaces", "equalsignorecase");
 		UtilityMethods.StringValidation(BellControlCenterPO.PasswordPara.getText(), "Include at least 8 characters with at least two numbers and one upper case letter.", "equalsignorecase");
 		System.out.println("CC002");
-		try {Thread.sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}
+		UtilityMethods.sleep(2000);
 	}
 	
 	//@Test(priority=3)
@@ -72,30 +73,35 @@ public class BellControlCenter extends BaseDriver
 		UtilityMethods.PlaceholderValidation(BellControlCenterPO.PasswordInput, "Create a password", "password Input Field");
 		UtilityMethods.PlaceholderValidation(BellControlCenterPO.ConfirmPasswordInput, "", "Confirm password Input Field");
 		System.out.println("CC003");
-		try {Thread.sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}
+		UtilityMethods.sleep(4000);
 	}
 	
 	//@Test(priority=4)
 	public static void CCRequiredFieldValidation()
 	{
 		PageFactory.initElements(driver, BellControlCenterPO.class);	
+		UtilityMethods.sleep(3000);
 		BellControlCenterPO.CreateButton.click();
-		try {Thread.sleep(3000);} catch (InterruptedException e) {e.printStackTrace();}
+		UtilityMethods.sleep(3000);
 		UtilityMethods.ControlCenterRequiredFieldValidation(BellControlCenterPO.UserNameInput,BellControlCenterPO.UserNameError, "Username.");
+		UtilityMethods.sleep(2000);
 		UtilityMethods.ControlCenterRequiredFieldValidation(BellControlCenterPO.PasswordInput, BellControlCenterPO.PasswordError, "Password");
 		System.out.println("CC004");
-		try {Thread.sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}
+		UtilityMethods.sleep(2000);
 	}
 	
 	//@Test(priority=5)
 	public static void CCUserNameMinMaxValidation()
 	{
-		PageFactory.initElements(driver, BellControlCenterPO.class);	
+		PageFactory.initElements(driver, BellControlCenterPO.class);
+		UtilityMethods.sleep(3000);
 		BellControlCenterPO.CreateButton.click();
+		UtilityMethods.sleep(3000);
 		UtilityMethods.MinimumInputValidation(BellControlCenterPO.UserNameInput, BellControlCenterPO.UserNameError,6, "a,ab,abc,abcd,abcde,1,12,123,1234,12345");
+		UtilityMethods.sleep(3000);
 		UtilityMethods.MaximumInputValidation(BellControlCenterPO.UserNameInput, BellControlCenterPO.UserNameError,25, "abcdefghijklmnopqrsturwxyz,ababcdefghijklmnopqrsturwxyz,abcabcdefghijklmnopqrsturwxyz,01234567890123456789012345,012345678901234567890123456,0123456789012345678901234567");
 		System.out.println("CC005");
-		try {Thread.sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}
+		UtilityMethods.sleep(3000);
 	}
 	
 	//@Test(priority=6)
@@ -107,7 +113,7 @@ public class BellControlCenter extends BaseDriver
 		UtilityMethods.CCPasswordAndConfirmPasswordValidation(BellControlCenterPO.PasswordInput, BellControlCenterPO.ConfirmPasswordInput, BellControlCenterPO.PasswordError, BellControlCenterPO.ConfirmPasswordError, "Test123Adbc,TEst123!@#$ABC");
 		UtilityMethods.CCConfirmPasswordValidation(BellControlCenterPO.PasswordInput, BellControlCenterPO.ConfirmPasswordInput,BellControlCenterPO.ConfirmPasswordError, "Test123Adbc,TEst123!@#$ABC");	
 		System.out.println("CC006");
-		try {Thread.sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}
+		UtilityMethods.sleep(2000);
 	}
 	
 	//@Test(priority=7)
@@ -118,13 +124,7 @@ public class BellControlCenter extends BaseDriver
 		UtilityMethods.SendInputValues(BellControlCenterPO.PasswordInput, allInputValue.getProperty("ccPassword"), "TextBox");
 		UtilityMethods.SendInputValues(BellControlCenterPO.ConfirmPasswordInput, allInputValue.getProperty("ccConfirmPassword"), "TextBox");
 		BellControlCenterPO.CreateButton.click();
-		
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			
-			e.printStackTrace();
-		}
+		UtilityMethods.sleep(5000);
 		System.out.println("CC007");
 		
 	}

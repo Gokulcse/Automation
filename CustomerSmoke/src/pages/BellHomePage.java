@@ -14,9 +14,9 @@ public class BellHomePage extends BaseDriver
 		
 	//@BeforeTest
 	public static FirefoxDriver start() throws Exception
-	{	 
-		driver = launchApp();
+	{	
 		allInputValue = UtilityMethods.getBellPropValues();
+		driver = launchApp(allInputValue.getProperty("BaseURl"));
 		return driver;
 	}
 			 
