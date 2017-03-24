@@ -121,11 +121,12 @@ public class UtilityMethods extends BaseDriver {
 	
 	public static void pageRedirection(WebElement Linkbutton,WebElement FindElement,String PageName) throws InterruptedException
 	{
-	//	driver.navigate().refresh();
+		driver.navigate().refresh();
 		sleep(5000);
 		Linkbutton.click();
-		sleep(5000);
+		sleep(3000);
 		driver.navigate().refresh();
+		sleep(3000);
 		if(!FindElement.isDisplayed())
     	{
     		System.out.println("Page Rredirection Failed for"+Linkbutton.getText()+"");

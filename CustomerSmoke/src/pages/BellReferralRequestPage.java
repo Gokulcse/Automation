@@ -35,7 +35,7 @@ public class BellReferralRequestPage extends BaseDriver
 		PageFactory.initElements(driver, BellReferralRequestPO.class);
 		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.BellLogo, "NotEqual","Bell Operator Logo in IoT Starter Kit");	
 		UtilityMethods.Imagevalidation(BellReferralRequestPO.BellLogo,"src",allInputValue.getProperty("bellLogo"),"Bell Operator Logo");		
-		System.out.println(""+"TS001");
+		System.out.println("RR001");
 	} 
 	
 	//@Test(priority=2)
@@ -44,7 +44,7 @@ public class BellReferralRequestPage extends BaseDriver
 		PageFactory.initElements(driver, BellReferralRequestPO.class);
 		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.CiscoLogo, "NotEqual","Cisco Jasper Company Logo in IoT Starter Kit");		
 		UtilityMethods.Imagevalidation(BellReferralRequestPO.CiscoLogo,"src",allInputValue.getProperty("ciscoLogo"),"Cisco Jasper Company Logo");		
-		System.out.println(""+"TS002");
+		System.out.println("RR002");
 	}
  
 	//@Test(priority=3)
@@ -57,7 +57,7 @@ public class BellReferralRequestPage extends BaseDriver
 		UtilityMethods.StringValidation(BellReferralRequestPO.DeviceInfoText.getText(), "Device Information", "equalsignorecase");
 	//	UtilityMethods.StringValidation(BellReferralRequestPO.legalText.getText().replace("\n", " "), allInputValue.getProperty("ReferralRequestLegaltext"), "equalsignorecase");
 		UtilityMethods.StringValidation(BellReferralRequestPO.checkBoxLabel.getText(), allInputValue.getProperty("referralrequestCheckBox"), "equalsignorecase");
-		System.out.println(""+"TS003");
+		System.out.println("RR003");
 	}
 
 	//@Test(priority=4)
@@ -84,7 +84,7 @@ public class BellReferralRequestPage extends BaseDriver
 		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.checkBoxLabel, "NotEqual", "Check Box Input Field");
 		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.CancelButton, "NotEqual", "Cancel Button");	
 		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.RequestButton, "NotEqual", "Request Button");	
-		System.out.println(""+"TS004");
+		System.out.println("RR004");
 	}
 	
 	//@Test(priority=5)
@@ -110,7 +110,7 @@ public class BellReferralRequestPage extends BaseDriver
 		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.IN12MonthLabel, "NotEqual", "6-12 months Label Text");	
 		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.Morethan12Monthlabel, "NotEqual", "More than 12 months/unknown Label Text");
 		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.DescriptionLabel, "NotEqual", "Description Label Text");			
-		System.out.println(""+"TS005");
+		System.out.println("RR005");
 	}
 	
 	//@Test(priority=6)
@@ -126,7 +126,7 @@ public class BellReferralRequestPage extends BaseDriver
 		UtilityMethods.PlaceholderValidation(BellReferralRequestPO.ModuleInput, "Enter the module used in your device", "Module");
 		UtilityMethods.PlaceholderValidation(BellReferralRequestPO.VolumetoDeployInput, "Enter first year quantity", "Volume to deploy");
 		UtilityMethods.PlaceholderValidation(BellReferralRequestPO.Description, "Tell us a little about your device, target audience, and how we can help.", "Description");
-		System.out.println(""+"TS006");
+		System.out.println("RR006");
 	}
 	//@Test(priority=7) 
 	public static void ReferralRequestCodeValidInputValidation()
@@ -145,7 +145,7 @@ public class BellReferralRequestPage extends BaseDriver
 		UtilityMethods.ValidInputValidation(BellReferralRequestPO.Description, allInputValue.getProperty("ValidDescription"), BellReferralRequestPO.DescriptionError);
 		//UtilityMethods.ValidateSimTypeRadioButton(2,driver.findElement(By.xpath("//div[@id='simTypeId-error']")));	
 	   //driver.findElement(By.xpath("//label[text()='2FF/Ruggedized']")).click();
-		System.out.println(""+"TS007");
+		System.out.println("RR007");
 	}
 	
 	//@Test(priority=8)
@@ -165,7 +165,7 @@ public class BellReferralRequestPage extends BaseDriver
 		UtilityMethods.RequiredFieldValidation(BellReferralRequestPO.VolumetoDeployInput, BellReferralRequestPO.VolumetoDeployError,"TextBox");
 		UtilityMethods.RequiredFieldValidation(BellReferralRequestPO.LaunchTimeframeLabel, BellReferralRequestPO.LastNameError,"RadioButton");
 		UtilityMethods.RequiredFieldValidation(BellReferralRequestPO.Description, BellReferralRequestPO.DescriptionError,"TextBox");		
-		System.out.println(""+"TS008");
+		System.out.println("RR008");
 	}
 	
 	//@Test(priority=9)
@@ -177,7 +177,7 @@ public class BellReferralRequestPage extends BaseDriver
 		UtilityMethods.SpaceNotAllowedvalidation(BellReferralRequestPO.LastNameInput, BellReferralRequestPO.LastNameError);
 		UtilityMethods.SpaceNotAllowedvalidation(BellReferralRequestPO.CompanyNameInput, BellReferralRequestPO.CompanyError);
 		UtilityMethods.SpaceNotAllowedvalidation(BellReferralRequestPO.PositionRoleInput, BellReferralRequestPO.PositionError);	
-		System.out.println(""+"TS009");
+		System.out.println("RR009");
 	 }
 	//@Test(priority=10)
 	public static void ReferralRequestMaximumInputValidation()
@@ -190,7 +190,7 @@ public class BellReferralRequestPage extends BaseDriver
 	    UtilityMethods.MaximumInputValidation(BellReferralRequestPO.PositionRoleInput, BellReferralRequestPO.PositionError, 25, allInputValue.getProperty("InvalidCompanyName"));
 	    UtilityMethods.MaximumInputValidation(BellReferralRequestPO.PhoneNumberInput, BellReferralRequestPO.PhoneNumberError, 10, allInputValue.getProperty("Invalidphonenumber"));
 	    UtilityMethods.MaximumInputValidation(BellReferralRequestPO.Description, BellReferralRequestPO.DescriptionError, 255, allInputValue.getProperty("InvalidDescription"));     
-	    System.out.println(""+"TS010");
+	    System.out.println("RR010");
 	 }
 	//@Test(priority=11)
 	public static void ReferralRequestMinimumInputValidation()
@@ -199,7 +199,7 @@ public class BellReferralRequestPage extends BaseDriver
 		BellReferralRequestPO.RequestButton.click();
 		UtilityMethods.MinimumInputValidation(BellReferralRequestPO.CompanyNameInput, BellReferralRequestPO.CompanyError, 3, allInputValue.getProperty("InvalidMinInput"));
 	    UtilityMethods.MinimumInputValidation(BellReferralRequestPO.PhoneNumberInput, BellReferralRequestPO.PhoneNumberError, 10, allInputValue.getProperty("InvalidMinphonenumber"));    	 
-	    System.out.println(""+"TS011");
+	    System.out.println("RR011");
 	 }
 	//@Test(priority=12)
 	public static void ReferralRequestEmailValidation()
@@ -207,7 +207,7 @@ public class BellReferralRequestPage extends BaseDriver
 		PageFactory.initElements(driver, BellReferralRequestPO.class);
 		BellReferralRequestPO.RequestButton.click();
 		UtilityMethods.EmailIdInvalidvalidation(BellReferralRequestPO.EmailInput, BellReferralRequestPO.EmailError, allInputValue.getProperty("InvalidEmailID"));
-		System.out.println(""+"TS012");
+		System.out.println("RR012");
 	}
 	//@Test(priority=13)
 	public static void ReferralRequestNumericFieldValidation()
@@ -216,13 +216,13 @@ public class BellReferralRequestPage extends BaseDriver
 		BellReferralRequestPO.RequestButton.click();
 		UtilityMethods.NumericFieldValidation(BellReferralRequestPO.PhoneNumberInput, BellReferralRequestPO.PhoneNumberError, allInputValue.getProperty("InvalidPhoneNumber"));
 		UtilityMethods.NumericFieldValidation(BellReferralRequestPO.VolumetoDeployInput, BellReferralRequestPO.VolumetoDeployError, allInputValue.getProperty("InvadildNumbericField"));
-		System.out.println(""+"TS013");
+		System.out.println("RR013");
 	}
 	//@Test(priority=14)
 	public static void BellLogoValidation() throws InterruptedException
 	{
 		UtilityMethods.pageRedirection(BellReferralRequestPO.BellLogo, BellReferralRequestPO.CancelButtonFindElement,"Others");
-		System.out.println(""+"TS014");
+		System.out.println("RR014");
 	}
 	//@Test(priority=15)
 	public static void BellCALinkValidation() throws InterruptedException
@@ -230,7 +230,7 @@ public class BellReferralRequestPage extends BaseDriver
 		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.BellCaLink, "NotEqual","Bell Ca Link referral request page");	
 		UtilityMethods.StringValidation(BellReferralRequestPO.BellCaLink.getText(), "bell.ca/communicationpreferences.", "equalsignorecase");
 		UtilityMethods.PageNavigationValidation(BellReferralRequestPO.BellCaLink, BellReferralRequestPO.BellCaLinkFindElement, "Email updates from Bell Canada – manage your email preferences");	
-		System.out.println(""+"TS015");
+		System.out.println("RR015");
 	}
 	//@Test(priority=16)
 	public static void ReferralrequestCancelButton() throws InterruptedException
@@ -238,7 +238,7 @@ public class BellReferralRequestPage extends BaseDriver
 		UtilityMethods.DisplayEnableValidator(BellReferralRequestPO.CancelButton, "NotEqual","Bell Ca Link referral request page");	
 		UtilityMethods.StringValidation(BellReferralRequestPO.CancelButton.getText(), "Cancel", "equalsignorecase");
 		UtilityMethods.pageRedirection(BellReferralRequestPO.CancelButton, BellReferralRequestPO.CancelButtonFindElement,"Others");
-		System.out.println(""+"TS016");
+		System.out.println("RR016");
 	}
 	
 	//@Test(priority=17)
@@ -260,45 +260,11 @@ public class BellReferralRequestPage extends BaseDriver
 	    //UtilityMethods.PageRedirection(driver.findElement(By.xpath("//input[@value='Request']")), driver.findElement(By.xpath("//a[text()='Back to IoT Starter Kit Page']")));
 	   // UtilityMethods.PageNavigationValidation(driver.findElement(By.xpath("//input[@value='Request']")), driver.findElement(By.xpath("//a[text()='Back to IoT Starter Kit Page']")));
 	    BellReferralRequestPO.RequestButton.click();
-	    System.out.println(""+"TS017");
+	    System.out.println("RR017");
 	}
 
-	//@Test(priority=18)
-	public static void AdminApproval() throws InterruptedException
-	{
-		System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.get("http://starterkit-dev.devm2m.com/admin/internal/login");
-		Thread.sleep(1500);
-		driver.findElement(By.xpath("//input[@id='userName']")).sendKeys("venkatesh.s");
-		driver.findElement(By.xpath("//input[@value='Login']")).click();
-		Thread.sleep(1500);
-		driver.findElement(By.xpath("//div[@class='blpr-menu blpr-dsk-menu']//span[text()='Referrals']")).click();
-		Thread.sleep(1500);
-		driver.findElement(By.xpath("//div[@id='approve0']")).click();
-		Thread.sleep(1500);
-		driver.findElement(By.xpath("//div[@id='aprCode']//button[@type='submit']")).click();
-		driver.close();
-	}
 	
-public static void EmailIntegration() throws InterruptedException
-	{
-	System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
-	//driver = new FirefoxDriver();
-	driver.manage().window().maximize();
-	driver.get("http://www.yopmail.com/en/");
-	Thread.sleep(3500);
-	driver.navigate().refresh();
-	driver.findElement(By.xpath("//input[@id='login']")).sendKeys("automation1");
-	driver.findElement(By.xpath("//a[@id='lrefr']/span")).click();
-	Thread.sleep(3500);
-	driver.findElement(By.xpath(".//*[@id='m1']//a[@class='lm']")).click();
-	Thread.sleep(3500);
-	driver.findElement(By.xpath(".//*[@id='mailmillieu']//a[@rel='nofollow']")).click();
-	Thread.sleep(3500);
-	
-	}
+
 	//@AfterTest
 	public static void Exit()
 	{

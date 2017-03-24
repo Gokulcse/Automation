@@ -13,6 +13,8 @@ import pageobjects.BellHomePagePO;
 import pages.BellHomePage;
 import pages.BellReferralRequestPage;
 import pages.BellReferralRequestThankYou;
+import pages.AdminOperation;
+
 import utilitymethods.UtilityMethods;
 
 public class BellEndToEndFlowOne extends BaseDriver
@@ -123,7 +125,7 @@ static Properties allInputValue;
 	@Test(priority=21)
 	public static void HomePageSecOneReferralRequesButton() throws InterruptedException
 	{
-		//BellHomePage.sectionOneReferralRequestvalidation();
+		BellHomePage.sectionOneReferralRequestvalidation();
 	}
 	@Test(priority=20)
 	public static void HomePageM2MDotComvalidation() throws InterruptedException, IOException
@@ -183,7 +185,7 @@ static Properties allInputValue;
 	@Test(priority=23)
 	public static void HomePageBellLogoValidation() throws InterruptedException
 	{
-		//BellHomePage.bellLogoValidation();
+		BellHomePage.bellLogoValidation();
 		
 	}
 	@Test(priority=24)
@@ -223,7 +225,6 @@ static Properties allInputValue;
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		BellReferralRequestPage.ReferralRequestTextValidation();
@@ -245,7 +246,7 @@ static Properties allInputValue;
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	//	BellReferralRequestPage.RequestReferralCodeLabelTextDisplayedAndEnabled();
+		BellReferralRequestPage.RequestReferralCodeLabelTextDisplayedAndEnabled();
 	}
 
 	@Test(priority=30)
@@ -325,15 +326,14 @@ static Properties allInputValue;
 		try {
 			Thread.sleep(6000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		//BellReferralRequestThankYou.validateOperatorLogo();
+		BellReferralRequestThankYou.validateOperatorLogo();
 	}
 	@Test(priority=43)
 	public static void ThankYouCiscoLogo()
 	{
-		//BellReferralRequestThankYou.validateCompanyLogo();
+		BellReferralRequestThankYou.validateCompanyLogo();
 	}
 	@Test(priority=44)
 	public static void ThankYouTextvalidation()
@@ -361,7 +361,7 @@ static Properties allInputValue;
 	@Test(priority=47)
 	public static void ReferralRequestAdminApproval() throws InterruptedException
 	{
-		BellReferralRequestPage.AdminApproval();	
+		AdminOperation.AdminApproval();	
 	}
 }
 

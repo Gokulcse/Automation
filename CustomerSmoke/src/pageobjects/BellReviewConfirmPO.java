@@ -74,8 +74,8 @@ public class BellReviewConfirmPO extends BaseDriver
 	@FindBy(how=How.XPATH,using="//img[@title='What is IoT']")
 	public static WebElement CancelButtonFindElement;
 	
-	@FindBy(how=How.XPATH,using="//input[@value='Continue']")
-	public static WebElement BillEditFindElement;//to be modified
+	@FindBy(how=How.XPATH,using="//input[@value='Review']")
+	public static WebElement BillEditFindElement;
 
 	@FindBy(how=How.XPATH,using="//input[@value='Continue']")
 	public static WebElement ShipEditFindElement;

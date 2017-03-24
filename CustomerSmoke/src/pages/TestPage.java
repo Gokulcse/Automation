@@ -35,8 +35,19 @@ public class TestPage {
 		System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.get("https://accounts.google.com/ServiceLogin?");
-		UtilityMethods.sleep(5000);
+		driver.get("http://bell.devm2m.com/?clLocaleCode=fr");
+		System.out.println(""+driver.getTitle());
+		String temp =driver.findElement(By.tagName("body")).getText();
+				
+				try
+				{
+				PrintWriter writer = new PrintWriter("BellPublicSiteFrench.doc", "UTF-8");
+				writer.println(temp);
+				writer.close();
+				} 
+			catch (IOException e) {}
+				   System.out.println(""+temp);
+		/*UtilityMethods.sleep(5000);
 		driver.findElement(By.id("Email")).sendKeys("automateselenium1");
 		driver.findElement(By.id("next")).click();
 		UtilityMethods.sleep(5000);
@@ -63,7 +74,7 @@ public class TestPage {
 		            System.out.println("No mail form " + MyMailer);
 		        }
 		    }
-		}
+		}*/
 		driver.close();
 		/*System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();

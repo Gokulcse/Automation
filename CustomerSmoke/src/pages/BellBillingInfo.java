@@ -185,7 +185,7 @@ public class BellBillingInfo extends BaseDriver
 	public static void CancelButtonValidation() throws InterruptedException
 	{
 		PageFactory.initElements(driver, BellBillingInfoPO.class);
-		UtilityMethods.sleep(5000);
+		//UtilityMethods.sleep(5000);
 		UtilityMethods.sleep(5000);
 		UtilityMethods.pageRedirection(BellBillingInfoPO.CancelButton, BellBillingInfoPO.CancelButtonFindElement,"Others");
 		System.out.println("BI014");
@@ -195,7 +195,7 @@ public class BellBillingInfo extends BaseDriver
 	public static void BackButtonValidation() throws InterruptedException
 	{
 		PageFactory.initElements(driver, BellBillingInfoPO.class);
-		UtilityMethods.sleep(5000);
+		//UtilityMethods.sleep(5000);
 		
 		UtilityMethods.sleep(5000);
 		UtilityMethods.pageRedirection(BellBillingInfoPO.BackButton, BellBillingInfoPO.BackFindElement,"Others");
@@ -221,7 +221,7 @@ public class BellBillingInfo extends BaseDriver
 			System.out.println("The Xpath For Review button is Enabled:"+BellBillingInfoPO.ReviewButton.isEnabled()+"");
 			BellBillingInfoPO.ReviewButton.click();
 			System.out.println("BI016");
-			UtilityMethods.sleep(5000);
+			UtilityMethods.sleep(2000);
 			
 		}
 		else if(allInputValue.getProperty("sameShippBillAddress").equals("No"))

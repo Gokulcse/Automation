@@ -31,20 +31,39 @@ public static void DeleteAllEmail()
 	driver.findElement(By.xpath(".//*[@id='gb23']/span[text()='Gmail']")).click();
 	 UtilityMethods.sleep(20000);
 	System.out.println("Mail Opened");
-	//div[@role='presentation']
-	 UtilityMethods.sleep(20000);
 	System.out.println("Delete all check box is displayed :: "+driver.findElement(By.xpath("//div[@aria-label='Select']")).isDisplayed()+"");
 	System.out.println("Delete all check box is Enabled   :: "+driver.findElement(By.xpath("//div[@aria-label='Select']")).isEnabled()+"");
 	driver.findElement(By.xpath("//div[@aria-label='Select']")).click();
-	 UtilityMethods.sleep(20000);
+	 UtilityMethods.sleep(4000);
 	System.out.println("Check box selected");
-	//div[@aria-label='Delete']
-	System.out.println("Delete button is displayed :: "+driver.findElement(By.xpath("//div[@aria-label='Delete']")).isDisplayed()+"");
-	System.out.println("Delete button is Enabled   :: "+driver.findElement(By.xpath("//div[@aria-label='Delete']")).isEnabled()+"");
-	driver.findElement(By.xpath("//div[@aria-label='Delete']")).click();
-	 UtilityMethods.sleep(20000);
-	System.out.println("Delete Button Clicked");
-	System.out.println("Delete All Inbox Emails");
+
+	List<WebElement> unreademeil = driver.findElements(By.xpath("//*[@class='zF']"));
+	String MyMailer = "orders";
+	for(int i=0;i<unreademeil.size();i++)
+	{
+	    if(unreademeil.get(i).isDisplayed()==true)
+	    {
+	        if(unreademeil.get(i).getText().equals(MyMailer))
+	        {
+	            System.out.println("Yes we have got mail form " + MyMailer);
+	            System.out.println("Delet button is displayed :: "+driver.findElement(By.xpath("//div[@aria-label='Delete']")).isDisplayed()+"");
+	        	System.out.println("Delete button is Enabled   :: "+driver.findElement(By.xpath("//div[@aria-label='Delete']")).isEnabled()+"");
+	        	driver.findElement(By.xpath("//div[@aria-label='Delete']")).click();
+	        	UtilityMethods.sleep(4000);
+	        	System.out.println("Delete Button Clicked");
+	        	System.out.println("Deleted All Inbox Emails");
+	        }
+	        else
+	        {
+	            System.out.println("No mail form " + MyMailer);
+	        }
+	    }
+	    else
+	    {
+	    	  System.out.println("No mail form " + MyMailer);
+	    }
+	}
+	
 	driver.close();
 }
 
@@ -57,12 +76,12 @@ public static void CheckEmailReceived()
 	UtilityMethods.sleep(5000);
 	driver.findElement(By.id("Email")).sendKeys("automateselenium1");
 	driver.findElement(By.id("next")).click();
-	UtilityMethods.sleep(5000);
+	UtilityMethods.sleep(3000);
 	driver.findElement(By.id("Passwd")).sendKeys("Automation@Selenium");
 	driver.findElement(By.id("signIn")).click();
 	UtilityMethods.sleep(5000);
 	driver.findElement(By.xpath(".//*[@id='gbwa']/div[1]/a")).click();
-	UtilityMethods.sleep(5000);
+	UtilityMethods.sleep(3000);
 	driver.findElement(By.xpath(".//*[@id='gb23']/span[text()='Gmail']")).click();
 	UtilityMethods.sleep(20000);
 	System.out.println("INBOX Opened");
@@ -96,12 +115,12 @@ public static String ccURL()
 	UtilityMethods.sleep(5000);
 	driver.findElement(By.id("Email")).sendKeys("automateselenium1");
 	driver.findElement(By.id("next")).click();
-	UtilityMethods.sleep(5000);
+	UtilityMethods.sleep(3000);
 	driver.findElement(By.id("Passwd")).sendKeys("Automation@Selenium");
 	driver.findElement(By.id("signIn")).click();
 	UtilityMethods.sleep(5000);
 	driver.findElement(By.xpath(".//*[@id='gbwa']/div[1]/a")).click();
-	UtilityMethods.sleep(5000);
+	UtilityMethods.sleep(3000);
 	driver.findElement(By.xpath(".//*[@id='gb23']/span[text()='Gmail']")).click();
 	UtilityMethods.sleep(20000);
 	System.out.println("INBOX Opened");

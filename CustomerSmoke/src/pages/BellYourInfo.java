@@ -395,7 +395,7 @@ public class BellYourInfo extends BaseDriver
 	{
 		UtilityMethods.DisplayEnableValidator(BellYourInfoPO.CancelButton, "NotEqual","Your Info Cancel Button");	
 		UtilityMethods.StringValidation(BellYourInfoPO.CancelButton.getText(), "Cancel", "equalsignorecase");
-		UtilityMethods.sleep(5000);
+		UtilityMethods.sleep(2000);
 		UtilityMethods.pageRedirection(BellYourInfoPO.CancelButton, BellYourInfoPO.CancelButtonFindElement,"HomePage");
 		System.out.println("YI020");
 		UtilityMethods.sleep(2000);
@@ -414,7 +414,7 @@ public class BellYourInfo extends BaseDriver
 		UtilityMethods.SendInputValues(BellYourInfoPO.PhoneNumberInput, allInputValue.getProperty("PhoneNumber"), "TextBox");
 		UtilityMethods.SendInputValues(BellYourInfoPO.EmailInput, allInputValue.getProperty("E-mailAddress"), "TextBox");
 		UtilityMethods.SendInputValues(BellYourInfoPO.ModuleInput, allInputValue.getProperty("ModuleData"), "TextBox");
-		//UtilityMethods.SendInputValues(BellYourInfoPO.BusinessInput, allInputValue.getProperty("BusinessType"), "DropDown");
+		UtilityMethods.SendInputValues(BellYourInfoPO.BusinessInput, allInputValue.getProperty("BusinessType"), "DropDown");
 	    UtilityMethods.SendInputValues(BellYourInfoPO.SimNanolabel, "", "Radiobutton");
 	    UtilityMethods.SendInputValues(BellYourInfoPO.VolumetoDeployInput, allInputValue.getProperty("VolumeToDeploy"), "TextBox");
 	    UtilityMethods.SendInputValues(BellYourInfoPO.IN12MonthLabel, "", "Radiobutton");

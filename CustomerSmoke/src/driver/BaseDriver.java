@@ -58,10 +58,10 @@ public class BaseDriver {
 		 profile.setPreference("browser.download.folderList", 2);
 		 profile.setPreference("browser.download.dir", "F:\\pdf");
 		 profile.setPreference("browser.helperApps.alwaysAsk.force", false);
-		 /*profile.setPreference("browser.download.manager.showAlertOnComplete", false);
+		 profile.setPreference("browser.download.manager.showAlertOnComplete", false);
 		 profile.setPreference("browser.download.manager.showWhenStarting",false);
 		 profile.setPreference("browser.helperApps.neverAsk.saveToDisk", "application/pdf");
-		 profile.setPreference("pdfjs.disabled", false);*/ 
+		 profile.setPreference("pdfjs.disabled", false);
 		 return profile;
 	 }
 }
