@@ -16,7 +16,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NotFoundException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import driver.BaseDriver;
 
@@ -79,15 +81,26 @@ public class UtilityMethods extends BaseDriver {
 			break;
 		}
 	}
+	public static void waitForWebElement(WebElement element) 
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+	}
+	public static void waitForWebElementdriver(WebDriver driver,WebElement element) 
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+	}
 	public static void PageNavigationValidation(WebElement Linkbutton,WebElement FindElement, String PageTitile) throws InterruptedException 
 	{
-		driver.navigate().refresh();
+		waitForWebElement(Linkbutton);
+		//driver.navigate().refresh();
 		//System.out.println("The Link button xpath is :"+Linkbutton+"");
 		//System.out.println("The Find button xpath is :"+FindElement+"");
 		//System.out.println(""+ Linkbutton.getAttribute("href"));
 		//System.out.println(" The Linkbutton is displayed :"+Linkbutton.isDisplayed()+"");
 		//System.out.println(" The Linkbutton is enabled :"+Linkbutton.isEnabled()+"");
-		sleep(4000);
+		//sleep(4000);
 		Linkbutton.click();	
 		//System.out.println("link button clicked");
 		sleep(5000);
@@ -99,6 +112,7 @@ public class UtilityMethods extends BaseDriver {
 		        //System.out.println("" +driver.getTitle());
 		        if (driver.getTitle().equals(PageTitile))
 			    {
+		        	waitForWebElement(FindElement);
 		        	if(!FindElement.isDisplayed())
 		        	{
 		        		System.out.println("Page Rredirection Failed for"+Linkbutton.getText()+"");
@@ -111,33 +125,63 @@ public class UtilityMethods extends BaseDriver {
 			    }
 		    }
 		   driver.switchTo().window(parentHandle);
-		    //driver.navigate().back();
 		    }
 		catch(Exception e)
 		{
 		   System.out.println("Condition fail :"+e+"");
 		}	
 	}
+	public static void ThankYouPageRedirection(WebElement Linkbutton,WebElement FindElement)
+	{
+		waitForWebElement(Linkbutton);
+		Linkbutton.click();
+		waitForWebElement(FindElement);
+		if(FindElement.isDisplayed())
+		{ 
+			System.out.println("Page Redirection done");
+			driver.navigate().back();
+			
+		}
+		else if(!FindElement.isDisplayed())
+    	{
+			sleep(5000);
+			System.out.println("Page Redirection done");
+			driver.navigate().back();
+    	}
+		else
+		{
+			System.out.println("Page Rredirection Failed for"+Linkbutton.getText()+"");
+			driver.navigate().back();
+		}
+	}
 	
 	public static void pageRedirection(WebElement Linkbutton,WebElement FindElement,String PageName) throws InterruptedException
 	{
 		driver.navigate().refresh();
-		sleep(5000);
+		waitForWebElement(Linkbutton);
 		Linkbutton.click();
 		sleep(3000);
 		driver.navigate().refresh();
 		sleep(3000);
-		if(!FindElement.isDisplayed())
-    	{
-    		System.out.println("Page Rredirection Failed for"+Linkbutton.getText()+"");
-    	}
-		/*if(!PageName.equals("HomePage"))
-		{
-			sleep(6000);
+		waitForWebElement(FindElement);
+		if(FindElement.isDisplayed())
+		{ 
 			driver.navigate().back();
-		}*/
-		sleep(5000);
-		driver.navigate().back();
+			System.out.println("Page Redirection done");
+		}
+		else if(!FindElement.isDisplayed())
+    	{
+			sleep(5000);
+			driver.navigate().back();
+			System.out.println("Page Redirection done");
+    		
+    	}
+		else
+		{
+			System.out.println("Page Rredirection Failed for"+Linkbutton.getText()+"");
+		}
+		
+		
 	}
 	public static void howItWorksValidation(WebElement webObj,String str1,String str2,String str3)
 	{

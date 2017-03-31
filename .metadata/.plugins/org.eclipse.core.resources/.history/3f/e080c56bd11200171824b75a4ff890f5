@@ -1,0 +1,265 @@
+package test;
+
+import java.awt.AWTException;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import pages.AdminOperation;
+import pages.BellBillingInfo;
+import pages.BellControlCenter;
+import pages.BellHomePage;
+import pages.BellOrderSummary;
+import pages.BellReferralRequestPage;
+import pages.BellReferralRequestThankYou;
+import pages.BellReviewConfirm;
+import pages.BellShippingInfo;
+import pages.BellYourInfo;
+import pages.EmailIntegration;
+import utilitymethods.UtilityMethods;
+
+public class DummyTest 
+{
+
+	public static FirefoxDriver driver;
+	static Properties allInputValue;
+
+	@BeforeTest
+	public static void BrowserIntilation() throws Exception
+	{
+		driver = BellControlCenter.start();
+	}
+	
+	@Test(priority=1)
+	public static void CCDisplayedAndEnabledValidation()
+	{
+		BellControlCenter.CCDisplayedAndEnabledValidation();
+	}
+	
+	@Test(priority=7)
+	public static void InputValidation()
+	{
+		BellControlCenter.InputValidation();
+	}
+	
+	@Test(priority=8)
+	public static void referralRequestDataValidation()
+	{
+		driver.navigate().refresh();
+		UtilityMethods.sleep(4000);
+		try {BellYourInfo.intial();} catch (IOException e) {e.printStackTrace();}
+		UtilityMethods.sleep(2000);
+		BellYourInfo.referralRequestDataValidation();
+	}
+	
+	@Test(priority=9)
+	public static void TermsOfServiceTextValidation()
+	{
+		BellYourInfo.TermsOfServiceTextValidation();
+	}
+	
+	@Test(priority=13)
+	public static void YourInfoBellLogo()
+	{
+		BellYourInfo.validateOperatorLogo();
+	}
+	
+	@Test(priority=14)
+	public static void YourInfoCompanyLogo()
+	{
+		BellYourInfo.validateCompanyLogo();
+	}
+	
+	@Test(priority=15)
+	public static void YourInfoTextValiadtion()
+	{
+		UtilityMethods.sleep(2000);
+		BellYourInfo.ReferralRequestTextValidation();
+	}
+	
+	@Test(priority=16)
+	public static void YourInfoTextBoxDisplayedAndEnabled()
+	{
+		BellYourInfo.RequestReferralCodeTextBoxDisplayedAndEnabled();
+	}
+	
+	@Test(priority=17)
+	public static void YourInfoLabelDisplayedAndEnabled()
+	{
+		UtilityMethods.sleep(2000);
+		BellYourInfo.RequestReferralCodeLabelTextDisplayedAndEnabled();
+	}
+
+	@Test(priority=29)
+	public static void YourInfocontinueButton() throws InterruptedException, IOException
+	{
+		BellYourInfo.RequestButtonValidation();
+		UtilityMethods.sleep(4000);
+	}
+	
+	@Test(priority=30)
+	public static void ShippingInfovalidateOperatorLogo() throws Exception
+	{	
+		driver.navigate().refresh();
+		UtilityMethods.sleep(4000);
+		try {BellShippingInfo.Start();} catch (IOException e) {e.printStackTrace();}
+		//driver.navigate().refresh();
+		UtilityMethods.sleep(5000);
+		BellShippingInfo.validateOperatorLogo();
+	} 
+	
+	@Test(priority=31)
+	public static void ShippingInfovalidateCompanyLogo()
+	{	
+		BellShippingInfo.validateCompanyLogo();	
+	}
+	
+	@Test(priority=32)
+	public static void ShippingInfoTextvalidation()
+	{
+		BellShippingInfo.ShippingInfoTextvalidation();
+	}
+	
+	@Test(priority=33)
+	public static void shippingInfoLabelText()
+	{
+		BellShippingInfo.shippingInfoLabelText();
+	}
+	
+	@Test(priority=43)	
+	public static void ShippingInfoSendInputs()
+	{
+		BellShippingInfo.ShippingInfoSendInputs();
+	}
+	
+	@Test(priority=44)
+	public static void BillingInfovalidateOperatorLogo()
+	{	
+		UtilityMethods.sleep(4000);
+		try {BellBillingInfo.Start();} catch (Exception e) {e.printStackTrace();}
+		UtilityMethods.sleep(2000);
+		BellBillingInfo.validateOperatorLogo();
+		
+	} 
+	
+	@Test(priority=45)
+	public static void BillingInfovalidateCompanyLogo()
+	{	
+		BellBillingInfo.validateCompanyLogo();
+	}
+	
+	@Test(priority=46)
+	public static void BillingInfoTextvalidation()
+	{	
+		BellBillingInfo.BillingInfoTextvalidation();
+	}
+	
+	@Test(priority=47)
+	public static void BillingCardDetailsLabelText()
+	{	
+		BellBillingInfo.BillingCardDetailsLabelText();
+	}
+	
+	@Test(priority=59)
+	public static void BillingInfoSendInputs()
+	{
+		BellBillingInfo.BillingInfoSendInputs();
+	}
+	
+	@Test(priority=60)
+	public static void ReviewConfirmOperatorLogo()
+	{
+		try {
+			BellReviewConfirm.Start();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		UtilityMethods.sleep(4000);
+		BellReviewConfirm.validateOperatorLogo();
+	} 
+	
+	@Test(priority=61)
+	public static void ReviewConfirmCompanyLogo()
+	{	
+		BellReviewConfirm.validateCompanyLogo();
+	}
+	
+	@Test(priority=62)
+	public static void ReviewConfirmHeadertextValidation()
+	{
+		BellReviewConfirm.HeadertextValidation();
+	}
+
+	@Test(priority=70)
+	public static void ReviewConfirmButton()
+	{
+		BellReviewConfirm.ConfirmButtonClick();
+	
+	}
+	
+	@Test(priority=71)
+	public static void OrderSummaryBellLogo()
+	{
+		UtilityMethods.sleep(4000);
+		try {BellOrderSummary.Start();} catch (Exception e) {e.printStackTrace();}
+		UtilityMethods.sleep(4000);
+		BellOrderSummary.validateOperatorLogo();
+	}
+	
+	@Test(priority=72)
+	public static void OrderSummaryCompanyLogo()
+	{	
+		BellOrderSummary.validateCompanyLogo();
+	}
+	
+	@Test(priority=73)
+	public static void OrderSummaryHeadertextValidation()
+	{
+		BellOrderSummary.HeadertextValidation();
+	}
+	@Test(priority=74)
+	public static void orderSummaryShipBillAddressVAlidation()
+	{
+		BellOrderSummary.ShipBillAddressValidation();
+	}
+	
+	@Test(priority=75)
+	public static void OrderSummarysectionTwoTextValidation()
+	{
+		BellOrderSummary.sectionTwoTextValidation();
+	}
+	
+	@Test(priority=76)
+	public static void OrderSummarysectionThreeTextValidation()
+	{
+		BellOrderSummary.sectionThreeTextValidation();
+	}
+	
+	@Test(priority=77)
+	public static void OrderSummaryBellLogoValidation() throws InterruptedException
+	{
+		BellOrderSummary.sectionOneBellLogoValidation();
+	}
+	
+	@Test(priority=78)
+	public static void OrderSummaryBackToIOTValidation() throws InterruptedException
+	{
+		BellOrderSummary.sectionOneBackToIOTValidation();
+	}
+	
+	@Test(priority=79)
+	public static void OrderSummaryTrackOrderValidation() throws InterruptedException
+	{
+		BellOrderSummary.sectionOneTrackOrderValidation();
+	}
+	
+	@Test(priority=80)
+	public static void OrderSummaryhomePageLinkvalidation() throws InterruptedException
+	{
+		BellOrderSummary.homePageLinkvalidation();
+	}
+
+}

@@ -3,6 +3,7 @@ package pages;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -24,35 +25,17 @@ import pageobjects.BellYourInfoPO;
 
 public class BellYourInfo extends BaseDriver
 {
-	public static FirefoxDriver driver=BaseDriver.driver;
+	public static WebDriver driver;
 	public static Properties allInputValue ;
-	//@BeforeTest
-	public static void BrowserIntilation() throws Exception
-	{
-		//driver = launchApp();
-		allInputValue = UtilityMethods.getBellPropValues();
-		String myWindowHandle = driver.getWindowHandle();
-		driver.switchTo().window(myWindowHandle);
-		//driver.navigate().refresh();
-	}
-	//@Test(priority=1)
 	
+	
+	//@Test(priority=1)
 	public static void intial() throws IOException
 	{
+		driver=BaseDriver.driver;
 		allInputValue = UtilityMethods.getBellPropValues();
 		
 	}
-	
-	/*public static void inputDta()
-	{
-		PageFactory.initElements(driver, BellControlCenterPO.class);
-		UtilityMethods.SendInputValues(BellControlCenterPO.UserNameInput, allInputValue.getProperty("ccUserName"), "TextBox");
-		UtilityMethods.SendInputValues(BellControlCenterPO.PasswordInput, allInputValue.getProperty("ccPassword"), "TextBox");
-		UtilityMethods.SendInputValues(BellControlCenterPO.ConfirmPasswordInput, allInputValue.getProperty("ccConfirmPassword"), "TextBox");
-		BellControlCenterPO.CreateButton.click();
-		UtilityMethods.sleep(5000);
-		System.out.println("TS007");
-	}*/
 	
 	//@Test(priority=2)
 	public static void referralRequestDataValidation()
@@ -409,27 +392,21 @@ public class BellYourInfo extends BaseDriver
 		UtilityMethods.sleep(2000);
 		UtilityMethods.SendInputValues(BellYourInfoPO.FirstNameInput, allInputValue.getProperty("FirstName"), "TextBox");
 		UtilityMethods.SendInputValues(BellYourInfoPO.LastNameInput, allInputValue.getProperty("LastName"), "TextBox");
+		UtilityMethods.sleep(1000);
 		UtilityMethods.SendInputValues(BellYourInfoPO.CompanyNameInput, allInputValue.getProperty("CompanyName")+UtilityMethods.GenerateRandomNum(5), "TextBox");
 		UtilityMethods.SendInputValues(BellYourInfoPO.PositionRoleInput, allInputValue.getProperty("Position"), "TextBox");
+		UtilityMethods.sleep(1000);
 		UtilityMethods.SendInputValues(BellYourInfoPO.PhoneNumberInput, allInputValue.getProperty("PhoneNumber"), "TextBox");
 		UtilityMethods.SendInputValues(BellYourInfoPO.EmailInput, allInputValue.getProperty("E-mailAddress"), "TextBox");
+		UtilityMethods.sleep(1000);
 		UtilityMethods.SendInputValues(BellYourInfoPO.ModuleInput, allInputValue.getProperty("ModuleData"), "TextBox");
-		UtilityMethods.SendInputValues(BellYourInfoPO.BusinessInput, allInputValue.getProperty("BusinessType"), "DropDown");
-	    UtilityMethods.SendInputValues(BellYourInfoPO.SimNanolabel, "", "Radiobutton");
+		//UtilityMethods.SendInputValues(BellYourInfoPO.BusinessInput, allInputValue.getProperty("BusinessType"), "DropDown");
+		UtilityMethods.sleep(1000);
+		UtilityMethods.SendInputValues(BellYourInfoPO.SimNanolabel, "", "Radiobutton");
 	    UtilityMethods.SendInputValues(BellYourInfoPO.VolumetoDeployInput, allInputValue.getProperty("VolumeToDeploy"), "TextBox");
+	    UtilityMethods.sleep(1000);
 	    UtilityMethods.SendInputValues(BellYourInfoPO.IN12MonthLabel, "", "Radiobutton");
 	    UtilityMethods.SendInputValues(BellYourInfoPO.Description, allInputValue.getProperty("Description"), "TextBox");	
-	    
-	    
-	  /*  String Temp = allInputValue.getProperty("CompanyName")+UtilityMethods.GenerateRandomNum(5);
-	    FileOutputStream out = new FileOutputStream("First.properties");
-        FileInputStream in = new FileInputStream("First.properties");
-        Properties props = new Properties();
-        props.load(in);
-        in.close();
-        props.setProperty("CompanyName", Temp);
-        props.store(out, null);
-        out.close();*/
 	    UtilityMethods.sleep(2000);
 	    BellYourInfoPO.checkBoxTerms.click();
 	    UtilityMethods.sleep(2000);

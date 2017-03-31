@@ -2,6 +2,7 @@ package pages;
 
 import java.util.Properties;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -15,7 +16,7 @@ import utilitymethods.UtilityMethods;
 
 public class BellReviewConfirm extends BaseDriver
 {
-	public static FirefoxDriver driver =BaseDriver.driver;
+	public static WebDriver driver =BaseDriver.driver;
 	static Properties allInputValue;
 	//@BeforeTest
 	public static void Start() throws Exception 
@@ -30,7 +31,6 @@ public class BellReviewConfirm extends BaseDriver
 		UtilityMethods.Imagevalidation(BellReviewConfirmPO.BellLogo,"src",allInputValue.getProperty("bellLogo"),"Bell Operator Logo");		
 		System.out.println("RC001");
 		try {Thread.sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}
-
 	} 
 	
 	public static void validateCompanyLogo()
@@ -39,7 +39,6 @@ public class BellReviewConfirm extends BaseDriver
 		UtilityMethods.Imagevalidation(BellReviewConfirmPO.CiscoLogo,"src",allInputValue.getProperty("ciscoLogo"),"Cisco Jasper Company Logo");		
 		System.out.println("RC002");
 		try {Thread.sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}
-
 	}
 	
 	public static void HeadertextValidation()
@@ -52,7 +51,6 @@ public class BellReviewConfirm extends BaseDriver
 		UtilityMethods.StringValidation(BellReviewConfirmPO.ReviewConfirmText.getText(), "Review & Confirm", "equalsignorecase");
 		System.out.println("RC003");
 		try {Thread.sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}
-
 	}
 	
 	public static void SectionOneTextValidation()
@@ -64,7 +62,6 @@ public class BellReviewConfirm extends BaseDriver
 		UtilityMethods.StringValidation(BellReviewConfirmPO.FullAcessText.getText(), "Full access to Bell Control Centre", "equalsignorecase");
 		System.out.println("RC004");
 		try {Thread.sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}
-
 	}
 	
 	public static void ShippingBillingAddressValidation()
@@ -75,7 +72,6 @@ public class BellReviewConfirm extends BaseDriver
 			UtilityMethods.StringValidation(BellReviewConfirmPO.BillingAddress.getText().replace("\n", " "), allInputValue.getProperty("shippindAddress"), "equalsignorecase");
 			System.out.println("RC005");
 			try {Thread.sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}
-
 		}
 		else if (allInputValue.getProperty("sameShippBillAddress").equals("No"))
 		{
@@ -83,7 +79,6 @@ public class BellReviewConfirm extends BaseDriver
 			UtilityMethods.StringValidation(BellReviewConfirmPO.BillingAddress.getText().replace("\n", " "), allInputValue.getProperty("billingAddress"), "equalsignorecase");
 			System.out.println("RC005");
 			try {Thread.sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}
-
 		}
 		else
 		{
@@ -94,15 +89,14 @@ public class BellReviewConfirm extends BaseDriver
 		}
 	}
 	
-	
 	public static void EditButtonsValidation()
 	{
 		UtilityMethods.DisplayEnableValidator(BellReviewConfirmPO.ShippingEdit, "NotEqual", "Edit button in shipping");
 		UtilityMethods.DisplayEnableValidator(BellReviewConfirmPO.BillingEdit, "NotEqual", "Edit button in Billing");
 		System.out.println("RC006");
 		try {Thread.sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}
-
 	}
+	
 	public static void BellLogoValidation() throws InterruptedException
 	{
 		PageFactory.initElements(driver, BellReviewConfirmPO.class);

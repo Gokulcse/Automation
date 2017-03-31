@@ -3,6 +3,7 @@ package pages;
 
 import java.util.Properties;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -15,7 +16,7 @@ import driver.BaseDriver;
 
 public class BellOrderSummary extends BaseDriver
 {
-	public static FirefoxDriver driver =BaseDriver.driver;
+	public static WebDriver driver =BaseDriver.driver;
 	static Properties allInputValue;
 	public static void Start() throws Exception 
 	{
@@ -107,7 +108,7 @@ public class BellOrderSummary extends BaseDriver
 	{
 		PageFactory.initElements(driver, BellOrderSummaryPO.class);
 		UtilityMethods.DisplayEnableValidator(BellOrderSummaryPO.BellLogo, "NotEqual", "Bell Logo");
-		UtilityMethods.pageRedirection(BellOrderSummaryPO.BellLogo, BellOrderSummaryPO.BactToIOTFindElement,"Others");
+		UtilityMethods.ThankYouPageRedirection(BellOrderSummaryPO.BellLogo, BellOrderSummaryPO.BactToIOTFindElement);
 		System.out.println("OS007");
 		UtilityMethods.sleep(2000);
 	}
@@ -116,7 +117,7 @@ public class BellOrderSummary extends BaseDriver
 	{
 		PageFactory.initElements(driver, BellOrderSummaryPO.class);
 		UtilityMethods.DisplayEnableValidator(BellOrderSummaryPO.BactToIOTButton, "NotEqual", "Back to IOt Starter Kit Button");
-		UtilityMethods.pageRedirection(BellOrderSummaryPO.BactToIOTButton, BellOrderSummaryPO.BactToIOTFindElement,"Others");
+		UtilityMethods.ThankYouPageRedirection(BellOrderSummaryPO.BactToIOTButton, BellOrderSummaryPO.BactToIOTFindElement);
 		System.out.println("OS008");
 		UtilityMethods.sleep(2000);
 	}
@@ -125,7 +126,7 @@ public class BellOrderSummary extends BaseDriver
 	{
 		PageFactory.initElements(driver, BellOrderSummaryPO.class);
 		UtilityMethods.DisplayEnableValidator(BellOrderSummaryPO.TrackOrderButton, "NotEqual", "Track Order Button");
-		UtilityMethods.pageRedirection(BellOrderSummaryPO.TrackOrderButton, BellOrderSummaryPO.TrackOrderFindElement,"Others");
+		UtilityMethods.ThankYouPageRedirection(BellOrderSummaryPO.TrackOrderButton, BellOrderSummaryPO.TrackOrderFindElement);
 		System.out.println("OS009");
 		UtilityMethods.sleep(2000);
 	}
@@ -134,9 +135,10 @@ public class BellOrderSummary extends BaseDriver
 	{
 		PageFactory.initElements(driver, BellOrderSummaryPO.class);
 		UtilityMethods.DisplayEnableValidator(BellOrderSummaryPO.HomePageLink, "NotEqual", "THome Page Link Button");
-		UtilityMethods.pageRedirection(BellOrderSummaryPO.HomePageLink, BellOrderSummaryPO.homepageLinkFindElement,"Others");
+		UtilityMethods.ThankYouPageRedirection(BellOrderSummaryPO.HomePageLink, BellOrderSummaryPO.homepageLinkFindElement);
 		System.out.println("OS010");
 		UtilityMethods.sleep(2000);
+		driver.close();
 	}
 	
 }

@@ -3,6 +3,7 @@ package pages;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -17,7 +18,7 @@ import utilitymethods.UtilityMethods;
 
 public class BellShippingInfo extends BaseDriver
 {
-	public static FirefoxDriver driver =BaseDriver.driver;
+	public static WebDriver driver =BaseDriver.driver;
 	static Properties allInputValue;
 	//@BeforeTest
 	public static void Start() throws Exception 

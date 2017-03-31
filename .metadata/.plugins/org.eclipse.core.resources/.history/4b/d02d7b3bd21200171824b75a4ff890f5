@@ -1,0 +1,36 @@
+package test;
+
+import java.awt.AWTException;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import pages.AdminOperation;
+import pages.BellBillingInfo;
+import pages.BellControlCenter;
+import pages.BellHomePage;
+import pages.BellOrderSummary;
+import pages.BellReferralRequestPage;
+import pages.BellReferralRequestThankYou;
+import pages.BellReviewConfirm;
+import pages.BellShippingInfo;
+import pages.BellYourInfo;
+import pages.EmailIntegration;
+import utilitymethods.UtilityMethods;
+
+public class DummyTest 
+{
+
+	@AfterTest
+	public static void Exit()
+	{
+		extent.endTest(testcase);
+		extent.flush();
+		driver.close();
+	}
+
+}

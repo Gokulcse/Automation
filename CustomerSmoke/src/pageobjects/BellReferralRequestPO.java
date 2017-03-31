@@ -56,7 +56,7 @@ public class BellReferralRequestPO extends BaseDriver
 	@FindBy(how=How.XPATH,using="//input[@id='phoneNumber']")
 	public static WebElement PhoneNumberInput;
 	
-	@FindBy(how=How.XPATH,using="//label[text()='E-mail Address']")
+	@FindBy(how=How.XPATH,using="//label[text()='Email Address']")
 	public static WebElement EmailLabel;
 	
 	@FindBy(how=How.XPATH,using="//input[@id='email']")

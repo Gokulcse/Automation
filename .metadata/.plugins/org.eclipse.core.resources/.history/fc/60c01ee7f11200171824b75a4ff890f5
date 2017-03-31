@@ -1,0 +1,165 @@
+package pages;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import utilitymethods.UtilityMethods;
+
+public class EmailIntegration 
+
+{
+@BeforeTest
+public static void DeleteAllEmail()
+{
+	System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
+	WebDriver driver = new FirefoxDriver();
+	driver.manage().window().maximize();
+	driver.get("https://www.google.co.in/?gfe_rd=cr&ei=BhfVWKOwGoPT8gfvw73oAw");
+	
+	UtilityMethods.waitForWebElement(driver.findElement(By.xpath("//a[@href='https://mail.google.com/mail/?tab=wm']")));
+	
+	driver.findElement(By.xpath("//a[@href='https://mail.google.com/mail/?tab=wm']")).click();
+	
+	UtilityMethods.waitForWebElement(driver.findElement(By.id("Email")));
+	
+	driver.findElement(By.id("Email")).sendKeys("automateselenium1");
+	driver.findElement(By.id("next")).click();
+	
+	UtilityMethods.waitForWebElement(driver.findElement(By.id("signIn")));
+	
+	driver.findElement(By.id("Passwd")).sendKeys("Automation@Selenium");
+	driver.findElement(By.id("signIn")).click();
+	
+	UtilityMethods.waitForWebElement(driver.findElement(By.xpath("//div[@aria-label='Select']")));
+	UtilityMethods.waitForWebElement(driver.findElement(By.xpath("//a[@href='https://mail.google.com/mail/?tab=wm']")));	
+
+	System.out.println("Mail Opened");
+	System.out.println("Delete all check box is displayed :: "+driver.findElement(By.xpath("//div[@aria-label='Select']")).isDisplayed()+"");
+	System.out.println("Delete all check box is Enabled   :: "+driver.findElement(By.xpath("//div[@aria-label='Select']")).isEnabled()+"");
+	
+
+	List<WebElement> unreademeil = driver.findElements(By.xpath("//*[@class='zF']"));
+	String MyMailer = "orders";
+	for(int i=0;i<unreademeil.size();i++)
+	{
+	    if(unreademeil.get(i).isDisplayed()==true)
+	    {
+	        if(unreademeil.get(i).getText().equals(MyMailer))
+	        {
+	        	driver.findElement(By.xpath("//div[@aria-label='Select']")).click();
+	        	
+	        	UtilityMethods.waitForWebElement(driver.findElement(By.xpath("//div[@aria-label='Delete']")));
+	       	 	
+	        	System.out.println("Check box selected");
+	            System.out.println("Yes we have got mail form " + MyMailer);
+	            System.out.println("Delet button is displayed :: "+driver.findElement(By.xpath("//div[@aria-label='Delete']")).isDisplayed()+"");
+	        	System.out.println("Delete button is Enabled   :: "+driver.findElement(By.xpath("//div[@aria-label='Delete']")).isEnabled()+"");
+	        	driver.findElement(By.xpath("//div[@aria-label='Delete']")).click();
+	        	UtilityMethods.sleep(2000);
+	        	System.out.println("Delete Button Clicked");
+	        	System.out.println("Deleted All Inbox Emails");
+	        }
+	        else
+	        {
+	            System.out.println("No mail form " + MyMailer);
+	        }
+	    }
+	    else
+	    {
+	    	  System.out.println("No mail form " + MyMailer);
+	    }
+	}
+	 System.out.println("No mail form " + MyMailer);
+	driver.close();
+}
+
+@Test(priority=1)
+public static void CheckEmailReceived()
+{
+	System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
+	WebDriver driver = new FirefoxDriver();
+	driver.manage().window().maximize();
+	driver.get("https://www.google.co.in/?gfe_rd=cr&ei=BhfVWKOwGoPT8gfvw73oAw");
+	
+	UtilityMethods.waitForWebElement(driver.findElement(By.xpath("//a[@href='https://mail.google.com/mail/?tab=wm']")));
+	
+	driver.findElement(By.xpath("//a[@href='https://mail.google.com/mail/?tab=wm']")).click();
+	
+	UtilityMethods.waitForWebElement(driver.findElement(By.id("Email")));	
+	
+	driver.findElement(By.id("Email")).sendKeys("automateselenium1");
+	driver.findElement(By.id("next")).click();
+	
+	UtilityMethods.waitForWebElement(driver.findElement(By.id("signIn")));
+	
+	driver.findElement(By.id("Passwd")).sendKeys("Automation@Selenium");
+	driver.findElement(By.id("signIn")).click();
+	
+	UtilityMethods.waitForWebElement(driver.findElement(By.xpath("//div[@aria-label='Select']")));
+
+	System.out.println("INBOX Opened");
+	List<WebElement> unreademeil = driver.findElements(By.xpath("//*[@class='zF']"));
+	String MyMailer = "orders";
+	for(int i=0;i<unreademeil.size();i++)
+	{
+	    if(unreademeil.get(i).isDisplayed()==true)
+	    {
+	        if(unreademeil.get(i).getText().equals(MyMailer))
+	        {
+	            System.out.println("Yes we have got mail form " + MyMailer);
+	        }
+	        else
+	        {
+	            System.out.println("No mail form " + MyMailer);
+	        }
+	    }
+	}
+	driver.close();
+}
+
+
+//@Test(priority=2)
+public static String ccURL() 
+{
+	System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
+	WebDriver driver = new FirefoxDriver();
+	driver.manage().window().maximize();
+	driver.get("https://www.google.co.in/?gfe_rd=cr&ei=BhfVWKOwGoPT8gfvw73oAw");
+	
+	UtilityMethods.waitForWebElement(driver.findElement(By.xpath("//a[@href='https://mail.google.com/mail/?tab=wm']")));
+	
+	driver.findElement(By.xpath("//a[@href='https://mail.google.com/mail/?tab=wm']")).click();
+	
+	UtilityMethods.waitForWebElement(driver.findElement(By.id("Email")));	
+	
+	driver.findElement(By.id("Email")).sendKeys("automateselenium1");
+	driver.findElement(By.id("next")).click();
+	
+	UtilityMethods.waitForWebElement(driver.findElement(By.id("signIn")));
+	
+	driver.findElement(By.id("Passwd")).sendKeys("Automation@Selenium");
+	driver.findElement(By.id("signIn")).click();
+	
+	UtilityMethods.waitForWebElement(driver.findElement(By.xpath("//div[@aria-label='Select']")));
+
+	System.out.println("INBOX Opened");
+	System.out.println("Order Mail is displayed :: "+driver.findElement(By.xpath("//div[@class='UI']")).isDisplayed()+"");
+	System.out.println("Order Mail is Enabled   :: "+driver.findElement(By.xpath("//div[@class='UI']")).isEnabled()+"");
+	driver.findElement(By.xpath("//div[@class='UI']")).click();
+	System.out.println("Mail Opened");
+	UtilityMethods.sleep(5000);
+	System.out.println("sub Mail is displayed :: "+driver.findElement(By.xpath("//a[text()='http://bell.m2m.com ']")).isDisplayed()+"");
+	System.out.println("sub Mail is Enabled   :: "+driver.findElement(By.xpath("//a[text()='http://bell.m2m.com ']")).isEnabled()+"");
+	String CCURL = driver.findElement(By.xpath("//a[text()='http://bell.m2m.com ']")).getAttribute("href");
+	System.out.println("Control Center URL ::"+CCURL+"");	
+	driver.close();
+    return CCURL;
+}
+
+}

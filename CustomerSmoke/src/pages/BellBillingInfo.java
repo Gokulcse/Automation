@@ -2,6 +2,7 @@ package pages;
 
 import java.util.Properties;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -16,7 +17,7 @@ import utilitymethods.UtilityMethods;
 
 public class BellBillingInfo extends BaseDriver
 {
-	public static FirefoxDriver driver =BaseDriver.driver ;
+	public static WebDriver driver =BaseDriver.driver ;
 	static Properties allInputValue;
 	
 	public static void Start() throws Exception 
@@ -119,13 +120,6 @@ public class BellBillingInfo extends BaseDriver
 	public static void BillingInfoRequiredFieldvalidatoin()
 	{
 		PageFactory.initElements(driver, BellBillingInfoPO.class);
-		/*boolean result = true;
-		result=BellBillingInfoPO.SameBillAndShipcheckbox.isSelected();
-		if(result== false)
-		{
-			BellBillingInfoPO.SameBillAndShipLabel.click();
-			try {Thread.sleep(2000);} catch (InterruptedException e) {e.printStackTrace();}	
-		}*/  
 		UtilityMethods.sleep(3000);
 		BellBillingInfoPO.BillAddressInput.clear();
 		UtilityMethods.sleep(1000);
@@ -170,7 +164,7 @@ public class BellBillingInfo extends BaseDriver
 		BellBillingInfoPO.BillAddressInput.clear();UtilityMethods.sleep(1000);
 		BellBillingInfoPO.ReviewButton.click();
 		BellBillingInfoPO.ReviewButton.click();
-        UtilityMethods.MinimumInputValidation(BellBillingInfoPO.BillPostInput, BellBillingInfoPO.BillPostError, 6, allInputValue.getProperty("InvalidMinInput"));    	 
+        UtilityMethods.MinimumInputValidation(BellBillingInfoPO.BillPostInput, BellBillingInfoPO.BillPostError, 3, allInputValue.getProperty("InvalidMinInput"));    	 
         System.out.println("BI012");
         UtilityMethods.sleep(2000);
 	}
@@ -211,14 +205,14 @@ public class BellBillingInfo extends BaseDriver
 			UtilityMethods.sleep(4000);	
 			BellBillingInfoPO.SameBillAndShipLabel.click();
 			UtilityMethods.sleep(3000);
-			System.out.println("The Xpath For Review button is :"+BellBillingInfoPO.ReviewButton+"");
-			System.out.println("The Xpath For Review button is Displayed:"+BellBillingInfoPO.ReviewButton.isDisplayed()+"");
-			System.out.println("The Xpath For Review button is Enabled:"+BellBillingInfoPO.ReviewButton.isEnabled()+"");
+			//System.out.println("The Xpath For Review button is :"+BellBillingInfoPO.ReviewButton+"");
+			//System.out.println("The Xpath For Review button is Displayed:"+BellBillingInfoPO.ReviewButton.isDisplayed()+"");
+			//System.out.println("The Xpath For Review button is Enabled:"+BellBillingInfoPO.ReviewButton.isEnabled()+"");
 			driver.navigate().refresh();
 			UtilityMethods.sleep(5000);
-			System.out.println("The Xpath For Review button is :"+BellBillingInfoPO.ReviewButton+"");
-			System.out.println("The Xpath For Review button is Displayed:"+BellBillingInfoPO.ReviewButton.isDisplayed()+"");
-			System.out.println("The Xpath For Review button is Enabled:"+BellBillingInfoPO.ReviewButton.isEnabled()+"");
+			//System.out.println("The Xpath For Review button is :"+BellBillingInfoPO.ReviewButton+"");
+			//System.out.println("The Xpath For Review button is Displayed:"+BellBillingInfoPO.ReviewButton.isDisplayed()+"");
+			//System.out.println("The Xpath For Review button is Enabled:"+BellBillingInfoPO.ReviewButton.isEnabled()+"");
 			BellBillingInfoPO.ReviewButton.click();
 			System.out.println("BI016");
 			UtilityMethods.sleep(2000);

@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -14,12 +16,11 @@ import pages.BellHomePage;
 import pages.BellReferralRequestPage;
 import pages.BellReferralRequestThankYou;
 import pages.AdminOperation;
-
 import utilitymethods.UtilityMethods;
 
 public class BellEndToEndFlowOne extends BaseDriver
 {
-public static FirefoxDriver driver;
+public static WebDriver driver;
 
 static Properties allInputValue;
 	@BeforeTest
@@ -131,7 +132,7 @@ static Properties allInputValue;
 	public static void HomePageM2MDotComvalidation() throws InterruptedException, IOException
 	{
 	allInputValue= UtilityMethods.getBellPropValues();
-	if(allInputValue.getProperty("Broswer").equals("Chrome"))
+	if(allInputValue.getProperty("Broswer").equals("Chme"))
 	{
 		//driver.navigate().refresh();
 		driver.navigate().refresh();
@@ -193,6 +194,7 @@ static Properties allInputValue;
 	{
 		driver.navigate().refresh();
 		Thread.sleep(3000);
+		driver.navigate().forward();
 		BellHomePage.ReferralRequestButtonRedirection();
 		Thread.sleep(3000);
 		//driver.navigate().refresh();

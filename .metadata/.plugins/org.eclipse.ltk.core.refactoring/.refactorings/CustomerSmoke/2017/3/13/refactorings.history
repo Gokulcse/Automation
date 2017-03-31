@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;test.BellEndToEndM1AndM2&apos; to &apos;BellEndToEnd&apos;&#x0D;&#x0A;- Original project: &apos;CustomerSmoke&apos;&#x0D;&#x0A;- Original element: &apos;test.BellEndToEndM1AndM2&apos;&#x0D;&#x0A;- Renamed element: &apos;test.BellEndToEnd&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;BellEndToEndM1AndM2&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;test{BellEndToEndM1AndM2.java[BellEndToEndM1AndM2" matchStrategy="1" name="BellEndToEnd" qualified="false" references="true" similarDeclarations="false" stamp="1490596860929" textual="false" version="1.0"/>
+</session>

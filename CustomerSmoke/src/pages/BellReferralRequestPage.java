@@ -1,34 +1,29 @@
 package pages;
 
 import java.util.Properties;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.PageFactory;
+
 import pageobjects.BellReferralRequestPO;
 import utilitymethods.UtilityMethods;
 import driver.BaseDriver;
 
 public class BellReferralRequestPage extends BaseDriver
 {
-	public static FirefoxDriver driver=BaseDriver.driver;
-	public static Properties allInputValue = BellHomePage.allInputValue;
+	public static WebDriver driver ;
+	public static Properties allInputValue;
 	//@BeforeTest
 	public static void BrowserIntilation() throws Exception
 	{
 		allInputValue = UtilityMethods.getBellPropValues();
-		driver = BellHomePage.start();
+		driver = BaseDriver.driver;
 		driver.navigate().refresh();
 	}
-	/*public static FirefoxDriver driver;
-	public static Properties allInputValue ;
-	//@BeforeTest
-	public static void BrowserIntilation() throws Exception
-	{ 
-		driver=BaseDriver.driver;
-		allInputValue = UtilityMethods.getBellPropValues();
-		driver = BellHomePage.start();
-		driver.navigate().refresh();
-	}*/
 	//@Test(priority=1)
 	public static void validateOperatorLogo()
 	{
@@ -122,7 +117,7 @@ public class BellReferralRequestPage extends BaseDriver
 		UtilityMethods.PlaceholderValidation(BellReferralRequestPO.CompanyNameInput, "Enter your company name", "Company Name");
 		UtilityMethods.PlaceholderValidation(BellReferralRequestPO.PositionRoleInput, "Enter your position/role", "position/role");
 		UtilityMethods.PlaceholderValidation(BellReferralRequestPO.PhoneNumberInput, "Enter your contact number", "Phone Number");
-		UtilityMethods.PlaceholderValidation(BellReferralRequestPO.EmailInput, "Enter e-mail", "Email-ID");
+		UtilityMethods.PlaceholderValidation(BellReferralRequestPO.EmailInput, "Enter email", "Email-ID");
 		UtilityMethods.PlaceholderValidation(BellReferralRequestPO.ModuleInput, "Enter the module used in your device", "Module");
 		UtilityMethods.PlaceholderValidation(BellReferralRequestPO.VolumetoDeployInput, "Enter first year quantity", "Volume to deploy");
 		UtilityMethods.PlaceholderValidation(BellReferralRequestPO.Description, "Tell us a little about your device, target audience, and how we can help.", "Description");
@@ -262,8 +257,6 @@ public class BellReferralRequestPage extends BaseDriver
 	    BellReferralRequestPO.RequestButton.click();
 	    System.out.println("RR017");
 	}
-
-	
 
 	//@AfterTest
 	public static void Exit()

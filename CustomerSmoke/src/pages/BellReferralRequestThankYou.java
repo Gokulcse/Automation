@@ -2,7 +2,10 @@ package pages;
 
 import java.util.Properties;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
@@ -12,14 +15,14 @@ import utilitymethods.UtilityMethods;
 
 public class BellReferralRequestThankYou extends BaseDriver
 {
-	public static FirefoxDriver driver=BaseDriver.driver;
-	public static Properties allInputValue = BellHomePage.allInputValue;
+	public static WebDriver driver;
+	public static Properties allInputValue;
 	//@BeforeTest
 	public static void BrowserIntilation() throws Exception
 	{
 		allInputValue = UtilityMethods.getBellPropValues();
-		driver = BellHomePage.start();
-		driver.navigate().refresh();
+		driver = BaseDriver.driver;
+		
 	}
 	
 	@Test(priority=1)
@@ -52,7 +55,7 @@ public class BellReferralRequestThankYou extends BaseDriver
 	@Test(priority=4)
 	public static void bellLogoValidation() throws InterruptedException
 	{
-		UtilityMethods.pageRedirection(BellReferralRequestThankYouPO.BellLogo, BellReferralRequestThankYouPO.WhatIsIotImage,"others");		
+		UtilityMethods.ThankYouPageRedirection(BellReferralRequestThankYouPO.BellLogo, BellReferralRequestThankYouPO.WhatIsIotImage);		
 		System.out.println("RRTY004");
 	}
 	
@@ -67,7 +70,8 @@ public class BellReferralRequestThankYou extends BaseDriver
 	@Test(priority=6)
 	public static void backToIOTPageValidation() throws InterruptedException
 	{
-		UtilityMethods.pageRedirection(BellReferralRequestThankYouPO.BackToIOT,BellReferralRequestThankYouPO.WhatIsIotImage,"Others");		
+		UtilityMethods.ThankYouPageRedirection(BellReferralRequestThankYouPO.BackToIOT,BellReferralRequestThankYouPO.WhatIsIotImage);		
 		System.out.println("RRTY006");
+		
 	}
 }

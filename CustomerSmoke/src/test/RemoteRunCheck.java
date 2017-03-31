@@ -24,10 +24,13 @@ public class RemoteRunCheck
 	@BeforeTest
 	public static void Setup() throws MalformedURLException
 	{
-		String NodeURL="http://192.168.1.8:5566/wd/hub";
-		DesiredCapabilities capability = DesiredCapabilities.firefox();
-		capability.setBrowserName("firefox");
+		String NodeURL="http://192.168.1.2:5566/wd/hub";
+		//System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
+		DesiredCapabilities capability = DesiredCapabilities.chrome();
+		capability.setBrowserName("chrome");
+		//capability.setCapability("marionette", true);
 		capability.setPlatform(Platform.WIN10);
+		//capability.setVersion("47");
 		driver = new RemoteWebDriver(new URL(NodeURL), capability);
 		
 	}

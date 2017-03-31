@@ -1,7 +1,9 @@
 package pages;
 
+import java.io.IOException;
 import java.util.Properties;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -15,26 +17,16 @@ import pages.EmailIntegration;
 
 public class BellControlCenter extends BaseDriver
 {
-	public static FirefoxDriver driver;
+	public static WebDriver driver;
 	static Properties allInputValue;
 	
-	
-	/*public static void start() throws Exception
-	{	 
-		driver = launchApp();
-		allInputValue = UtilityMethods.getBellPropValues();	
-		String myWindowHandle = driver.getWindowHandle();
-		driver.switchTo().window(myWindowHandle);
-		PageFactory.initElements(driver, BellControlCenterPO.class);	
-	}*/
 	//@BeforeTest
-	public static FirefoxDriver start() throws Exception
+	public static WebDriver start() throws Exception
 	{	 
 		driver = launchApp(EmailIntegration.ccURL());
 		allInputValue = UtilityMethods.getBellPropValues();
 		String myWindowHandle = driver.getWindowHandle();
 		driver.switchTo().window(myWindowHandle);
-		//return driver;
 		return driver;
 	}
 	//@Test(priority=1)
@@ -45,7 +37,6 @@ public class BellControlCenter extends BaseDriver
 		UtilityMethods.DisplayEnableValidator(BellControlCenterPO.PasswordInput, "NotEqual", "Control Center Password input Field");
 		UtilityMethods.DisplayEnableValidator(BellControlCenterPO.ConfirmPasswordInput, "NotEqual", "Control Center Confirm password input Field");
 		UtilityMethods.DisplayEnableValidator(BellControlCenterPO.CreateButton, "NotEqual", "Control Center Create link button");
-		//UtilityMethods.DisplayEnableValidator(driver.findElement(By.xpath("//button")), "NotEqual", "Control Center Close icon");
 		System.out.println("CC001");
 		UtilityMethods.sleep(2000);
 	}
@@ -83,6 +74,12 @@ public class BellControlCenter extends BaseDriver
 		UtilityMethods.sleep(3000);
 		BellControlCenterPO.CreateButton.click();
 		UtilityMethods.sleep(3000);
+ 		BrowserForUse=allInputValue.getProperty("Broswer");
+ 		if(BrowserForUse.equals("IE"))
+ 		{
+ 			BellControlCenterPO.CreateButton.click();
+ 			UtilityMethods.sleep(3000);
+ 		}
 		UtilityMethods.ControlCenterRequiredFieldValidation(BellControlCenterPO.UserNameInput,BellControlCenterPO.UserNameError, "Username.");
 		UtilityMethods.sleep(2000);
 		UtilityMethods.ControlCenterRequiredFieldValidation(BellControlCenterPO.PasswordInput, BellControlCenterPO.PasswordError, "Password");

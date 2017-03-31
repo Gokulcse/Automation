@@ -8,7 +8,6 @@ import driver.BaseDriver;
 
 public class BellHomePagePO extends BaseDriver
 {
-	
 	@FindBy(how=How.XPATH,using="//img[@alt='Bell']")
 	public static WebElement BellLogo;
 	

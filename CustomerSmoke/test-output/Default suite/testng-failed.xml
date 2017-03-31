@@ -3,15 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="pages.BellEndToEndFlowOne">
+      <class name="driver.Test">
         <methods>
-          <include name="ReferralrequestLabelDisplayedAndEnabled"/>
-          <include name="ThankYouIOTPagevalidation"/>
-          <include name="ThankYouBellPageRedirection"/>
-          <include name="BrowserIntilation"/>
-          <include name="ThankYouBellLogo"/>
+          <include name="DeletingPreviousEmail"/>
+          <include name="HomePageBellLogoValidation"/>
         </methods>
-      </class> <!-- pages.BellEndToEndFlowOne -->
+      </class> <!-- driver.Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

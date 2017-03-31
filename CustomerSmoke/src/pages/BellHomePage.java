@@ -1,23 +1,29 @@
 package pages;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.util.Properties;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.PageFactory;
+
 import driver.BaseDriver;
 import pageobjects.BellHomePagePO;
 import utilitymethods.UtilityMethods;
 public class BellHomePage extends BaseDriver
 {
-		public static FirefoxDriver driver;
+		public static WebDriver driver =BaseDriver.driver;
 		static Properties allInputValue;
-		
+		public static	String BrowserForUse;
 	//@BeforeTest
-	public static FirefoxDriver start() throws Exception
+	public static WebDriver start() throws Exception
 	{	
 		allInputValue = UtilityMethods.getBellPropValues();
-		driver = launchApp(allInputValue.getProperty("BaseURl"));
-		return driver;
+		return driver = launchApp(allInputValue.getProperty("BaseURl"));
 	}
 			 
 	//@Test(priority=1)
@@ -56,6 +62,7 @@ public class BellHomePage extends BaseDriver
 		Thread.sleep(3000);
 		UtilityMethods.DisplayEnableValidator(BellHomePagePO.SectionOneTrackOrderButton, "NotEqual","Track Order Button in IoT Starter Kit banner");
 		BellHomePagePO.SectionOneTrackOrderButton.click();
+		Thread.sleep(2000);
 		UtilityMethods.DisplayEnableValidator(BellHomePagePO.SectionOneTrackOrderPRButton, "NotEqual","Track Order on click Button in IoT Starter Kit Track Order");
 		UtilityMethods.DisplayEnableValidator(BellHomePagePO.SectionOneTrackOrderText, "NotEqual","Track Order on Click Text in IoT Starter Kit Track Order");
 		UtilityMethods.DisplayEnableValidator(BellHomePagePO.TrackOrderEmailID, "NotEqual","Enter Email ID Text Box in IoT Starter Kit Track Order");
@@ -248,28 +255,56 @@ public class BellHomePage extends BaseDriver
 	{
 		PageFactory.initElements(driver, BellHomePagePO.class);	
 		UtilityMethods.DisplayEnableValidator(BellHomePagePO.SectionOneReferralRrequestButton, "NotEqual", "Section One Referral Request Button");
-		UtilityMethods.pageRedirection(BellHomePagePO.SectionOneReferralRrequestButton,BellHomePagePO.ReferrralRequestFindElement,"Others");
+		UtilityMethods.pageRedirection(BellHomePagePO.SectionOneReferralRrequestButton,BellHomePagePO.ReferrralRequestFindElement,"");
 		System.out.println("HP021");
 	}
 	
 	//@Test(priority=22)
-	public static void sectionTwoReferralRequestvalidation() throws InterruptedException
+	public static void sectionTwoReferralRequestvalidation() throws InterruptedException, AWTException
 	{
 		PageFactory.initElements(driver, BellHomePagePO.class);
 		UtilityMethods.DisplayEnableValidator(BellHomePagePO.SectionTwoReferralRrequestButton, "NotEqual", "Section Two Referral Request Button");
+		BrowserForUse=allInputValue.getProperty("Broswer");
+		if (BrowserForUse.equals("IE"))
+		{
+			UtilityMethods.sleep(6000);
+			System.out.println("Page redirection Done");
+			/*if(!BellHomePagePO.SectionTwoReferralRrequestButton.isEnabled())
+			{
+				Robot rb =new Robot();
+				rb.keyPress(KeyEvent.VK_ESCAPE);
+				rb.keyRelease(KeyEvent.VK_ESCAPE);
+				UtilityMethods.sleep(2000);
+				driver.navigate().refresh();
+				UtilityMethods.sleep(5000);
+			}
+			BellHomePagePO.SectionTwoReferralRrequestButton.click();
+			UtilityMethods.sleep(5000);
+			if(BellHomePagePO.ReferrralRequestFindElement.isDisplayed())
+			{
+			driver.navigate().back();
+			System.out.println("Page redirection Done");
+			}
+			else
+			{
+			System.out.println("Page redirection failed");	
+			}*/
+		}
+		else
+		{
 		driver.navigate().refresh();
-		UtilityMethods.pageRedirection(BellHomePagePO.SectionTwoReferralRrequestButton, BellHomePagePO.ReferrralRequestFindElement,"Others");			
+		UtilityMethods.pageRedirection(BellHomePagePO.SectionTwoReferralRrequestButton, BellHomePagePO.ReferrralRequestFindElement,"");			
+		}
 		System.out.println("HP022");
+		
 	}
 	//@Test(priority=23)
 	public static void bellLogoValidation() throws InterruptedException
 	{
 		PageFactory.initElements(driver, BellHomePagePO.class);
-		UtilityMethods.pageRedirection(BellHomePagePO.BellLogo, BellHomePagePO.WhatIsIotImage,"HomePage");
+		UtilityMethods.pageRedirection(BellHomePagePO.BellLogo, BellHomePagePO.WhatIsIotImage,"");
 		System.out.println("HP023");
 	}
-	
-	
 	
 	////@Test(priority=25)
 	public static void TrackOrderValidPageRedirection() throws InterruptedException
@@ -280,6 +315,7 @@ public class BellHomePage extends BaseDriver
 		UtilityMethods.PageNavigationValidation(BellHomePagePO.SectionOneTrackOrderPRButton, BellHomePagePO.SectionOneTrackOrderFindElement, "Post");
 		System.out.println(""+"TS0023");
 	}
+	
 	public static void ReferralRequestButtonRedirection() throws InterruptedException
 	{
 		PageFactory.initElements(driver, BellHomePagePO.class);
