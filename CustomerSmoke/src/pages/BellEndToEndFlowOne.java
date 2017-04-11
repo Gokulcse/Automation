@@ -1,5 +1,6 @@
 package pages;
 
+import java.awt.AWTException;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -178,7 +179,7 @@ static Properties allInputValue;
 	}
 	}
 	@Test(priority=22)
-	public static void HomePageSectwoReferralRequestButton() throws InterruptedException
+	public static void HomePageSectwoReferralRequestButton() throws InterruptedException, AWTException
 	{
 		Thread.sleep(2000);
 		BellHomePage.sectionTwoReferralRequestvalidation();

@@ -139,10 +139,10 @@ public class BellBillingInfo extends BaseDriver
 		PageFactory.initElements(driver, BellBillingInfoPO.class);
 		BellBillingInfoPO.BillAddressInput.clear();UtilityMethods.sleep(1000);
 		BellBillingInfoPO.ReviewButton.click();
-		 UtilityMethods.SpaceNotAllowedvalidation(BellBillingInfoPO.BillAddressInput, BellBillingInfoPO.BillAddressError);
-		 UtilityMethods.SpaceNotAllowedvalidation(BellBillingInfoPO.BillCityInput, BellBillingInfoPO.BillCityError);
-		 System.out.println("BI010");
-		 UtilityMethods.sleep(2000);
+		UtilityMethods.SpaceNotAllowedvalidation(BellBillingInfoPO.BillAddressInput, BellBillingInfoPO.BillAddressError);
+		UtilityMethods.SpaceNotAllowedvalidation(BellBillingInfoPO.BillCityInput, BellBillingInfoPO.BillCityError);
+		System.out.println("BI010");
+		UtilityMethods.sleep(2000);
 	}
 	
 	public static void BillingInfoMaximumInputValidation()
@@ -190,7 +190,6 @@ public class BellBillingInfo extends BaseDriver
 	{
 		PageFactory.initElements(driver, BellBillingInfoPO.class);
 		//UtilityMethods.sleep(5000);
-		
 		UtilityMethods.sleep(5000);
 		UtilityMethods.pageRedirection(BellBillingInfoPO.BackButton, BellBillingInfoPO.BackFindElement,"Others");
 		System.out.println("BI015");

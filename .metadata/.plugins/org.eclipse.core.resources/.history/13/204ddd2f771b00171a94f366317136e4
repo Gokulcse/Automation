@@ -1,0 +1,52 @@
+package pages;
+
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import pageobjects.BellHomePagePO;
+import pageobjects.UnicomHomePagePO;
+import utilitymethods.UtilityMethods;
+import driver.BaseDriver;
+
+public class UnicomHomePage extends BaseDriver
+{
+	public static WebDriver driver =BaseDriver.driver;
+	static Properties allInputValue;
+	public static	String BrowserForUse;
+	
+	public static WebDriver start() throws Exception
+	{	
+		allInputValue = UtilityMethods.getUnicomPropValues();
+		return driver = launchApp(allInputValue.getProperty("BaseURl"));
+	}
+	@BeforeTest
+	public static void validateOperatorLogo() 
+	{		
+		PageFactory.initElements(driver, UnicomHomePagePO.class);	
+		UtilityMethods.DisplayEnableValidator(UnicomHomePagePO.UnicomLogo, "NotEqual","China Unicom Operator Logo in IoT Starter Kit");	
+		UtilityMethods.Imagevalidation(UnicomHomePagePO.UnicomLogo,"src",allInputValue.getProperty("UnicomLogo"),"China Unicom Operator Logo");
+		System.out.println("HP001");
+	} 
+	@Test(priority=1)
+	public static void validateCompanyLogo() 
+	{
+		PageFactory.initElements(driver, UnicomHomePagePO.class);	
+		UtilityMethods.DisplayEnableValidator(UnicomHomePagePO.CiscoLogo, "NotEqual","Cisco Jasper Company Logo in IoT Starter Kit");		
+		UtilityMethods.Imagevalidation(UnicomHomePagePO.CiscoLogo,"src",allInputValue.getProperty("ciscoLogo"),"Cisco Jasper Company Logo");
+		System.out.println("HP002");
+	}
+	@Test(priority=1)
+	public static void sectionOneIotStarterKitBellValidation()
+	{
+		PageFactory.initElements(driver, UnicomHomePagePO.class);	
+		UtilityMethods.StringValidation(UnicomHomePagePO.TextBannerh1.getText(), allInputValue.getProperty("sectionOneH1"), "equalsignorecase");
+		UtilityMethods.StringValidation(UnicomHomePagePO.TextBannerh3.getText(), allInputValue.getProperty("sectionOneH3"), "equalsignorecase");
+		UtilityMethods.StringValidation(UnicomHomePagePO.TextBannerp1.getText(), allInputValue.getProperty("sectionOneP1"), "equalsignorecase");
+		UtilityMethods.StringValidation(UnicomHomePagePO.TextBannerp2.getText(), allInputValue.getProperty("sectionOneP2"), "equalsignorecase");
+		System.out.println("HP003");
+	}
+}

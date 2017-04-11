@@ -36,7 +36,21 @@ public class LinkValidation {
 	
 	public static void main(String[] args) throws InterruptedException
 	{
+		System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();
+		driver.manage().window().maximize();
+		driver.get("http://chinaun9c0nd.devm2m.com/?clLocaleCode=en"); 
+		System.out.println(""+driver.getTitle());
+		String temp =driver.findElement(By.tagName("body")).getText();
 		
+		try
+		{
+		PrintWriter writer = new PrintWriter("China_Unicom_English.doc", "UTF-8");
+		writer.println(temp);
+		writer.close();
+		} 
+	catch (IOException e) {}
+		   System.out.println(""+temp);
 		
 		/*
 		System.out.println(""+GenerateRandomNum(5)+"");
@@ -66,21 +80,7 @@ public class LinkValidation {
 		driver.findElement(By.xpath(".//*[@id='mailmillieu']//a[@rel='nofollow']")).click();
 		Thread.sleep(3500);
 */
-		/*System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
-		WebDriver driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.get("http://starterkit-dev.devm2m.com/"); 
-		System.out.println(""+driver.getTitle());
-String temp =driver.findElement(By.tagName("body")).getText();
-		
-		try
-		{
-		PrintWriter writer = new PrintWriter("AdminDashBoard.doc", "UTF-8");
-		writer.println(temp);
-		writer.close();
-		} 
-	catch (IOException e) {}
-		   System.out.println(""+temp);
+		/*
 		
 		
 		/* String parentHandle = driver.getWindowHandle();

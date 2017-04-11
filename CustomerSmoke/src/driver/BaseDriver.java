@@ -33,7 +33,7 @@ public class BaseDriver {
 	public static  WebDriver launchApp(String URL) throws IOException, Exception
 	{	
 		try {allInputValue=UtilityMethods.getBellPropValues();} catch (IOException e) {e.printStackTrace();}
- 		BrowserForUse=allInputValue.getProperty("Broswer");
+		BrowserForUse=allInputValue.getProperty("Broswer");
 		if (BrowserForUse.equals("FireFox"))
 		{
 			System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
@@ -69,16 +69,16 @@ public class BaseDriver {
 		return driver;
 		//driver.get("http://skotni:dkt123@postdevfortesting.devm2m.com/");	 to be used if windows server authentication is used
 	}
-	 public static FirefoxProfile FirefoxDriverProfile() throws Exception 
-	 {
-		 FirefoxProfile profile = new FirefoxProfile();
-		 profile.setPreference("browser.download.folderList", 2);
-		 profile.setPreference("browser.download.dir", "F:\\pdf");
-		 profile.setPreference("browser.helperApps.alwaysAsk.force", false);
-		 profile.setPreference("browser.download.manager.showAlertOnComplete", false);
-		 profile.setPreference("browser.download.manager.showWhenStarting",false);
-		 profile.setPreference("browser.helperApps.neverAsk.saveToDisk", "application/pdf");
-		 profile.setPreference("pdfjs.disabled", false);
-		 return profile;
-	 }
+	public static FirefoxProfile FirefoxDriverProfile() throws Exception 
+	{
+		FirefoxProfile profile = new FirefoxProfile();
+		profile.setPreference("browser.download.folderList", 2);
+		profile.setPreference("browser.download.dir", "F:\\pdf");
+		profile.setPreference("browser.helperApps.alwaysAsk.force", false);
+		profile.setPreference("browser.download.manager.showAlertOnComplete", false);
+		profile.setPreference("browser.download.manager.showWhenStarting",false);
+		profile.setPreference("browser.helperApps.neverAsk.saveToDisk", "application/pdf");
+		profile.setPreference("pdfjs.disabled", false);
+		return profile;
+	}
 }

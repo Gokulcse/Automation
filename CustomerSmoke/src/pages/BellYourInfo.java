@@ -27,16 +27,15 @@ public class BellYourInfo extends BaseDriver
 {
 	public static WebDriver driver;
 	public static Properties allInputValue ;
-	
-	
+
+
 	//@Test(priority=1)
 	public static void intial() throws IOException
 	{
 		driver=BaseDriver.driver;
 		allInputValue = UtilityMethods.getBellPropValues();
-		
 	}
-	
+
 	//@Test(priority=2)
 	public static void referralRequestDataValidation()
 	{
@@ -56,7 +55,7 @@ public class BellYourInfo extends BaseDriver
 		System.out.println("YI001");
 		UtilityMethods.sleep(2000);
 	}
-	
+
 	//@Test(priority=3)
 	public static void TermsOfServiceTextValidation()
 	{
@@ -71,7 +70,7 @@ public class BellYourInfo extends BaseDriver
 		System.out.println("YI002");
 		UtilityMethods.sleep(5000);
 	}
-	
+
 	//@Test(priority=4)
 	public static void TermsOfServicePopUpCloseIcon()
 	{
@@ -84,7 +83,6 @@ public class BellYourInfo extends BaseDriver
 		System.out.println("YI003");
 		UtilityMethods.sleep(2000);
 	}
-	
 	//@Test(priority=5)
 	public static void TermsOfServicePopUpCloseButton()
 	{
@@ -98,8 +96,6 @@ public class BellYourInfo extends BaseDriver
 		System.out.println("YI004");
 		UtilityMethods.sleep(2000);
 	}
-	
-	
 	//@Test(priority=6)
 	public static void TermsOfServicePDFDownload() throws AWTException
 	{
@@ -109,7 +105,7 @@ public class BellYourInfo extends BaseDriver
 		UtilityMethods.sleep(2000);
 		UtilityMethods.DisplayEnableValidator(BellYourInfoPO.TermsOfServicesDownload, "NotEqual","Terms Of Services Download");
 		System.out.println("TS005.2");
-		
+
 		if(allInputValue.getProperty("Broswer").equals("Firefox"))
 		{	
 			BellYourInfoPO.TermsOfServicesDownload.click();
@@ -127,14 +123,14 @@ public class BellYourInfo extends BaseDriver
 			System.out.println("The URL is: "+PdfUrl+"");
 			System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+ "\\libs\\IEDriverServer.exe");
 			InternetExplorerDriver driver1 = new InternetExplorerDriver();
-	        driver1.get(PdfUrl);
-	        UtilityMethods.sleep(5000);
-	        Robot rb =new Robot();
+			driver1.get(PdfUrl);
+			UtilityMethods.sleep(5000);
+			Robot rb =new Robot();
 			rb.keyPress(KeyEvent.VK_ALT);
 			rb.keyPress(KeyEvent.VK_S);
 			rb.keyRelease(KeyEvent.VK_ALT);
 			rb.keyRelease(KeyEvent.VK_S);
-			 UtilityMethods.sleep(5000);
+			UtilityMethods.sleep(5000);
 			System.out.println("File Downloaded");
 			driver1.close();
 		}
@@ -149,7 +145,7 @@ public class BellYourInfo extends BaseDriver
 		System.out.println("YI005");
 		UtilityMethods.sleep(2000);
 	}
-	
+
 	//@Test(priority=7)
 	public static void validateOperatorLogo()
 	{
@@ -159,7 +155,7 @@ public class BellYourInfo extends BaseDriver
 		System.out.println("YI006");
 		UtilityMethods.sleep(2000);
 	} 
-	
+
 	//@Test(priority=8)
 	public static void validateCompanyLogo()
 	{
@@ -169,7 +165,7 @@ public class BellYourInfo extends BaseDriver
 		System.out.println("YI007");
 		UtilityMethods.sleep(2000);
 	}
- 
+
 	//@Test(priority=9)
 	public static void ReferralRequestTextValidation()
 	{
@@ -212,7 +208,7 @@ public class BellYourInfo extends BaseDriver
 		System.out.println("YI009");
 		UtilityMethods.sleep(2000);
 	}
-	
+
 	//@Test(priority=11)
 	public static void RequestReferralCodeLabelTextDisplayedAndEnabled()
 	{	
@@ -239,7 +235,7 @@ public class BellYourInfo extends BaseDriver
 		System.out.println("YI010");
 		UtilityMethods.sleep(2000);
 	}
-	
+
 	//@Test(priority=12) 
 	public static void ReferralRequestCodeValidInputValidation()
 	{
@@ -258,11 +254,11 @@ public class BellYourInfo extends BaseDriver
 		UtilityMethods.ValidInputValidation(BellYourInfoPO.VolumetoDeployInput, allInputValue.getProperty("ValidVolumeToDeploy"),BellYourInfoPO.VolumetoDeployError);
 		UtilityMethods.ValidInputValidation(BellYourInfoPO.Description, allInputValue.getProperty("ValidDescription"), BellYourInfoPO.DescriptionError);
 		//UtilityMethods.ValidateSimTypeRadioButton(2,driver.findElement(By.xpath("//div[@id='simTypeId-error']")));	
-	   //driver.findElement(By.xpath("//label[text()='2FF/Ruggedized']")).click();
+		//driver.findElement(By.xpath("//label[text()='2FF/Ruggedized']")).click();
 		System.out.println("YI011");
 		UtilityMethods.sleep(2000);
 	}
-	
+
 	//@Test(priority=13)
 	public static void ReferralRequestRequiredFieldValidation()
 	{
@@ -284,10 +280,10 @@ public class BellYourInfo extends BaseDriver
 		System.out.println("YI012");
 		UtilityMethods.sleep(2000);
 	}
-	
+
 	//@Test(priority=14)
 	public static void ReferralRequestSpaceNotAllowedValidation()
-	 {
+	{
 		PageFactory.initElements(driver, BellYourInfoPO.class);
 		UtilityMethods.sleep(2000);
 		BellYourInfoPO.ContinueButton.click();
@@ -298,36 +294,36 @@ public class BellYourInfo extends BaseDriver
 		UtilityMethods.SpaceNotAllowedvalidation(BellYourInfoPO.PositionRoleInput, BellYourInfoPO.PositionError);	
 		System.out.println("YI013");
 		UtilityMethods.sleep(2000);
-	 }
+	}
 	//@Test(priority=15)
 	public static void ReferralRequestMaximumInputValidation()
-	 {
+	{
 		PageFactory.initElements(driver, BellYourInfoPO.class);
 		UtilityMethods.sleep(2000);
 		BellYourInfoPO.ContinueButton.click();
 		UtilityMethods.sleep(5000);
-	    UtilityMethods.MaximumInputValidation(BellYourInfoPO.FirstNameInput, BellYourInfoPO.FirstNameError, 49, allInputValue.getProperty("InvalidInput"));
-	    UtilityMethods.MaximumInputValidation(BellYourInfoPO.LastNameInput, BellYourInfoPO.LastNameError, 49, allInputValue.getProperty("InvalidInput"));
-	    UtilityMethods.MaximumInputValidation(BellYourInfoPO.CompanyNameInput, BellYourInfoPO.CompanyError, 25, allInputValue.getProperty("InvalidCompanyName"));
-	    UtilityMethods.MaximumInputValidation(BellYourInfoPO.PositionRoleInput, BellYourInfoPO.PositionError, 25, allInputValue.getProperty("InvalidCompanyName"));
-	    UtilityMethods.MaximumInputValidation(BellYourInfoPO.PhoneNumberInput, BellYourInfoPO.PhoneNumberError, 25, allInputValue.getProperty("Invalidphonenumber"));
-	    UtilityMethods.MaximumInputValidation(BellYourInfoPO.Description, BellYourInfoPO.DescriptionError, 255, allInputValue.getProperty("InvalidDescription"));     
-	    System.out.println("YI014");
-	    UtilityMethods.sleep(2000);
-	 }
+		UtilityMethods.MaximumInputValidation(BellYourInfoPO.FirstNameInput, BellYourInfoPO.FirstNameError, 49, allInputValue.getProperty("InvalidInput"));
+		UtilityMethods.MaximumInputValidation(BellYourInfoPO.LastNameInput, BellYourInfoPO.LastNameError, 49, allInputValue.getProperty("InvalidInput"));
+		UtilityMethods.MaximumInputValidation(BellYourInfoPO.CompanyNameInput, BellYourInfoPO.CompanyError, 25, allInputValue.getProperty("InvalidCompanyName"));
+		UtilityMethods.MaximumInputValidation(BellYourInfoPO.PositionRoleInput, BellYourInfoPO.PositionError, 25, allInputValue.getProperty("InvalidCompanyName"));
+		UtilityMethods.MaximumInputValidation(BellYourInfoPO.PhoneNumberInput, BellYourInfoPO.PhoneNumberError, 25, allInputValue.getProperty("Invalidphonenumber"));
+		UtilityMethods.MaximumInputValidation(BellYourInfoPO.Description, BellYourInfoPO.DescriptionError, 255, allInputValue.getProperty("InvalidDescription"));     
+		System.out.println("YI014");
+		UtilityMethods.sleep(2000);
+	}
 	//@Test(priority=16)
 	public static void ReferralRequestMinimumInputValidation()
-	 {
+	{
 		PageFactory.initElements(driver, BellYourInfoPO.class);
 		UtilityMethods.sleep(2000);
 		BellYourInfoPO.ContinueButton.click();
 		UtilityMethods.sleep(5000);
 		UtilityMethods.MinimumInputValidation(BellYourInfoPO.CompanyNameInput, BellYourInfoPO.CompanyError, 3, allInputValue.getProperty("InvalidMinInput"));
-	    UtilityMethods.MinimumInputValidation(BellYourInfoPO.PhoneNumberInput, BellYourInfoPO.PhoneNumberError, 10, allInputValue.getProperty("InvalidMinphonenumber"));    	 
-	    System.out.println("YI015");
-	    UtilityMethods.sleep(2000);
-	    
-	 }
+		UtilityMethods.MinimumInputValidation(BellYourInfoPO.PhoneNumberInput, BellYourInfoPO.PhoneNumberError, 10, allInputValue.getProperty("InvalidMinphonenumber"));    	 
+		System.out.println("YI015");
+		UtilityMethods.sleep(2000);
+
+	}
 	//@Test(priority=17)
 	public static void ReferralRequestEmailValidation()
 	{	
@@ -338,7 +334,7 @@ public class BellYourInfo extends BaseDriver
 		UtilityMethods.EmailIdInvalidvalidation(BellYourInfoPO.EmailInput, BellYourInfoPO.EmailError, allInputValue.getProperty("InvalidEmailID"));
 		System.out.println("YI016");
 		UtilityMethods.sleep(2000);
-		
+
 	}
 	//@Test(priority=18)
 	public static void ReferralRequestNumericFieldValidation()
@@ -384,7 +380,7 @@ public class BellYourInfo extends BaseDriver
 		UtilityMethods.sleep(2000);
 
 	}
-	
+
 	//@Test(priority=22)
 	public static void RequestButtonValidation() throws IOException
 	{
@@ -403,17 +399,17 @@ public class BellYourInfo extends BaseDriver
 		//UtilityMethods.SendInputValues(BellYourInfoPO.BusinessInput, allInputValue.getProperty("BusinessType"), "DropDown");
 		UtilityMethods.sleep(1000);
 		UtilityMethods.SendInputValues(BellYourInfoPO.SimNanolabel, "", "Radiobutton");
-	    UtilityMethods.SendInputValues(BellYourInfoPO.VolumetoDeployInput, allInputValue.getProperty("VolumeToDeploy"), "TextBox");
-	    UtilityMethods.sleep(1000);
-	    UtilityMethods.SendInputValues(BellYourInfoPO.IN12MonthLabel, "", "Radiobutton");
-	    UtilityMethods.SendInputValues(BellYourInfoPO.Description, allInputValue.getProperty("Description"), "TextBox");	
-	    UtilityMethods.sleep(2000);
-	    BellYourInfoPO.checkBoxTerms.click();
-	    UtilityMethods.sleep(2000);
-	    BellYourInfoPO.ContinueButton.click();
-	    System.out.println("YI021");
+		UtilityMethods.SendInputValues(BellYourInfoPO.VolumetoDeployInput, allInputValue.getProperty("VolumeToDeploy"), "TextBox");
+		UtilityMethods.sleep(1000);
+		UtilityMethods.SendInputValues(BellYourInfoPO.IN12MonthLabel, "", "Radiobutton");
+		UtilityMethods.SendInputValues(BellYourInfoPO.Description, allInputValue.getProperty("Description"), "TextBox");	
+		UtilityMethods.sleep(2000);
+		BellYourInfoPO.checkBoxTerms.click();
+		UtilityMethods.sleep(2000);
+		BellYourInfoPO.ContinueButton.click();
+		System.out.println("YI021");
 		UtilityMethods.sleep(2000);
 
 	}
-	
+
 }

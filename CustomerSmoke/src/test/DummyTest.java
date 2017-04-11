@@ -4,6 +4,7 @@ import java.awt.AWTException;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -31,7 +32,7 @@ import utilitymethods.UtilityMethods;
 public class DummyTest 
 {
 
-	public static FirefoxDriver driver;
+	public static WebDriver driver;
 	static Properties allInputValue;
 	public static ExtentReports extent;
 	public static ExtentTest testcase;
@@ -40,7 +41,7 @@ public class DummyTest
 	@BeforeTest
 	public static void DeletingPreviousEmail()
 	{
-		EmailIntegration.DeleteAllEmail();
+		//EmailIntegration.DeleteAllEmail();
 		extent = new ExtentReports(System.getProperty("user.dir")+"/test-output/Advanced.html", true );
 	}
 	@AfterMethod

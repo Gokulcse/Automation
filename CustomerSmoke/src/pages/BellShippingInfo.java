@@ -33,7 +33,6 @@ public class BellShippingInfo extends BaseDriver
 		UtilityMethods.Imagevalidation(BellShippingInfoPO.BellLogo,"src",allInputValue.getProperty("bellLogo"),"Bell Operator Logo");		
 		System.out.println("SI001");
 		UtilityMethods.sleep(2000);
-
 	} 
 	
 	public static void validateCompanyLogo()
@@ -112,6 +111,7 @@ public class BellShippingInfo extends BaseDriver
 		System.out.println("SI007");
 		UtilityMethods.sleep(2000);
 	}
+	
 	public static void ShippingInfoSpaceNotAllowedvalidatoin()
 	{
 		PageFactory.initElements(driver, BellShippingInfoPO.class);

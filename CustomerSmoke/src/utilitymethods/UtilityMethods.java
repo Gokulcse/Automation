@@ -24,7 +24,7 @@ import driver.BaseDriver;
 
 public class UtilityMethods extends BaseDriver {
 
-	
+
 	public static String GenerateRandomNum(int length)
 	{
 		String alphabet =  new String("0123456789"); 
@@ -32,10 +32,10 @@ public class UtilityMethods extends BaseDriver {
 		String result = new String(); 
 		Random r = new Random(); 
 		for (int i=0; i<length; i++) 
-		result = result + alphabet.charAt(r.nextInt(n));
+			result = result + alphabet.charAt(r.nextInt(n));
 		return result;
 	}
-	
+
 	public static String GenerateRandomString(int length)
 	{
 		String alphabet = new String("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"); //9
@@ -43,22 +43,22 @@ public class UtilityMethods extends BaseDriver {
 		String result = new String(); 
 		Random r = new Random(); 
 		for (int i=0; i<length; i++) 
-		result = result + alphabet.charAt(r.nextInt(n));
+			result = result + alphabet.charAt(r.nextInt(n));
 		return result;
 	}
-	
+
 	public static String GenerateRandomAlphaNumeric(int length){
 		String alphabet =new String("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"); //9
 		int n = alphabet.length();
 		String result = new String(); 
 		Random r = new Random();
 		for (int i=0; i<length; i++) 
-		result = result + alphabet.charAt(r.nextInt(n));
+			result = result + alphabet.charAt(r.nextInt(n));
 		return result;
-		}
-	
-	
-	
+	}
+
+
+
 	public static void InputDataValidation(WebElement InputField,String Compare,String fieldType)
 	{
 		switch (fieldType.toLowerCase()) {
@@ -106,29 +106,29 @@ public class UtilityMethods extends BaseDriver {
 		sleep(5000);
 		String parentHandle = driver.getWindowHandle();
 		try {
-		    for(String winHandle : driver.getWindowHandles())
-		    {
-		        driver.switchTo().window(winHandle);
-		        //System.out.println("" +driver.getTitle());
-		        if (driver.getTitle().equals(PageTitile))
-			    {
-		        	waitForWebElement(FindElement);
-		        	if(!FindElement.isDisplayed())
-		        	{
-		        		System.out.println("Page Rredirection Failed for"+Linkbutton.getText()+"");
-		        	}
-		        	else
-		        	{
-		        		System.out.println("Page Redirection done");
-		        		driver.close();
-		        	}
-			    }
-		    }
-		   driver.switchTo().window(parentHandle);
-		    }
+			for(String winHandle : driver.getWindowHandles())
+			{
+				driver.switchTo().window(winHandle);
+				//System.out.println("" +driver.getTitle());
+				if (driver.getTitle().equals(PageTitile))
+				{
+					waitForWebElement(FindElement);
+					if(!FindElement.isDisplayed())
+					{
+						System.out.println("Page Rredirection Failed for"+Linkbutton.getText()+"");
+					}
+					else
+					{
+						System.out.println("Page Redirection done");
+						driver.close();
+					}
+				}
+			}
+			driver.switchTo().window(parentHandle);
+		}
 		catch(Exception e)
 		{
-		   System.out.println("Condition fail :"+e+"");
+			System.out.println("Condition fail :"+e+"");
 		}	
 	}
 	public static void ThankYouPageRedirection(WebElement Linkbutton,WebElement FindElement)
@@ -140,21 +140,20 @@ public class UtilityMethods extends BaseDriver {
 		{ 
 			System.out.println("Page Redirection done");
 			driver.navigate().back();
-			
 		}
 		else if(!FindElement.isDisplayed())
-    	{
+		{
 			sleep(5000);
 			System.out.println("Page Redirection done");
 			driver.navigate().back();
-    	}
+		}
 		else
 		{
 			System.out.println("Page Rredirection Failed for"+Linkbutton.getText()+"");
 			driver.navigate().back();
 		}
 	}
-	
+
 	public static void pageRedirection(WebElement Linkbutton,WebElement FindElement,String PageName) throws InterruptedException
 	{
 		driver.navigate().refresh();
@@ -170,53 +169,25 @@ public class UtilityMethods extends BaseDriver {
 			System.out.println("Page Redirection done");
 		}
 		else if(!FindElement.isDisplayed())
-    	{
+		{
 			sleep(5000);
 			driver.navigate().back();
 			System.out.println("Page Redirection done");
-    		
-    	}
+
+		}
 		else
 		{
+			driver.navigate().back();
 			System.out.println("Page Rredirection Failed for"+Linkbutton.getText()+"");
 		}
-		
-		
+
+
 	}
 	public static void howItWorksValidation(WebElement webObj,String str1,String str2,String str3)
 	{
 		String Temp = webObj.getText();
 		//System.out.println(""+Temp+"");
 		String[] result = Temp.split("\n");
-		if((!result[0].equalsIgnoreCase(str1)))
-		{
-	System.out.println("Error in string validation "+result[0]);		
-		}
-		else if(!result[1].equalsIgnoreCase(str2))
-		{
-			System.out.println("Error in string validation "+result[1]);
-		}
-		else if (!result[2].equalsIgnoreCase(str3))
-		{
-			System.out.println("Error in string validation "+result[2]);
-		}
-	}
-	
-	public static void sectionOneLinkvalidation(WebElement webObj) throws Exception
-	{
-		webObj.click();
-		sleep(1000);
-		if(!webObj.getAttribute("class").equals("active"))
-		{
-			System.out.println("There is error in link validation "+webObj.getText()+"");
-		}
-	}
-	
-	public static void whatThekitIncludesTextValidation(WebElement webObj,String str1,String str2,String str3)
-	{
-		String Temp = webObj.getText();
-		String[] result = Temp.split("\n");
-		
 		if((!result[0].equalsIgnoreCase(str1)))
 		{
 			System.out.println("Error in string validation "+result[0]);		
@@ -230,30 +201,59 @@ public class UtilityMethods extends BaseDriver {
 			System.out.println("Error in string validation "+result[2]);
 		}
 	}
-	
+
+	public static void sectionOneLinkvalidation(WebElement webObj) throws Exception
+	{
+		webObj.click();
+		sleep(1000);
+		if(!webObj.getAttribute("class").equals("active"))
+		{
+			System.out.println("There is error in link validation "+webObj.getText()+"");
+		}
+	}
+
+	public static void whatThekitIncludesTextValidation(WebElement webObj,String str1,String str2,String str3)
+	{
+		String Temp = webObj.getText();
+		String[] result = Temp.split("\n");
+
+		if((!result[0].equalsIgnoreCase(str1)))
+		{
+			System.out.println("Error in string validation "+result[0]);		
+		}
+		else if(!result[1].equalsIgnoreCase(str2))
+		{
+			System.out.println("Error in string validation "+result[1]);
+		}
+		else if (!result[2].equalsIgnoreCase(str3))
+		{
+			System.out.println("Error in string validation "+result[2]);
+		}
+	}
+
 	public static void whatTheKitIncludesImageAndTextValidation(WebElement imgObj,String imgsrc,WebElement TextObj,String Stringsrc)
 	{
-		
+
 		//System.out.println(""+imgObj.getAttribute("src"));
 		if (!imgObj.getAttribute("src").equals(imgsrc))
 		{
-		//ScreenShot(driver, "Imagevalidation Source path "+imgsrc+"");
-		System.out.println("The " + imgsrc +" is having wrong src Porperty");			
+			//ScreenShot(driver, "Imagevalidation Source path "+imgsrc+"");
+			System.out.println("The " + imgsrc +" is having wrong src Porperty");			
 		}
 		String Temp = TextObj.getText().replace("\n", " ");
 		if((!Temp.equalsIgnoreCase(Stringsrc)))
 		{
-		System.out.println("Error in string validation "+Stringsrc);		
+			System.out.println("Error in string validation "+Stringsrc);		
 		}
 	}	
-	
+
 	public static void InputValidation(WebElement Button1,WebElement InputElement,String Input,WebElement Button2)
 	{
 		for (String retval: Input.split(","))
 		{
 			sleep(2500);
 			System.out.println("The Valid Email Id Is"+retval);
-		//	driver.findElement(By.xpath("//div[@class='bl-val-chnge pb25']/a[text()='Track Order']")).click();
+			//	driver.findElement(By.xpath("//div[@class='bl-val-chnge pb25']/a[text()='Track Order']")).click();
 			Button1.click();
 			sleep(2500);
 			InputElement.clear();
@@ -264,10 +264,10 @@ public class UtilityMethods extends BaseDriver {
 			driver.navigate().back();
 		}	
 	}
-	
+
 	public static void SendInputValues(WebElement webObject,String Input,String type)
 	{
-		
+
 		switch (type.toLowerCase()) 
 		{
 		case "textbox":
@@ -291,7 +291,7 @@ public class UtilityMethods extends BaseDriver {
 		}
 		sleep(1000);
 	}
-	
+
 	public static void sleep(long milliseconds)
 	{
 		try 
@@ -303,8 +303,8 @@ public class UtilityMethods extends BaseDriver {
 			e.printStackTrace();
 		}
 	}
-	
-	
+
+
 	public static void NumericFieldValidation(WebElement numericFieldObject,WebElement errorObject,String Input)
 	{
 		for (String retval: Input.split(","))
@@ -322,12 +322,12 @@ public class UtilityMethods extends BaseDriver {
 				else
 				{
 					//ScreenShot(driver, ""+numericFieldObject.getAttribute("id")+" "+retval+"");
-				System.out.println("The Error Message displayed is "+ErrorMessage+" near Text Box ID "+numericFieldObject.getAttribute("id")+" for input value : '"+retval+" '");
-		     	}	
+					System.out.println("The Error Message displayed is "+ErrorMessage+" near Text Box ID "+numericFieldObject.getAttribute("id")+" for input value : '"+retval+" '");
+				}	
 			}
 		}		
 	}
-	
+
 	public static void CCConfirmPasswordValidation(WebElement PasswordObj,WebElement ConfirmPasswordObj,WebElement errorObject,String input)
 	{
 		sleep(1000);
@@ -345,14 +345,14 @@ public class UtilityMethods extends BaseDriver {
 			}
 		}
 	}
-	
+
 	public static void CCPasswordAndConfirmPasswordValidation(WebElement PasswordObj,WebElement ConfirmPasswordObj,WebElement errorObject1,WebElement errorObject2,String Passwordinput)
 	{
 		sleep(1000);
 		String ErrorMessage1 = null,ErrorMessage2 = null;
 		for (String pwd: Passwordinput.split(","))
 		{
-			
+
 			PasswordObj.clear();
 			ConfirmPasswordObj.clear(); 
 			PasswordObj.sendKeys(pwd);
@@ -361,17 +361,17 @@ public class UtilityMethods extends BaseDriver {
 			ErrorMessage2= errorObject2.getText();	
 			if((!ErrorMessage1.equals(""))||(!ErrorMessage2.equals("")))
 			{
-			//ScreenShot(driver, ""+PasswordObj.getAttribute("id")+" "+pwd+"");
-			System.out.println("The Error Message displayed near password textbox is "+ErrorMessage1+"for input "+pwd+"");
-			System.out.println("The Error Message displayed near Confirmpassword textbox is "+ErrorMessage2+"for input "+pwd+"");
+				//ScreenShot(driver, ""+PasswordObj.getAttribute("id")+" "+pwd+"");
+				System.out.println("The Error Message displayed near password textbox is "+ErrorMessage1+"for input "+pwd+"");
+				System.out.println("The Error Message displayed near Confirmpassword textbox is "+ErrorMessage2+"for input "+pwd+"");
 			}
 		}
 	}
-	
+
 	public static void ControlCenterPasswordValidation(WebElement textBoxObject,WebElement errorObject,String input)
 	{
 		sleep(1000);
-		
+
 		for (String retval: input.split(","))
 		{
 			textBoxObject.clear();
@@ -384,10 +384,10 @@ public class UtilityMethods extends BaseDriver {
 			}
 		}
 	}
-	
+
 	public static void ControlCenterRequiredFieldValidation(WebElement textBoxObject,WebElement errorObject,String Type)
 	{
-		
+
 		textBoxObject.clear();
 		sleep(2000);
 		String ErrorMessage= errorObject.getText();
@@ -397,29 +397,29 @@ public class UtilityMethods extends BaseDriver {
 			System.out.println("The Error Message displayed is "+ErrorMessage+" not equals to Please enter "+Type+"");
 		}	
 	}
-	
+
 	public static void EnterReferralCodeValidation(WebElement textBoxObject,WebElement errorObject)
 	{
 		textBoxObject.clear();
 		String ErrorMessage= errorObject.getText();
 		if(!ErrorMessage.equals("Please enter Referral Code"))
 		{
-		 	System.out.println("Please enter Referral Code Error Message is Not Displayed");	
+			System.out.println("Please enter Referral Code Error Message is Not Displayed");	
 		}
 	}
-	
-	
-	
+
+
+
 	public static void TrackOrderErrorValidation(WebElement textBoxObject,WebElement errorObject)
 	{
 		textBoxObject.clear();
 		String ErrorMessage= errorObject.getText();
 		if(!ErrorMessage.equals("Please enter Email Address"))
 		{
-		 	System.out.println("Please enter Email Address Error Message is Not Displayed");	
+			System.out.println("Please enter Email Address Error Message is Not Displayed");	
 		}
 	}
-	
+
 	public static void EmailIdInvalidvalidation(WebElement textBoxObject,WebElement errorObject,String Input)
 	{
 		for (String retval: Input.split(","))
@@ -434,7 +434,7 @@ public class UtilityMethods extends BaseDriver {
 			}		
 		}	
 	}
-	
+
 	public static void TrackEmailIdvalidation(WebElement textBoxObject,WebElement errorObject,String Input,WebElement linkButton)
 	{
 		for (String retval: Input.split(","))
@@ -450,7 +450,7 @@ public class UtilityMethods extends BaseDriver {
 			}		
 		}	
 	}
-	
+
 	public static void MaximumInputValidation(WebElement textBoxObject,WebElement errorObject,int Maximumvalue,String Input)
 	{
 		for (String retval: Input.split(","))
@@ -465,9 +465,9 @@ public class UtilityMethods extends BaseDriver {
 				System.out.println("The Error Message is "+ErrorMessage+" near Displayed Text Box ID "+textBoxObject.getAttribute("id")+" for input value : '"+retval+" '");
 			}		
 		}	
-		
+
 	}
-	
+
 	public static void MinimumInputValidation(WebElement textBoxObject,WebElement errorObject,int Minimumvalue,String Input)
 	{
 		for (String retval: Input.split(","))
@@ -483,7 +483,7 @@ public class UtilityMethods extends BaseDriver {
 			}		
 		}		
 	}
-	
+
 	public static void SpaceNotAllowedvalidation(WebElement textBoxObject,WebElement errorObject)
 	{
 		textBoxObject.clear();
@@ -495,7 +495,7 @@ public class UtilityMethods extends BaseDriver {
 			System.out.println("The Error Message displayed is "+ErrorMessage+" not equals to 'Spaces not allowed before text'");
 		}
 	}
-	
+
 	public static void RequiredFieldValidation(WebElement textBoxObject,WebElement errorObject,String type)
 	{
 		switch(type.toLowerCase())
@@ -526,19 +526,19 @@ public class UtilityMethods extends BaseDriver {
 				//ScreenShot(driver, ""+textBoxObject.getAttribute("id")+" "+ErrorMessage2+"");
 				System.out.println("The Error Message displayed is "+ErrorMessage2+" not equals to 'This field is required.'");
 			}
-			
+
 			break;
 		}
 	}
 	//ScreenShot Not Used
 	public static void ValidateSimTypeRadioButton(int InputValue,WebElement errorObject)
 	{
-		 List<WebElement> radios = driver.findElements(By.name("simTypeId"));
-		    if (InputValue > 0 && InputValue <= radios.size()) {
-		        radios.get(InputValue - 1).click();
-		    } else {
-		        throw new NotFoundException("option " + InputValue + " not found");
-		    }
+		List<WebElement> radios = driver.findElements(By.name("simTypeId"));
+		if (InputValue > 0 && InputValue <= radios.size()) {
+			radios.get(InputValue - 1).click();
+		} else {
+			throw new NotFoundException("option " + InputValue + " not found");
+		}
 
 		String ErrorMessage= errorObject.getText();
 		if(!ErrorMessage.equals(""))
@@ -558,7 +558,7 @@ public class UtilityMethods extends BaseDriver {
 			System.out.println("The Error Message displayed is "+ErrorMessage1+" not equals to 'This field is required.'");
 		}
 	}
-	
+
 	public static void ValidateDropDown(WebElement dropDownObject,String InputValue,WebElement errorObject)
 	{
 		Select DropDown = new Select(dropDownObject);
@@ -570,7 +570,7 @@ public class UtilityMethods extends BaseDriver {
 			System.out.println("The Error Message is "+ErrorMessage+" near Displayed Drop Down ID "+dropDownObject.getAttribute("id")+" for input value : '"+InputValue+" '");
 		}
 	}
-	
+
 	public static void ValidInputValidation(WebElement textBoxObject,String Input,WebElement errorObject)
 	{
 		for (String retval: Input.split(","))
@@ -585,7 +585,7 @@ public class UtilityMethods extends BaseDriver {
 			}		
 		}	
 	}
-	
+
 	public static void PlaceholderValidation(WebElement textObject,String stringToCompare,String Result)
 	{
 		String stringBase=textObject.getAttribute("placeholder");
@@ -595,8 +595,8 @@ public class UtilityMethods extends BaseDriver {
 			System.out.println("The Placeholder value in "+Result+" Input Field doesn't match.");
 		}	
 	}
-	
-	
+
+
 	public static void Imagevalidation(WebElement imgObject,String typeattribute,String value,String Result)
 	{
 		//System.out.println(""+imgObject.getAttribute(typeattribute));
@@ -615,7 +615,7 @@ public class UtilityMethods extends BaseDriver {
 			{
 				//ScreenShot(driver, "Imagevalidation Source path "+Result+"");
 				System.out.println("The " + Result +" is having wrong src Porperty");
-				
+
 			}
 			break;
 		}	
@@ -628,13 +628,13 @@ public class UtilityMethods extends BaseDriver {
 		{
 		case "equal":
 			result = stringBase.equals(stringToCompare);
-		break;
+			break;
 		case "equalsignorecase":
 			result = stringBase.equalsIgnoreCase(stringToCompare);
-		break;
+			break;
 		case "doubleequals":
 			result = stringBase==stringToCompare;
-		break;	
+			break;	
 		}
 		if (result == false)
 		{
@@ -644,15 +644,15 @@ public class UtilityMethods extends BaseDriver {
 			System.out.println("The String " + stringToCompare +" is not " + value +" to "+ stringBase +" ");
 		}
 	}
-	
+
 	public static void DisabledValidation(WebElement strObject,String Result)
 	{
 		if (strObject.isEnabled())
 		{
-		System.out.println("The " + Result +" is Enabled");
+			System.out.println("The " + Result +" is Enabled");
 		}
 	}
-	
+
 	public static void DisplayEnableValidator(WebElement strObject, String value, String Result) 
 	{	
 		sleep(1000);
@@ -666,15 +666,15 @@ public class UtilityMethods extends BaseDriver {
 			{
 				//ScreenShot(driver,"DisplayEnableValidator "+ Result+"");
 				//Assert.assertEquals(true, strObject.isDisplayed() && strObject.isEnabled());			
-			System.out.println("The " + Result +" is Enabled");
+				System.out.println("The " + Result +" is Enabled");
 			}
 			break;
 		case "notequal":
 			if (!strObject.isDisplayed() && !strObject.isEnabled())
 			{
 				//ScreenShot(driver, Result);
-			
-			System.out.println("The " + Result +" is not Displayed or Enabled");
+
+				System.out.println("The " + Result +" is not Displayed or Enabled");
 				//Assert.assertEquals(false, strObject.isDisplayed() && strObject.isEnabled());	
 			}
 			break;
@@ -686,18 +686,18 @@ public class UtilityMethods extends BaseDriver {
 		{
 			sleep(1200);
 			Calendar currentDate = Calendar.getInstance();
-	        SimpleDateFormat formatter = new SimpleDateFormat("yyyy/MMM/dd HH:mm:ss");
-	        String dateN = formatter.format(currentDate.getTime()).replace("/","_");
-	        String dateNow = dateN.replace(":","_");
-	        File source =((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(source, new File("./FailedScreenShot/"+screenshotName+" "+dateNow+".png"));
-		 
-		System.out.println("Screenshot taken for failed testCase");
+			SimpleDateFormat formatter = new SimpleDateFormat("yyyy/MMM/dd HH:mm:ss");
+			String dateN = formatter.format(currentDate.getTime()).replace("/","_");
+			String dateNow = dateN.replace(":","_");
+			File source =((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(source, new File("./FailedScreenShot/"+screenshotName+" "+dateNow+".png"));
+
+			System.out.println("Screenshot taken for failed testCase");
 		} 
 		catch (Exception e)
 		{
-		 
-		System.out.println("Exception while taking screenshot "+e.getMessage());
+
+			System.out.println("Exception while taking screenshot "+e.getMessage());
 		} 
 	}
 	public static Properties getPropValues() throws IOException 
@@ -707,56 +707,71 @@ public class UtilityMethods extends BaseDriver {
 		try 
 		{
 			properties.load(new FileInputStream(propertiesFile));
-        } 
+		} 
 		catch (IOException e) 
 		{
-            System.out.println("Exception Occurred" + e.getMessage());
-        }
+			System.out.println("Exception Occurred" + e.getMessage());
+		}
 		return properties;
 	}	
+	public static Properties getUnicomPropValues() throws IOException 
+	{
+
+		Properties properties = new Properties();
+		String propertiesFile=System.getProperty("user.dir")+ "\\src\\UnicomTestData.properties";
+		try 
+		{
+			properties.load(new FileInputStream(propertiesFile));
+		} 
+		catch (IOException e) 
+		{
+			System.out.println("Exception Occurred" + e.getMessage());
+		}
+		return properties;
+	}
 	public static Properties getBellPropValues() throws IOException 
 	{
-		
+
 		Properties properties = new Properties();
 		String propertiesFile=System.getProperty("user.dir")+ "\\src\\BellTestData.properties";
 		try 
 		{
 			properties.load(new FileInputStream(propertiesFile));
-        } 
+		} 
 		catch (IOException e) 
 		{
-            System.out.println("Exception Occurred" + e.getMessage());
-        }
+			System.out.println("Exception Occurred" + e.getMessage());
+		}
 		return properties;
 	}
 	public static Properties getTele2PropValues() throws IOException 
 	{
-		
+
 		Properties properties = new Properties();
 		String propertiesFile=System.getProperty("user.dir")+ "\\src\\tele2TestData.properties";
 		try 
 		{
 			properties.load(new FileInputStream(propertiesFile));
-        } 
+		} 
 		catch (IOException e) 
 		{
-            System.out.println("Exception Occurred" + e.getMessage());
-        }
+			System.out.println("Exception Occurred" + e.getMessage());
+		}
 		return properties;
 	}
 	public static Properties getPostPropValues() throws IOException 
 	{
-		
+
 		Properties properties = new Properties();
 		String propertiesFile=System.getProperty("user.dir")+ "\\src\\PostTestData.properties";
 		try 
 		{
 			properties.load(new FileInputStream(propertiesFile));
-        } 
+		} 
 		catch (IOException e) 
 		{
-            System.out.println("Exception Occurred" + e.getMessage());
-        }
+			System.out.println("Exception Occurred" + e.getMessage());
+		}
 		return properties;
 	}
 }

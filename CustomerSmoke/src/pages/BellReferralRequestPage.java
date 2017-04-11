@@ -128,6 +128,7 @@ public class BellReferralRequestPage extends BaseDriver
 	{
 		PageFactory.initElements(driver, BellReferralRequestPO.class);
 		BellReferralRequestPO.RequestButton.click();
+		UtilityMethods.sleep(2000);
 		UtilityMethods.ValidInputValidation(BellReferralRequestPO.FirstNameInput, allInputValue.getProperty("ValidFirstName"), BellReferralRequestPO.FirstNameError);
 		UtilityMethods.ValidInputValidation(BellReferralRequestPO.LastNameInput, allInputValue.getProperty("ValidLastName"),BellReferralRequestPO.LastNameError );
 		UtilityMethods.ValidInputValidation(BellReferralRequestPO.CompanyNameInput, allInputValue.getProperty("ValidCompanyName"), BellReferralRequestPO.CompanyError);
@@ -138,8 +139,6 @@ public class BellReferralRequestPage extends BaseDriver
 		UtilityMethods.ValidateDropDown(BellReferralRequestPO.BusinessInput, "Consumer electronics - personal navigation", BellReferralRequestPO.BusinessTypeError);	
 		UtilityMethods.ValidInputValidation(BellReferralRequestPO.VolumetoDeployInput, allInputValue.getProperty("ValidVolumeToDeploy"),BellReferralRequestPO.VolumetoDeployError);
 		UtilityMethods.ValidInputValidation(BellReferralRequestPO.Description, allInputValue.getProperty("ValidDescription"), BellReferralRequestPO.DescriptionError);
-		//UtilityMethods.ValidateSimTypeRadioButton(2,driver.findElement(By.xpath("//div[@id='simTypeId-error']")));	
-	   //driver.findElement(By.xpath("//label[text()='2FF/Ruggedized']")).click();
 		System.out.println("RR007");
 	}
 	
@@ -148,6 +147,7 @@ public class BellReferralRequestPage extends BaseDriver
 	{
 		PageFactory.initElements(driver, BellReferralRequestPO.class);
 		BellReferralRequestPO.RequestButton.click();
+		UtilityMethods.sleep(2000);
 		UtilityMethods.RequiredFieldValidation(BellReferralRequestPO.FirstNameInput, BellReferralRequestPO.FirstNameError,"TextBox");
 		UtilityMethods.RequiredFieldValidation(BellReferralRequestPO.LastNameInput, BellReferralRequestPO.LastNameError,"TextBox");
 		UtilityMethods.RequiredFieldValidation(BellReferralRequestPO.CompanyNameInput, BellReferralRequestPO.CompanyError,"TextBox");
@@ -168,6 +168,7 @@ public class BellReferralRequestPage extends BaseDriver
 	 {
 		PageFactory.initElements(driver, BellReferralRequestPO.class);
 		BellReferralRequestPO.RequestButton.click();
+		UtilityMethods.sleep(2000);
 		UtilityMethods.SpaceNotAllowedvalidation(BellReferralRequestPO.FirstNameInput, BellReferralRequestPO.FirstNameError);
 		UtilityMethods.SpaceNotAllowedvalidation(BellReferralRequestPO.LastNameInput, BellReferralRequestPO.LastNameError);
 		UtilityMethods.SpaceNotAllowedvalidation(BellReferralRequestPO.CompanyNameInput, BellReferralRequestPO.CompanyError);
@@ -179,7 +180,8 @@ public class BellReferralRequestPage extends BaseDriver
 	 {
 		PageFactory.initElements(driver, BellReferralRequestPO.class);
 		BellReferralRequestPO.RequestButton.click();
-	    UtilityMethods.MaximumInputValidation(BellReferralRequestPO.FirstNameInput, BellReferralRequestPO.FirstNameError, 49, allInputValue.getProperty("InvalidInput"));
+		UtilityMethods.sleep(2000);
+		UtilityMethods.MaximumInputValidation(BellReferralRequestPO.FirstNameInput, BellReferralRequestPO.FirstNameError, 49, allInputValue.getProperty("InvalidInput"));
 	    UtilityMethods.MaximumInputValidation(BellReferralRequestPO.LastNameInput, BellReferralRequestPO.LastNameError, 49, allInputValue.getProperty("InvalidInput"));
 	    UtilityMethods.MaximumInputValidation(BellReferralRequestPO.CompanyNameInput, BellReferralRequestPO.CompanyError, 25, allInputValue.getProperty("InvalidCompanyName"));
 	    UtilityMethods.MaximumInputValidation(BellReferralRequestPO.PositionRoleInput, BellReferralRequestPO.PositionError, 25, allInputValue.getProperty("InvalidCompanyName"));
@@ -192,6 +194,7 @@ public class BellReferralRequestPage extends BaseDriver
 	 {
 		PageFactory.initElements(driver, BellReferralRequestPO.class);
 		BellReferralRequestPO.RequestButton.click();
+		UtilityMethods.sleep(2000);
 		UtilityMethods.MinimumInputValidation(BellReferralRequestPO.CompanyNameInput, BellReferralRequestPO.CompanyError, 3, allInputValue.getProperty("InvalidMinInput"));
 	    UtilityMethods.MinimumInputValidation(BellReferralRequestPO.PhoneNumberInput, BellReferralRequestPO.PhoneNumberError, 10, allInputValue.getProperty("InvalidMinphonenumber"));    	 
 	    System.out.println("RR011");
@@ -201,6 +204,7 @@ public class BellReferralRequestPage extends BaseDriver
 	{	
 		PageFactory.initElements(driver, BellReferralRequestPO.class);
 		BellReferralRequestPO.RequestButton.click();
+		UtilityMethods.sleep(2000);
 		UtilityMethods.EmailIdInvalidvalidation(BellReferralRequestPO.EmailInput, BellReferralRequestPO.EmailError, allInputValue.getProperty("InvalidEmailID"));
 		System.out.println("RR012");
 	}
@@ -209,6 +213,7 @@ public class BellReferralRequestPage extends BaseDriver
 	{
 		PageFactory.initElements(driver, BellReferralRequestPO.class);
 		BellReferralRequestPO.RequestButton.click();
+		UtilityMethods.sleep(2000);
 		UtilityMethods.NumericFieldValidation(BellReferralRequestPO.PhoneNumberInput, BellReferralRequestPO.PhoneNumberError, allInputValue.getProperty("InvalidPhoneNumber"));
 		UtilityMethods.NumericFieldValidation(BellReferralRequestPO.VolumetoDeployInput, BellReferralRequestPO.VolumetoDeployError, allInputValue.getProperty("InvadildNumbericField"));
 		System.out.println("RR013");

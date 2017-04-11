@@ -17,11 +17,11 @@ public class AdminOperation
 	static Properties allInputValue;
 	public static	String BrowserForUse;
 	public static WebDriver driver;	
-	@BeforeTest
+	//@Test(priority=1)
 	public static void AdminApproval() throws InterruptedException
 	{
 		try {allInputValue=UtilityMethods.getBellPropValues();} catch (IOException e) {e.printStackTrace();}
- 		BrowserForUse=allInputValue.getProperty("Broswer");
+		BrowserForUse=allInputValue.getProperty("Broswer");
 		if (BrowserForUse.equals("FireFox"))
 		{
 			System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
@@ -63,11 +63,12 @@ public class AdminOperation
 		driver.close();
 		System.out.println("Referral request Approved");
 	}
-	@Test(priority=1)
+	
+	//@BeforeTest
 	public static void AdminOrderFulfill() throws InterruptedException
 	{
 		try {allInputValue=UtilityMethods.getBellPropValues();} catch (IOException e) {e.printStackTrace();}
- 		BrowserForUse=allInputValue.getProperty("Broswer");
+		BrowserForUse=allInputValue.getProperty("Broswer");
 		if (BrowserForUse.equals("FireFox"))
 		{
 			System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
@@ -106,10 +107,10 @@ public class AdminOperation
 		driver.findElement(By.xpath("//div[@id='order0']")).click();
 		Thread.sleep(4000);
 		driver.findElement(By.xpath("//input[@name='tracking_no']")).sendKeys(UtilityMethods.GenerateRandomAlphaNumeric(8));
-		driver.findElement(By.xpath("//input[@name='delivery_date']")).sendKeys("10/10/2017");
+		driver.findElement(By.xpath("//input[@name='delivery_date']")).sendKeys("2017/10/10");
 		driver.findElement(By.xpath("//button[@id='create_fulfill']")).click();
 		driver.close();
 		System.out.println("Order Fulfilled");
 	}
-	
+
 }

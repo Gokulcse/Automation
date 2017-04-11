@@ -35,18 +35,17 @@ public class TestPage {
 		System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.get("http://bell.devm2m.com/?clLocaleCode=fr");
+		driver.get("http://chinaun9c0nd.devm2m.com/");
 		System.out.println(""+driver.getTitle());
 		String temp =driver.findElement(By.tagName("body")).getText();
-				
-				try
-				{
-				PrintWriter writer = new PrintWriter("BellPublicSiteFrench.doc", "UTF-8");
-				writer.println(temp);
-				writer.close();
-				} 
-			catch (IOException e) {}
-				   System.out.println(""+temp);
+		try
+		{
+			PrintWriter writer = new PrintWriter("China UnicomPublicSite.doc", "UTF-8");
+			writer.println(temp);
+			writer.close();
+		} 
+		catch (IOException e) {}
+		System.out.println(""+temp);
 		/*UtilityMethods.sleep(5000);
 		driver.findElement(By.id("Email")).sendKeys("automateselenium1");
 		driver.findElement(By.id("next")).click();

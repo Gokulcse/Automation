@@ -6,30 +6,30 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="@org.testng.annotations." key="selection"/>
+		<item value="UnicomReferralRequestPO" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="@"/>
-			<item value="ReferralRequestThankYouPara"/>
-			<item value="Centre"/>
-			<item value="Bell covers over 32 million"/>
-			<item value="Center"/>
-			<item value="try {Thread.sleep(5000);} catch (InterruptedException e) {e.printStackTrace();}"/>
-			<item value="try {Thread.sleep(2000);} catch (InterruptedException e) {e.printStackTrace();}"/>
-			<item value="try {Thread.sleep(4000);} catch (InterruptedException e) {e.printStackTrace();}"/>
+			<item value="BellReferralRequestPO"/>
+			<item value="UnicomReferralRequestPO"/>
+			<item value="BellHomePagePO"/>
+			<item value="//@Test"/>
+			<item value="@org.testng.annotations.Test"/>
+			<item value="org.testng.annotations."/>
+			<item value="waitForWebElement"/>
+			<item value="waitForWebElementdriver"/>
 		</list>
 		<list key="replacehistory">
+			<item value="UnicomReferralRequestPO"/>
+			<item value="UnicomHomePagePO"/>
+			<item value="@Test"/>
+			<item value=""/>
 			<item value="@org.testng.annotations."/>
 			<item value="UtilityMethods.sleep(5000);"/>
 			<item value="UtilityMethods.sleep(2000);"/>
 			<item value="UtilityMethods.sleep(4000);"/>
-			<item value="UtilityMethods.sleep(3000);"/>
-			<item value="UtilityMethods."/>
-			<item value=""/>
-			<item value="2000"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
