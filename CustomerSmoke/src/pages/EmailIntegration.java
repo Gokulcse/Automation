@@ -23,10 +23,10 @@ public class EmailIntegration
 	public static	String BrowserForUse;
 	public static WebDriver driver;	
 
-	//@BeforeTest
+
 	public static void DeleteAllEmail()
 	{
-		try {allInputValue=UtilityMethods.getBellPropValues();} catch (IOException e) {e.printStackTrace();}
+		try {allInputValue=UtilityMethods.getPropValues();} catch (IOException e) {e.printStackTrace();}
 		BrowserForUse=allInputValue.getProperty("Broswer");
 		if (BrowserForUse.equals("FireFox"))
 		{
@@ -57,12 +57,12 @@ public class EmailIntegration
 			System.out.println("Default browser is Mozilla FireFox is launched");
 		}
 
-		driver.get("https://mail.google.com/mail/?tab=wm");
+		driver.get(allInputValue.getProperty("EmailURl"));
 		UtilityMethods.sleep(4000);
-		driver.findElement(By.id("Email")).sendKeys("automateselenium1");
+		driver.findElement(By.id("Email")).sendKeys(allInputValue.getProperty("EmailID"));
 		driver.findElement(By.id("next")).click();  
 		UtilityMethods.sleep(2000);
-		driver.findElement(By.id("Passwd")).sendKeys("Automation@Selenium");
+		driver.findElement(By.id("Passwd")).sendKeys(allInputValue.getProperty("EmailPassword"));
 		driver.findElement(By.id("signIn")).click();
 		UtilityMethods.sleep(20000);
 		System.out.println("Mail Opened");
@@ -119,10 +119,10 @@ public class EmailIntegration
 		}
 	}
 
-	//@Test(priority=1)
+	@Test(priority=1)
 	public static void CheckEmailReceived()
 	{
-		try {allInputValue=UtilityMethods.getBellPropValues();} catch (IOException e) {e.printStackTrace();}
+		try {allInputValue=UtilityMethods.getPropValues();} catch (IOException e) {e.printStackTrace();}
 		BrowserForUse=allInputValue.getProperty("Broswer");
 
 		if (BrowserForUse.equals("FireFox"))
@@ -153,12 +153,12 @@ public class EmailIntegration
 			driver.manage().window().maximize();
 			System.out.println("Default browser is Mozilla FireFox is launched");
 		}
-		driver.get("https://mail.google.com/mail/?tab=wm");
+		driver.get(allInputValue.getProperty("EmailURl"));
 		UtilityMethods.sleep(4000);
-		driver.findElement(By.id("Email")).sendKeys("automateselenium1");
+		driver.findElement(By.id("Email")).sendKeys(allInputValue.getProperty("EmailID"));
 		driver.findElement(By.id("next")).click();
 		UtilityMethods.sleep(2000);
-		driver.findElement(By.id("Passwd")).sendKeys("Automation@Selenium");
+		driver.findElement(By.id("Passwd")).sendKeys(allInputValue.getProperty("EmailPassword"));
 		driver.findElement(By.id("signIn")).click();
 		UtilityMethods.sleep(20000);
 		System.out.println("INBOX Opened");
@@ -189,7 +189,7 @@ public class EmailIntegration
 	@BeforeTest
 	public static String ccURL() 
 	{
-		try {allInputValue=UtilityMethods.getBellPropValues();} catch (IOException e) {e.printStackTrace();}
+		try {allInputValue=UtilityMethods.getPropValues();} catch (IOException e) {e.printStackTrace();}
 		BrowserForUse=allInputValue.getProperty("Broswer");
 
 		if (BrowserForUse.equals("FireFox"))
@@ -220,23 +220,28 @@ public class EmailIntegration
 			driver.manage().window().maximize();
 			System.out.println("Default browser is Mozilla FireFox is launched");
 		}
-		driver.get("https://mail.google.com/mail/?tab=wm");
+		driver.get(allInputValue.getProperty("EmailURl"));
 		UtilityMethods.sleep(4000);
-		driver.findElement(By.id("Email")).sendKeys("automateselenium1");
+		driver.findElement(By.id("Email")).sendKeys(allInputValue.getProperty("EmailID"));
 		driver.findElement(By.id("next")).click();
 		UtilityMethods.sleep(2000);
-		driver.findElement(By.id("Passwd")).sendKeys("Automation@Selenium");
+		driver.findElement(By.id("Passwd")).sendKeys(allInputValue.getProperty("EmailPassword"));
 		driver.findElement(By.id("signIn")).click();
 		UtilityMethods.sleep(20000);
 		System.out.println("INBOX Opened");
+		
+		System.out.println("the Xpath is  33::"+allInputValue.getProperty("FindURL")+"");
+		String Test=allInputValue.getProperty("FindURL");
 		System.out.println("Order Mail is displayed :: "+driver.findElement(By.xpath("//div[@class='UI']")).isDisplayed()+"");
 		System.out.println("Order Mail is Enabled   :: "+driver.findElement(By.xpath("//div[@class='UI']")).isEnabled()+"");
 		driver.findElement(By.xpath("//div[@class='UI']")).click();
 		System.out.println("Mail Opened");
 		UtilityMethods.sleep(8000);
-		System.out.println("sub Mail is displayed :: "+driver.findElement(By.xpath("//a[text()='http://bell.m2m.com']")).isDisplayed()+"");
-		System.out.println("sub Mail is Enabled   :: "+driver.findElement(By.xpath("//a[text()='http://bell.m2m.com']")).isEnabled()+"");
-		String CCURL = driver.findElement(By.xpath("//a[text()='http://bell.m2m.com']")).getAttribute("href");
+		
+		System.out.println("the Xpath is ::"+driver.findElement(By.xpath(Test))+"");
+		System.out.println("sub Mail is displayed :: "+driver.findElement(By.xpath(Test)).isDisplayed()+"");
+		System.out.println("sub Mail is Enabled   :: "+driver.findElement(By.xpath(Test)).isEnabled()+"");
+		String CCURL = driver.findElement(By.xpath(Test)).getAttribute("href");
 		System.out.println("Control Center URL ::"+CCURL+"");	
 		driver.close();
 		return CCURL;

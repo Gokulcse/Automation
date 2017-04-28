@@ -20,7 +20,7 @@ public class AdminOperation
 	//@Test(priority=1)
 	public static void AdminApproval() throws InterruptedException
 	{
-		try {allInputValue=UtilityMethods.getBellPropValues();} catch (IOException e) {e.printStackTrace();}
+		try {allInputValue=UtilityMethods.getPropValues();} catch (IOException e) {e.printStackTrace();}
 		BrowserForUse=allInputValue.getProperty("Broswer");
 		if (BrowserForUse.equals("FireFox"))
 		{
@@ -50,9 +50,9 @@ public class AdminOperation
 			driver.manage().window().maximize();
 			System.out.println("Default browser is Mozilla FireFox is launched");
 		}
-		driver.get("http://starterkit-dev.devm2m.com/admin/internal/login");
+		driver.get(allInputValue.getProperty("AdminURL"));
 		Thread.sleep(4000);
-		driver.findElement(By.xpath("//input[@id='userName']")).sendKeys("venkatesh.s");
+		driver.findElement(By.xpath("//input[@id='userName']")).sendKeys(allInputValue.getProperty("AdminUserName"));
 		driver.findElement(By.xpath("//input[@value='Login']")).click();
 		Thread.sleep(4000);
 		driver.findElement(By.xpath("//div[@class='blpr-menu blpr-dsk-menu']//span[text()='Referrals']")).click();
@@ -67,7 +67,7 @@ public class AdminOperation
 	//@BeforeTest
 	public static void AdminOrderFulfill() throws InterruptedException
 	{
-		try {allInputValue=UtilityMethods.getBellPropValues();} catch (IOException e) {e.printStackTrace();}
+		try {allInputValue=UtilityMethods.getPropValues();} catch (IOException e) {e.printStackTrace();}
 		BrowserForUse=allInputValue.getProperty("Broswer");
 		if (BrowserForUse.equals("FireFox"))
 		{
@@ -97,9 +97,9 @@ public class AdminOperation
 			driver.manage().window().maximize();
 			System.out.println("Default browser is Mozilla FireFox is launched");
 		}
-		driver.get("http://starterkit-dev.devm2m.com/admin/internal/login");
+		driver.get(allInputValue.getProperty("AdminURL"));
 		Thread.sleep(4000);
-		driver.findElement(By.xpath("//input[@id='userName']")).sendKeys("venkatesh.s");
+		driver.findElement(By.xpath("//input[@id='userName']")).sendKeys(allInputValue.getProperty("AdminUserName"));
 		driver.findElement(By.xpath("//input[@value='Login']")).click();
 		Thread.sleep(4000);
 		driver.findElement(By.xpath("//div[@class='blpr-menu blpr-dsk-menu']//span[text()='Orders']")).click();

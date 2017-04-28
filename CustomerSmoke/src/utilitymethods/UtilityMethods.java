@@ -22,9 +22,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import driver.BaseDriver;
 
-public class UtilityMethods extends BaseDriver {
-
-
+public class UtilityMethods extends BaseDriver 
+{
 	public static String GenerateRandomNum(int length)
 	{
 		String alphabet =  new String("0123456789"); 
@@ -57,8 +56,6 @@ public class UtilityMethods extends BaseDriver {
 		return result;
 	}
 
-
-
 	public static void InputDataValidation(WebElement InputField,String Compare,String fieldType)
 	{
 		switch (fieldType.toLowerCase()) {
@@ -81,16 +78,19 @@ public class UtilityMethods extends BaseDriver {
 			break;
 		}
 	}
+	
 	public static void waitForWebElement(WebElement element) 
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
+	
 	public static void waitForWebElementdriver(WebDriver driver,WebElement element) 
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
+	
 	public static void PageNavigationValidation(WebElement Linkbutton,WebElement FindElement, String PageTitile) throws InterruptedException 
 	{
 		waitForWebElement(Linkbutton);
@@ -131,6 +131,7 @@ public class UtilityMethods extends BaseDriver {
 			System.out.println("Condition fail :"+e+"");
 		}	
 	}
+	
 	public static void ThankYouPageRedirection(WebElement Linkbutton,WebElement FindElement)
 	{
 		waitForWebElement(Linkbutton);
@@ -183,6 +184,7 @@ public class UtilityMethods extends BaseDriver {
 
 
 	}
+	
 	public static void howItWorksValidation(WebElement webObj,String str1,String str2,String str3)
 	{
 		String Temp = webObj.getText();
@@ -408,8 +410,6 @@ public class UtilityMethods extends BaseDriver {
 		}
 	}
 
-
-
 	public static void TrackOrderErrorValidation(WebElement textBoxObject,WebElement errorObject)
 	{
 		textBoxObject.clear();
@@ -526,7 +526,6 @@ public class UtilityMethods extends BaseDriver {
 				//ScreenShot(driver, ""+textBoxObject.getAttribute("id")+" "+ErrorMessage2+"");
 				System.out.println("The Error Message displayed is "+ErrorMessage2+" not equals to 'This field is required.'");
 			}
-
 			break;
 		}
 	}
@@ -547,6 +546,7 @@ public class UtilityMethods extends BaseDriver {
 		}
 
 	}
+	
 	public static void RequiredFieldShippingDropDown(WebElement textBoxObject,WebElement errorObject)
 	{
 		Select DropDown = new Select(textBoxObject);
@@ -673,13 +673,13 @@ public class UtilityMethods extends BaseDriver {
 			if (!strObject.isDisplayed() && !strObject.isEnabled())
 			{
 				//ScreenShot(driver, Result);
-
 				System.out.println("The " + Result +" is not Displayed or Enabled");
 				//Assert.assertEquals(false, strObject.isDisplayed() && strObject.isEnabled());	
 			}
 			break;
 		}	
 	}
+	
 	public static void ScreenShot(WebDriver driver,String screenshotName)
 	{
 		try 
@@ -700,6 +700,7 @@ public class UtilityMethods extends BaseDriver {
 			System.out.println("Exception while taking screenshot "+e.getMessage());
 		} 
 	}
+	
 	public static Properties getPropValues() throws IOException 
 	{	
 		Properties properties = new Properties();
@@ -713,7 +714,8 @@ public class UtilityMethods extends BaseDriver {
 			System.out.println("Exception Occurred" + e.getMessage());
 		}
 		return properties;
-	}	
+	}
+	
 	public static Properties getUnicomPropValues() throws IOException 
 	{
 
@@ -729,6 +731,7 @@ public class UtilityMethods extends BaseDriver {
 		}
 		return properties;
 	}
+	
 	public static Properties getBellPropValues() throws IOException 
 	{
 
@@ -744,6 +747,7 @@ public class UtilityMethods extends BaseDriver {
 		}
 		return properties;
 	}
+	
 	public static Properties getTele2PropValues() throws IOException 
 	{
 
@@ -759,6 +763,7 @@ public class UtilityMethods extends BaseDriver {
 		}
 		return properties;
 	}
+	
 	public static Properties getPostPropValues() throws IOException 
 	{
 

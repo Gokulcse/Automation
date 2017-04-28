@@ -6,37 +6,37 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="UnicomReferralRequestPO" key="selection"/>
+		<item value="UnicomControlCenrterPO" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="BellControlCenterPO"/>
+			<item value="bell"/>
+			<item value="Bell"/>
+			<item value="BellReferralRequestThankYou"/>
+			<item value="BellReferralRequestPage"/>
+			<item value="BellHomePage"/>
+			<item value="BellReferralRequestThankYouPO"/>
 			<item value="BellReferralRequestPO"/>
-			<item value="UnicomReferralRequestPO"/>
-			<item value="BellHomePagePO"/>
-			<item value="//@Test"/>
-			<item value="@org.testng.annotations.Test"/>
-			<item value="org.testng.annotations."/>
-			<item value="waitForWebElement"/>
-			<item value="waitForWebElementdriver"/>
 		</list>
 		<list key="replacehistory">
+			<item value="UnicomControlCenrterPO"/>
+			<item value="UnicomReferralRequestThankYou"/>
+			<item value="UnicomReferralRequest"/>
+			<item value="UnicomHomePage"/>
+			<item value="Unicom"/>
+			<item value="UnicomReferralRequestThankYouPO"/>
 			<item value="UnicomReferralRequestPO"/>
 			<item value="UnicomHomePagePO"/>
-			<item value="@Test"/>
-			<item value=""/>
-			<item value="@org.testng.annotations."/>
-			<item value="UtilityMethods.sleep(5000);"/>
-			<item value="UtilityMethods.sleep(2000);"/>
-			<item value="UtilityMethods.sleep(4000);"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="257" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="386" key="DIALOG_HEIGHT"/>
-		<item value="819" key="DIALOG_X_ORIGIN"/>
-		<item value="196" key="DIALOG_Y_ORIGIN"/>
+		<item value="606" key="DIALOG_X_ORIGIN"/>
+		<item value="305" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

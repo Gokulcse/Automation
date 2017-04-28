@@ -11,6 +11,7 @@ import pageobjects.UnicomReferralRequestPO;
 import utilitymethods.UtilityMethods;
 import driver.BaseDriver;
 
+
 public class UnicomReferralRequest extends BaseDriver
 {
 	public static WebDriver driver ;
@@ -19,7 +20,7 @@ public class UnicomReferralRequest extends BaseDriver
 	public static void BrowserIntilation() throws Exception
 	{
 		allInputValue = UtilityMethods.getUnicomPropValues();
-		driver = launchApp(allInputValue.getProperty("BaseURl")); // need to be verfifed
+		driver = BaseDriver.driver; // need to be verfifed
 		driver.navigate().refresh();
 	}
 	@Test(priority=1)
@@ -30,7 +31,7 @@ public class UnicomReferralRequest extends BaseDriver
 		UtilityMethods.Imagevalidation(UnicomReferralRequestPO.UnicomLogo,"src",allInputValue.getProperty("UnicomLogo"),"Bell Operator Logo");		
 		System.out.println("RR001");
 	} 
-	
+
 	@Test(priority=2)
 	public static void validateCompanyLogo()
 	{
@@ -39,7 +40,7 @@ public class UnicomReferralRequest extends BaseDriver
 		UtilityMethods.Imagevalidation(UnicomReferralRequestPO.CiscoLogo,"src",allInputValue.getProperty("ciscoLogo"),"Cisco Jasper Company Logo");		
 		System.out.println("RR002");
 	}
- 
+
 	@Test(priority=3)
 	public static void ReferralRequestTextValidation()
 	{
@@ -118,7 +119,29 @@ public class UnicomReferralRequest extends BaseDriver
 		UtilityMethods.PlaceholderValidation(UnicomReferralRequestPO.Description, "Tell us a little about your device, target audience, and how we can help.", "Description");
 		System.out.println("RR006");
 	}
+
 	@Test(priority=7) 
+	public static void ReferralRequestRequiredFieldValidation()
+	{
+		PageFactory.initElements(driver, UnicomReferralRequestPO.class);
+		UnicomReferralRequestPO.RequestButton.click();
+		UtilityMethods.sleep(2000);
+		UtilityMethods.RequiredFieldValidation(UnicomReferralRequestPO.FirstNameInput, UnicomReferralRequestPO.FirstNameError,"TextBox");
+		UtilityMethods.RequiredFieldValidation(UnicomReferralRequestPO.LastNameInput, UnicomReferralRequestPO.LastNameError,"TextBox");
+		UtilityMethods.RequiredFieldValidation(UnicomReferralRequestPO.CompanyNameInput, UnicomReferralRequestPO.CompanyError,"TextBox");
+		UtilityMethods.RequiredFieldValidation(UnicomReferralRequestPO.PositionRoleInput, UnicomReferralRequestPO.PositionError,"TextBox");
+		UtilityMethods.RequiredFieldValidation(UnicomReferralRequestPO.PhoneNumberInput, UnicomReferralRequestPO.PhoneNumberError,"TextBox");
+		UtilityMethods.RequiredFieldValidation(UnicomReferralRequestPO.EmailInput, UnicomReferralRequestPO.EmailError,"TextBox");
+		//UtilityMethods.RequiredFieldValidation(UnicomReferralRequestPO.ProvincesInput, UnicomReferralRequestPO.ProvincesError,"DropDown");
+		UtilityMethods.RequiredFieldValidation(UnicomReferralRequestPO.ModuleInput, UnicomReferralRequestPO.ModuleError,"TextBox");
+		UtilityMethods.RequiredFieldValidation(UnicomReferralRequestPO.BusinessInput, UnicomReferralRequestPO.BusinessTypeError,"DropDown");
+		UtilityMethods.RequiredFieldValidation(UnicomReferralRequestPO.SimLabel, UnicomReferralRequestPO.SimTypeError,"RadioButton");
+		UtilityMethods.RequiredFieldValidation(UnicomReferralRequestPO.VolumetoDeployInput, UnicomReferralRequestPO.VolumetoDeployError,"TextBox");
+		UtilityMethods.RequiredFieldValidation(UnicomReferralRequestPO.LaunchTimeframeLabel, UnicomReferralRequestPO.LastNameError,"RadioButton");
+		UtilityMethods.RequiredFieldValidation(UnicomReferralRequestPO.Description, UnicomReferralRequestPO.DescriptionError,"TextBox");		
+		System.out.println("RR007");
+	}
+	@Test(priority=8)
 	public static void ReferralRequestCodeValidInputValidation()
 	{
 		PageFactory.initElements(driver, UnicomReferralRequestPO.class);
@@ -135,6 +158,97 @@ public class UnicomReferralRequest extends BaseDriver
 		UtilityMethods.ValidateDropDown(UnicomReferralRequestPO.BusinessInput, "Consumer electronics - personal navigation", UnicomReferralRequestPO.BusinessTypeError);	
 		UtilityMethods.ValidInputValidation(UnicomReferralRequestPO.VolumetoDeployInput, allInputValue.getProperty("ValidVolumeToDeploy"),UnicomReferralRequestPO.VolumetoDeployError);
 		UtilityMethods.ValidInputValidation(UnicomReferralRequestPO.Description, allInputValue.getProperty("ValidDescription"), UnicomReferralRequestPO.DescriptionError);
-		System.out.println("RR007");
+		System.out.println("RR008");
 	}
+
+	@Test(priority=9)
+	public static void ReferralRequestSpaceNotAllowedValidation()
+	{
+		PageFactory.initElements(driver, UnicomReferralRequestPO.class);
+		UnicomReferralRequestPO.RequestButton.click();
+		UtilityMethods.sleep(2000);
+		UtilityMethods.SpaceNotAllowedvalidation(UnicomReferralRequestPO.FirstNameInput, UnicomReferralRequestPO.FirstNameError);
+		UtilityMethods.SpaceNotAllowedvalidation(UnicomReferralRequestPO.LastNameInput, UnicomReferralRequestPO.LastNameError);
+		UtilityMethods.SpaceNotAllowedvalidation(UnicomReferralRequestPO.CompanyNameInput, UnicomReferralRequestPO.CompanyError);
+		UtilityMethods.SpaceNotAllowedvalidation(UnicomReferralRequestPO.PositionRoleInput, UnicomReferralRequestPO.PositionError);	
+		System.out.println("RR009");
+	}
+	@Test(priority=10)
+	public static void ReferralRequestMaximumInputValidation()
+	{
+		PageFactory.initElements(driver, UnicomReferralRequestPO.class);
+		UnicomReferralRequestPO.RequestButton.click();
+		UtilityMethods.sleep(2000);
+		UtilityMethods.MaximumInputValidation(UnicomReferralRequestPO.FirstNameInput, UnicomReferralRequestPO.FirstNameError, 49, allInputValue.getProperty("InvalidInput"));
+		UtilityMethods.MaximumInputValidation(UnicomReferralRequestPO.LastNameInput, UnicomReferralRequestPO.LastNameError, 49, allInputValue.getProperty("InvalidInput"));
+		UtilityMethods.MaximumInputValidation(UnicomReferralRequestPO.CompanyNameInput, UnicomReferralRequestPO.CompanyError, 25, allInputValue.getProperty("InvalidCompanyName"));
+		UtilityMethods.MaximumInputValidation(UnicomReferralRequestPO.PositionRoleInput, UnicomReferralRequestPO.PositionError, 25, allInputValue.getProperty("InvalidCompanyName"));
+		UtilityMethods.MaximumInputValidation(UnicomReferralRequestPO.PhoneNumberInput, UnicomReferralRequestPO.PhoneNumberError, 10, allInputValue.getProperty("Invalidphonenumber"));
+		UtilityMethods.MaximumInputValidation(UnicomReferralRequestPO.Description, UnicomReferralRequestPO.DescriptionError, 255, allInputValue.getProperty("InvalidDescription"));     
+		System.out.println("RR010");
+	}
+	@Test(priority=11)
+	public static void ReferralRequestMinimumInputValidation()
+	{
+		PageFactory.initElements(driver, UnicomReferralRequestPO.class);
+		UnicomReferralRequestPO.RequestButton.click();
+		UtilityMethods.sleep(2000);
+		UtilityMethods.MinimumInputValidation(UnicomReferralRequestPO.CompanyNameInput, UnicomReferralRequestPO.CompanyError, 3, allInputValue.getProperty("InvalidMinInput"));
+		UtilityMethods.MinimumInputValidation(UnicomReferralRequestPO.PhoneNumberInput, UnicomReferralRequestPO.PhoneNumberError, 10, allInputValue.getProperty("InvalidMinphonenumber"));    	 
+		System.out.println("RR011");
+	}
+	@Test(priority=12)
+	public static void ReferralRequestEmailValidation()
+	{	
+		PageFactory.initElements(driver, UnicomReferralRequestPO.class);
+		UnicomReferralRequestPO.RequestButton.click();
+		UtilityMethods.sleep(2000);
+		UtilityMethods.EmailIdInvalidvalidation(UnicomReferralRequestPO.EmailInput, UnicomReferralRequestPO.EmailError, allInputValue.getProperty("InvalidEmailID"));
+		System.out.println("RR012");
+	}
+	@Test(priority=13)
+	public static void ReferralRequestNumericFieldValidation()
+	{
+		PageFactory.initElements(driver, UnicomReferralRequestPO.class);
+		UnicomReferralRequestPO.RequestButton.click();
+		UtilityMethods.sleep(2000);
+		UtilityMethods.NumericFieldValidation(UnicomReferralRequestPO.PhoneNumberInput, UnicomReferralRequestPO.PhoneNumberError, allInputValue.getProperty("InvalidPhoneNumber"));
+		UtilityMethods.NumericFieldValidation(UnicomReferralRequestPO.VolumetoDeployInput, UnicomReferralRequestPO.VolumetoDeployError, allInputValue.getProperty("InvadildNumbericField"));
+		System.out.println("RR013");
+	}
+	//@Test(priority=14)
+	public static void UnicomLogoValidation() throws InterruptedException
+	{
+		UtilityMethods.pageRedirection(UnicomReferralRequestPO.UnicomLogo, UnicomReferralRequestPO.CancelButtonFindElement,"Others");
+		System.out.println("RR014");
+	}
+	//@Test(priority=15)
+	public static void ReferralrequestCancelButton() throws InterruptedException
+	{
+		UtilityMethods.DisplayEnableValidator(UnicomReferralRequestPO.CancelButton, "NotEqual","Bell Ca Link referral request page");	
+		UtilityMethods.StringValidation(UnicomReferralRequestPO.CancelButton.getText(), "Cancel", "equalsignorecase");
+		UtilityMethods.pageRedirection(UnicomReferralRequestPO.CancelButton, UnicomReferralRequestPO.CancelButtonFindElement,"Others");
+		System.out.println("RR015");
+	}
+	@Test(priority=16)
+	public static void RequestButtonValidation()
+	{
+		PageFactory.initElements(driver, UnicomReferralRequestPO.class);
+		UtilityMethods.SendInputValues(UnicomReferralRequestPO.FirstNameInput, allInputValue.getProperty("FirstName"), "TextBox");
+		UtilityMethods.SendInputValues(UnicomReferralRequestPO.LastNameInput, allInputValue.getProperty("LastName"), "TextBox");
+		UtilityMethods.SendInputValues(UnicomReferralRequestPO.CompanyNameInput, allInputValue.getProperty("CompanyName"), "TextBox");
+		UtilityMethods.SendInputValues(UnicomReferralRequestPO.PositionRoleInput, allInputValue.getProperty("Position"), "TextBox");
+		UtilityMethods.SendInputValues(UnicomReferralRequestPO.PhoneNumberInput, allInputValue.getProperty("PhoneNumber"), "TextBox");
+		UtilityMethods.SendInputValues(UnicomReferralRequestPO.EmailInput, allInputValue.getProperty("E-mailAddress"), "TextBox");
+		UtilityMethods.SendInputValues(UnicomReferralRequestPO.ProvincesInput, allInputValue.getProperty("Provinces"), "DropDown");
+		UtilityMethods.SendInputValues(UnicomReferralRequestPO.ModuleInput, allInputValue.getProperty("Module"), "TextBox");
+		UtilityMethods.SendInputValues(UnicomReferralRequestPO.BusinessInput, allInputValue.getProperty("BusinessType"), "DropDown");
+		UtilityMethods.SendInputValues(UnicomReferralRequestPO.SimNanolabel, "", "Radiobutton");
+		UtilityMethods.SendInputValues(UnicomReferralRequestPO.VolumetoDeployInput, allInputValue.getProperty("VolumeToDeploy"), "TextBox");
+		UtilityMethods.SendInputValues(UnicomReferralRequestPO.IN12MonthLabel, "", "Radiobutton");
+		UtilityMethods.SendInputValues(UnicomReferralRequestPO.Description, allInputValue.getProperty("Description"), "TextBox");	
+		UnicomReferralRequestPO.RequestButton.click();
+		System.out.println("RR016");
+	}
+
 }

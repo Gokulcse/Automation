@@ -48,7 +48,7 @@ public class BellControlCenterPO
 	@FindBy(how=How.XPATH,using="//div[@id='uname-error']")
 	public static WebElement UserNameError;
 	
-	@FindBy(how=How.XPATH,using="//input[@id='cpsswrd']")
+	@FindBy(how=How.XPATH,using="//input[@id='cpsswrd-error']")
 	public static WebElement ConfirmPasswordError;
 	
 }

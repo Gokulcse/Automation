@@ -1,6 +1,7 @@
 package pages;
 
 import java.awt.AWTException;
+import java.io.IOException;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
@@ -8,7 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import pageobjects.BellHomePagePO;
 import pageobjects.UnicomHomePagePO;
 import utilitymethods.UtilityMethods;
 import driver.BaseDriver;
@@ -41,7 +41,7 @@ public class UnicomHomePage extends BaseDriver
 		System.out.println("HP002");
 	}
 	@Test(priority=3)
-	public static void sectionOneIotStarterKitBellValidation()
+	public static void sectionOneIotStarterKitUnicomValidation()
 	{
 		PageFactory.initElements(driver, UnicomHomePagePO.class);	
 		UtilityMethods.StringValidation(UnicomHomePagePO.TextBannerh1.getText(), allInputValue.getProperty("sectionOneH1"), "equalsignorecase");
@@ -118,7 +118,7 @@ public class UnicomHomePage extends BaseDriver
 	public static void sectionTwoWhatThekitIncludesContentvalidation()
 	{
 		PageFactory.initElements(driver, UnicomHomePagePO.class);
-		UtilityMethods.Imagevalidation(UnicomHomePagePO.SimIcon, "src",allInputValue.getProperty("bellSimIcon"), "Bell Sim Icon");
+		UtilityMethods.Imagevalidation(UnicomHomePagePO.SimIcon, "src",allInputValue.getProperty("UnicomSimIcon"), "Unicom Sim Icon");
 		UtilityMethods.StringValidation(UnicomHomePagePO.TextSimh1.getText(), allInputValue.getProperty("whatTheKitIncludesSimh1"), "equalsignorecase");
 		UtilityMethods.StringValidation(UnicomHomePagePO.TextSimh2.getText(), allInputValue.getProperty("whatTheKitIncludesSimh2"), "equalsignorecase");
 		UtilityMethods.StringValidation(UnicomHomePagePO.TextSimh3.getText(), allInputValue.getProperty("whatTheKitIncludesSimh3"), "equalsignorecase");
@@ -132,7 +132,7 @@ public class UnicomHomePage extends BaseDriver
 	public static void sectionTwoWhatThekitIncludesToolsvalidation()
 	{
 		PageFactory.initElements(driver, UnicomHomePagePO.class);
-		UtilityMethods.whatTheKitIncludesImageAndTextValidation(UnicomHomePagePO.ToolIcon, allInputValue.getProperty("bellToolIcon"), UnicomHomePagePO.ToolText, allInputValue.getProperty("whatTheKitIncludesToolc1"));
+		UtilityMethods.whatTheKitIncludesImageAndTextValidation(UnicomHomePagePO.ToolIcon, allInputValue.getProperty("UnicomToolIcon"), UnicomHomePagePO.ToolText, allInputValue.getProperty("whatTheKitIncludesToolc1"));
 		UtilityMethods.whatThekitIncludesTextValidation(UnicomHomePagePO.ToolListText,allInputValue.getProperty("whatTheKitIncludesToolc2"),allInputValue.getProperty("whatTheKitIncludesToolc3"),allInputValue.getProperty("whatTheKitIncludesToolc4"));		
 		System.out.println("HP009");
 	}
@@ -141,7 +141,7 @@ public class UnicomHomePage extends BaseDriver
 	public static void sectionTwoWhatThekitIncludesCentervalidation()  
 	{	
 		PageFactory.initElements(driver, UnicomHomePagePO.class);
-		UtilityMethods.whatTheKitIncludesImageAndTextValidation(UnicomHomePagePO.CenterIcon, allInputValue.getProperty("bellCenterIcon"), UnicomHomePagePO.CenterText,allInputValue.getProperty("whatTheKitIncludescenterc1"));
+		UtilityMethods.whatTheKitIncludesImageAndTextValidation(UnicomHomePagePO.CenterIcon, allInputValue.getProperty("UnicomCenterIcon"), UnicomHomePagePO.CenterText,allInputValue.getProperty("whatTheKitIncludescenterc1"));
 		UtilityMethods.whatThekitIncludesTextValidation(UnicomHomePagePO.CenterListText, allInputValue.getProperty("whatTheKitIncludescenterc2"), allInputValue.getProperty("whatTheKitIncludescenterc3"),allInputValue.getProperty("whatTheKitIncludescenterc4"));		
 		System.out.println("HP010");
 	}
@@ -150,7 +150,7 @@ public class UnicomHomePage extends BaseDriver
 	public static void sectionTwoWhatThekitIncludesSuppportvalidation()
 	{
 		PageFactory.initElements(driver, UnicomHomePagePO.class);
-		UtilityMethods.whatTheKitIncludesImageAndTextValidation(UnicomHomePagePO.SupportIcon, allInputValue.getProperty("bellSupportIcon"), UnicomHomePagePO.SupportText,allInputValue.getProperty("whatTheKitIncludesSupportc1"));
+		UtilityMethods.whatTheKitIncludesImageAndTextValidation(UnicomHomePagePO.SupportIcon, allInputValue.getProperty("UnicomSupportIcon"), UnicomHomePagePO.SupportText,allInputValue.getProperty("whatTheKitIncludesSupportc1"));
 		UtilityMethods.whatThekitIncludesTextValidation(UnicomHomePagePO.SupportListText, allInputValue.getProperty("whatTheKitIncludesSupportc2"), allInputValue.getProperty("whatTheKitIncludesSupportc3"),allInputValue.getProperty("whatTheKitIncludesSupportc4"));
 		System.out.println("HP011");
 	}
@@ -187,17 +187,6 @@ public class UnicomHomePage extends BaseDriver
 		System.out.println("HP014");
 	}
 	
-	@Test(priority=17)
-	public static void sectionTwoM2MDotCom() throws InterruptedException
-	{   
-		PageFactory.initElements(driver, UnicomHomePagePO.class);	
-		driver.navigate().refresh();
-		UtilityMethods.DisplayEnableValidator(UnicomHomePagePO.M2MDotCom, "NotEqual", "M2MDotCom Link Button");
-		UtilityMethods.PageNavigationValidation(UnicomHomePagePO.M2MDotCom,UnicomHomePagePO.M2MDotComFindElement,"M2M Developer Kits from the World’s Leading Mobile Operators"); 
-		System.out.println("HP017");
-	}
-	
-	
 	@Test(priority=15)
 	public static void sectionOneReferralRequestvalidation() throws InterruptedException
 	{
@@ -220,23 +209,39 @@ public class UnicomHomePage extends BaseDriver
 		}
 		else
 		{
-		driver.navigate().refresh();
-		UtilityMethods.pageRedirection(UnicomHomePagePO.SectionTwoReferralRrequestButton, UnicomHomePagePO.ReferrralRequestFindElement,"");			
+			driver.navigate().refresh();
+			UtilityMethods.pageRedirection(UnicomHomePagePO.SectionTwoReferralRrequestButton, UnicomHomePagePO.ReferrralRequestFindElement,"");			
 		}
 		System.out.println("HP016");
 	}
+	
+	@Test(priority=17)
+	public static void sectionTwoM2MDotCom() throws InterruptedException
+	{   
+		PageFactory.initElements(driver, UnicomHomePagePO.class);	
+		driver.navigate().refresh();
+		UtilityMethods.DisplayEnableValidator(UnicomHomePagePO.M2MDotCom, "NotEqual", "M2MDotCom Link Button");
+		UtilityMethods.PageNavigationValidation(UnicomHomePagePO.M2MDotCom,UnicomHomePagePO.M2MDotComFindElement,"M2M Developer Kits from the World’s Leading Mobile Operators"); 
+		System.out.println("HP017");
+	}
+
 	@Test(priority=18)
-	public static void bellLogoValidation() throws InterruptedException
+	public static void UnicomLogoValidation() throws InterruptedException
 	{
 		PageFactory.initElements(driver, UnicomHomePagePO.class);
 		UtilityMethods.pageRedirection(UnicomHomePagePO.UnicomLogo, UnicomHomePagePO.WhatIsIotImage,"");
 		System.out.println("HP018");
+		driver.close();
 	}
 
 	@Test(priority=19)
-	public static void ReferralRequestButtonRedirection() throws InterruptedException
+	public static void ReferralRequestButtonRedirection() throws IOException, Exception
 	{
+		
+		driver = launchApp(allInputValue.getProperty("BaseURl"));
+		UtilityMethods.sleep(3000);
 		PageFactory.initElements(driver, UnicomHomePagePO.class);
+		allInputValue = UtilityMethods.getUnicomPropValues();
 		System.out.println("Req Buttton is displayed  :"+UnicomHomePagePO.SectionOneReferralRrequestButton.isDisplayed()+"");
 		System.out.println("Req Buttton is enabled :"+UnicomHomePagePO.SectionOneReferralRrequestButton.isEnabled()+"");
 		UnicomHomePagePO.SectionOneReferralRrequestButton.click();	
