@@ -8,15 +8,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
-
-
-
-
-
-
 
 import utilitymethods.UtilityMethods;
 
@@ -32,7 +27,7 @@ public class BaseDriver {
 	public static String downloadPath = "F:\\pdf";
 	public static  WebDriver launchApp(String URL) throws IOException, Exception
 	{	
-		try {allInputValue=UtilityMethods.getBellPropValues();} catch (IOException e) {e.printStackTrace();}
+		try {allInputValue=UtilityMethods.getUnicomPropValues();} catch (IOException e) {e.printStackTrace();}
 		BrowserForUse=allInputValue.getProperty("Broswer");
 		if (BrowserForUse.equals("FireFox"))
 		{
@@ -45,6 +40,7 @@ public class BaseDriver {
 		{
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ "\\libs\\chromedriver.exe");
 			driver = new ChromeDriver();
+			
 			driver.manage().window().maximize();
 			System.out.println("Chrome browser launched");
 		}
@@ -66,6 +62,8 @@ public class BaseDriver {
 		driver.manage().window().maximize();
 		Thread.sleep(1000);
 		driver.get(URL);
+		Thread.sleep(3000);
+		
 		return driver;
 		//driver.get("http://skotni:dkt123@postdevfortesting.devm2m.com/");	 to be used if windows server authentication is used
 	}
@@ -79,6 +77,7 @@ public class BaseDriver {
 		profile.setPreference("browser.download.manager.showWhenStarting",false);
 		profile.setPreference("browser.helperApps.neverAsk.saveToDisk", "application/pdf");
 		profile.setPreference("pdfjs.disabled", false);
+		profile.setPreference("xpinstall.signatures.required", false);
 		return profile;
 	}
 }

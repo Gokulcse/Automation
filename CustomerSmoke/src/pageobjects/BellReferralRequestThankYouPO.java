@@ -1,9 +1,7 @@
 package pageobjects;
 
-import java.util.Properties;
 
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 

@@ -10,6 +10,8 @@ import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 
@@ -29,10 +31,21 @@ import utilitymethods.UtilityMethods;
 
 public class TestPage {
 
+	 public void LaunchChrome_Method1()
+	    {
+		 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ "\\libs\\chromedriver.exe");
+	        ChromeOptions options = new ChromeOptions();
+	        options.addArguments("disable-infobars");
+	        
+	        WebDriver driver = new ChromeDriver(options);
+	        driver.get("https://www.facebook.com/");
+	    }
+
 	public static void main(String[] args) throws InterruptedException
 	{
-		
-		System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
+		TestPage test = new TestPage();
+		test.LaunchChrome_Method1();
+	/*	System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.get("http://chinaun9c0nd.devm2m.com/");
@@ -45,7 +58,7 @@ public class TestPage {
 			writer.close();
 		} 
 		catch (IOException e) {}
-		System.out.println(""+temp);
+		System.out.println(""+temp);*/
 		/*UtilityMethods.sleep(5000);
 		driver.findElement(By.id("Email")).sendKeys("automateselenium1");
 		driver.findElement(By.id("next")).click();
@@ -74,7 +87,6 @@ public class TestPage {
 		        }
 		    }
 		}*/
-		driver.close();
 		/*System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+ "\\libs\\geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();

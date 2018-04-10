@@ -25,6 +25,11 @@ public class PostOrderConfirmPage extends BaseDriver
 		PageFactory.initElements(driver, PostReferralRequestPO.class);
 	}
 	
+	private static FirefoxDriver launchApp() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	public static void validateOperatorLogo()
 	{
 		WebElement operatorLogo = driver.findElement(By.xpath("//img[@alt='post']"));

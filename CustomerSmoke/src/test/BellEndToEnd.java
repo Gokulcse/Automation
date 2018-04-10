@@ -11,21 +11,22 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import bell.BellBillingInfo;
+import bell.BellControlCenter;
+import bell.BellHomePage;
+import bell.BellOrderSummary;
+import bell.BellReferralRequestPage;
+import bell.BellReferralRequestThankYou;
+import bell.BellReviewConfirm;
+import bell.BellShippingInfo;
+import bell.BellTrackOrder;
+import bell.BellYourInfo;
+
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 import driver.BaseDriver;
-import pages.BellBillingInfo;
-import pages.BellControlCenter;
-import pages.BellHomePage;
-import pages.BellOrderSummary;
-import pages.BellReferralRequestPage;
-import pages.BellReferralRequestThankYou;
-import pages.BellReviewConfirm;
-import pages.BellShippingInfo;
-import pages.BellTrackOrder;
-import pages.BellYourInfo;
 import pages.EmailIntegration;
 import pages.AdminOperation;
 import utilitymethods.UtilityMethods;
@@ -38,7 +39,7 @@ public class BellEndToEnd extends BaseDriver
 	@BeforeTest
 	public static void DeletingPreviousEmail()
 	{
-		EmailIntegration.DeleteAllEmail();
+		//EmailIntegration.DeleteAllEmail();
 	}
 
 	@Test(priority=1)

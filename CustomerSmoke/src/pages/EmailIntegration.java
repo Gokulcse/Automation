@@ -22,8 +22,9 @@ public class EmailIntegration
 	static Properties allInputValue;
 	public static	String BrowserForUse;
 	public static WebDriver driver;	
-
-
+    public static String OldURL="https://accounts.google.com/ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/mail/&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1#identifier"; 
+    public static String NewURL="https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
+    
 	public static void DeleteAllEmail()
 	{
 		try {allInputValue=UtilityMethods.getPropValues();} catch (IOException e) {e.printStackTrace();}
@@ -59,13 +60,32 @@ public class EmailIntegration
 
 		driver.get(allInputValue.getProperty("EmailURl"));
 		UtilityMethods.sleep(4000);
-		driver.findElement(By.id("Email")).sendKeys(allInputValue.getProperty("EmailID"));
-		driver.findElement(By.id("next")).click();  
-		UtilityMethods.sleep(2000);
-		driver.findElement(By.id("Passwd")).sendKeys(allInputValue.getProperty("EmailPassword"));
-		driver.findElement(By.id("signIn")).click();
-		UtilityMethods.sleep(20000);
-		System.out.println("Mail Opened");
+		System.out.println("Current Url ::"+driver.getCurrentUrl()+"");
+		driver.findElement(By.xpath("//input[@type='email']")).sendKeys(allInputValue.getProperty("EmailID"));
+		
+		String URL=driver.getCurrentUrl();
+		if(URL.equals(NewURL))
+		{
+			System.out.println("New URL ::"+URL+"");
+			driver.findElement(By.xpath("//div[@id='identifierNext']")).click();
+			UtilityMethods.sleep(2000);
+			driver.findElement(By.xpath("//input[@type='password']")).sendKeys(allInputValue.getProperty("EmailPassword"));
+			driver.findElement(By.xpath("//div[@id='passwordNext']")).click();			
+			UtilityMethods.sleep(20000);
+			System.out.println("INBOX Opened");
+	
+		}
+		else if(URL.equals(OldURL))
+		{
+			System.out.println("Old URL ::"+URL+"");
+			driver.findElement(By.id("next")).click();
+			UtilityMethods.sleep(2000);
+			driver.findElement(By.id("Passwd")).sendKeys(allInputValue.getProperty("EmailPassword"));
+			driver.findElement(By.id("signIn")).click();
+			UtilityMethods.sleep(20000);
+			System.out.println("INBOX Opened");
+	
+		}
 		System.out.println("Delete all check box is displayed :: "+driver.findElement(By.xpath("//div[@aria-label='Select']")).isDisplayed()+"");
 		System.out.println("Delete all check box is Enabled   :: "+driver.findElement(By.xpath("//div[@aria-label='Select']")).isEnabled()+"");
 		List<WebElement> unreademeil = driver.findElements(By.xpath("//*[@class='zF']"));
@@ -155,13 +175,32 @@ public class EmailIntegration
 		}
 		driver.get(allInputValue.getProperty("EmailURl"));
 		UtilityMethods.sleep(4000);
-		driver.findElement(By.id("Email")).sendKeys(allInputValue.getProperty("EmailID"));
-		driver.findElement(By.id("next")).click();
-		UtilityMethods.sleep(2000);
-		driver.findElement(By.id("Passwd")).sendKeys(allInputValue.getProperty("EmailPassword"));
-		driver.findElement(By.id("signIn")).click();
-		UtilityMethods.sleep(20000);
-		System.out.println("INBOX Opened");
+		System.out.println("Current Url ::"+driver.getCurrentUrl()+"");
+		driver.findElement(By.xpath("//input[@type='email']")).sendKeys(allInputValue.getProperty("EmailID"));
+		
+		String URL=driver.getCurrentUrl();
+		if(URL.equals(NewURL))
+		{
+			System.out.println("New URL ::"+URL+"");
+			driver.findElement(By.xpath("//div[@id='identifierNext']")).click();
+			UtilityMethods.sleep(2000);
+			driver.findElement(By.xpath("//input[@type='password']")).sendKeys(allInputValue.getProperty("EmailPassword"));
+			driver.findElement(By.xpath("//div[@id='passwordNext']")).click();			
+			UtilityMethods.sleep(20000);
+			System.out.println("INBOX Opened");
+	
+		}
+		else if(URL.equals(OldURL))
+		{
+			System.out.println("Old URL ::"+URL+"");
+			driver.findElement(By.id("next")).click();
+			UtilityMethods.sleep(2000);
+			driver.findElement(By.id("Passwd")).sendKeys(allInputValue.getProperty("EmailPassword"));
+			driver.findElement(By.id("signIn")).click();
+			UtilityMethods.sleep(20000);
+			System.out.println("INBOX Opened");
+	
+		}
 		List<WebElement> unreademeil = driver.findElements(By.xpath("//*[@class='zF']"));
 		String MyMailer = "orders";
 		for(int i=0;i<unreademeil.size();i++)
@@ -222,23 +261,65 @@ public class EmailIntegration
 		}
 		driver.get(allInputValue.getProperty("EmailURl"));
 		UtilityMethods.sleep(4000);
-		driver.findElement(By.id("Email")).sendKeys(allInputValue.getProperty("EmailID"));
-		driver.findElement(By.id("next")).click();
-		UtilityMethods.sleep(2000);
-		driver.findElement(By.id("Passwd")).sendKeys(allInputValue.getProperty("EmailPassword"));
-		driver.findElement(By.id("signIn")).click();
-		UtilityMethods.sleep(20000);
-		System.out.println("INBOX Opened");
+		System.out.println("Current Url ::"+driver.getCurrentUrl()+"");
+		driver.findElement(By.xpath("//input[@type='email']")).sendKeys(allInputValue.getProperty("EmailID"));
 		
+		String URL=driver.getCurrentUrl();
+		if(URL.equals(NewURL))
+		{
+			System.out.println("New URL ::"+URL+"");
+			driver.findElement(By.xpath("//div[@id='identifierNext']")).click();
+			UtilityMethods.sleep(2000);
+			driver.findElement(By.xpath("//input[@type='password']")).sendKeys(allInputValue.getProperty("EmailPassword"));
+			driver.findElement(By.xpath("//div[@id='passwordNext']")).click();			
+			UtilityMethods.sleep(20000);
+			System.out.println("INBOX Opened");
+	
+		}
+		else if(URL.equals(OldURL))
+		{
+			System.out.println("Old URL ::"+URL+"");
+			driver.findElement(By.id("next")).click();
+			UtilityMethods.sleep(2000);
+			driver.findElement(By.id("Passwd")).sendKeys(allInputValue.getProperty("EmailPassword"));
+			driver.findElement(By.id("signIn")).click();
+			UtilityMethods.sleep(20000);
+			System.out.println("INBOX Opened");
+	
+		}
+	/*	System.out.println("Is New Next Button Displayed ::"+driver.findElement(By.xpath("//div[@id='identifierNext']")).isDisplayed()+"");
+		System.out.println("Is Old Next Button Displayed ::"+driver.findElement(By.id("next")).isDisplayed()+"");
+		Boolean Result = false;
+		Result = driver.findElement(By.xpath("//div[@id='identifierNext']")).isDisplayed();
+		if(Result==true)
+		{
+			driver.findElement(By.xpath("//div[@id='identifierNext']")).click();
+			UtilityMethods.sleep(2000);
+			driver.findElement(By.xpath("//input[@type='password']")).sendKeys(allInputValue.getProperty("EmailPassword"));
+			driver.findElement(By.xpath("//div[@id='passwordNext']")).click();			
+			UtilityMethods.sleep(20000);
+			System.out.println("INBOX Opened");
+		}
+		else
+		{
+			driver.findElement(By.id("next")).click();
+			UtilityMethods.sleep(2000);
+			driver.findElement(By.id("Passwd")).sendKeys(allInputValue.getProperty("EmailPassword"));
+			driver.findElement(By.id("signIn")).click();
+			UtilityMethods.sleep(20000);
+			System.out.println("INBOX Opened");
+		}
+		
+	*/	
 		System.out.println("the Xpath is  33::"+allInputValue.getProperty("FindURL")+"");
 		String Test=allInputValue.getProperty("FindURL");
 		System.out.println("Order Mail is displayed :: "+driver.findElement(By.xpath("//div[@class='UI']")).isDisplayed()+"");
 		System.out.println("Order Mail is Enabled   :: "+driver.findElement(By.xpath("//div[@class='UI']")).isEnabled()+"");
 		driver.findElement(By.xpath("//div[@class='UI']")).click();
 		System.out.println("Mail Opened");
-		UtilityMethods.sleep(8000);
+		UtilityMethods.sleep(5000);
 		
-		System.out.println("the Xpath is ::"+driver.findElement(By.xpath(Test))+"");
+		System.out.println("the Xpath is ::"+allInputValue.getProperty("FindURL")+"");
 		System.out.println("sub Mail is displayed :: "+driver.findElement(By.xpath(Test)).isDisplayed()+"");
 		System.out.println("sub Mail is Enabled   :: "+driver.findElement(By.xpath(Test)).isEnabled()+"");
 		String CCURL = driver.findElement(By.xpath(Test)).getAttribute("href");

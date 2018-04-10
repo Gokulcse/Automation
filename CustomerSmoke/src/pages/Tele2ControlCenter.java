@@ -23,6 +23,10 @@ public class Tele2ControlCenter extends BaseDriver {
 		System.out.println("Section one Completed");
 		
 	}
+	private static FirefoxDriver launchApp() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	public static void ControlCenterAccountCreation()
 	{
 		

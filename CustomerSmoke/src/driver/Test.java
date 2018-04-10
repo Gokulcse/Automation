@@ -7,17 +7,17 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 
+import bell.BellBillingInfo;
+import bell.BellControlCenter;
+import bell.BellHomePage;
+import bell.BellOrderSummary;
+import bell.BellReferralRequestPage;
+import bell.BellReferralRequestThankYou;
+import bell.BellReviewConfirm;
+import bell.BellShippingInfo;
+import bell.BellTrackOrder;
+import bell.BellYourInfo;
 import pages.AdminOperation;
-import pages.BellBillingInfo;
-import pages.BellControlCenter;
-import pages.BellHomePage;
-import pages.BellOrderSummary;
-import pages.BellReferralRequestPage;
-import pages.BellReferralRequestThankYou;
-import pages.BellReviewConfirm;
-import pages.BellShippingInfo;
-import pages.BellTrackOrder;
-import pages.BellYourInfo;
 import pages.EmailIntegration;
 import utilitymethods.UtilityMethods;
 

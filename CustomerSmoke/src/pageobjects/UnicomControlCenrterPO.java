@@ -48,7 +48,7 @@ public class UnicomControlCenrterPO
 	@FindBy(how=How.XPATH,using="//div[@id='uname-error']")
 	public static WebElement UserNameError;
 	
-	@FindBy(how=How.XPATH,using="//input[@id='cpsswrd-error']")
+	@FindBy(how=How.XPATH,using="//div[@id='cpsswrd-error']")
 	public static WebElement ConfirmPasswordError;
 
 	

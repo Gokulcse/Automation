@@ -3,6 +3,7 @@ package pages;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -15,16 +16,15 @@ import driver.BaseDriver;
 
 public class PostHomePage extends BaseDriver
 {
-	public static FirefoxDriver driver;
+	public static WebDriver driver =BaseDriver.driver;
 	 static Properties allInputValue;
 	
 	 @BeforeTest
-	 public static void start() throws Exception
+	 public static WebDriver start() throws Exception
 	{
-		 
-		driver = launchApp();
-		allInputValue = UtilityMethods.getPostPropValues();
 		
+		allInputValue = UtilityMethods.getPostPropValues();
+		return driver = launchApp(allInputValue.getProperty("BaseURl"));
 	}
 	 
 	 @Test(priority=1)

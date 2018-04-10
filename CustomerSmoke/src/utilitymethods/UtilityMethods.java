@@ -779,4 +779,21 @@ public class UtilityMethods extends BaseDriver
 		}
 		return properties;
 	}
+	public static Properties getAdminPropValues() throws IOException 
+	{
+
+		Properties properties = new Properties();
+		String propertiesFile=System.getProperty("user.dir")+ "\\src\\AdminTestData.properties";
+		try 
+		{
+			properties.load(new FileInputStream(propertiesFile));
+		} 
+		catch (IOException e) 
+		{
+			System.out.println("Exception Occurred" + e.getMessage());
+		}
+		return properties;
+	}
+	
+	
 }

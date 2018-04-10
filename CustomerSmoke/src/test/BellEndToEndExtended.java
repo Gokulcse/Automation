@@ -10,21 +10,22 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import bell.BellBillingInfo;
+import bell.BellControlCenter;
+import bell.BellHomePage;
+import bell.BellOrderSummary;
+import bell.BellReferralRequestPage;
+import bell.BellReferralRequestThankYou;
+import bell.BellReviewConfirm;
+import bell.BellShippingInfo;
+import bell.BellTrackOrder;
+import bell.BellYourInfo;
+
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 import pages.AdminOperation;
-import pages.BellBillingInfo;
-import pages.BellControlCenter;
-import pages.BellHomePage;
-import pages.BellOrderSummary;
-import pages.BellReferralRequestPage;
-import pages.BellReferralRequestThankYou;
-import pages.BellReviewConfirm;
-import pages.BellShippingInfo;
-import pages.BellTrackOrder;
-import pages.BellYourInfo;
 import pages.EmailIntegration;
 import utilitymethods.UtilityMethods;
 import driver.BaseDriver;

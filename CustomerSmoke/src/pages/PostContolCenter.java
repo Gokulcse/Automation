@@ -4,6 +4,7 @@ package pages;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import driver.BaseDriver;
@@ -11,19 +12,16 @@ import utilitymethods.UtilityMethods;
 
 public class PostContolCenter extends BaseDriver
 {
-	public static FirefoxDriver driver;
+	public static WebDriver driver;
 	static Properties allInputValue;
 	
-	public static void main(String[] args) throws Exception 
-	
-	{
-		driver = launchApp();
-		allInputValue = UtilityMethods.getPropValues();
+	public static WebDriver start() throws Exception
+	{	 
+		driver = launchApp(EmailIntegration.ccURL());
+		allInputValue = UtilityMethods.getBellPropValues();
 		String myWindowHandle = driver.getWindowHandle();
 		driver.switchTo().window(myWindowHandle);
-		ControlCenterAccountCreation();
-		System.out.println("Section one Completed");
-		
+		return driver;
 	}
 	public static void ControlCenterAccountCreation()
 	{

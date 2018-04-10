@@ -40,6 +40,10 @@ import driver.BaseDriver;
 		PageFactory.initElements(driver, Tele2HomePagePO.class);	
 		extent = new ExtentReports(System.getProperty("user.dir")+"/test-output/Advanced.html", true );	
 	}
+	private static FirefoxDriver launchApp() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	@AfterMethod
 	public static void getResult(ITestResult result)
 	{

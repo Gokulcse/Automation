@@ -32,6 +32,11 @@ public class PostReferralRequest extends BaseDriver
 		//UtilityMethods.PageNavigationValidation(driver.findElement(By.xpath("//img[@alt='Tele2']")), driver.findElement(By.xpath("//img[@title='What is IoT']")));
 	}*/
 	
+	private static FirefoxDriver launchApp() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	@Test
 	public static void validateOperatorLogo()
 	{

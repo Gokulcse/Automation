@@ -31,7 +31,6 @@ public class BellOrderSummary extends BaseDriver
 		UtilityMethods.Imagevalidation(BellOrderSummaryPO.BellLogo,"src",allInputValue.getProperty("bellLogo"),"Bell Operator Logo");		
 		System.out.println("OS001");
 		UtilityMethods.sleep(2000);
-
 	} 
 	
 	public static void validateCompanyLogo()
@@ -41,7 +40,6 @@ public class BellOrderSummary extends BaseDriver
 		UtilityMethods.Imagevalidation(BellOrderSummaryPO.CiscoLogo,"src",allInputValue.getProperty("ciscoLogo"),"Cisco Jasper Company Logo");		
 		System.out.println("OS002");
 		UtilityMethods.sleep(2000);
-
 	}
 	
 	public static void HeadertextValidation()
@@ -134,7 +132,7 @@ public class BellOrderSummary extends BaseDriver
 	public static void homePageLinkvalidation() throws InterruptedException
 	{
 		PageFactory.initElements(driver, BellOrderSummaryPO.class);
-		UtilityMethods.DisplayEnableValidator(BellOrderSummaryPO.HomePageLink, "NotEqual", "THome Page Link Button");
+		UtilityMethods.DisplayEnableValidator(BellOrderSummaryPO.HomePageLink, "NotEqual", "Home Page Link Button");
 		UtilityMethods.ThankYouPageRedirection(BellOrderSummaryPO.HomePageLink, BellOrderSummaryPO.homepageLinkFindElement);
 		System.out.println("OS010");
 		UtilityMethods.sleep(2000);

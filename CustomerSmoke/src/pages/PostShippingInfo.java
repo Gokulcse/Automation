@@ -26,6 +26,10 @@ public class PostShippingInfo extends BaseDriver
 		allInputValue = UtilityMethods.getPostPropValues();
 		PageFactory.initElements(driver, PostReferralRequestPO.class);
 	}
+	private static FirefoxDriver launchApp() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	@Test(priority=1)
 	public static void EnterReffCode() throws InterruptedException
 	{

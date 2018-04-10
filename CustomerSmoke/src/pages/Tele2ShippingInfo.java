@@ -22,6 +22,11 @@ public class Tele2ShippingInfo extends BaseDriver
 		allInputValue = UtilityMethods.getTele2PropValues();
 	}
 	
+	private static FirefoxDriver launchApp() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	@Test
 	public static void validateOperatorLogo()
 	{

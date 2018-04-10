@@ -26,6 +26,11 @@ public class PostReferralrequestThankYou extends BaseDriver
 		allInputValue = UtilityMethods.getPostPropValues();
 	}
 	
+	private static FirefoxDriver launchApp() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	@Test(priority=1)
 	public static void validateOperatorLogo()
 	{

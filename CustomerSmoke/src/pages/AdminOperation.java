@@ -52,6 +52,8 @@ public class AdminOperation
 		}
 		driver.get(allInputValue.getProperty("AdminURL"));
 		Thread.sleep(4000);
+				
+		
 		driver.findElement(By.xpath("//input[@id='userName']")).sendKeys(allInputValue.getProperty("AdminUserName"));
 		driver.findElement(By.xpath("//input[@value='Login']")).click();
 		Thread.sleep(4000);
